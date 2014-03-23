@@ -10,8 +10,6 @@
     "url": "https://github.com/blanketsheep/hachioji/issues"
   },
   "devDependencies": {
-    "grunt-cli": "^0.1.13",
-    "component": "^0.19.7",
-    "grunt": "^0.4.4"
+    "component": "^0.19.7"
   }
 }
