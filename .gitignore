@@ -3,6 +3,7 @@
 /components/
 /css/
 /.sass-cache/
+/.vagrant/
 
 !Gemfile
 Gemfile.lock
