@@ -2,10 +2,10 @@
 /node_modules/
 /components/
 /css/
+/.sass-cache/
 
 !Gemfile
 Gemfile.lock
 
 !component.json
 !package.json
-!Gruntfile.coffee
