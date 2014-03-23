@@ -1,6 +1,7 @@
 /_site/
 /node_modules/
 /components/
+/css/
 
 !Gemfile
 Gemfile.lock
