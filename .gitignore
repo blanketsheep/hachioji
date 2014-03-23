@@ -1,2 +1,10 @@
-_site/
+/_site/
+/node_modules/
+/components/
+
+!Gemfile
 Gemfile.lock
+
+!component.json
+!package.json
+!Gruntfile.coffee
