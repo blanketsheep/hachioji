@@ -1,10 +1,12 @@
 require:
 - jekyll-compass
-project_path: .
+
 http_path: "/"
 css_dir: css
 sass_dir: _sass
 images_dir: img
 javascripts_dir: js
-cache: false
-cache_location: "/tmp/.sass-cache"
+
+sass_options:
+  cache: false
+  cache_dir: "/tmp/.sass-cache"
