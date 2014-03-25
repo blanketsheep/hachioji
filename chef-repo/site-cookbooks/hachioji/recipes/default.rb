@@ -9,3 +9,4 @@
 yum_package 'ruby'
 yum_package 'ruby-devel'
 gem_package 'bundler'
+yum_package 'nodejs'
