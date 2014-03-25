@@ -1,4 +1,6 @@
 site :opscode
 
 cookbook 'hachioji', path: 'site-cookbooks/hachioji'
-cookbook 'yum-fedora'
+cookbook 'rbenv', github: 'fnichol/chef-rbenv'
+cookbook 'yum-centos'
+cookbook 'yum-epel'
