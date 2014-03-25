@@ -7,7 +7,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "chef/fedora-19"
   config.omnibus.chef_version = :latest
   
-  config.vm.network "forwarded_port", guest: 4000, host: 4000
+  config.vm.network "public_network"
+  config.vm.network "forwarded_port", guest: 4000, host: 4040
   
   config.vm.provision "chef_solo" do |chef|
     chef.cookbooks_path = ["./chef-repo/cookbooks","./chef-repo/site-cookbooks"]
