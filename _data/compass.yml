@@ -6,3 +6,5 @@ css_dir: css
 sass_dir: _sass
 images_dir: img
 javascripts_dir: js
+cache: false
+cache_location: "/tmp/.sass-cache"
