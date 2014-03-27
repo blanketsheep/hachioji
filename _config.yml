@@ -1,4 +1,14 @@
 name: Your New Jekyll Site
+exclude:
+- node_modules
+- chef-repo
+- component.json
+- debug.sh
+- Gemfile
+- Gemfile.lock
+- package.json
+- packages.config
+- Vagrantfile
 pygments: true
 gems:
 - jekyll-compass
