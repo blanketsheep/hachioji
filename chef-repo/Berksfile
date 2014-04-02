@@ -1,3 +1,0 @@
-site :opscode
-
-cookbook 'hachioji', path: 'site-cookbooks/hachioji'
