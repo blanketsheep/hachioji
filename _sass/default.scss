@@ -1,1 +1,8 @@
 @import 'default_vars';
+
+html,body {
+  height:100%;
+}
+#wrapper {
+  min-height:100%;
+}
