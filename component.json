@@ -1,8 +1,0 @@
-{
-  "name": "hachioji",
-  "repo": "blanketsheep/hachioji",
-  "description": "",
-  "dependencies": {
-    "necolas/normalize.css": "*"
-  }
-}
