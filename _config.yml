@@ -1,15 +1,11 @@
-exclude: ["README.md","Gemfile","Gemfile.lock","deploy_key","deploy_key.pub","deploy_key.enc"]
 name: Your New Jekyll Site
 exclude:
-- node_modules
-- chef-repo
-- component.json
-- debug.sh
+- README.md
 - Gemfile
 - Gemfile.lock
-- package.json
-- packages.config
-- Vagrantfile
+- deploy_key
+- deploy_key.pub
+- deploy_key.enc
 pygments: true
 timezone: Asia/Tokyo
 markdown: kramdown
