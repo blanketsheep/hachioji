@@ -25,6 +25,7 @@ body {
 }
 #header {
 	height:$header-height;
+	z-index:$header-z-index;
 	#h1 {
 		width:$h1-size;
 		height:$h1-size;
@@ -41,6 +42,7 @@ body {
 			color:#fff;
 			background-color:$carrot;
 			@include border-radius(50%);
+			@include default-box-shadow;
 			.icon {
 				display:block;
 				position:absolute;
@@ -57,13 +59,13 @@ body {
 			}
 		}
 	}
+	/*
 	#header-image {
 		background-color:$pumpkin;
-		@include background-size(cover);
-		background-position:center center;
-		background-image:url('http://www.publicdomainpictures.net/pictures/10000/velka/photos%20(7).jpg');
 	}
+	*/
 	#nav {
+		z-index:$nav-z-index;
 		ul {
 			list-style-type:none;
 			margin:0;
@@ -85,9 +87,11 @@ body {
 			max-width:$container-max-width;
 			margin:0 auto;
 		}
+		/*
 		#header-image {
 			height:100%;
 		}
+		*/
 		#nav {
 			//position:absolute;
 			position:fixed;
@@ -99,6 +103,8 @@ body {
 				
 			}
 			ul {
+				background-color:#fff;
+				@include default-box-shadow;
 				li {
 					position:relative;
 					padding-left:$left-nav-item-height;
@@ -107,12 +113,18 @@ body {
 						top:0;left:0;bottom:0;
 						right:auto;
 						width:$left-nav-item-height;
-						//background-color:#000;
-						//color:#fff;
+						background-color:$pumpkin;
+						color:#fff;
 						text-align:center;
 						& + * {
 							padding-left:.5em;
 						}
+					}
+					.fa {
+						line-height:inherit;
+					}
+					&:not(:last-child) {
+						border-bottom:solid 1px #eee;
 					}
 				}
 			}
@@ -186,19 +198,26 @@ body {
 #footer {
 	height:$footer-height;
 	top:auto;bottom:0;
+	z-index:$footer-z-index;
 }
 #main {
 	position:relative;
 	padding-top:$header-height;
 	padding-bottom:$footer-height;
+	z-index:$main-z-index;
+	.wide {
+		background-color:$pumpkin;
+	}
 	@media all and (min-width:$two-column-min-width) {
 		& {
 			padding-top:0;
 		}
 		>.container {
-			min-height:1500px;
 			max-width:$container-max-width;
 			margin:0 auto;
+		}
+		.wide {
+			min-height:400px;
 		}
 	}
 }

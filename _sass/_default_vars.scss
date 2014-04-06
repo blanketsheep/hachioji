@@ -5,6 +5,7 @@ $container-max-width:1000px;
 $carrot:#e67e22;
 $pumpkin:#d35400;
 $sunflower:#f1c40f;
+$wetasphalt:#34495e;
 
 $header-height:225px;
 $footer-height:100px;
@@ -14,10 +15,16 @@ $h1-size:$header-height;
 $left-nav-width:$header-height;
 $left-nav-item-height:40px;
 
+$nav-z-index:9999;
+$header-z-index:($nav-z-index - 1);
+$footer-z-index:($header-z-index - 1);
+$main-z-index:($footer-z-index - 1);
 
 $two-column-min-width:($container-max-width + $left-nav-width);
 
 @mixin cf {
 	@include legacy-pie-clearfix;
 }
-
+@mixin default-box-shadow {
+	@include single-box-shadow(rgba(0,0,0,.125),0,1px,3px);
+}

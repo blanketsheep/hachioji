@@ -23,7 +23,8 @@ after_success:
 branches:
   only:
   #- master
-  - develop
+  #- develop
+  - design/default
 env:
   global:
   # GitHub Deploy Key
