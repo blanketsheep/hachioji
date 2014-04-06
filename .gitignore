@@ -8,5 +8,11 @@
 !Gemfile
 Gemfile.lock
 
-!component.json
-!package.json
+!/component.json
+!/package.json
+
+!/.travis.yml
+/deploy_key
+/deploy_key.pub
+!/deploy_key.enc
+
