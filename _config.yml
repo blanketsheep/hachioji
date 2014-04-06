@@ -1,5 +1,9 @@
+exclude: ["README.md","Gemfile","Gemfile.lock","deploy_key","deploy_key.pub","deploy_key.enc"]
 name: Your New Jekyll Site
 pygments: true
+timezone: Asia/Tokyo
+markdown: kramdown
 gems:
 - jekyll-compass
 - jekyll-coffeescript
+
