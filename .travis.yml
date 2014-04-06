@@ -3,6 +3,7 @@ rvm:
 - 2.1.0
 bundler_args: --without ubuntu
 before_script:
+- rm -rf _site/
 - git clone --quiet --branch gh-pages https://github.com/blanketsheep/hachioji.git _site/
 - pushd _site/
 - git pull --quiet -u origin gh-pages
