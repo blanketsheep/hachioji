@@ -3,7 +3,202 @@
 html,body {
 	height:100%;
 }
+body {
+	color:#000;
+	background-color:#fff;
+	font-family:
+		'Lucida Grande',
+		'Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',
+		'Meiryo','メイリオ',
+		sans-serif;
+	background-image:url('../img/photography/photography.png');
+}
 #wrapper {
 	min-height:100%;
 	position:relative;
+}
+
+#header,
+#footer {
+	position:absolute;
+	left:0;right:0;
+}
+#header {
+	height:$header-height;
+	#h1 {
+		width:$h1-size;
+		height:$h1-size;
+		margin:0;
+		&,& a {
+			position:relative;
+			overflow:hidden;
+		}
+		a {
+			display:block;
+			position:absolute;
+			top:0;left:0;right:0;bottom:0;
+			margin:20px;
+			color:#fff;
+			background-color:$carrot;
+			@include border-radius(50%);
+			.icon {
+				display:block;
+				position:absolute;
+				top:0;bottom:0;
+				left:75%;right:-75%;
+				margin:-50%;
+				@include background-size(contain);
+				background-image:url('../img/blanketsheep.white.bt.512.png');
+				background-position:100% center;
+				background-repeat:no-repeat;
+				img {
+					display:none;
+				}
+			}
+		}
+	}
+	#header-image {
+		background-color:$pumpkin;
+		@include background-size(cover);
+		background-position:center center;
+		background-image:url('http://www.publicdomainpictures.net/pictures/10000/velka/photos%20(7).jpg');
+	}
+	#nav {
+		ul {
+			list-style-type:none;
+			margin:0;
+			padding:0;
+			font-size:( $left-nav-item-height / 2.5 );
+			li {
+				position:relative;
+				display:block;
+				line-height:$left-nav-item-height;
+			}
+		}
+	}
+	@media all and (min-width:$two-column-min-width) {
+		& {
+			position:static;
+		}
+		>.container {
+			height:100%;
+			max-width:$container-max-width;
+			margin:0 auto;
+		}
+		#header-image {
+			height:100%;
+		}
+		#nav {
+			//position:absolute;
+			position:fixed;
+			top:0;left:auto;bottom:0;
+			right:50%;
+			margin-right:($container-max-width / 2);
+			width:$left-nav-width;
+			#h1 {
+				
+			}
+			ul {
+				li {
+					position:relative;
+					padding-left:$left-nav-item-height;
+					>a>*:first-child {
+						position:absolute;
+						top:0;left:0;bottom:0;
+						right:auto;
+						width:$left-nav-item-height;
+						//background-color:#000;
+						//color:#fff;
+						text-align:center;
+						& + * {
+							padding-left:.5em;
+						}
+					}
+				}
+			}
+			/*
+			>.background {
+				position:absolute;
+				top:auto;
+				left:0;right:0;bottom:0;
+				height:$left-nav-item-height;
+				background-color:#ccc;
+			}
+			*/
+		}
+	}
+	@media all and (max-width:$two-column-min-width) {
+		& {
+			position:absolute;
+			top:0;bottom:auto;
+		}
+		>.container {
+			height:100%;
+		}
+		#nav {
+			position:relative;
+			height:100%;
+			>.container {
+				height:100%;
+				position:relative;
+			}
+			>.container>* {
+				float:left;
+				&:last-child {
+					@include cf;
+				}
+			}
+			#h1 {
+				
+			}
+			ul {
+				position:absolute;
+				top:auto;left:auto;
+				right:0;bottom:0;
+				li {
+					float:left;
+					&,& a {
+						padding-left:1em;
+						padding-right:1em;
+					}
+					a {
+						display:block;
+						height:100%;
+						border:solid 1px #000;
+					}
+					&:last-child {
+						@include cf;
+					}
+				}
+			}
+			/*
+			>.background {
+				background-color:#000;
+				position:absolute;
+				top:$left-nav-item-height;
+				bottom:$left-nav-item-height;
+				left:$h1-size;right:0;
+			}
+			*/
+		}
+	}
+}
+#footer {
+	height:$footer-height;
+	top:auto;bottom:0;
+}
+#main {
+	position:relative;
+	padding-top:$header-height;
+	padding-bottom:$footer-height;
+	@media all and (min-width:$two-column-min-width) {
+		& {
+			padding-top:0;
+		}
+		>.container {
+			min-height:1500px;
+			max-width:$container-max-width;
+			margin:0 auto;
+		}
+	}
 }

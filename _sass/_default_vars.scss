@@ -1,3 +1,23 @@
+@import 'compass';
+
 $container-max-width:1000px;
 
-$header-height:100px;
+$carrot:#e67e22;
+$pumpkin:#d35400;
+$sunflower:#f1c40f;
+
+$header-height:225px;
+$footer-height:100px;
+
+$h1-size:$header-height;
+
+$left-nav-width:$header-height;
+$left-nav-item-height:40px;
+
+
+$two-column-min-width:($container-max-width + $left-nav-width);
+
+@mixin cf {
+	@include legacy-pie-clearfix;
+}
+
