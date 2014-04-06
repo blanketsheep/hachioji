@@ -15,11 +15,13 @@
 		<div id="wrapper">
 			<header id="header">
 				<div class="container">
-					<!--
-					<div id="header-image">
-						
-					</div>
-					-->
+					<h1 id="title">
+						{% if page.title %}
+						<a>{{ page.title }}</a>
+						{% else %}
+						<a>{{ site.name }}</a>
+						{% endif %}
+					</h1>
 					<nav id="nav">
 						<!--<div class="background"></div>-->
 						<div class="container">

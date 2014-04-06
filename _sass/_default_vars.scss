@@ -6,13 +6,18 @@ $carrot:#e67e22;
 $pumpkin:#d35400;
 $sunflower:#f1c40f;
 $wetasphalt:#34495e;
+$turquoise:#1abc9c;
+$orange:#f39c12;
+$clouds:#ecf0f1;
 
-$header-height:225px;
+$h1-size:225px;
+
+$header-background-color:#fff;
+
+$header-height:($h1-size - 75px);
 $footer-height:100px;
 
-$h1-size:$header-height;
-
-$left-nav-width:$header-height;
+$left-nav-width:$h1-size;
 $left-nav-item-height:40px;
 
 $nav-z-index:9999;
