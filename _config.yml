@@ -1,3 +1,4 @@
+exclude: ["README.md","Gemfile","Gemfile.lock","deploy_key","deploy_key.pub","deploy_key.enc"]
 name: Your New Jekyll Site
 exclude:
 - node_modules
@@ -10,6 +11,9 @@ exclude:
 - packages.config
 - Vagrantfile
 pygments: true
+timezone: Asia/Tokyo
+markdown: kramdown
 gems:
 - jekyll-compass
 - jekyll-coffeescript
+
