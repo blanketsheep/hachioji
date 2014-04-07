@@ -23,9 +23,9 @@ after_success:
 - git push --quiet git@github.com:blanketsheep/hachioji.git gh-pages
 branches:
   only:
-  #- master
+  - master
   #- develop
-  - design/default
+  #- design/default
 env:
   global:
   # GitHub Deploy Key
@@ -34,4 +34,5 @@ env:
   - GIT_AUTHOR_NAME="Travis CI (Shuma Yoshioka)"
   - GIT_COMMITER_EMAIL="s64.stdio@gmail.com"
   - GIT_AUTHOR_EMAIL="s64.stdio@gmail.com"
+  - JEKYLL_BUILD="gh-pages"
 

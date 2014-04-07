@@ -3,6 +3,11 @@
 	<head>
 		<meta charset="UTF-8"/>
 		<meta name="robots" content="noindex"/>
+		{% if site.env.build != 'local' %}
+		<base href="//blanketsheep.github.io/hachioji/"/>
+		{% else %}
+		<base href="//localhost:4000"/>
+		{% endif %}
 		<link rel="stylesheet" href="./lib/normalize-3.0.1.css"/>
 		<link rel="stylesheet" href="./lib/font-awesome-4.0.3/css/font-awesome.min.css"/>
 		<script src="./lib/jquery-1.11.0.min.js"></script>

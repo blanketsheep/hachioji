@@ -1,0 +1,33 @@
+<article class="article" data-id="{{ include.param.id }}">
+	<div class="article-container">
+		<header class="header">
+			<div>
+				<div class="image">
+					<div class="container">
+				{% if include.param.thumbnail %}
+							<div class="img" style="background-image:url({{ include.param.thumbnail }});"></div>
+						</div>
+					</div>
+					<div class="background" style="background-image:url({{ include.param.thumbnail }});"></div>
+					<div class="hmain" data-thumbnail="{{ include.param.thumbnail }}">
+				{% else %}
+							<div class="img"></div>
+						</div>
+					</div>
+					<div class="background" style=""></div>
+					<div class="hmain">
+				{% endif %}
+					<div class="container">
+						<h1>
+							<a>{{ include.param.title }}</a>
+						</h1>
+						<p>
+							{{ include.param.excerpt }}
+						</p>
+					</div>
+				</div>
+			</div>
+		</header>
+	</div>
+</article>
+

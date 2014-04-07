@@ -33,7 +33,7 @@ body {
 		line-height:$header-height;
 		font-weight:bolder;
 		color:transparent;
-		background-image:url('http://www.publicdomainpictures.net/download-picture.php?adresar=40000&soubor=the-road-6.jpg');
+		background-image:url('../img/DSC_4957.JPG');
 		@include background-size(cover);
 		background-position:center center;
 		@include background-clip(text);
@@ -51,7 +51,7 @@ body {
 			display:block;
 			position:absolute;
 			top:0;left:0;right:0;bottom:0;
-			margin:20px;
+			margin:$h1-margin;
 			color:#fff;
 			background-color:$carrot;
 			@include border-radius(50%);
@@ -81,7 +81,7 @@ body {
 		z-index:$nav-z-index;
 		ul {
 			list-style-type:none;
-			margin:0;
+			margin:0 $h1-margin;
 			padding:0;
 			font-size:( $left-nav-item-height / 2.5 );
 			li {
@@ -226,7 +226,7 @@ body {
 			position:absolute;
 			top:0;left:0;right:0;bottom:0;
 			@include background-size(cover);
-			background-position:center center;
+			background-position:center 25%;
 		}
 		>*:not(.background) {
 			position:relative;
@@ -252,6 +252,117 @@ body {
 		}
 		.wide {
 			min-height:500px;
+		}
+	}
+	#articles {
+		>.container {
+			max-width:$container-max-width;
+			margin:0 auto;
+			padding:$articles-padding;
+		}
+	}
+	article.article {
+		#articles & {
+			padding:$article-margin;
+		}
+		>.article-container {
+			#articles & {
+				background-color:$article-background-color;
+				@include default-box-shadow;
+			}
+		}
+		$b-z-index:1;
+		$i-z-index:($b-z-index + 1);
+		$c-z-index:($i-z-index + 1);
+		.header {
+			>div {
+				position:relative;
+				overflow:hidden;
+				height:100%;
+			}
+			.background,
+			.image {
+				position:absolute;
+				top:0;left:0;right:0;bottom:0;
+			}
+			.background {
+				$blur:5px;
+				position:absolute;
+				top:0;left:0;right:0;bottom:0;
+				@include scale(1.25,1.25,false,true);
+				z-index:$b-z-index;
+				@include background-size(cover);
+				background-position:center center;
+				@include filter(blur($blur));
+			}
+			.image {
+				position:absolute;
+				top:0;bottom:0;
+				left:auto;
+				right:50px;
+				z-index:$i-z-index;
+				>.container {
+					height:100%;
+				}
+				.img {
+					display:block;
+					height:100%;
+					width:auto;
+					background-position:center center;
+					@include background-size(cover);
+					background-repeat:no-repeat;
+					max-width:$article-himage-max-width;
+				}
+			}
+			.hmain {
+				position:relative;
+				z-index:$c-z-index;
+				.container {
+					max-width:$container-max-width;
+					margin:0 auto;
+				}
+				&[data-thumbnail] {
+					color:#fff;
+				}
+			}
+			h1,p {
+				margin:0;
+			}
+		}
+	}
+	#single {
+		article.article {
+			.header {
+				.image {
+					left:0;right:0;
+					>.container {
+						margin:0 auto;
+						max-width:$container-max-width;
+					}
+					.img {
+						margin:0;
+						margin-left:auto;
+					}
+				}
+				.hmain {
+					h1 {
+						display:none;
+					}
+					&[data-thumbnail] {
+						p {
+							font-size:1.25em;
+							padding-left:1em;
+							padding-right:$article-himage-max-width;
+						}
+					}
+				}
+				.hmain[data-thumbnail] {
+					$padding:65px;
+					$height:( 250px - ($padding * 2) );
+					min-height:$height;
+					padding:$padding 0;
+				}
+			}
 		}
 	}
 }

@@ -9,6 +9,7 @@ exclude:
 pygments: true
 timezone: Asia/Tokyo
 markdown: kramdown
+paginate: 5
 gems:
 - jekyll-compass
 - jekyll-coffeescript

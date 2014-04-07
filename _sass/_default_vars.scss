@@ -11,6 +11,7 @@ $orange:#f39c12;
 $clouds:#ecf0f1;
 
 $h1-size:225px;
+$h1-margin:20px;
 
 $header-background-color:#fff;
 
@@ -19,6 +20,11 @@ $footer-height:100px;
 
 $left-nav-width:$h1-size;
 $left-nav-item-height:40px;
+
+$article-margin:20px;
+$articles-padding:$article-margin;
+$article-background-color:#fff;
+$article-himage-max-width:350px;
 
 $nav-z-index:9999;
 $header-z-index:($nav-z-index - 1);
