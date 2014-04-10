@@ -13,12 +13,19 @@ $container-max-width:($grid-size * 45);
 $nav-width:($grid-size * 12);
 $two-column-width:($container-max-width + $nav-width);
 
-$header-height:($grid-size * 5);
+$header-height:($grid-size * 3);
 $footer-height:($grid-size * 2);
+
+$header-background-color:#fff;
+
+$h1-height:$header-height;
+$h1-background-color:$carrot;
+$h1-width:$header-height;
 
 $article-background-color:#fff;
 $article-main-border-color:#000;
 $article-main-padding:($grid-size * 1);
+$article-margin:($grid-size * 1);
 
 $nav-padding:($grid-size * 1);
 

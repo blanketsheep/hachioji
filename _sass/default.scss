@@ -34,6 +34,44 @@ a {
 #header {
 	height:$header-height;
 	top:0;bottom:auto;
+	background-color:$header-background-color;
+	#h1 {
+		&,& a {
+			display:block;
+		}
+		& {
+			background-color:$h1-background-color;
+			width:$h1-width;
+		}
+		a {
+			position:relative;
+			height:$h1-height;
+			padding-left:$h1-height;
+			line-height:$h1-height;
+		}
+		.icon,
+		.title {
+			display:block;
+		}
+		.icon {
+			position:absolute;
+			top:0;left:0;bottom:0;
+			right:auto;
+			$padding:5px;
+			width:($h1-width - $padding*2);
+			border:solid $padding transparent;
+			background-position:center center;
+			@include background-size(contain);
+			background-repeat:no-repeat;
+			background-image:url('../img/blanketsheep.white.bt.512.png');
+			img {
+				display:none;
+			}
+		}
+		.title {
+			display:none;
+		}
+	}
 }
 #footer {
 	height:$footer-height;
@@ -78,6 +116,12 @@ a {
 #main {	
 	padding-top:$header-height;
 	padding-bottom:$footer-height;
+}
+#image {
+	min-height:($grid-size * 20);
+	background-position:center center;
+	@include background-size(cover);
+	background-image:url('../img/the-road-6.jpg');
 }
 
 .article {

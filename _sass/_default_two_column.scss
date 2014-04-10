@@ -1,5 +1,11 @@
 @import 'default_vars';
 
+#header {
+	>.container {
+		max-width:$container-max-width;
+		margin:0 auto;
+	}
+}
 #nav {
 	position:fixed;
 	width:$nav-width;
@@ -10,14 +16,32 @@
 	#links {
 		margin:$nav-padding;
 		&:first-child {
-			margin-top:0;
+			//margin-top:0;
 		}
 		&:last-child {
 			margin-bottom:0;
 		}
 	}
 }
-#single .article {
+#single,
+#articles {
+	.article {
+		padding:$article-margin;
+	}
+}
+#single {
 	max-width:$container-max-width;
 	margin:0 auto;
+	.article {
+		
+	}
+}
+#articles {
+	max-width:$container-max-width;
+	margin:0 auto;
+	.article {
+		&:first-child {
+			//padding-top:0;
+		}
+	}
 }

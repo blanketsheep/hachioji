@@ -1,3 +1,9 @@
 ---
 layout: default
 ---
+<div id="articles">
+	{% for post in paginator.posts %}
+		{% include article.html param=post %}
+	{% endfor %}
+</div>
+
