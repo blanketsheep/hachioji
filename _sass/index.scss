@@ -1,13 +1,1 @@
 @import 'default_vars';
-
-#header {
-	@media all and (min-width:$two-column-min-width) {
-		& {
-			//height:400px;
-		}
-	}
-}
-#main {
-	min-height:1500px;
-	
-}

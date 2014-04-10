@@ -12,73 +12,27 @@
 		<link rel="stylesheet" href="./lib/font-awesome-4.0.3/css/font-awesome.min.css"/>
 		<script src="./lib/jquery-1.11.0.min.js"></script>
 		<link rel="stylesheet" href="./css/default.css"/>
-		{% if page.url == '/index.html' %}
-			<link rel="stylesheet" href="./css/index.css"/>
-		{% endif %}
-		{% if page.thumbnail %}
-			<link rel="stylesheet" href="./css/thumbnail.css"/>
-		{% endif %}
 	</head>
 	<body>
 		<div id="wrapper">
 			<header id="header">
-				<div class="container">
-					<h1 id="title">
-						{% if page.title %}
-						<a>{{ page.title }}</a>
-						{% else %}
-						<a>{{ site.name }}</a>
-						{% endif %}
-					</h1>
-					<nav id="nav">
-						<!--<div class="background"></div>-->
-						<div class="container">
-							<h1 id="h1">
-								<a>
-									<span class="icon">
-										<img src="./img/blanketsheep.white.bt.512.png"/>
-									</span>
-								</a>
-							</h1>
-							<ul>
-								<li>
-									<a>
-										<i class="fa fa-asterisk"></i>
-										<span>About</span>
-									</a>
-								</li>
-								<li>
-									<a>
-										<i class="fa fa-camera-retro"></i>
-										<span>Gallery</span>
-									</a>
-								</li>
-								<li>
-									<a>
-										<i class="fa fa-book"></i>
-										<span>Essay</span>
-									</a>
-								</li>
-								<li>
-									<a>
-										<i class="fa fa-table"></i>
-										<span>Plan</span>
-									</a>
-								</li>
-								<li>
-									<a>
-										<i class="fa fa-envelope"></i>
-										<span>Letter</span>
-									</a>
-								</li>
-							</ul>
-						</div>
-					</nav>
-				</div>
+				
 			</header>
 			<div id="main">
 				{{ content }}
 			</div>
+			<nav id="nav">
+				<div>
+					<ul id="links">
+						{% for link in site.data.links %}
+							<li><a href="{{ link.href }}">
+								<i class="fa {{ link.icon }}"></i>
+								<span>{{ link.name }}</span>
+							</a></li>
+						{% endfor %}
+					</ul>
+				</div>
+			</nav>
 			<footer id="footer">
 				
 			</footer>

@@ -1,7 +1,5 @@
 @import 'compass';
 
-$container-max-width:1000px;
-
 $carrot:#e67e22;
 $pumpkin:#d35400;
 $sunflower:#f1c40f;
@@ -10,28 +8,25 @@ $turquoise:#1abc9c;
 $orange:#f39c12;
 $clouds:#ecf0f1;
 
-$h1-size:225px;
-$h1-margin:20px;
+$grid-size:20px;
+$container-max-width:($grid-size * 45);
+$nav-width:($grid-size * 12);
+$two-column-width:($container-max-width + $nav-width);
 
-$header-background-color:#fff;
+$header-height:($grid-size * 5);
+$footer-height:($grid-size * 2);
 
-$header-height:($h1-size - 75px);
-$footer-height:100px;
-
-$left-nav-width:$h1-size;
-$left-nav-item-height:40px;
-
-$article-margin:20px;
-$articles-padding:$article-margin;
 $article-background-color:#fff;
-$article-himage-max-width:350px;
+$article-main-border-color:#000;
+$article-main-padding:($grid-size * 1);
 
-$nav-z-index:9999;
-$header-z-index:($nav-z-index - 1);
-$footer-z-index:($header-z-index - 1);
-$main-z-index:($footer-z-index - 1);
+$nav-padding:($grid-size * 1);
 
-$two-column-min-width:($container-max-width + $left-nav-width);
+$links-background-color:$article-background-color;
+$link-icon-color:#fff;
+$link-icon-background-color:$carrot;
+$link-border-bottom-color:#eee;
+$link-height:($grid-size * 2);
 
 @mixin cf {
 	@include legacy-pie-clearfix;
@@ -39,3 +34,4 @@ $two-column-min-width:($container-max-width + $left-nav-width);
 @mixin default-box-shadow {
 	@include single-box-shadow(rgba(0,0,0,.125),0,1px,3px);
 }
+

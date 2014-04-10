@@ -1,0 +1,23 @@
+@import 'default_vars';
+
+#nav {
+	position:fixed;
+	width:$nav-width;
+	top:$header-height;
+	bottom:$footer-height;
+	left:50%;right:auto;
+	margin-left:($container-max-width / 2);
+	#links {
+		margin:$nav-padding;
+		&:first-child {
+			margin-top:0;
+		}
+		&:last-child {
+			margin-bottom:0;
+		}
+	}
+}
+#single .article {
+	max-width:$container-max-width;
+	margin:0 auto;
+}
