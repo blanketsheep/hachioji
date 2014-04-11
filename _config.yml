@@ -1,4 +1,5 @@
 name: "八王子ウェブマガジン"
+description: "This is subtitle."
 exclude:
 - README.md
 - Gemfile

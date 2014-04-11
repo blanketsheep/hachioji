@@ -36,9 +36,9 @@ a {
 }
 #header {
 	top:0;bottom:auto;
-	//background-color:$header-background-color;
+	background-color:$header-background-color;
 	>.container {
-		background-color:$header-background-color;
+		//background-color:$header-background-color;
 		height:$header-height;
 	}
 	#logo,
