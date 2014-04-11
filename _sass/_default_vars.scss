@@ -13,18 +13,21 @@ $container-max-width:($grid-size * 45);
 $nav-width:($grid-size * 12);
 $two-column-width:($container-max-width + $nav-width);
 
-$header-height:($grid-size * 3);
+$header-height:($grid-size * 6);
 $footer-height:($grid-size * 2);
 
-$header-background-color:#fff;
+$header-background-color:#ddd;
 
 $h1-height:$header-height;
+$h1-width:($h1-height / 1.25);
 $h1-background-color:$carrot;
-$h1-width:$header-height;
+//$h1-background-color:#333;
+
+$image-height:($grid-size * 20);
 
 $article-background-color:#fff;
 $article-main-border-color:#000;
-$article-main-padding:($grid-size * 1);
+$article-main-padding:($grid-size * 1.5);
 $article-margin:($grid-size * 1);
 
 $nav-padding:($grid-size * 1);

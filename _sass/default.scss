@@ -11,7 +11,10 @@ body {
 		'Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',
 		'Meiryo','メイリオ',
 		sans-serif;
-	background-image:url('../img/photography/photography.png');
+	//background-image:url('../img/photography/photography.png');
+	//background-image:url('http://subtlepatterns.com/patterns/sativa.png');
+	//background-image:url('http://subtlepatterns.com/patterns/diagonales_decalees.png');
+	background-image:url('http://subtlepatterns.com/patterns/gplaypattern.png');
 }
 #wrapper {
 	min-height:100%;
@@ -32,22 +35,26 @@ a {
 	left:0;right:0;
 }
 #header {
-	height:$header-height;
 	top:0;bottom:auto;
-	background-color:$header-background-color;
+	//background-color:$header-background-color;
+	>.container {
+		background-color:$header-background-color;
+		height:$header-height;
+	}
 	#h1 {
 		&,& a {
 			display:block;
 		}
 		& {
-			background-color:$h1-background-color;
 			width:$h1-width;
+			position:relative;
 		}
 		a {
 			position:relative;
 			height:$h1-height;
-			padding-left:$h1-height;
+			//padding-left:$h1-height;
 			line-height:$h1-height;
+			//background-color:$h1-background-color;
 		}
 		.icon,
 		.title {
@@ -57,7 +64,7 @@ a {
 			position:absolute;
 			top:0;left:0;bottom:0;
 			right:auto;
-			$padding:5px;
+			$padding:7px;
 			width:($h1-width - $padding*2);
 			border:solid $padding transparent;
 			background-position:center center;
@@ -70,6 +77,50 @@ a {
 		}
 		.title {
 			display:none;
+		}
+		&:before {
+			$border-width:($h1-width / 2);
+			display:block;
+			content:'';
+			width:0;height:0;
+			overflow:hidden;
+			border-style:none;
+			border-width:$border-width;
+			border-color:transparent;
+			border-style:solid;
+			//@include rotate(90deg);
+			width:($h1-width - ($border-width * 2));
+			position:absolute;
+			left:0;right:0;
+			margin-bottom:-($border-width);
+			& {
+				//border-left-color:$h1-background-color;
+				//border-right-color:$h1-background-color;
+				top:auto;
+				bottom:0;
+			}
+			& {
+				//display:none;
+			}
+		}
+		&:not(:hover) {
+			a {
+				background-color:$h1-background-color;
+			}
+			&:before {
+				border-left-color:$h1-background-color;
+				border-right-color:$h1-background-color;
+			}
+		}
+		&:hover {
+			$background-color:#333;
+			a {
+				background-color:$background-color;
+			}
+			&:before {
+				border-left-color:$background-color;
+				border-right-color:$background-color;
+			}
 		}
 	}
 }
@@ -93,7 +144,9 @@ a {
 			}
 			height:$link-height;
 			line-height:$link-height;
-			border-bottom:solid 1px $link-border-bottom-color;
+			&:not(:last-child) {
+				border-bottom:solid 1px $link-border-bottom-color;
+			}
 			i {
 				display:block;
 				position:absolute;
@@ -107,7 +160,11 @@ a {
 				text-align:center;
 			}
 			span {
+				display:block;
 				padding-left:.5em;
+				&:first-letter {
+					color:red;
+				}
 			}
 		}
 	}
@@ -117,12 +174,14 @@ a {
 	padding-top:$header-height;
 	padding-bottom:$footer-height;
 }
+/*
 #image {
-	min-height:($grid-size * 20);
+	height:$image-height;
 	background-position:center center;
 	@include background-size(cover);
 	background-image:url('../img/the-road-6.jpg');
 }
+*/
 
 .article {
 	.article-container {
@@ -139,7 +198,7 @@ a {
 			padding:$article-main-padding;
 		}
 		>.container {
-			border:solid 1px $article-main-border-color;
+			//border:solid 1px $article-main-border-color;
 		}
 	}
 }
