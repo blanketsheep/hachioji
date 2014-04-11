@@ -9,7 +9,7 @@ $orange:#f39c12;
 $clouds:#ecf0f1;
 
 $grid-size:20px;
-$container-max-width:($grid-size * 45);
+$container-max-width:($grid-size * 50);
 $nav-width:($grid-size * 12);
 $two-column-width:($container-max-width + $nav-width);
 
@@ -19,9 +19,13 @@ $footer-height:($grid-size * 2);
 $header-background-color:#ddd;
 
 $h1-height:$header-height;
-$h1-width:($h1-height / 1.25);
-$h1-background-color:$carrot;
-//$h1-background-color:#333;
+$h1-width:$h1-height;
+
+$logo-padding:7px;
+$logo-height:$h1-height;
+$logo-width:($h1-width / 1.25);
+$logo-background-color:$carrot;
+$logo-hover-background-color:$wetasphalt;
 
 $image-height:($grid-size * 20);
 
@@ -45,3 +49,13 @@ $link-height:($grid-size * 2);
 	@include single-box-shadow(rgba(0,0,0,.125),0,1px,3px);
 }
 
+@mixin logo-size($width,$height) {
+	width:$width;
+	a {
+		height:$height;
+		line-height:$height;
+	}
+	.icon {
+		width:($width - $logo-padding*2);
+	}
+}

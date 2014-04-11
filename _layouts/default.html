@@ -18,13 +18,12 @@
 		<div id="wrapper">
 			<header id="header">
 				<div class="container">
+					<div id="logo">
+						{% include logo.html %}
+					</div>
 					<h1 id="h1">
-						<a>
-							<span class="icon">
-								<img src="./img/blanketsheep.white.bt.512.png"/>
-							</span>
-							<span class="title">{{ site.name }}</span>
-						</a>
+						<div id="h1-logo">{% include logo.html %}</div>
+						<span>{{ site.name }}</span>
 					</h1>
 				</div>
 			</header>

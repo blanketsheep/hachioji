@@ -6,20 +6,20 @@
 		margin:0 auto;
 	}
 }
-#h1 {
-	/*
-	body:not([data-scroll-header]) & {
-		&:before {
-			
-		}
-	}
-	*/
-	//body[data-scroll-header] & {
+#logo {
+	& {
 		position:fixed !important;
-		top:0;bottom:auto;
-		left:($grid-size * 3);
+		bottom:auto;
+		left:($grid-size * 5);
 		right:auto;
-	//}
+		@include single-transition(top);
+	}
+	body:not([data-scroll-header]) & {
+		top:-($logo-height + ($logo-width / 2));
+	}
+	body[data-scroll-header] & {
+		top:0;
+	}
 }
 #nav {
 	width:$nav-width;

@@ -11,10 +11,10 @@ body {
 		'Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',
 		'Meiryo','メイリオ',
 		sans-serif;
-	//background-image:url('../img/photography/photography.png');
+	background-image:url('../img/photography/photography.png');
 	//background-image:url('http://subtlepatterns.com/patterns/sativa.png');
 	//background-image:url('http://subtlepatterns.com/patterns/diagonales_decalees.png');
-	background-image:url('http://subtlepatterns.com/patterns/gplaypattern.png');
+	//background-image:url('http://subtlepatterns.com/patterns/gplaypattern.png');
 }
 #wrapper {
 	min-height:100%;
@@ -41,20 +41,14 @@ a {
 		background-color:$header-background-color;
 		height:$header-height;
 	}
-	#h1 {
+	#logo,
+	#h1-logo {
+		position:relative;
 		&,& a {
 			display:block;
 		}
-		& {
-			width:$h1-width;
-			position:relative;
-		}
 		a {
 			position:relative;
-			height:$h1-height;
-			//padding-left:$h1-height;
-			line-height:$h1-height;
-			//background-color:$h1-background-color;
 		}
 		.icon,
 		.title {
@@ -64,8 +58,7 @@ a {
 			position:absolute;
 			top:0;left:0;bottom:0;
 			right:auto;
-			$padding:7px;
-			width:($h1-width - $padding*2);
+			$padding:$logo-padding;
 			border:solid $padding transparent;
 			background-position:center center;
 			@include background-size(contain);
@@ -75,11 +68,24 @@ a {
 				display:none;
 			}
 		}
+		&:not(:hover) {
+			a {
+				background-color:$logo-background-color;
+			}
+		}
+		&:hover {
+			a {
+				background-color:$logo-hover-background-color;
+			}
+		}
+	}
+	#logo {
+		@include logo-size($logo-width,$logo-height);
 		.title {
 			display:none;
 		}
 		&:before {
-			$border-width:($h1-width / 2);
+			$border-width:($logo-width / 2);
 			display:block;
 			content:'';
 			width:0;height:0;
@@ -89,13 +95,11 @@ a {
 			border-color:transparent;
 			border-style:solid;
 			//@include rotate(90deg);
-			width:($h1-width - ($border-width * 2));
+			width:($logo-width - ($border-width * 2));
 			position:absolute;
 			left:0;right:0;
 			margin-bottom:-($border-width);
 			& {
-				//border-left-color:$h1-background-color;
-				//border-right-color:$h1-background-color;
 				top:auto;
 				bottom:0;
 			}
@@ -104,24 +108,20 @@ a {
 			}
 		}
 		&:not(:hover) {
-			a {
-				background-color:$h1-background-color;
-			}
 			&:before {
-				border-left-color:$h1-background-color;
-				border-right-color:$h1-background-color;
+				border-left-color:$logo-background-color;
+				border-right-color:$logo-background-color;
 			}
 		}
 		&:hover {
-			$background-color:#333;
-			a {
-				background-color:$background-color;
-			}
 			&:before {
-				border-left-color:$background-color;
-				border-right-color:$background-color;
+				border-left-color:$logo-hover-background-color;
+				border-right-color:$logo-hover-background-color;
 			}
 		}
+	}
+	#h1-logo {
+		@include logo-size($h1-width,$h1-height);
 	}
 }
 #footer {
