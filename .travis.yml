@@ -23,9 +23,9 @@ after_success:
 - git push --quiet git@github.com:blanketsheep/hachioji.git gh-pages
 branches:
   only:
-  - master
+  #- master
   #- develop
-  #- design/default
+  - design/default
 env:
   global:
   # GitHub Deploy Key
