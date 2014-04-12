@@ -13,17 +13,21 @@ $container-max-width:($grid-size * 50);
 $nav-width:($grid-size * 12);
 $two-column-width:($container-max-width + $nav-width);
 
-$header-height:($grid-size * 4);
+$color:#333;
+$background-color:lighten($carrot,45%);
+
+$header-height:($grid-size * 3);
 $footer-height:($grid-size * 2);
 
-$header-background-color:#fff;
+$header-background-color:inherit;
+$header-border-width:3px;
 
 $h1-height:$header-height;
 $h1-width:$h1-height;
 
 $logo-padding:7px;
-$logo-height:$h1-height;
-$logo-width:($h1-width / 1.25);
+$logo-height:($h1-height * 1.5);
+$logo-width:($logo-height / 1.25);
 $logo-background-color:$carrot;
 $logo-hover-background-color:$wetasphalt;
 
@@ -41,6 +45,13 @@ $link-icon-color:#fff;
 $link-icon-background-color:$carrot;
 $link-border-bottom-color:#eee;
 $link-height:($grid-size * 2);
+
+$header-z-index:1000;
+
+$h1-z-index:($header-z-index + 1);
+$header-border-z-index:($h1-z-index + 1);
+$h1-icon-z-index:($header-border-z-index + 1);
+$logo-z-index:($h1-icon-z-index + 1);
 
 @mixin cf {
 	@include legacy-pie-clearfix;

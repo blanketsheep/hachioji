@@ -2,8 +2,19 @@
 
 #header {
 	>.container {
+		position:relative;
 		max-width:$container-max-width;
 		margin:0 auto;
+	}
+	&:before {
+		position:fixed;
+		top:0;left:0;right:0;
+		bottom:auto;
+		display:block;
+		height:$header-border-width;
+		//@include background-image( linear-gradient(left,black 13%,white 13%,black 13%,white 13%,black 13%,white 13%) );
+		background-color:$pumpkin;
+		content:'';
 	}
 }
 #logo {
@@ -19,6 +30,48 @@
 	}
 	body[data-scroll-header] & {
 		top:0;
+	}
+}
+#h1 {
+	position:absolute;
+	$line-height:($h1-height / 2);
+	$padding:($line-height / 2);
+	padding-left:($h1-width + $padding);
+	padding-right:$padding;
+	top:0;bottom:0;left:0;
+	right:auto;
+	#h1-logo {
+		position:absolute;
+		top:0;left:0;bottom:0;
+		right:auto;
+	}
+	.sub,
+	.title {
+		position:relative;
+		display:block;
+		line-height:$line-height;
+		font-weight:normal;
+	}
+	.sub {
+		font-size:.375em;
+		text-transform:uppercase;
+		letter-spacing:.25em;
+		color:lighten($color,50%);
+	}
+	.title {
+		font-size:.6em;
+		letter-spacing:.125em;
+	}
+	.background {
+		display:block;
+		position:absolute;
+		top:$header-border-width;
+		left:0;right:0;
+		bottom:0;
+		background-color:#fff;
+		& {
+			display:none !important;
+		}
 	}
 }
 #nav {

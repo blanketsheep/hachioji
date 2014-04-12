@@ -1,5 +1,5 @@
 name: "八王子ウェブマガジン"
-description: "This is subtitle."
+description: "discover hachioji"
 exclude:
 - README.md
 - Gemfile
