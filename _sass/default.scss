@@ -169,6 +169,30 @@ a {
 		}
 	}
 }
+#article_aside {
+	#place {
+		background-color:$place-background-color;
+		@include default-box-shadow;
+		$padding:($grid-size / 4);
+		.thumbnail {
+			
+		}
+		.main {
+			padding:$padding;
+		}
+		h1,p {
+			margin:0;
+			padding:$padding;
+		}
+		h1 {
+			font-size:1.25em;
+			font-weight:inherit;
+		}
+		p {
+			font-size:$place-font-size;
+		}
+	}
+}
 
 #main {	
 	padding-top:$header-height;
@@ -193,7 +217,8 @@ a {
 			text-align:center;
 		}
 	}
-	.main {
+	.article-container>.main {
+		font-size:$article-font-size;
 		&,&>.container {
 			padding:$article-main-padding;
 		}
@@ -204,6 +229,7 @@ a {
 }
 
 @import 'z_index';
+@import 'writer_info';
 
 @media all and (min-width:$two-column-width) {
 	@import 'default_two_column';

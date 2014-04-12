@@ -9,14 +9,15 @@ $orange:#f39c12;
 $clouds:#ecf0f1;
 
 $grid-size:20px;
-$container-max-width:($grid-size * 50);
-$nav-width:($grid-size * 12);
+$container-max-width:($grid-size * 45);
+$nav-width:($grid-size * 16);
+$article-aside-width:$nav-width;
 $two-column-width:($container-max-width + $nav-width);
 
 $color:#333;
 $background-color:lighten($carrot,45%);
 
-$header-height:($grid-size * 3);
+$header-height:($grid-size * 4);
 $footer-height:($grid-size * 2);
 
 $header-background-color:inherit;
@@ -27,7 +28,7 @@ $h1-width:$h1-height;
 
 $logo-padding:7px;
 $logo-height:($h1-height * 1.5);
-$logo-width:($logo-height / 1.25);
+$logo-width:($logo-height / 1.5);
 $logo-background-color:$carrot;
 $logo-hover-background-color:$wetasphalt;
 
@@ -36,15 +37,20 @@ $image-height:($grid-size * 20);
 $article-background-color:#fff;
 $article-main-border-color:#000;
 $article-main-padding:($grid-size * 1.5);
-$article-margin:($grid-size * 1);
+$article-margin:($grid-size * 2);
+$article-font-size:.9em;
 
-$nav-padding:($grid-size * 1);
+$nav-padding:$article-margin;
+$article-aside-padding:$nav-padding;
 
 $links-background-color:$article-background-color;
 $link-icon-color:#fff;
 $link-icon-background-color:$carrot;
 $link-border-bottom-color:#eee;
 $link-height:($grid-size * 2);
+
+$place-background-color:$links-background-color;
+$place-font-size:$article-font-size;
 
 $header-z-index:1000;
 
