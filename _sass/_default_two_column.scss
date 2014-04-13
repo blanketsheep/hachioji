@@ -101,6 +101,7 @@
 	}
 }
 #article_aside {
+	position:absolute;
 	width:$article-aside-width;
 	& {
 		left:auto;
@@ -130,6 +131,7 @@
 		padding:$article-margin 0;
 	}
 }
+/*
 #single {
 	max-width:$container-max-width;
 	margin:0 auto;
@@ -139,6 +141,7 @@
 		}
 	}
 }
+*/
 #articles {
 	max-width:$container-max-width;
 	margin:0 auto;

@@ -213,6 +213,7 @@ a {
 		@include default-box-shadow;
 	}
 	.header {
+		padding:$article-main-padding;
 		h1 {
 			text-align:center;
 		}

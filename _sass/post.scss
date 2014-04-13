@@ -1,0 +1,31 @@
+@import 'default_vars';
+
+.article {
+	.article-container {
+		@include single-box-shadow(none);
+		background-color:transparent;
+		>.main {
+			>.container {
+				@media all and (min-width:$two-column-width) {
+					max-width:$container-max-width;
+					margin:0 auto;
+				}
+			}
+		}
+	}
+}
+@media all and (min-width:$two-column-width) {
+	#h1 {
+		/*
+		.sub,.title {
+			display:none;
+		}
+		*/
+		& {
+			display:none;
+		}
+	}
+	#logo {
+		top:0 !important;
+	}
+}

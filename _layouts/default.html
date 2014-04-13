@@ -12,6 +12,9 @@
 		<link rel="stylesheet" href="./lib/font-awesome-4.0.3/css/font-awesome.min.css"/>
 		<script src="./lib/jquery-1.11.0.min.js"></script>
 		<link rel="stylesheet" href="./css/default.css"/>
+		{% if page.path contains '_posts' %}
+			<link rel="stylesheet" href="./css/post.css"/>
+		{% endif %}
 		<script src="./js/default.js"></script>
 	</head>
 	<body>
