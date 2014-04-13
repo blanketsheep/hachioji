@@ -6,15 +6,31 @@
 		background-color:transparent;
 		>.main {
 			>.container {
-				@media all and (min-width:$two-column-width) {
-					max-width:$container-max-width;
-					margin:0 auto;
-				}
+				
 			}
 		}
 	}
 }
-@media all and (min-width:$two-column-width) {
+#single {
+	>.thumbnail {
+		min-height:400px;
+		position:relative;
+		.background {
+			position:absolute;
+			top:0;left:0;right:0;bottom:0;
+			background-position:center center;
+			@include background-size(cover);
+		}
+	}
+}
+.article .article-container>.main>.container,
+#single>.thumbnail .background {
+	@media all and (min-width:$layout-pc-max-width) {
+		max-width:$container-max-width;
+		margin:0 auto;
+	}
+}
+@media all and (min-width:$layout-pc-max-width) {
 	#h1 {
 		/*
 		.sub,.title {

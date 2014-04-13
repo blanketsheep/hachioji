@@ -232,6 +232,6 @@ a {
 @import 'z_index';
 @import 'writer_info';
 
-@media all and (min-width:$two-column-width) {
+@media all and (min-width:$layout-pc-max-width) {
 	@import 'default_two_column';
 }
