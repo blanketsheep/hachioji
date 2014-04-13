@@ -1,6 +1,7 @@
 @import 'default_vars';
 
 .article {
+	padding:0 !important;
 	.article-container {
 		@include single-box-shadow(none);
 		background-color:transparent;
@@ -23,11 +24,14 @@
 		}
 	}
 }
-.article .article-container>.main>.container,
-#single>.thumbnail .background {
+//.article .article-container,
+//#single>.thumbnail .background {
+#single {
 	@media all and (min-width:$layout-pc-max-width) {
 		max-width:$container-max-width;
 		margin:0 auto;
+		background-color:$article-background-color;
+		@include default-box-shadow;
 	}
 }
 @media all and (min-width:$layout-pc-max-width) {

@@ -213,9 +213,27 @@ a {
 		@include default-box-shadow;
 	}
 	.header {
-		padding:$article-main-padding;
 		h1 {
-			text-align:center;
+			//
+			color:$article-header-h1-color;
+			background-color:$article-header-h1-background-color;
+			font-size:$article-header-h1-font-size;
+			a {
+				display:block;
+				line-height:$article-header-h1-height;
+				position:relative;
+				padding:0 ($article-header-h1-height + $grid-size);
+				i {
+					display:block;
+					line-height:$article-header-h1-height;
+					width:$article-header-h1-height;
+					position:absolute;
+					top:0;left:0;
+					bottom:auto;right:auto;
+					background-color:$article-header-icon-background-color;
+					text-align:center;
+				}
+			}
 		}
 	}
 	.article-container>.main {

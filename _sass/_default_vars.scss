@@ -15,7 +15,7 @@ $article-aside-width:$nav-width;
 $layout-pc-max-width:($article-aside-width + $container-max-width + $nav-width);
 
 $color:#333;
-$background-color:lighten($carrot,45%);
+$background-color:lighten($carrot,42.5%);
 
 $header-height:($grid-size * 4);
 $footer-height:($grid-size * 2);
@@ -38,7 +38,12 @@ $article-background-color:#fff;
 $article-main-border-color:#000;
 $article-main-padding:($grid-size * 1);
 $article-margin:($grid-size * 2);
-$article-font-size:.9em;
+$article-font-size:.95em;
+$article-header-h1-color:#fff;
+$article-header-h1-background-color:$logo-background-color;
+$article-header-h1-height:($grid-size * 4);
+$article-header-h1-font-size:1.75em;
+$article-header-icon-background-color:$pumpkin;
 
 $nav-padding:$article-margin;
 $article-aside-padding:$nav-padding;
