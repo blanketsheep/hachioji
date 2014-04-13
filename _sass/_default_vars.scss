@@ -15,7 +15,8 @@ $article-aside-width:$nav-width;
 $layout-pc-max-width:($article-aside-width + $container-max-width + $nav-width);
 
 $color:#333;
-$background-color:lighten($carrot,42.5%);
+//$background-color:lighten($carrot,42.5%);
+$background-color:#fff;
 
 $header-height:($grid-size * 4);
 $footer-height:($grid-size * 2);
