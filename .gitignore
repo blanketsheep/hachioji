@@ -15,4 +15,4 @@ Gemfile.lock
 /deploy_key
 /deploy_key.pub
 !/deploy_key.enc
-
+!/.compass

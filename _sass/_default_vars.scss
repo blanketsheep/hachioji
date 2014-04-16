@@ -10,9 +10,16 @@ $clouds:#ecf0f1;
 
 $grid-size:20px;
 $container-max-width:($grid-size * 45);
-$nav-width:($grid-size * 16);
-$article-aside-width:$nav-width;
-$layout-pc-max-width:($article-aside-width + $container-max-width + $nav-width);
+$nav-width:($grid-size * 18);
+$article-aside-width:($grid-size * 23);
+
+$layout-pc-max-width:($container-max-width + ($article-aside-width * 2) );
+$layout-middle-pc-max-width:($container-max-width + ( $nav-width * 1.25 ));
+$layout-small-pc-max-width:($container-max-width + $nav-width );
+$layout-square-pc-max-width:($container-max-width);
+
+$middle-pc-max-width:( $layout-middle-pc-max-width - ($grid-size * 5) );
+$square-pc-container-max-width:( $layout-square-pc-max-width - ($grid-size * 15) );
 
 $color:#333;
 //$background-color:lighten($carrot,42.5%);
@@ -45,6 +52,7 @@ $article-header-h1-background-color:$logo-background-color;
 $article-header-h1-height:($grid-size * 4);
 $article-header-h1-font-size:1.75em;
 $article-header-icon-background-color:$pumpkin;
+$article-border-radius:5px;
 
 $nav-padding:$article-margin;
 $article-aside-padding:$nav-padding;
@@ -80,5 +88,27 @@ $logo-z-index:($h1-icon-z-index + 1);
 	}
 	.icon {
 		width:($width - $logo-padding*2);
+	}
+}
+
+@mixin content-size($max-width) {
+	.article .article-container,
+	#single>.thumbnail .background {
+		max-width:$max-width;
+	}
+}
+
+@mixin side-margin-left($margin-left) {
+	#nav,
+	#article_aside {
+		margin-left:$margin-left;
+	}
+}
+
+@mixin main-container-max-width($max-width) {
+	#main {
+		>div {
+			max-width:$max-width;
+		}
 	}
 }

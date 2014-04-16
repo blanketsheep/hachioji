@@ -3,7 +3,10 @@ layout: default
 ---
 <div id="single">
 	<div class="thumbnail">
-		<div class="background" style="background-image:url({{ page.thumbnail }});"></div>
+		<div class="container">
+			<div class="background" style="background-image:url({{ page.thumbnail }});"></div>
+			<div class="border"></div>
+		</div>
 	</div>
 	{% include article.html param=page %}
 </div>

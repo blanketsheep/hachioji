@@ -33,27 +33,22 @@
 				</div>
 			</header>
 			<div id="main">
-				<!--
-				<div id="image">
-					
-				</div>
-				-->
 				<div>
 					{{ content }}
+					<nav id="nav">
+						<div>
+							<ul id="links">
+								{% for link in site.data.links %}
+									<li><a href="{{ link.href }}">
+										<i class="fa {{ link.icon }}"></i>
+										<span>{{ link.name }}</span>
+									</a></li>
+								{% endfor %}
+							</ul>
+						</div>
+					</nav>
 				</div>
 			</div>
-			<nav id="nav">
-				<div>
-					<ul id="links">
-						{% for link in site.data.links %}
-							<li><a href="{{ link.href }}">
-								<i class="fa {{ link.icon }}"></i>
-								<span>{{ link.name }}</span>
-							</a></li>
-						{% endfor %}
-					</ul>
-				</div>
-			</nav>
 			<footer id="footer">
 				
 			</footer>
