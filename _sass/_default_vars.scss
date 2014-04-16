@@ -14,12 +14,13 @@ $nav-width:($grid-size * 18);
 $article-aside-width:($grid-size * 23);
 
 $layout-pc-max-width:($container-max-width + ($article-aside-width * 2) );
-$layout-middle-pc-max-width:($container-max-width + ( $nav-width * 1.25 ));
-$layout-small-pc-max-width:($container-max-width + $nav-width );
-$layout-square-pc-max-width:($container-max-width);
+$layout-middle-pc-max-width:($container-max-width + ($article-aside-width * 1.5));
+$layout-small-pc-max-width:($layout-middle-pc-max-width - $nav-width);
+$layout-tablet-max-width:($layout-small-pc-max-width - $nav-width);
 
-$middle-pc-max-width:( $layout-middle-pc-max-width - ($grid-size * 5) );
-$square-pc-container-max-width:( $layout-square-pc-max-width - ($grid-size * 15) );
+$middle-pc-container-max-width:($layout-middle-pc-max-width - ($article-aside-width * 2) );
+$small-pc-container-max-width:($layout-small-pc-max-width - $nav-width);
+$tablet-container-max-width:($layout-tablet-max-width - $nav-width);
 
 $color:#333;
 //$background-color:lighten($carrot,42.5%);
@@ -98,17 +99,32 @@ $logo-z-index:($h1-icon-z-index + 1);
 	}
 }
 
-@mixin side-margin-left($margin-left) {
-	#nav,
-	#article_aside {
-		margin-left:$margin-left;
+@mixin main-container-max-width($max-width) {
+	#main {
+		>.container {
+			max-width:$max-width;
+		}
 	}
 }
 
-@mixin main-container-max-width($max-width) {
-	#main {
-		>div {
-			max-width:$max-width;
-		}
+@mixin tc-content-size($max-width) {
+	#articles,
+	#single {
+		max-width:$max-width;
+	}
+}
+
+@mixin side-margin($container-max-width) {
+	#article_aside,
+	#nav {
+		margin:0 ($container-max-width / 2);
+	}
+}
+
+@mixin side-float-margin($container-max-width) {
+	//#main>.container>* {
+		#nav,
+		#article_aside {
+		margin-left:$container-max-width;
 	}
 }

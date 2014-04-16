@@ -1,3 +1,5 @@
+@import 'default_vars';
+
 #header:before {
 	position:fixed;
 	top:0;left:0;right:0;
@@ -31,4 +33,32 @@
 	margin:0 auto;
 }
 
-@import 'default_two_column';
+.article .article-container,
+#single>.thumbnail .background {
+	margin:0 auto !important;
+}
+
+@media all and (min-width:$layout-tablet-max-width) and (max-width:$layout-middle-pc-max-width) {
+	#single {
+		float:left;
+	}
+	#main>.container {
+		@include cf;
+	}
+}
+
+@media all and (min-width:$layout-tablet-max-width) and (max-width:$layout-small-pc-max-width) {
+	@import 'default_tablet';
+}
+
+@media all and (min-width:$layout-small-pc-max-width) and (max-width:$layout-middle-pc-max-width) {
+	@import 'default_pc_small';
+}
+
+@media all and (min-width:$layout-middle-pc-max-width) {
+	@import 'default_pc_middle';
+}
+
+@media all and (min-width:$layout-pc-max-width) {
+	@import 'default_pc';
+}

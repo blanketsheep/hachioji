@@ -1,21 +1,15 @@
 @import 'default_vars';
 
-.article .article-container,
-#single>.thumbnail .background {
-	margin:0 auto !important;
-}
-
 #article_aside,
 #nav {
 	position:fixed;
 	top:$header-height;
 	bottom:$footer-height;
 	& {
-		margin:0 ($container-max-width / 2);
+		//margin:0 ($container-max-width / 2);
 		left:50%;right:50%;
 	}
 }
-
 #nav {
 	right:auto;
 	margin-right:0;
@@ -28,4 +22,5 @@
 	width:$article-aside-width;
 }
 
-@include content-size($container-max-width);
+@include side-margin($middle-pc-container-max-width);
+@include content-size($middle-pc-container-max-width);
