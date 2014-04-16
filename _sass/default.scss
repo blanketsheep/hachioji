@@ -120,31 +120,16 @@ a {
 				border-right-color:$logo-hover-background-color;
 			}
 		}
-		& {
-			position:fixed !important;
-			bottom:auto;
-			left:($grid-size * 5);
-			right:auto;
-			@include single-transition(top);
-		}
-		body:not([data-scroll-header]) & {
-			top:-($logo-height + ($logo-width / 2));
-		}
-		body[data-scroll-header] & {
-			top:0;
-		}
 	}
 	#h1-logo {
 		@include logo-size($h1-width,$h1-height);
 	}
 	#h1 {
-		position:absolute;
+		position:relative;
 		$line-height:($h1-height / 2);
 		$padding:($line-height / 2);
 		padding-left:($h1-width + $padding);
 		padding-right:$padding;
-		top:0;bottom:0;left:0;
-		right:auto;
 		#h1-logo {
 			position:absolute;
 			top:0;left:0;bottom:0;
@@ -185,9 +170,7 @@ a {
 		margin:0 auto;
 	}
 	&:before {
-		position:fixed;
-		top:0;left:0;right:0;
-		bottom:auto;
+		position:relative;
 		display:block;
 		height:$header-border-width;
 		//@include background-image( linear-gradient(left,black 13%,white 13%,black 13%,white 13%,black 13%,white 13%) );
@@ -340,10 +323,6 @@ a {
 		padding:$article-margin 0;
 	}
 }
-#articles {
-	max-width:$container-max-width;
-	margin:0 auto;
-}
 #single {
 	>.thumbnail {
 		>.container {
@@ -368,4 +347,4 @@ a {
 @import 'z_index';
 @import 'writer_info';
 
-@import 'default_two_column';
+@import 'default_position';
