@@ -38,6 +38,10 @@
 	margin:0 auto !important;
 }
 
+@media all and (min-width:$layout-phablet-max-width) and (max-width:$layout-tablet-max-width) {
+	@import 'default_phablet';
+}
+
 @media all and (min-width:$layout-tablet-max-width) and (max-width:$layout-middle-pc-max-width) {
 	#single {
 		float:left;

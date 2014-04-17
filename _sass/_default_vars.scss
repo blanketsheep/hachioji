@@ -17,10 +17,12 @@ $layout-pc-max-width:($container-max-width + ($article-aside-width * 2) );
 $layout-middle-pc-max-width:($container-max-width + ($article-aside-width * 1.5));
 $layout-small-pc-max-width:($layout-middle-pc-max-width - $nav-width);
 $layout-tablet-max-width:($layout-small-pc-max-width - $nav-width);
+$layout-phablet-max-width:($layout-tablet-max-width - $nav-width);
 
 $middle-pc-container-max-width:($layout-middle-pc-max-width - ($article-aside-width * 2) );
 $small-pc-container-max-width:($layout-small-pc-max-width - $nav-width);
 $tablet-container-max-width:($layout-tablet-max-width - $nav-width);
+//$phablet-container-max-width:($layout-phablet-max-width):
 
 $color:#333;
 //$background-color:lighten($carrot,42.5%);
