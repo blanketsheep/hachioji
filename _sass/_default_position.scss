@@ -32,6 +32,9 @@
 			color:#fff;
 			background-color:$carrot;
 		}
+		#h1 .sub {
+			//color:lighten($color,50%);
+		}
 	}
 }
 
@@ -63,6 +66,12 @@
 		.article {
 			padding:$article-margin 0;
 		}
+	}
+	.article .article-container {
+		@include border-radius($article-border-radius);
+	}
+	#header #h1 .sub {
+		color:lighten($color,50%);
 	}
 }
 

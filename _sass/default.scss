@@ -148,7 +148,6 @@ a {
 			font-size:.375em;
 			text-transform:uppercase;
 			letter-spacing:.25em;
-			color:lighten($color,50%);
 		}
 		.title {
 			font-size:.6em;
@@ -283,7 +282,6 @@ a {
 		background-color:$article-background-color;
 		@include default-box-shadow;
 		overflow:hidden;
-		@include border-radius($article-border-radius);
 	}
 	.header {
 		h1 {
