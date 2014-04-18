@@ -11,3 +11,17 @@ $(window).on 'scroll', ->
 		$(body).attr headerFlag,headerFlag
 	else
 		$(body).removeAttr headerFlag
+
+$ ->
+	selectors = ['#navtoggle a','#nav'].join(', ')
+	$(selectors).on 'click', ->
+		body = $('body').eq(0)
+		openedFlag = 'data-overlay-opened'
+		
+		isOpened = $(body).attr openedFlag
+		if !isOpened?
+			$(body).attr(openedFlag,openedFlag)
+		else
+			$(body).removeAttr(openedFlag)
+	$('#nav>*').on 'click', (e) ->
+		e.stopPropagation()

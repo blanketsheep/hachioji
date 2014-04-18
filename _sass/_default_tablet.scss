@@ -1,4 +1,4 @@
-@import 'default_vars';
+//@import 'default_vars';
 
 @include main-container-max-width($layout-tablet-max-width);
 @include tc-content-size($tablet-container-max-width);

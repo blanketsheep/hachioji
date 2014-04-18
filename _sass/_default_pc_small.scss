@@ -1,4 +1,4 @@
-@import 'default_vars';
+//@import 'default_vars';
 
 @include main-container-max-width($layout-small-pc-max-width);
 @include tc-content-size($small-pc-container-max-width);

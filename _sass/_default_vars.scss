@@ -43,6 +43,9 @@ $logo-width:($logo-height / 1.5);
 $logo-background-color:$carrot;
 $logo-hover-background-color:$wetasphalt;
 
+$navtoggle-background-color:$carrot;
+$navtoggle-color:#fff;
+
 $image-height:($grid-size * 20);
 
 $article-background-color:#fff;
@@ -71,7 +74,8 @@ $place-font-size:$article-font-size;
 
 $header-z-index:1000;
 
-$h1-z-index:($header-z-index + 1);
+$overlay-nav-z-index:($header-z-index + 1);
+$h1-z-index:($overlay-nav-z-index + 1);
 $header-border-z-index:($h1-z-index + 1);
 $h1-icon-z-index:($header-border-z-index + 1);
 $logo-z-index:($h1-icon-z-index + 1);

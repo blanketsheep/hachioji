@@ -1,4 +1,4 @@
-@import 'default_vars';
+//@import 'default_vars';
 
 #header:before {
 	position:fixed;
@@ -34,6 +34,22 @@
 		}
 		#h1 .sub {
 			//color:lighten($color,50%);
+		}
+	}
+	#nav {
+		position:fixed;
+		left:0;right:0;
+		overflow:auto;
+		overflow-x:hidden;
+		background-color:fade-out(#000,.5);
+		z-index:$overlay-nav-z-index;
+		body[data-overlay-opened] & {
+			top:0%;
+			bottom:0%;
+		}
+		body:not(data-overlay-opened) & {
+			top:100%;
+			bottom:-100%;
 		}
 	}
 }
@@ -72,6 +88,9 @@
 	}
 	#header #h1 .sub {
 		color:lighten($color,50%);
+	}
+	#navtoggle {
+		display:none !important;
 	}
 }
 
