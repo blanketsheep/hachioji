@@ -74,5 +74,7 @@ OSCみたいな展示会とか、M3みたいな即売会と同じようなイメ
 ----------------------------
 幅広い視野でまたいくつも学校を見ないといけないね。
 
+{% include writer_info.html param=site.data.writers.sumiyoshi %}
+{% include writer_info.html param=site.data.writers.tsuchiya %}
 {% include writer_info.html param=site.data.writers.s64 %}
 <!-- {% include writer_info.html param=site.data.writers.blanketsheep %} -->
