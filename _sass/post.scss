@@ -1,10 +1,13 @@
 @import 'default_vars';
 
-#h1 {
-	& {
-		display:none;
+@media all and (min-width:$layout-tablet-max-width) {
+	#h1 {
+		& {
+			display:none;
+		}
+	}
+	#logo {
+		top:0 !important;
 	}
 }
-#logo {
-	top:0 !important;
-}
+

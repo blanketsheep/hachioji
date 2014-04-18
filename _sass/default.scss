@@ -69,6 +69,7 @@ a {
 				display:none;
 			}
 		}
+		/*
 		&:not(:hover) {
 			a {
 				background-color:$logo-background-color;
@@ -79,6 +80,7 @@ a {
 				background-color:$logo-hover-background-color;
 			}
 		}
+		*/
 	}
 	#logo {
 		@include logo-size($logo-width,$logo-height);
@@ -317,7 +319,7 @@ a {
 		}
 	}
 }
-#single,
+//#single,
 #articles {
 	.article {
 		padding:$article-margin 0;
@@ -331,9 +333,6 @@ a {
 		&,&>.container {
 			position:relative;
 		}
-		//@media all and (min-width:$layout-pc-max-width) {
-			padding:$article-margin 0;
-		//}
 		.background {
 			position:absolute;
 			top:0;left:0;right:0;bottom:0;

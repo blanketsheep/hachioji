@@ -130,3 +130,19 @@ $logo-z-index:($h1-icon-z-index + 1);
 		margin-left:$container-max-width;
 	}
 }
+
+@mixin logo-coloring($background-color,$hover-background-color) {
+	#logo,
+	#h1-logo {
+		&:not(:hover) {
+			a {
+				background-color:$background-color;
+			}
+		}
+		&:hover {
+			a {
+				background-color:$hover-background-color;
+			}
+		}
+	}
+}
