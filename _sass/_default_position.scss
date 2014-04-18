@@ -36,6 +36,14 @@
 			//color:lighten($color,50%);
 		}
 	}
+	#articles {
+		.article {
+			padding:$article-margin;
+		}
+	}
+	#single .article .article-container {
+		@include border-radius(0);
+	}
 	#nav {
 		position:fixed;
 		z-index:$overlay-nav-z-index;
@@ -99,13 +107,11 @@
 	#single>.thumbnail {
 		padding:$article-margin 0;
 	}
+	#articles,
 	#single {
 		.article {
 			padding:$article-margin 0;
 		}
-	}
-	.article .article-container {
-		@include border-radius($article-border-radius);
 	}
 	#header #h1 .sub {
 		color:lighten($color,50%);
