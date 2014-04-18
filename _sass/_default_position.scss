@@ -38,18 +38,39 @@
 	}
 	#nav {
 		position:fixed;
-		left:0;right:0;
-		overflow:auto;
-		overflow-x:hidden;
-		background-color:fade-out(#000,.5);
 		z-index:$overlay-nav-z-index;
-		body[data-overlay-opened] & {
-			top:0%;
-			bottom:0%;
+		&,&>.container {
+			left:0;right:0;
+			@include transition-timing-function(ease);
 		}
-		body:not(data-overlay-opened) & {
-			top:100%;
-			bottom:-100%;
+		& {
+			@include transition-property(background-color,top,bottom);
+			@include transition-duration($default-transition-duration,0s,0s);
+		}
+		body[data-overlay-opened] & {
+			&,&>.container {
+				top:0%;
+				bottom:0%;
+			}
+			//opacity:1;
+			background-color:fade-out(#000,.5);
+			@include transition-delay(0s,0s,0s);
+		}
+		body:not([data-overlay-opened]) & {
+			&,&>.container {
+				top:100%;
+				bottom:-100%;
+			}
+			//opacity:0;
+			background-color:fade-out(#000,1);
+			@include transition-delay(0s,$default-transition-duration,$default-transition-duration);
+		}
+		>.container {
+			position:absolute;
+			overflow:auto;
+			overflow-x:hidden;
+			@include transition-property(top,bottom);
+			@include transition-duration();
 		}
 	}
 }

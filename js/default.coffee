@@ -23,5 +23,5 @@ $ ->
 			$(body).attr(openedFlag,openedFlag)
 		else
 			$(body).removeAttr(openedFlag)
-	$('#nav>*').on 'click', (e) ->
+	$('#nav>.container>*').on 'click', (e) ->
 		e.stopPropagation()
