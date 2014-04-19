@@ -13,6 +13,8 @@ $(window).on 'scroll', ->
 		$(body).removeAttr headerFlag
 
 $ ->
+	moment.lang 'ja'
+	
 	selectors = ['#navtoggle a','#nav'].join(', ')
 	$(selectors).on 'click', ->
 		body = $('body').eq(0)
@@ -25,3 +27,8 @@ $ ->
 			$(body).removeAttr(openedFlag)
 	$('#nav>.container>*').on 'click', (e) ->
 		e.stopPropagation()
+	
+	$('.article .footer time').each (i,elm) ->
+		rawTime = $(elm).attr 'datetime'
+		strTime = moment(rawTime).fromNow()
+		$(elm).find('span').text strTime

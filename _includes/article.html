@@ -18,9 +18,12 @@
 			</div>
 		</div>
 		<footer class="footer">
-			<div>
-				<time class="timestamp">
-					<a href=".{{ include.param.url }}">{{ include.param.date }}</a>
+			<div class="container">
+				<time class="item timestamp" datetime="{{ include.param.date }}">
+					<a href=".{{ include.param.url }}">
+						<i class="fa fa-clock-o"></i>
+						<span>{{ include.param.date }}</span>
+					</a>
 				</time>
 			</div>
 		</footer>

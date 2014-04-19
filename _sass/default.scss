@@ -342,6 +342,40 @@ a {
 			//border:solid 1px $article-main-border-color;
 		}
 	}
+	.footer {
+		$height:40px;
+		$ic:lighten($color,40%);
+		border-top:solid 1px $border-color;
+		>.container {
+			
+		}
+		.item {
+			&,& a {
+				display:block;
+			}
+			a {
+				position:relative;
+				$padding:($height / 3);
+				//padding-left:($height + $padding);
+				padding-left:$height;
+				padding-right:$padding;
+			}
+			font-size:.825em;
+			color:$ic;
+			line-height:$height;
+			i {
+				position:absolute;
+				top:0;left:0;bottom:0;
+				right:auto;
+				width:$height;
+				line-height:inherit;
+				text-align:center;
+				//color:$article-background-color;
+				//background-color:$ic;
+				font-size:1.2em;
+			}
+		}
+	}
 }
 #single {
 	>.thumbnail {
