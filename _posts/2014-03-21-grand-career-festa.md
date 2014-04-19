@@ -3,6 +3,10 @@ layout: post
 title: グランド進路フェスタに参加して思ったことのメモ
 date: 2014-03-21 23:57
 thumbnail: ./img/DSC_4957.JPG
+categories:
+- hoge
+- moge
+- piyo
 #place:
 #  name: "ほげ屋"
 #  img: "./img/DSC_4957.JPG"

@@ -1,0 +1,23 @@
+<article class="article-card">
+	<div class="container">
+		<div class="thumbnail">
+			<div class="container">
+				{% if include.param.thumbnail %}
+					<div class="background" style="background-image:url({{ include.param.thumbnail }});"></div>
+				{% else %}
+					<div class="background" style=""></div>
+				{% endif %}
+			</div>
+		</div>
+		<header class="header">
+			<h1>
+				<a>{{ include.param.title }}</a>
+			</h1>
+		</header>
+		<div class="excerpt">
+			<div class="container">
+				{{ include.param.excerpt }}
+			</div>
+		</div>
+	</div>
+</article>

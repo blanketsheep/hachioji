@@ -1,1 +1,14 @@
 @import 'default_vars';
+
+#series {
+	.series {
+		>.container {
+			>* {
+				float:left;
+			}
+			.clear {
+				@include hiddenclear;
+			}
+		}
+	}
+}

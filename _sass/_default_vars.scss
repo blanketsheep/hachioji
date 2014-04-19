@@ -92,8 +92,18 @@ $header-border-z-index:($h1-z-index + 1);
 $h1-icon-z-index:($header-border-z-index + 1);
 $logo-z-index:($h1-icon-z-index + 1);
 
+@mixin hiddenclear {
+	display:block;
+	content:'.';
+	width:0;height:0;
+	float:none;
+	clear:both;
+	font-size:0;
+}
 @mixin cf {
-	@include legacy-pie-clearfix;
+	&:after {
+		@include hiddenclear;
+	}
 }
 @mixin default-box-shadow {
 	//@include single-box-shadow(,0,1px,3px);
@@ -115,7 +125,8 @@ $logo-z-index:($h1-icon-z-index + 1);
 	.article .article-container,
 	#single>.thumbnail .background,
 	#image .background,
-	#image img {
+	#image img,
+	#series .series {
 		max-width:$max-width;
 	}
 }

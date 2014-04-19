@@ -10,7 +10,24 @@ layout: default
 -->
 <div id="image">
 	<div class="container">
-		<!--<div class="background" style="background-image:url(./img/test.png);"></div>-->
-		<img src="./img/test.png">
+		<div class="background" style="background-image:url(./img/test.png);"></div>
+		<!-- <img src="./img/test.png"> -->
+	</div>
+</div>
+<div id="series">
+	<div class="container">
+		{% for sid in site.data.series_categories %}
+			<section class="series">
+				<header>
+					<h1>{{ site.data.series[sid].title }}</h1>
+				</header>
+				<div class="container">
+				{% for post in site.categories[sid] %}
+					{% include article_card.html param=post %}
+				{% endfor %}
+				<span class="clear"></span>
+				</div>
+			</section>
+		{% endfor %}
 	</div>
 </div>

@@ -381,7 +381,8 @@ a {
 #single>.thumbnail,
 #image {
 	>.container {
-		min-height:400px;
+		//min-height:400px;
+		min-height:450px;
 	}
 	&,&>.container {
 		position:relative;
@@ -399,5 +400,6 @@ a {
 
 @import 'z_index';
 @import 'writer_info';
+@import 'article_card';
 
 @import 'default_position';
