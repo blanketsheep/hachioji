@@ -393,7 +393,9 @@ a {
 		@include background-size(cover);
 	}
 }
-
+#image img {
+	display:block;
+}
 
 @import 'z_index';
 @import 'writer_info';

@@ -114,7 +114,8 @@ $logo-z-index:($h1-icon-z-index + 1);
 @mixin content-size($max-width) {
 	.article .article-container,
 	#single>.thumbnail .background,
-	#image .background {
+	#image .background,
+	#image img {
 		max-width:$max-width;
 	}
 }
