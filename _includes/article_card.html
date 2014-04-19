@@ -16,7 +16,7 @@
 		</header>
 		<div class="excerpt">
 			<div class="container">
-				{{ include.param.excerpt }}
+				{{ include.param.excerpt | strip_html | truncate: 65 }}
 			</div>
 		</div>
 	</div>

@@ -3,9 +3,11 @@ $article-card-margin:20px;
 $article-card-font-size:.9em;
 $article-card-thumbnail-height:100px;
 $article-card-width:250px;
+$article-card-padding:6px;
 
 .article-card {
 	padding:$article-card-margin;
+	$padding-half:($article-card-padding / 2);
 	>.container {
 		width:$article-card-width;
 		background-color:$article-card-background-color;
@@ -25,16 +27,18 @@ $article-card-width:250px;
 			background-position:center center;
 		}
 	}
+	.header{
+		padding:$padding-half;
+	}
 	h1 {
 		font-size:inherit;
-	}
-	.header {
-		h1 {
-			
-		}
+		padding:$padding-half;
 	}
 	.excerpt {
 		font-size:$article-card-font-size;
+		&,&>.container {
+			padding:0 $padding-half;
+		}
 		p {
 			&:first-child {
 				margin-top:0;
