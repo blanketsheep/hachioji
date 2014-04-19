@@ -18,7 +18,8 @@
 }
 
 .article .article-container,
-#single>.thumbnail .background {
+#single>.thumbnail .background,
+#image .background {
 	margin:0 auto !important;
 }
 
@@ -104,7 +105,8 @@
 			top:0;
 		}
 	}
-	#single>.thumbnail {
+	#single>.thumbnail,
+	#image {
 		padding:$article-margin 0;
 	}
 	#articles,

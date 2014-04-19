@@ -12,7 +12,7 @@ body {
 		'Meiryo','メイリオ',
 		sans-serif;
 	//background-image:url('../img/photography/photography.png');
-	background-image:url('../img/photography/photography_@2X.png');
+	//background-image:url('../img/photography/photography_@2X.png');
 	//background-image:url('http://subtlepatterns.com/patterns/sativa.png');
 	//background-image:url('http://subtlepatterns.com/patterns/diagonales_decalees.png');
 	//background-image:url('http://subtlepatterns.com/patterns/gplaypattern.png');
@@ -200,7 +200,7 @@ a {
 		display:block;
 		height:$header-border-width;
 		//@include background-image( linear-gradient(left,black 13%,white 13%,black 13%,white 13%,black 13%,white 13%) );
-		background-color:$pumpkin;
+		background-color:$header-border-color;
 		content:'';
 	}
 }
@@ -243,7 +243,7 @@ a {
 				display:block;
 				padding-left:.5em;
 				&:first-letter {
-					color:red;
+					//color:red;
 				}
 			}
 		}
@@ -319,7 +319,8 @@ a {
 				display:block;
 				line-height:$article-header-h1-height;
 				position:relative;
-				padding:0 ($article-header-h1-height + $grid-size);
+				//padding:0 ($article-header-h1-height + $grid-size);
+				padding:0 $article-header-h1-height;
 				i {
 					display:block;
 					line-height:$article-header-h1-height;
@@ -377,20 +378,19 @@ a {
 		}
 	}
 }
-#single {
-	>.thumbnail {
-		>.container {
-			min-height:400px;
-		}
-		&,&>.container {
-			position:relative;
-		}
-		.background {
-			position:absolute;
-			top:0;left:0;right:0;bottom:0;
-			background-position:center center;
-			@include background-size(cover);
-		}
+#single>.thumbnail,
+#image {
+	>.container {
+		min-height:400px;
+	}
+	&,&>.container {
+		position:relative;
+	}
+	.background {
+		position:absolute;
+		top:0;left:0;right:0;bottom:0;
+		background-position:center center;
+		@include background-size(cover);
 	}
 }
 

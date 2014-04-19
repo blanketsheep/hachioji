@@ -10,6 +10,8 @@ $turquoise:#1abc9c;
 $orange:#f39c12;
 $clouds:#ecf0f1;
 
+$border-color:#ddd;
+
 $grid-size:20px;
 $container-max-width:($grid-size * 45);
 $nav-width:($grid-size * 18);
@@ -35,6 +37,8 @@ $footer-height:($grid-size * 2);
 
 $header-background-color:inherit;
 $header-border-width:3px;
+//$header-border-color:$pumpkin;
+$header-border-color:$wetasphalt;
 
 $h1-height:$header-height;
 $h1-width:$h1-height;
@@ -42,10 +46,11 @@ $h1-width:$h1-height;
 $logo-padding:7px;
 $logo-height:($h1-height * 1.5);
 $logo-width:($logo-height / 1.5);
-$logo-background-color:$carrot;
+//$logo-background-color:$carrot;
+$logo-background-color:$wetasphalt;
 $logo-hover-background-color:$wetasphalt;
 
-$navtoggle-background-color:$carrot;
+$navtoggle-background-color:$logo-background-color;
 $navtoggle-color:#fff;
 
 $image-height:($grid-size * 20);
@@ -55,26 +60,29 @@ $article-main-border-color:#000;
 $article-main-padding:($grid-size * 1);
 $article-margin:($grid-size * 2);
 $article-font-size:.95em;
-$article-header-h1-color:#fff;
-$article-header-h1-background-color:$logo-background-color;
+//$article-header-h1-color:#fff;
+$article-header-h1-color:inherit;
+//$article-header-h1-background-color:$logo-background-color;
+$article-header-h1-background-color:inherit;
 $article-header-h1-height:($grid-size * 4);
 $article-header-h1-font-size:1.75em;
-$article-header-icon-background-color:$pumpkin;
+//$article-header-icon-background-color:$pumpkin;
+$article-header-icon-background-color:inherit;
 $article-border-radius:5px;
 
 $nav-padding:$article-margin;
 $article-aside-padding:$nav-padding;
 
 $links-background-color:$article-background-color;
-$link-icon-color:#fff;
-$link-icon-background-color:$carrot;
-$link-border-bottom-color:#eee;
+//$link-icon-color:#fff;
+$link-icon-color:inherit;
+//$link-icon-background-color:$carrot;
+$link-icon-background-color:inherit;
+$link-border-bottom-color:$border-color;
 $link-height:($grid-size * 2);
 
 $place-background-color:$links-background-color;
 $place-font-size:$article-font-size;
-
-$border-color:#ddd;
 
 $header-z-index:1000;
 
@@ -88,7 +96,8 @@ $logo-z-index:($h1-icon-z-index + 1);
 	@include legacy-pie-clearfix;
 }
 @mixin default-box-shadow {
-	@include single-box-shadow(rgba(0,0,0,.125),0,1px,3px);
+	//@include single-box-shadow(,0,1px,3px);
+	//border:solid 1px $border-color;
 }
 
 @mixin logo-size($width,$height) {
@@ -104,7 +113,8 @@ $logo-z-index:($h1-icon-z-index + 1);
 
 @mixin content-size($max-width) {
 	.article .article-container,
-	#single>.thumbnail .background {
+	#single>.thumbnail .background,
+	#image .background {
 		max-width:$max-width;
 	}
 }
