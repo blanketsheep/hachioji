@@ -17,11 +17,13 @@ layout: default
 <div id="series">
 	<div class="container">
 		{% for sid in site.data.series_categories %}
+			{% assign series = site.data.series[sid] %}
 			<section class="series">
 				<header class="header">
-					<h1>{{ site.data.series[sid].title }}</h1>
+					<h1>{{ series.title }}</h1>
 				</header>
 				<div class="container">
+				{% include article_card.html param=series %}
 				{% for post in site.categories[sid] %}
 					{% include article_card.html param=post %}
 				{% endfor %}

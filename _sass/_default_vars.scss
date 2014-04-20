@@ -84,6 +84,13 @@ $link-height:($grid-size * 2);
 $place-background-color:$links-background-color;
 $place-font-size:$article-font-size;
 
+$article-card-background-color:#fff;
+$article-card-margin:20px;
+$article-card-font-size:.9em;
+$article-card-thumbnail-height:150px;
+$article-card-width:250px;
+$article-card-padding:6px;
+
 $header-z-index:1000;
 
 $overlay-nav-z-index:($header-z-index + 1);

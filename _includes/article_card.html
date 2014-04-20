@@ -11,12 +11,16 @@
 		</div>
 		<header class="header">
 			<h1>
-				<a>{{ include.param.title }}</a>
+				{% if include.param.url %}
+					<a href=".{{ include.param.url }}">{{ include.param.title }}</a>
+				{% else %}
+					<a>{{ include.param.title }}</a>
+				{% endif %}
 			</h1>
 		</header>
 		<div class="excerpt">
 			<div class="container">
-				{{ include.param.excerpt | strip_html | truncate: 65 }}
+				{{ include.param.excerpt }}
 			</div>
 		</div>
 	</div>

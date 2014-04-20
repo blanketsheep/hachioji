@@ -1,16 +1,10 @@
-$article-card-background-color:#fff;
-$article-card-margin:20px;
-$article-card-font-size:.9em;
-$article-card-thumbnail-height:100px;
-$article-card-width:250px;
-$article-card-padding:6px;
-
 .article-card {
 	padding:$article-card-margin;
 	$padding-half:($article-card-padding / 2);
 	>.container {
 		width:$article-card-width;
 		background-color:$article-card-background-color;
+		font-size:$article-card-font-size;
 		@include default-box-shadow;
 		//overflow:hidden;
 		@include word-break(break-all);
@@ -35,9 +29,8 @@ $article-card-padding:6px;
 		padding:$padding-half;
 	}
 	.excerpt {
-		font-size:$article-card-font-size;
 		&,&>.container {
-			padding:0 $padding-half;
+			padding:$padding-half;
 		}
 		p {
 			&:first-child {
@@ -46,6 +39,16 @@ $article-card-padding:6px;
 			&:last-child {
 				margin-bottom:0;
 			}
+		}
+	}
+	&:first-child {
+		.header {
+			display:none;
+		}
+	}
+	&:not(:first-child) {
+		.excerpt {
+			display:none;
 		}
 	}
 }
