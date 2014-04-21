@@ -15,50 +15,12 @@
 		<script src="./lib/jquery-1.11.0.min.js"></script>
 		<link rel="stylesheet" href="./css/default.css"/>
 		{% if page.path contains '_posts' %}
-			<link rel="stylesheet" href="./css/post.css"/>
 		{% elsif page.path == 'index.html' %}
-			<link rel="stylesheet" href="./css/index.css"/>
 		{% endif %}
 		<script src="./js/default.js"></script>
 	</head>
 	<body>
 		<div id="wrapper">
-			<header id="header">
-				<div class="container">
-					<div id="logo">
-						{% include logo.html %}
-					</div>
-					<h1 id="h1">
-						<span class="background"></span>
-						<div id="h1-logo">{% include logo.html %}</div>
-						<span class="sub">{{ site.description }}</span>
-						<span class="title">{{ site.name }}</span>
-					</h1>
-					<div id="navtoggle">
-						<a><i class="fa fa-ellipsis-v"></i></a>
-					</div>
-				</div>
-			</header>
-			<div id="main">
-				<div class="container">
-					{{ content }}
-					<nav id="nav">
-						<div class="container">
-							<ul id="links">
-								{% for link in site.data.links %}
-									<li><a href="{{ link.href }}">
-										<i class="fa {{ link.icon }}"></i>
-										<span>{{ link.name }}</span>
-									</a></li>
-								{% endfor %}
-							</ul>
-						</div>
-					</nav>
-				</div>
-			</div>
-			<footer id="footer">
-				
-			</footer>
 		</div>
 	</body>
 </html>
