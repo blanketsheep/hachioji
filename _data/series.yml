@@ -1,0 +1,17 @@
+hoge:
+  title: "ほげを探して"
+  thumbnail: "./img/test.png"
+  excerpt: |-
+    太郎とノ助のホゲホゲコンビ。<br/>
+    八王子名物のほげを探し、<br/>市内をのたうちまわる。
+moge:
+  title: "100メートル先のモゲ・ミュージシャンたち"
+  thumbnail: "./img/photography/photography_@2X.png"
+  excerpt: |-
+    毎週100メートル先でモゲ系ミュージシャンを探す企画。<br/>
+    音楽と歩数計が好きなモゲオが不定期で担当。
+piyo:
+  title: "ぴよぴよ日和"
+  thumbnail: "./img/the-road-6.jpg"
+  excerpt: |-
+    ひよこ以外の動物が好きです

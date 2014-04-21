@@ -1,0 +1,5 @@
+//@import 'default_vars';
+
+@include main-container-max-width($layout-tablet-max-width);
+@include tc-content-size($tablet-container-max-width);
+@include side-float-margin($tablet-container-max-width);

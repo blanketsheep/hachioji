@@ -1,0 +1,54 @@
+//@import 'default_vars';
+
+.writer_info {
+	$avatar-size:64px;
+	$avatar-border-width:0;
+	$avatar-border-color:transparent;
+	$writer-info-padding:($grid-size * 1);
+	max-width:500px;
+	margin:($grid-size * 1) auto;
+	& {
+		padding:$writer-info-padding ($writer-info-padding * 2);
+	}
+	>.container {
+		min-height:$avatar-size;
+	}
+	&,
+	&>.container {
+		position:relative;
+	}
+	.avatar {
+		display:block;
+		overflow:hidden;
+		@include border-radius(50%);
+		$avatar-size-s:($avatar-size - ($avatar-border-width * 2));
+		width:$avatar-size-s;
+		height:$avatar-size-s;
+		border:solid $avatar-border-width $avatar-border-color;
+		background-position:center center;
+		@include background-size(cover);
+		img {
+			display:none;
+		}
+		& {
+			position:absolute;
+			top:0;left:0;
+			right:auto;bottom:auto;
+		}
+	}
+	.main {
+		padding-left:($avatar-size + $writer-info-padding);
+	}
+	h1 {
+		font-size:1em;
+	}
+	p {
+		margin:0;
+	}
+	& {
+		border:none 1px $border-color;
+		border-style:solid none;
+		//background-color:#f9f9f9;
+	}
+}
+

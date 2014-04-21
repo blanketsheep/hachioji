@@ -1,0 +1,21 @@
+//@import 'default_vars';
+
+#header {
+	z-index:$header-z-index;
+	#h1 {
+		#h1-logo {
+			z-index:$h1-icon-z-index;
+		}
+		.sub,
+		.title {
+			z-index:$h1-z-index;
+		}
+	}
+	&:before {
+		z-index:$header-border-z-index;
+	}
+}
+#logo {
+	z-index:$logo-z-index;
+}
+

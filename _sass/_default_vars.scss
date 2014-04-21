@@ -1,0 +1,185 @@
+@import 'compass';
+
+$default-transition-duration:.5s;
+
+$carrot:#e67e22;
+$pumpkin:#d35400;
+$sunflower:#f1c40f;
+$wetasphalt:#34495e;
+$turquoise:#1abc9c;
+$orange:#f39c12;
+$clouds:#ecf0f1;
+
+$border-color:#ddd;
+
+$grid-size:20px;
+$container-max-width:($grid-size * 45);
+$nav-width:($grid-size * 18);
+$article-aside-width:($grid-size * 23);
+
+$layout-pc-max-width:($container-max-width + ($article-aside-width * 2) );
+$layout-middle-pc-max-width:($container-max-width + ($article-aside-width * 1.5));
+$layout-small-pc-max-width:($layout-middle-pc-max-width - $nav-width);
+$layout-tablet-max-width:($layout-small-pc-max-width - $nav-width);
+$layout-phablet-max-width:($layout-tablet-max-width - $nav-width);
+
+$middle-pc-container-max-width:($layout-middle-pc-max-width - ($article-aside-width * 2) );
+$small-pc-container-max-width:($layout-small-pc-max-width - $nav-width);
+$tablet-container-max-width:($layout-tablet-max-width - $nav-width);
+//$phablet-container-max-width:($layout-phablet-max-width):
+
+$color:#333;
+//$background-color:lighten($carrot,42.5%);
+$background-color:#fff;
+
+$header-height:($grid-size * 4);
+$footer-height:($grid-size * 2);
+
+$header-background-color:inherit;
+$header-border-width:3px;
+//$header-border-color:$pumpkin;
+$header-border-color:$wetasphalt;
+
+$h1-height:$header-height;
+$h1-width:$h1-height;
+
+$logo-padding:7px;
+$logo-height:($h1-height * 1.5);
+$logo-width:($logo-height / 1.5);
+//$logo-background-color:$carrot;
+$logo-background-color:$wetasphalt;
+$logo-hover-background-color:$wetasphalt;
+
+$navtoggle-background-color:$logo-background-color;
+$navtoggle-color:#fff;
+
+$image-height:($grid-size * 20);
+
+$article-background-color:#fff;
+$article-main-border-color:#000;
+$article-main-padding:($grid-size * 1);
+$article-margin:($grid-size * 2);
+$article-font-size:.95em;
+//$article-header-h1-color:#fff;
+$article-header-h1-color:inherit;
+//$article-header-h1-background-color:$logo-background-color;
+$article-header-h1-background-color:inherit;
+$article-header-h1-height:($grid-size * 4);
+$article-header-h1-font-size:1.75em;
+//$article-header-icon-background-color:$pumpkin;
+$article-header-icon-background-color:inherit;
+$article-border-radius:5px;
+
+$nav-padding:$article-margin;
+$article-aside-padding:$nav-padding;
+
+$links-background-color:$article-background-color;
+//$link-icon-color:#fff;
+$link-icon-color:inherit;
+//$link-icon-background-color:$carrot;
+$link-icon-background-color:inherit;
+$link-border-bottom-color:$border-color;
+$link-height:($grid-size * 2);
+
+$place-background-color:$links-background-color;
+$place-font-size:$article-font-size;
+
+$article-card-background-color:#fff;
+$article-card-margin:20px;
+$article-card-font-size:.9em;
+$article-card-thumbnail-height:150px;
+$article-card-width:250px;
+$article-card-padding:6px;
+
+$header-z-index:1000;
+
+$overlay-nav-z-index:($header-z-index + 1);
+$h1-z-index:($overlay-nav-z-index + 1);
+$header-border-z-index:($h1-z-index + 1);
+$h1-icon-z-index:($header-border-z-index + 1);
+$logo-z-index:($h1-icon-z-index + 1);
+
+@mixin hiddenclear {
+	display:block;
+	content:'.';
+	width:0;height:0;
+	float:none;
+	clear:both;
+	font-size:0;
+}
+@mixin cf {
+	&:after {
+		@include hiddenclear;
+	}
+}
+@mixin default-box-shadow {
+	//@include single-box-shadow(,0,1px,3px);
+	//border:solid 1px $border-color;
+}
+
+@mixin logo-size($width,$height) {
+	width:$width;
+	a {
+		height:$height;
+		line-height:$height;
+	}
+	.icon {
+		width:($width - $logo-padding*2);
+	}
+}
+
+@mixin content-size($max-width) {
+	.article .article-container,
+	#single>.thumbnail .background,
+	#image .background,
+	#image img,
+	#series .series {
+		max-width:$max-width;
+	}
+}
+
+@mixin main-container-max-width($max-width) {
+	#main {
+		>.container {
+			max-width:$max-width;
+		}
+	}
+}
+
+@mixin tc-content-size($max-width) {
+	#articles,
+	#single {
+		max-width:$max-width;
+	}
+}
+
+@mixin side-margin($container-max-width) {
+	#article_aside,
+	#nav {
+		margin:0 ($container-max-width / 2);
+	}
+}
+
+@mixin side-float-margin($container-max-width) {
+	//#main>.container>* {
+		#nav,
+		#article_aside {
+		margin-left:$container-max-width;
+	}
+}
+
+@mixin logo-coloring($background-color,$hover-background-color) {
+	#logo,
+	#h1-logo {
+		&:not(:hover) {
+			a {
+				background-color:$background-color;
+			}
+		}
+		&:hover {
+			a {
+				background-color:$hover-background-color;
+			}
+		}
+	}
+}

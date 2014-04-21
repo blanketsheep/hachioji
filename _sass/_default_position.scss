@@ -1,0 +1,151 @@
+//@import 'default_vars';
+
+#header:before {
+	position:fixed;
+	top:0;left:0;right:0;
+	bottom:auto;
+}
+
+#header #h1 {
+	position:absolute;
+	top:0;bottom:0;left:0;
+	right:auto;
+}
+
+#articles {
+	max-width:$container-max-width;
+	margin:0 auto;
+}
+
+.article .article-container,
+#single>.thumbnail .background,
+#image .background,
+#image img,
+#series .series {
+	margin:0 auto !important;
+}
+
+@media all and (max-width:$layout-tablet-max-width) {
+	@include logo-coloring($pumpkin,$logo-hover-background-color);
+	#header {
+		#logo {
+			display:none;
+		}
+		>.container {
+			color:#fff;
+			background-color:$carrot;
+		}
+		#h1 .sub {
+			//color:lighten($color,50%);
+		}
+	}
+	#articles {
+		.article {
+			padding:$article-margin;
+		}
+	}
+	#single .article .article-container {
+		@include border-radius(0);
+	}
+	#nav {
+		position:fixed;
+		z-index:$overlay-nav-z-index;
+		&,&>.container {
+			left:0;right:0;
+			@include transition-timing-function(ease);
+		}
+		& {
+			@include transition-property(background-color,top,bottom);
+			@include transition-duration($default-transition-duration,0s,0s);
+		}
+		body[data-overlay-opened] & {
+			&,&>.container {
+				top:0%;
+				bottom:0%;
+			}
+			//opacity:1;
+			background-color:fade-out(#000,.5);
+			@include transition-delay(0s,0s,0s);
+		}
+		body:not([data-overlay-opened]) & {
+			&,&>.container {
+				top:100%;
+				bottom:-100%;
+			}
+			//opacity:0;
+			background-color:fade-out(#000,1);
+			@include transition-delay(0s,$default-transition-duration,$default-transition-duration);
+		}
+		>.container {
+			position:absolute;
+			overflow:auto;
+			overflow-x:hidden;
+			@include transition-property(top,bottom);
+			@include transition-duration();
+		}
+	}
+}
+
+@media all and (min-width:$layout-phablet-max-width) and (max-width:$layout-tablet-max-width) {
+	@import 'default_phablet';
+}
+
+@media all and (min-width:$layout-tablet-max-width) {
+	@include logo-coloring($logo-background-color,$logo-hover-background-color);
+	#header #logo {
+		& {
+			position:fixed !important;
+			bottom:auto;
+			left:($grid-size * 5);
+			right:auto;
+			@include single-transition(top);
+		}
+		body:not([data-scroll-header]) & {
+			top:-($logo-height + ($logo-width / 2));
+		}
+		body[data-scroll-header] & {
+			top:0;
+		}
+	}
+	#single>.thumbnail,
+	#image {
+		padding:$article-margin 0;
+	}
+	#articles,
+	#single {
+		.article {
+			padding:$article-margin 0;
+		}
+	}
+	#header #h1 .sub {
+		color:lighten($color,50%);
+	}
+	#navtoggle {
+		display:none !important;
+	}
+}
+
+@media all and (min-width:$layout-tablet-max-width) and (max-width:$layout-middle-pc-max-width) {
+	#single {
+		float:left;
+	}
+	#main>.container {
+		@include cf;
+	}
+}
+
+@media all and (min-width:$layout-tablet-max-width) and (max-width:$layout-small-pc-max-width) {
+	@import 'default_tablet';
+}
+
+@media all and (min-width:$layout-small-pc-max-width) and (max-width:$layout-middle-pc-max-width) {
+	@import 'default_pc_small';
+}
+
+@media all and (min-width:$layout-middle-pc-max-width) {
+	@import 'default_pc_middle';
+}
+
+@media all and (min-width:$layout-pc-max-width) {
+	@import 'default_pc';
+}

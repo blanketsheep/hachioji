@@ -1,0 +1,26 @@
+//@import 'default_vars';
+
+#article_aside,
+#nav {
+	position:fixed;
+	top:$header-height;
+	bottom:$footer-height;
+	& {
+		//margin:0 ($container-max-width / 2);
+		left:50%;right:50%;
+	}
+}
+#nav {
+	right:auto;
+	margin-right:0;
+	width:$nav-width;
+}
+#article_aside {
+	position:absolute;
+	left:auto;
+	margin-left:0;
+	width:$article-aside-width;
+}
+
+@include side-margin($middle-pc-container-max-width);
+@include content-size($middle-pc-container-max-width);

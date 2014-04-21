@@ -6,6 +6,7 @@ before_script:
 - git clone --quiet --branch gh-pages https://github.com/blanketsheep/hachioji.git _site/
 - pushd _site/
 - git pull --quiet -u origin gh-pages
+- git rm -rf .
 - popd
 script:
 - bundle exec jekyll build
@@ -23,7 +24,8 @@ after_success:
 branches:
   only:
   #- master
-  - develop
+  #- develop
+  - design/default
 env:
   global:
   # GitHub Deploy Key
@@ -32,4 +34,5 @@ env:
   - GIT_AUTHOR_NAME="Travis CI (Shuma Yoshioka)"
   - GIT_COMMITER_EMAIL="s64.stdio@gmail.com"
   - GIT_AUTHOR_EMAIL="s64.stdio@gmail.com"
+  - JEKYLL_BUILD="gh-pages"
 
