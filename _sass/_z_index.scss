@@ -1,0 +1,16 @@
+
+$main-z-index:1000;
+
+$header-z-index:($main-z-index + 1);
+
+$footer-z-index:($main-z-index - 1);
+
+#header {
+	z-index:$header-z-index;
+}
+#main {
+	z-index:$main-z-index;
+}
+#footer {
+	z-index:$footer-z-index;
+}

@@ -1,0 +1,62 @@
+@media all and (min-width:1px) {
+	
+	$header-height:150px;
+	$h1-width:75px;
+	$h1-height:$h1-width;
+	$h1-padding:5px;
+	
+	#header,#footer {
+		position:absolute;
+		left:0;right:0;
+	}
+	#header {
+		top:0;bottom:auto;
+	}
+	#footer {
+		top:auto;bottom:0;
+	}
+	#main {
+		position:relative;
+		padding-top:$header-height;
+	}
+	
+	#header {
+		height:$header-height;
+	}
+	#h1 {
+		$h1-real-width:($h1-width - ($h1-padding * 2));
+		$h1-real-height:($h1-height - ($h1-padding * 2));
+		.title {
+			display:none;
+		}
+		&>a,& .icon {
+			width:$h1-real-width;
+			height:$h1-real-height;
+		}
+		>a {
+			padding:$h1-padding;
+		}
+	}
+	#nav {
+		
+	}
+	
+	#home {
+		margin-top:-($header-height);
+	}
+	#home #wide {
+		>.container {
+			height:500px;
+		}
+		.sheep {
+			$size:700px;
+			width:$size;
+			height:$size;
+			@include transform( rotate( -(90deg / 2.75) ) scale(-1,1) );
+			$position:($size / 2);
+			left:-($position);
+			bottom:-($position);
+		}
+	}
+	
+}

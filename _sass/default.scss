@@ -15,5 +15,83 @@ body {
 	position:relative;
 }
 
+a {
+	color:inherit;
+	text-decoration:inherit;
+}
+
+#h1 {
+	&,&>a {
+		display:block;
+	}
+	& {
+		margin:0;
+	}
+	.icon {
+		img {
+			display:none;
+		}
+		&,& img {
+			
+		}
+		& {
+			display:block;
+			background-image:url('../img/blanketsheep.white.bt.512.png');
+			@include background-size(contain);
+			background-position:center;
+			background-repeat:no-repeat;
+		}
+	}
+	.title {
+		
+	}
+}
+
+#nav {
+	>ul {
+		list-style-type:none;
+		margin:0;
+		padding:0;
+	}
+	.navitem {
+		&,&>a {
+			display:block;
+		}
+		& {
+			list-style-type:none;
+		}
+		>a {
+			
+		}
+		.fa {
+			
+		}
+		.name {
+			
+		}
+	}
+}
+
+#home {
+	#wide {
+		background-color:$peterriver;
+		&,&>.container {
+			position:relative;
+		}
+		& {
+			overflow:hidden;
+		}
+		.sheep {
+			position:absolute;
+			top:auto;right:auto;
+			left:0;bottom:0;
+			background-image:url('../img/blanketsheep.512.png');
+			@include background-size(contain);
+			background-position:center;
+			background-repeat:no-repeat;
+		}
+	}
+}
+
 @import 'position';
 @import 'z_index';
