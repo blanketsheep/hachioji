@@ -110,5 +110,30 @@ a {
 	}
 }
 
+.writer {
+  &,
+  &>.container {
+    position:relative;
+  }
+  .top {
+    
+  }
+  .avatar {
+    display:block;
+    @include background-size(cover);
+    background-position:center center;
+    width:$avatar-size;
+    height:$avatar-size;
+    overflow:hidden;
+    border-radius:50%;
+    img {
+      display:none;
+    }
+  }
+  .aboutme {
+    font-size:.85em;
+  }
+}
+
 @import 'position';
 @import 'z_index';

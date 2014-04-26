@@ -1,12 +1,16 @@
 @media all and (min-width:1px) {
 	
-	$header-height:125px;
-	$h1-width:$header-height;
+	$h1-width:125px;
 	$h1-height:$h1-width;
 	$h1-padding:10px;
-	$wide-height:750px;
-	
+	$header-height:($h1-width + $navitem-height);
+	$center-width:800px;
 	$navitem-width:125px;
+	$side-width:300px;
+	$writer-top-height:($side-width / 1.5);
+	
+	$center-padding:30px;
+	$side-padding:$center-padding;
 	
 	#header,#footer {
 		position:absolute;
@@ -19,8 +23,10 @@
 		top:auto;bottom:0;
 	}
 	#main {
-		position:relative;
 		padding-top:$header-height;
+		>.container {
+		  position:relative;
+		}
 	}
 	
 	#header {
@@ -62,6 +68,7 @@
 	
 	#home {
 		margin-top:-($header-height);
+		
 	}
 	#home #wide {
 		>.container {
@@ -76,6 +83,68 @@
 			left:-($position);
 			bottom:-($position);
 		}
+	}
+	#center {
+	  padding:$center-padding;
+	}
+	#leftside,
+	#rightside {
+	  position:absolute;
+	  //top:$wide-height;
+	  top:0;
+	  left:50%;right:50%;
+	  bottom:0;
+	  padding:$side-padding;
+	  >.container {
+	    width:$side-width;
+	    margin:0;
+	  }
+	}
+	#leftside {
+	  left:0;
+	  margin-right:($center-width / 2);
+	  >.container {
+	    margin-left:auto;
+	  }
+	}
+	#rightside {
+	  right:0;
+	  margin-left:($center-width / 2);
+	  >.container {
+	    margin-right:auto;
+	  }
+  }
+	
+	.writer {
+	  $avatar-vpos:( ($writer-top-height - $avatar-size) / 2 );
+	  $avatar-name-height:30px;
+	  .top {
+	    >.container {
+	      position:relative;
+	      height:$writer-top-height;
+	    }
+	  }
+	  .avatar {
+	    position:absolute;
+	    top:$avatar-vpos;
+	    bottom:$avatar-vpos;
+	    left:0;right:0;
+	    margin:0 auto;
+	  }
+	  .name {
+	    position:absolute;
+	    top:auto;
+	    left:0;right:0;
+	    bottom:( ($avatar-vpos / 2) - ($avatar-name-height / 2) );
+	     display:block;
+	    line-height:$avatar-name-height;
+	    text-align:center;
+	  }
+	}
+	
+	#single {
+	  width:$center-width;
+	  margin:0 auto;
 	}
 	
 }

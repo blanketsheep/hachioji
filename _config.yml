@@ -17,4 +17,4 @@ relative_permalinks: false
 gems:
 - jekyll-compass
 - jekyll-coffeescript
-
+permalink: /blog/:year/:month/:day/:title

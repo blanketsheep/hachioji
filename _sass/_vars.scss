@@ -1,6 +1,6 @@
 @import 'compass';
 
-$default-transition-duration:.5s;
+$default-transition-duration:.25s;
 
 $carrot:#e67e22;
 $pumpkin:#d35400;
@@ -17,6 +17,10 @@ $navitem-icon-background-color:#333;
 $navitem-icon-width:$navitem-height;
 $navitem-color:inherit;
 $navitem-background-color:#fff;
+
+$avatar-size:96px;
+
+$wide-height:750px;
 
 @mixin cf {
   &:after {
