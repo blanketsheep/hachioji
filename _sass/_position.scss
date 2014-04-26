@@ -1,9 +1,12 @@
 @media all and (min-width:1px) {
 	
-	$header-height:150px;
-	$h1-width:75px;
+	$header-height:125px;
+	$h1-width:$header-height;
 	$h1-height:$h1-width;
-	$h1-padding:5px;
+	$h1-padding:10px;
+	$wide-height:750px;
+	
+	$navitem-width:125px;
 	
 	#header,#footer {
 		position:absolute;
@@ -35,10 +38,26 @@
 		}
 		>a {
 			padding:$h1-padding;
+			margin:0 auto;
 		}
 	}
+	
 	#nav {
-		
+	  .navitem {
+	    width:$navitem-width;
+	    padding:0 10px;
+	    & {
+	      //float:left;
+	      display:inline-block;
+	    }
+	    &:last-child {
+	      //@include cf;
+	    }
+	  }
+	  >ul {
+	    height:$navitem-height;
+	    text-align:center;
+	  }
 	}
 	
 	#home {
@@ -46,7 +65,7 @@
 	}
 	#home #wide {
 		>.container {
-			height:500px;
+			height:$wide-height;
 		}
 		.sheep {
 			$size:700px;

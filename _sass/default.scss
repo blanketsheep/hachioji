@@ -61,13 +61,30 @@ a {
 			list-style-type:none;
 		}
 		>a {
-			
+      position:relative;
+      padding-left:$navitem-icon-width;
+      height:$navitem-height;
+			line-height:$navitem-height;
+			color:$navitem-color;
+		  background-color:$navitem-background-color;
 		}
+		.fa,
+	  .name {
+	    display:block;
+	  }
 		.fa {
-			
+			position:absolute;
+	    width:$navitem-icon-width;
+	    line-height:inherit;
+	    text-align:center;
+	    top:0;left:0;bottom:0;
+	    right:auto;
+	    color:$navitem-icon-color;
+      background-color:$navitem-icon-background-color;
 		}
 		.name {
-			
+			padding:0 10px;
+			text-align:initial;
 		}
 	}
 }
