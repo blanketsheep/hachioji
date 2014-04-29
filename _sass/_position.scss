@@ -12,6 +12,15 @@
 	$center-padding:30px;
 	$side-padding:$center-padding;
 	
+	$article-card-width:($center-width / 3);
+	$article-card-height:400px;
+	$article-card-padding:0px;
+	$article-card-thumbnail-height:150px;
+	$article-card-footer-height:30px;
+	$article-card-footer-padding:10px;
+	
+	$articles-container-min-height:($article-card-height * 3);
+	
 	#header,#footer {
 		position:absolute;
 		left:0;right:0;
@@ -68,7 +77,6 @@
 	
 	#home {
 		margin-top:-($header-height);
-		
 	}
 	#home #wide {
 		>.container {
@@ -84,7 +92,7 @@
 			bottom:-($position);
 		}
 	}
-	#center {
+	#center>.container>*:not(.notwide) {
 	  padding:$center-padding;
 	}
 	#leftside,
@@ -141,10 +149,62 @@
 	    text-align:center;
 	  }
 	}
+	.article_card {
+	  $padding:10px;
+	  $rwidth: ($article-card-width - ($padding * 2));
+	  $rheight:($article-card-height - ($padding * 2));
+	  & {
+	    padding:$padding;
+	  }
+	  >.container {
+	    width:$rwidth;
+	    //height:($rheight - $article-card-footer-height);
+	    height:$rheight;
+	    //padding-bottom:$article-card-footer-height;
+	    //@include box-shadow;
+	  }
+	  .thumbnail {
+	    height:$article-card-thumbnail-height;
+	  }
+	  .header {
+	    >.container {
+	      padding:$article-card-padding;
+	    }
+	  }
+	  .footer {
+  	  /*
+	    position:absolute;
+	    top:auto;
+	    left:0;right:0;
+	    bottom:0;
+	    */
+	    .series {
+	      padding:0 $article-card-footer-padding;
+	    }
+	    h2 {
+	      line-height:$article-card-footer-height;
+	    }
+	  }
+	}
 	
-	#single {
-	  width:$center-width;
-	  margin:0 auto;
+	#articles {
+	  >.container {
+	    height:$articles-container-min-height;
+	  }
+	  .article_card {
+	    float:left;
+	    &:last-child {
+	      @include cf;
+	    }
+	  }
+	}
+	
+	#single,
+	#articles {
+	  >.container {
+	    width:$center-width;
+  	  margin:0 auto;
+	  }
 	}
 	
 }

@@ -135,5 +135,41 @@ a {
   }
 }
 
+.article_card {
+  &,&>.container {
+    position:relative;
+  }
+  .thumbnail {
+    position:relative;
+    .image {
+      display:block;
+      position:absolute;
+      top:0;left:0;right:0;bottom:0;
+      background-position:center center;
+      @include background-size(cover);
+      img {
+        display:none;
+      }
+    }
+  }
+  .header {
+    h1 {
+      //font-size:1.25em;
+      font-size:1em;
+      margin:0;
+    }
+  }
+  .footer {
+    h2 {
+      border-top:solid 1px $article-card-series-border-color;
+      font-size:.6em;
+      text-decoration:inherit;
+      font-weight:inherit;
+      text-align:center;
+      margin:0;
+    }
+  }
+}
+
 @import 'position';
 @import 'z_index';
