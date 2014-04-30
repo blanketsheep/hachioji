@@ -1,0 +1,7 @@
+<nav>
+  <ul>
+    {% for link in site.data.links %}
+      {% include navitem.html param=link %}
+    {% endfor %}
+  </ul>
+</nav>
