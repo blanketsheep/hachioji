@@ -11,19 +11,6 @@ $orange:#f39c12;
 $clouds:#ecf0f1;
 $peterriver:#3498db;
 
-$navitem-height:40px;
-$navitem-icon-color:#fff;
-$navitem-icon-background-color:#333;
-$navitem-icon-width:$navitem-height;
-$navitem-color:inherit;
-$navitem-background-color:#fff;
-
-$avatar-size:96px;
-
-$wide-height:750px;
-
-$article-card-series-border-color:#eee;
-
 @mixin cf {
   &:after {
     display:block;
