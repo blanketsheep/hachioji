@@ -11,6 +11,10 @@ categories:
 #  name: "ほげ屋"
 #  img: "./img/DSC_4957.JPG"
 #  text: "2024年創業の未来のカフェ。すごい。"
+writers:
+- sumiyoshi
+- tsuchiya
+- s64
 ---
 テスト用に http://blog.s64.comugi.co/2014/03/21/grand-career-festa.html よりコピー。  
 この前池袋サンシャインシティで開催されていたさんぽうのグランド進路フェスタに参加して思ったことなど
@@ -78,7 +82,3 @@ OSCみたいな展示会とか、M3みたいな即売会と同じようなイメ
 ----------------------------
 幅広い視野でまたいくつも学校を見ないといけないね。
 
-{% include writer_info.html param=site.data.writers.sumiyoshi %}
-{% include writer_info.html param=site.data.writers.tsuchiya %}
-{% include writer_info.html param=site.data.writers.s64 %}
-<!-- {% include writer_info.html param=site.data.writers.blanketsheep %} -->

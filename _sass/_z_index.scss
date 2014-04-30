@@ -1,21 +1,16 @@
-//@import 'default_vars';
+
+$main-z-index:1000;
+
+$header-z-index:($main-z-index + 1);
+
+$footer-z-index:($main-z-index - 1);
 
 #header {
 	z-index:$header-z-index;
-	#h1 {
-		#h1-logo {
-			z-index:$h1-icon-z-index;
-		}
-		.sub,
-		.title {
-			z-index:$h1-z-index;
-		}
-	}
-	&:before {
-		z-index:$header-border-z-index;
-	}
 }
-#logo {
-	z-index:$logo-z-index;
+#main {
+	z-index:$main-z-index;
 }
-
+#footer {
+	z-index:$footer-z-index;
+}

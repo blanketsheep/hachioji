@@ -2,31 +2,7 @@
 layout: default
 ---
 <div id="single">
-	<div class="thumbnail">
-		<div class="container">
-			<div class="background" style="background-image:url({{ page.thumbnail }});"></div>
-			<div class="border"></div>
-		</div>
-	</div>
-	{% include article.html param=page %}
+  <div class="container">
+    {{ content }}
+  </div>
 </div>
-<aside id="article_aside">
-	{% if page.place %}
-	<section id="place">
-		<div>
-			{% if page.place.img %}
-			<div class="thumbnail" style="background-image:url({{ page.place.img }});"></div>
-			{% elsif page.thumbnail %}
-			<div class="thumbnail" style="background-image:url({{ page.thumbnail }});"></div>
-			{% endif %}
-			<div class="main">
-				<h1>{{ page.place.name }}</h1>
-				<p>
-					{{ page.place.text }}
-				</p>
-			</div>
-		</div>
-	</section>
-	{% endif %}
-</aside>
-

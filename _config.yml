@@ -7,6 +7,8 @@ exclude:
 - deploy_key
 - deploy_key.pub
 - deploy_key.enc
+include:
+- .nojekyll
 pygments: true
 timezone: Asia/Tokyo
 markdown: kramdown
@@ -15,4 +17,4 @@ relative_permalinks: false
 gems:
 - jekyll-compass
 - jekyll-coffeescript
-
+permalink: /blog/:year/:month/:day/:title

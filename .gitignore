@@ -16,3 +16,4 @@ Gemfile.lock
 /deploy_key.pub
 !/deploy_key.enc
 !/.compass
+!/.nojekyll

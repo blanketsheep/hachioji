@@ -1,21 +1,6 @@
-@import 'default_vars';
+@import 'vars';
 
-#series {
-	.series {
-		>.header {
-			border-bottom:solid 1px $border-color;
-			h1 {
-				font-size:1.5em;
-			}
-		}
-		>.container {
-			padding:$article-card-padding;
-			>* {
-				float:left;
-			}
-			.clear {
-				@include hiddenclear;
-			}
-		}
-	}
+#leftside,
+#rightside {
+  top:$wide-height;
 }

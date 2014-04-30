@@ -1,0 +1,40 @@
+@import 'compass';
+
+$default-transition-duration:.25s;
+
+$carrot:#e67e22;
+$pumpkin:#d35400;
+$sunflower:#f1c40f;
+$wetasphalt:#34495e;
+$turquoise:#1abc9c;
+$orange:#f39c12;
+$clouds:#ecf0f1;
+$peterriver:#3498db;
+
+$navitem-height:40px;
+$navitem-icon-color:#fff;
+$navitem-icon-background-color:#333;
+$navitem-icon-width:$navitem-height;
+$navitem-color:inherit;
+$navitem-background-color:#fff;
+
+$avatar-size:96px;
+
+$wide-height:750px;
+
+$article-card-series-border-color:#eee;
+
+@mixin cf {
+  &:after {
+    display:block;
+    content:'';
+    float:none;
+    clear:both;
+    
+    font-size:0;
+    color:transparent;
+    background-color:transparent;
+    width:0;height:0;
+    overflow:hidden;
+  }
+}
