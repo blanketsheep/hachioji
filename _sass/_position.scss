@@ -1,3 +1,4 @@
-@media all and (min-width:1px) {
-  
+@media all and (min-width: get-viewport-width($pc-content-width,$pc-left-width,$pc-right-width) ) {
+  @include header-content-width($pc-content-width);
+  @include header-height($pc-header-height,true);
 }

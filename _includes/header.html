@@ -1,12 +1,14 @@
 <header id="header">
   <div class="container">
-    <div>
-      <div>
+    <div class="left">
+      <div class="logo-wrapper">
         {% include logo.html %}
       </div>
-      <h1>{{ site.name }}</h1>
+      <div class="h1-wrapper">
+        <h1>{{ site.name }}</h1>
+      </div>
     </div>
-    <div>
+    <div class="right">
       {% include nav.html %}
     </div>
   </div>

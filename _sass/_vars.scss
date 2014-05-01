@@ -11,6 +11,11 @@ $orange:#f39c12;
 $clouds:#ecf0f1;
 $peterriver:#3498db;
 
+$pc-content-width: 1000px;
+$pc-left-width:    300px;
+$pc-right-width:   300px;
+$pc-header-height: 100px;
+
 @mixin cf {
   &:after {
     display:block;
@@ -23,5 +28,53 @@ $peterriver:#3498db;
     background-color:transparent;
     width:0;height:0;
     overflow:hidden;
+  }
+}
+
+@mixin header-content-width($content-width) {
+  #header {
+    >.container {
+      >.left,
+      >.right {
+        position:absolute;
+        top:0;bottom:0;
+        left:0;right:0;
+        margin:0;
+      }
+      $half-content-width:($content-width / 2);
+      >.left {
+        right:50%;
+        margin-right:$half-content-width;
+      }
+      >.right {
+        left:50%;
+        margin-left:$half-content-width;
+      }
+    }
+  }
+}
+
+@function get-viewport-width($content-width,$left-width,$right-width) {
+  @return $content-width + $left-width + $right-width;
+}
+
+@mixin header-height($header-height,$is-fixed) {
+  #header {
+    @if $is-fixed {
+      position:fixed;
+      top:0;
+      left:0;right:0;
+      bottom:auto;
+    }
+    >.container {
+      height:$header-height;
+    }
+  }
+  #main {
+    >.container {
+      @if $is-fixed {
+        padding-top:$header-height;
+      }
+    }
   }
 }
