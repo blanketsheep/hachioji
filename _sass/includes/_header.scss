@@ -6,7 +6,16 @@
     >.left {
       .logo-wrapper,
       .h1-wrapper {
-        
+        float:left;
+        &:last-child {
+          @include cf;
+        }
+      }
+      .h1-wrapper {
+        h1 {
+          margin:0;
+          border-left:solid 1px $header-h1-border-color;
+        }
       }
     }
     >.right {
