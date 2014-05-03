@@ -3,22 +3,4 @@
     position:relative;
     display:block;
   }
-  >.container {
-    background-color:$logo-background-color;
-    overflow:hidden;
-    border-radius:50%;
-  }
-  .img {
-    position:absolute;
-    top:0;left:0;right:0;bottom:0;
-    background-position:center center;
-    @include background-size(cover);
-    background-repeat:no-repeat;
-    img {
-      display:none;
-    }
-  }
-  .text {
-    display:none;
-  }
 }

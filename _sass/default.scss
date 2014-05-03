@@ -21,21 +21,5 @@ a {
   text-decoration:inherit;
 }
 
-#header {
-  @import 'includes/header';
-}
-#footer {
-  @import 'includes/footer';
-}
-.logo {
-  @import 'includes/logo';
-}
-.nav {
-  @import 'includes/nav';
-}
-.navitem {
-  @import 'includes/navitem';
-}
-
 @import 'position';
 @import 'z_index';
