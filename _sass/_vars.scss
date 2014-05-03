@@ -12,22 +12,24 @@ $clouds:#ecf0f1;
 $peterriver:#3498db;
 
 $logo-background-color:$carrot;
-$header-h1-border-color:#fff;
+$header-background-color:#000;
+$header-text-color:#fff;
+$header-h1-border-color:$header-text-color;
 
 $pc-content-width:   1000px;
 $pc-left-width:      300px;
 $pc-right-width:     $pc-left-width;
-$pc-header-height:   100px;
+$pc-header-height:   75px;
 $pc-logo-size:       $pc-header-height;
-$pc-logo-padding:    10px;
+$pc-logo-padding:    15px;
 $pc-navitem-height:  30px;
 $pc-navitem-padding: 5px;
 
 @mixin cf {
   &:after {
     display:block;
-    content:'';
-    float:none;
+    content:'.';
+    //float:none;
     clear:both;
     
     font-size:0;
@@ -115,11 +117,10 @@ $pc-navitem-padding: 5px;
   }
 }
 
-@mixin navitem-height($height,$padding) {
+@mixin navitem-height($height,$padding,$is-card) {
   .navitem {
     >.container {
       height:$height;
-      padding-left:$height;
       line-height:$height;
       .icon {
         width:$height;
@@ -127,6 +128,30 @@ $pc-navitem-padding: 5px;
       }
       .text {
         padding:0 $padding;
+      }
+    }
+   }
+  @if $is-card {
+    .navitem {
+      >.container {
+        padding-left:$height;
+      }
+    }
+  } @else {
+    .navitem {
+      & {
+        float:left;
+      }
+      &:last-child {
+      @include cf;
+      }
+      >.container .icon {
+        display:none;
+      }
+    }
+    .nav {
+      >.container {
+        height:$height;
       }
     }
   }

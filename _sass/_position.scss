@@ -3,5 +3,5 @@
   @include header-height($pc-header-height,true);
   
   @include logo-size($pc-logo-size,$pc-logo-padding);
-  @include navitem-height($pc-navitem-height,$pc-navitem-padding);
+  @include navitem-height($pc-navitem-height,$pc-navitem-padding,false);
 }
