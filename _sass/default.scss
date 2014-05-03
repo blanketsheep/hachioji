@@ -12,163 +12,29 @@ body {
 }
 #wrapper {
 	min-height:100%;
+	min-height:100vh;
 	position:relative;
 }
 
 a {
-	color:inherit;
-	text-decoration:inherit;
+  color:inherit;
+  text-decoration:inherit;
 }
 
-#h1 {
-	&,&>a {
-		display:block;
-	}
-	& {
-		margin:0;
-	}
-	.icon {
-		img {
-			display:none;
-		}
-		&,& img {
-			
-		}
-		& {
-			display:block;
-			background-image:url('../img/blanketsheep.white.bt.512.png');
-			@include background-size(contain);
-			background-position:center;
-			background-repeat:no-repeat;
-		}
-	}
-	.title {
-		
-	}
+#header {
+  @import 'includes/header';
 }
-
-#nav {
-	>ul {
-		list-style-type:none;
-		margin:0;
-		padding:0;
-	}
-	.navitem {
-		&,&>a {
-			display:block;
-		}
-		& {
-			list-style-type:none;
-		}
-		>a {
-      position:relative;
-      padding-left:$navitem-icon-width;
-      height:$navitem-height;
-			line-height:$navitem-height;
-			color:$navitem-color;
-		  background-color:$navitem-background-color;
-		}
-		.fa,
-	  .name {
-	    display:block;
-	  }
-		.fa {
-			position:absolute;
-	    width:$navitem-icon-width;
-	    line-height:inherit;
-	    text-align:center;
-	    top:0;left:0;bottom:0;
-	    right:auto;
-	    color:$navitem-icon-color;
-      background-color:$navitem-icon-background-color;
-		}
-		.name {
-			padding:0 10px;
-			text-align:initial;
-		}
-	}
+#footer {
+  @import 'includes/footer';
 }
-
-#home {
-	#wide {
-		background-color:$peterriver;
-		&,&>.container {
-			position:relative;
-		}
-		& {
-			overflow:hidden;
-		}
-		.sheep {
-			position:absolute;
-			top:auto;right:auto;
-			left:0;bottom:0;
-			background-image:url('../img/blanketsheep.512.png');
-			@include background-size(contain);
-			background-position:center;
-			background-repeat:no-repeat;
-		}
-	}
+.logo {
+  @import 'includes/logo';
 }
-
-.writer {
-  &,
-  &>.container {
-    position:relative;
-  }
-  .top {
-    
-  }
-  .avatar {
-    display:block;
-    @include background-size(cover);
-    background-position:center center;
-    width:$avatar-size;
-    height:$avatar-size;
-    overflow:hidden;
-    border-radius:50%;
-    img {
-      display:none;
-    }
-  }
-  .aboutme {
-    font-size:.85em;
-  }
+.nav {
+  @import 'includes/nav';
 }
-
-.article_card {
-  &,&>.container {
-    position:relative;
-  }
-  .thumbnail {
-    position:relative;
-    .image {
-      display:block;
-      position:absolute;
-      top:0;left:0;right:0;bottom:0;
-      background-position:center center;
-      @include background-size(cover);
-      img {
-        display:none;
-      }
-    }
-  }
-  .header {
-    h1 {
-      //font-size:1.25em;
-      font-size:1em;
-      margin:0;
-    }
-  }
-  .footer {
-    h2 {
-      border-top:solid 1px $article-card-series-border-color;
-      font-size:.6em;
-      text-decoration:inherit;
-      font-weight:inherit;
-      text-align:center;
-      margin:0;
-    }
-  }
+.navitem {
+  @import 'includes/navitem';
 }
 
 @import 'position';

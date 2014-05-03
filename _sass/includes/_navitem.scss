@@ -1,0 +1,22 @@
+& {
+  &,&>.container {
+    position:relative;
+    display:block;
+  }
+  & {
+    text-align:initial;
+  }
+  .icon,
+  .text {
+    display:block;
+  }
+  .icon {
+    position:absolute;
+    top:0;left:0;bottom:0;
+    right:auto;
+    text-align:center;
+    .fa {
+      line-height:inherit;
+    }
+  }
+}

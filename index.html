@@ -3,18 +3,3 @@ layout: default
 extra_css:
 - "./css/index.css"
 ---
-<div id="home" class="notwide">
-	<div id="wide">
-		<div class="container">
-			
-		</div>
-		<span class="sheep"></span>
-	</div>
-</div>
-<div id="articles">
-  <div class="container">
-    {% for post in paginator.posts %}
-      {% include post_card.html param=post %}
-    {% endfor %}
-  </div>
-</div>
