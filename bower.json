@@ -1,0 +1,9 @@
+{
+  "name": "hachioji",
+  "version": "0.0.0",
+  "homepage": "https://github.com/blanketsheep/hachioji",
+  "authors": [
+    "Shuma Yoshioka <s64.stdio@gmail.com>"
+  ],
+  "private": true
+}
