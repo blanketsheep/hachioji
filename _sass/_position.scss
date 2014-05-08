@@ -1,7 +1,0 @@
-@media all and (min-width: get-viewport-width($pc-content-width,$pc-left-width,$pc-right-width) ) {
-  @include header-content-width($pc-content-width);
-  @include header-height($pc-header-height,true);
-  
-  @include logo-size($pc-logo-size,$pc-logo-padding);
-  @include navitem-height($pc-navitem-height,$pc-navitem-padding,false);
-}
