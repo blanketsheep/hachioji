@@ -1,0 +1,39 @@
+language: ruby
+rvm:
+- 2.1.0
+before_script:
+- git clone --quiet --branch gh-pages https://github.com/blanketsheep/hachioji.git build/
+- pushd build/
+- git pull --quiet -u origin gh-pages
+- git rm -rf .
+- popd
+- npm install -g bower
+- bower install
+- bundle install
+script:
+- bundle exec middleman build
+after_success:
+- openssl aes-256-cbc -k $DEPLOY_KEY_PASSPHRASE -in deploy_key.enc -d -a -out deploy_key
+- chmod 600 deploy_key
+- cp deploy_key ~/.ssh/github_hachioji_deploy_key
+- echo -e "\nHost github.com" >> ~/.ssh/config
+- echo -e "\tStrictHostKeyChecking no" >> ~/.ssh/config
+- echo -e "\tIdentityFile ~/.ssh/github_hachioji_deploy_key" >> ~/.ssh/config
+- pushd build/
+- git add -A
+- git commit -m Update
+- git push --quiet git@github.com:blanketsheep/hachioji.git gh-pages
+branches:
+  only:
+  - master
+  - develop
+env:
+  global:
+  # GitHub Deploy Key
+  - secure: UGlbsiwsXArXwBgjrBNVBLV3du9rzfLlT1kinGHMIrJ80WjujEAU2qKNNYUC+GKzlle8fLoxl5ZQ0YegSCWBErVswNUUzf37Je9ijfUbuLgtkaMukFiMPgAnOO2tOA4byi0k9XosjZm3+YTUdVWpIKGZn3CZyJhvUo3BeHPvY6w=
+  - GIT_COMMITTER_NAME="Travis CI (Shuma Yoshioka)"
+  - GIT_AUTHOR_NAME="Travis CI (Shuma Yoshioka)"
+  - GIT_COMMITTER_EMAIL="s64.stdio+travis@gmail.com"
+  - GIT_AUTHOR_EMAIL="s64.stdio+travis@gmail.com"
+  - JEKYLL_BUILD="gh-pages"
+
