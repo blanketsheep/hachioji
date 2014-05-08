@@ -5,5 +5,8 @@
   "authors": [
     "Shuma Yoshioka <s64.stdio@gmail.com>"
   ],
-  "private": true
+  "private": true,
+  "dependencies": {
+    "normalize-css": "~3.0.1"
+  }
 }
