@@ -1,0 +1,10 @@
+nav#nav
+  div.container
+    ul
+      - data.conf.nav.items.each do |item|
+        li.item
+          a.container href=url_for(item.href, :relative => true)
+            span.text
+              = item.name
+            span.icon
+              img src=""

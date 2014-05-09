@@ -1,0 +1,32 @@
+$logo-height:$header-height;
+
+& {
+  & {
+    margin:0;
+  }
+  >.container {
+    display:block;
+    //height:$logo-height;
+  }
+  .text,
+  .icon {
+    display:block;
+  }
+  .text {
+    display:none;
+  }
+  .icon {
+    & {
+      background-position:center center;
+      @include background-size(contain);
+      background-repeat:no-repeat;
+    }
+    img {
+      display:none;
+    }
+    & {
+      background-image:url('../images/blanketsheep.512.png');
+      height:$logo-height;
+    }
+  }
+}

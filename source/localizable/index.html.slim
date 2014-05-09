@@ -1,0 +1,17 @@
+---
+---
+div#home
+  div#slide
+  div#content
+    div.container
+      div#left
+        div.container
+          div#articles
+            - blog.articles[0...10].each do |article|
+              = article.title
+              = partial "partials/article", :locals => { :article => article }
+      div#right
+        div.container
+          section#writers
+            - data.writers.each_value do |item|
+              = partial "partials/writer", :locals => { :writer => item }

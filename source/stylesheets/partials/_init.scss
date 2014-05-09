@@ -1,0 +1,30 @@
+@charset 'UTF-8';
+@import 'compass';
+
+$susy: (
+  column-width: 24px,
+  columns: 40,
+  gutters: 3/8,
+  math: static,
+  container-position: center,
+  gutter-position: split,
+  global-box-sizing: content-box
+);
+
+@import 'susy';
+
+$wetasphalt:#34495e;
+
+$article-text-font-size:.9em;
+
+$slide-height:span(16);
+$slide-background-color:$wetasphalt;
+$writers-vertical-padding:gutter();
+
+$writer-header-height:span(4);
+$writer-text-font-size: $article-text-font-size;
+$writer-header-background-color:$wetasphalt;
+$writer-header-color:#fff;
+$writer-vertical-padding:$writers-vertical-padding;
+$writer-text-min-height:span(2);
+$writer-text-padding-top:gutter();

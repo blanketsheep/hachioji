@@ -1,0 +1,27 @@
+$header-height:span(3);
+
+& {
+  >.container {
+    @include container;
+    >.left,
+    >.center,
+    >.right {
+      height:$header-height;
+    }
+    >.left {
+      @include span(5);
+      .logo {
+        @import 'partials/logo';
+      }
+    }
+    >.center {
+      @include span(30 nest);
+      #nav {
+        @import 'partials/nav';
+      }
+    }
+    >.right {
+      @include span(5);
+    }
+  }
+}

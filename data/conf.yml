@@ -1,1 +1,13 @@
 title: "八王子ウェブマガジン"
+nav:
+  items:
+    - name: "About"
+      href: "/index.html"
+    - name: "Gallery"
+      href: "/index.html"
+    - name: "Column"
+      href: "/index.html"
+    - name: "Essay"
+      href: "/index.html"
+    - name: "Contact"
+      href: "/index.html"

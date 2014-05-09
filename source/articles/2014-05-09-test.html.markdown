@@ -1,0 +1,9 @@
+---
+title: test
+date: 2014-05-09 22:13 JST
+tags:
+writers:
+- s64
+- sumiyoshi
+---
+これは記事です。キジキジ。

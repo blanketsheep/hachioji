@@ -1,0 +1,33 @@
+$nav-height: $header-height;
+
+& {
+  >.container>ul {
+    height:$nav-height;
+  }
+  ul {
+    list-style-type:none;
+    margin:0;
+    padding:0;
+  }
+  li {
+    display:block;
+    text-align:initial;
+  }
+  .item {
+    @include span(6 of 30);
+    >.container {
+      display:block;
+    }
+    .text,
+    .icon {
+      display:block;
+      line-height:$nav-height;
+    }
+    .icon {
+      display:none;
+    }
+    .text {
+      text-align:center;
+    }
+  }
+}

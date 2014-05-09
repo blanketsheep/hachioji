@@ -7,6 +7,11 @@ activate :i18n, :path => "/:locale/", :mount_at_root => :ja
 set :relative_links, true
 set :slim, :pretty => true, :sort_attrs => false, :format => :html5
 
+activate :blog do |blog|
+  blog.layout = "blog"
+  blog.sources = "articles/{year}-{month}-{day}-{title}.html"
+end
+
 ###
 # Compass
 ###

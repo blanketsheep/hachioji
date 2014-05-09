@@ -1,0 +1,19 @@
+& {
+  >.container {
+    
+  }
+  #left {
+    @include span(30 nest);
+  }
+  #right {
+    @include span(10);
+    >.container {
+      
+    }
+  }
+  #writers {
+    .writer {
+      //@import 'partials/writer';
+    }
+  }
+}

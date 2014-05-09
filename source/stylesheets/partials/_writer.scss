@@ -1,0 +1,42 @@
+& {
+  & {
+    padding:$writer-vertical-padding 0;
+  }
+  >.container {
+    position:relative;
+  }
+  .header {
+    >.container {
+      position:relative;
+      height:$writer-header-height;
+      color:$writer-header-color;
+    }
+    .background {
+      position:absolute;
+      top:0;left:0;right:0;bottom:0;
+      & {
+        background-color:$writer-header-background-color;
+        background-position:center center;
+        @include background-size(cover);
+      }
+      img {
+        display:none;
+      }
+    }
+    .name {
+      margin:0;
+      font-size:1.25em;
+      position:absolute;
+      top:auto;left:auto;
+      right:0;bottom:0;
+      padding:gutter();
+    }
+  }
+  .main {
+    .text {
+      font-size:$writer-text-font-size;
+      min-height:$writer-text-min-height;
+      padding-top:$writer-text-padding-top;
+    }
+  }
+}

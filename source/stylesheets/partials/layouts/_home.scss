@@ -1,0 +1,23 @@
+& {
+  #slide {
+    height:$slide-height;
+    background-color:$slide-background-color;
+  }
+  #content {
+    >.container {
+      @include container;
+    }
+    #left {
+      @include span(30 nest);
+    }
+    #right {
+      @include span(10);
+    }
+  }
+  #writers {
+    padding:$writers-vertical-padding 0;
+    .writer {
+      //@import 'partials/writer';
+    }
+  }
+}
