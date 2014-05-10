@@ -26,8 +26,17 @@ a {
   color: inherit;
 }
 
+#mainborder {
+  display:block;
+  height:0;
+}
+
 #header {
   @import 'partials/header';
+}
+
+#main {
+  padding-top:rhythm($header-rhythm);
 }
 
 #home {

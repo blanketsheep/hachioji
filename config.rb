@@ -7,6 +7,9 @@ activate :i18n, :path => "/:locale/", :mount_at_root => :ja
 set :relative_links, true
 set :slim, :pretty => true, :sort_attrs => false, :format => :html5
 
+# Use relative URLs
+activate :relative_assets
+
 activate :blog do |blog|
   blog.layout = "blog"
   blog.sources   = "{year}-{month}-{day}-{title}.html"
@@ -79,9 +82,6 @@ configure :build do
 
   # Enable cache buster
   # activate :asset_hash
-
-  # Use relative URLs
-  # activate :relative_assets
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"

@@ -9,9 +9,8 @@ html
         = data.conf.title
     /!meta name="viewport" content="width=device-width, initial-scale=1.0"
     meta name="viewport" content="width=1920, initial-scale=1.0"
-    = stylesheet_link_tag "assets"
-    = stylesheet_link_tag "layout"
-    = javascript_include_tag "assets"
+    = stylesheet_link_tag "assets", "layout"
+    = javascript_include_tag "assets", "layout"
   body
     div#wrapper
       = partial "partials/header"

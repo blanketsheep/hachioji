@@ -20,10 +20,13 @@ $susy: (
 $rhythm-unit: 'rem';
 $relative-font-sizing:false;
 $rem-with-px-fallback: true;
+$default-transition-duration:.25s;
 
 @import 'susy';
 
 $wetasphalt:#34495e;
+
+$header-rhythm:3;
 
 //$article-text-font-size:.9em;
 

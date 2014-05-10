@@ -1,12 +1,14 @@
 & {
+  margin-top:-( rhythm($header-rhythm) );
   #slide {
     //height:$slide-height;
-    height:rhythm(15);
+    height:rhythm(15 + $header-rhythm);
     background-color:$slide-background-color;
   }
   #content {
     >.container {
       @include container;
+      min-height:1500px;
     }
     #left {
       @include span(30 nest);
