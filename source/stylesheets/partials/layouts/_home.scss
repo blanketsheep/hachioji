@@ -1,6 +1,7 @@
 & {
   #slide {
-    height:$slide-height;
+    //height:$slide-height;
+    height:rhythm(15);
     background-color:$slide-background-color;
   }
   #content {
@@ -13,9 +14,16 @@
     #right {
       @include span(10);
     }
+    #articles {
+      .article {
+        @import 'partials/article';
+      }
+    }
   }
   #writers {
-    padding:$writers-vertical-padding 0;
+    //padding:$writers-vertical-padding 0;
+    //@include rhythm;
+    @include rhythm(1);
     .writer {
       //@import 'partials/writer';
     }

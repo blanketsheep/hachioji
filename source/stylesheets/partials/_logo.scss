@@ -1,8 +1,9 @@
-$logo-height:$header-height;
+//$logo-height:$header-height;
 
 & {
   & {
     margin:0;
+    font-size:inherit;
   }
   >.container {
     display:block;
@@ -26,7 +27,8 @@ $logo-height:$header-height;
     }
     & {
       background-image:url('../images/blanketsheep.512.png');
-      height:$logo-height;
+      //height:$logo-height;
+      height:rhythm(3);
     }
   }
 }

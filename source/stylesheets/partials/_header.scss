@@ -1,4 +1,4 @@
-$header-height:span(3);
+//$header-height:span(3);
 
 & {
   >.container {
@@ -6,7 +6,8 @@ $header-height:span(3);
     >.left,
     >.center,
     >.right {
-      height:$header-height;
+      //height:$header-height;
+      height: rhythm(3);
     }
     >.left {
       @include span(5);

@@ -1,0 +1,38 @@
+$article-image-background-color:$wetasphalt;
+
+& {
+  $font-size:.95rem;
+  //$guttered:true;
+  @include gallery(10 of 30);
+  >.container {
+    //@include gutter;
+    //@import 'partials/fontreset';
+    font-size:$font-size;
+    @include fontreset($font-size,true,false);
+    @include clearfix;
+    @include leader(1,$font-size);
+    @include trailer(1,$font-size);
+    >.image {
+      //@include span(4 of 30);
+      //@include gutter;
+      @include trailer(1);
+      >.background {
+        display:block;
+        //width:span(4 of 30);
+        background-color:$article-image-background-color;
+        height:rhythm(7);
+        background-position:center center;
+        @include background-size(cover);
+      }
+    }
+    >.header {
+      //@include span(26 of 30);
+      >.container {
+        h1 {
+          //@include gutter;
+          @include adjust-font-size-to(1.25rem);
+        }
+      }
+    }
+  }
+}

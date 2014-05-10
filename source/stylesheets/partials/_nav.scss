@@ -1,13 +1,14 @@
-$nav-height: $header-height;
+//$nav-height: $header-height;
 
 & {
   >.container>ul {
-    height:$nav-height;
+    //height:$nav-height;
   }
   ul {
     list-style-type:none;
     margin:0;
     padding:0;
+    @include clearfix;
   }
   li {
     display:block;
@@ -21,13 +22,14 @@ $nav-height: $header-height;
     .text,
     .icon {
       display:block;
-      line-height:$nav-height;
+      //line-height:$nav-height;
     }
     .icon {
       display:none;
     }
     .text {
       text-align:center;
+      @include rhythm(1);
     }
   }
 }

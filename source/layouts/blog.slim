@@ -1,4 +1,10 @@
 = wrap_layout :layout do
+  - background = ''
+  - if current_page.data.thumbnail
+    - if current_page.data.thumbnail.wide
+      - background = url_for current_page.data.thumbnail.wide
+    - elsif current_page.data.thumbnail.grid
+      - background = url_for current_page.data.thumbnail.grid
   div#single
     div.container
       div#left
@@ -9,8 +15,9 @@
                 div.container
                   div#image
                     div.container
-                      div.background
-                        img
+                      - style = "background-image:url(" + background + ")";
+                      div.background style=style
+                        img src=background
                       h1
                         a
                           = current_page.data.title

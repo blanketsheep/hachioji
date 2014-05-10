@@ -8,7 +8,6 @@ div#home
         div.container
           div#articles
             - blog.articles[0...10].each do |article|
-              = article.title
               = partial "partials/article", :locals => { :article => article }
       div#right
         div.container

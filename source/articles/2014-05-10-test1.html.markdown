@@ -1,10 +1,11 @@
 ---
-title: "グランド進路フェスタに参加して思ったことのメモ"
-date: 2014-05-09 22:13 JST
+title: "グランド進路フェスタに参加して思ったことのメモ (1)"
+date: 2014-05-10 15:40 JST
 tags:
 writers:
 - s64
 - sumiyoshi
+- tsuchiya
 thumbnail:
   wide: "/resources/2014-05-09-test/DSC_5717.JPG"
 ---
