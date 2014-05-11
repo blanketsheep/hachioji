@@ -30,14 +30,16 @@
       height:rhythm($header-rhythm);
     }
   }
-  body:not([data-scrolled-main]) & {
+  /*body:not([data-scrolled-main])*/ & {
     .icon {
       background-image:url('../images/blanketsheep.white.bt.512.png');
     }
   }
+  /*
   body[data-scrolled-main] & {
     .icon {
       background-image:url('../images/blanketsheep.512.png');
     }
   }
+  */
 }
