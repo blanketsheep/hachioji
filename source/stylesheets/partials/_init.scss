@@ -29,8 +29,11 @@ $default-box-shadow-color:rgba(0,0,0,.125);
 @import 'susy';
 
 $wetasphalt:#34495e;
+$sunflower:#f1c40f;
 
-$header-rhythm:3;
+$background-color:lighten($sunflower,45%);
+
+$header-rhythm:5;
 
 //$article-text-font-size:.9em;
 

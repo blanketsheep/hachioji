@@ -27,7 +27,7 @@
     }
     & {
       //height:$logo-height;
-      height:rhythm(3);
+      height:rhythm($header-rhythm);
     }
   }
   body:not([data-scrolled-main]) & {
