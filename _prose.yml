@@ -3,6 +3,9 @@ prose:
   siteurl: "http://blanketsheep.github.io/hachioji/"
   media: "source/resources"
   ignore:
+  - .gitkeep
+  - .gitignore
+  - .gitattributes
   metadata:
     source/articles:
     - name: "date"
