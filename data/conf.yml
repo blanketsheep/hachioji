@@ -3,14 +3,24 @@ nav:
   items:
     - name: "About"
       href: "/index.html"
-    - name: "Gallery"
-      href: "/index.html"
+      classes:
+      - about
     - name: "Column"
       href: "/index.html"
+      classes:
+      - column
+    - name: "Gallery"
+      href: "/index.html"
+      classes:
+      - gallery
     - name: "Essay"
       href: "/index.html"
-    - name: "Contact"
+      classes: 
+      - essay
+    - name: "Letter"
       href: "/index.html"
+      classes:
+      - letter
 article:
   dateformat:
     grid: "%Y/%m/%d"

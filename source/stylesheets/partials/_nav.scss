@@ -31,5 +31,20 @@
       text-align:center;
       @include rhythm( ($header-rhythm - 1) / 2 );
     }
+    &.about .text:first-letter {
+      color:$pomegranate;
+    }
+    &.gallery .text:first-letter {
+      color:$belizehole;
+    }
+    &.column .text:first-letter {
+      color:$emerald;
+    }
+    &.essay .text:first-letter {
+      color:$sunflower;
+    }
+    &.letter .text:first-letter {
+      color:$amethyst;
+    }
   }
 }
