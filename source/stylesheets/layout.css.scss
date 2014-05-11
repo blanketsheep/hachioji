@@ -35,6 +35,10 @@ a {
   @import 'partials/header';
 }
 
+#footer {
+  @import 'partials/footer';
+}
+
 #main {
   padding-top:rhythm($header-rhythm);
 }
@@ -65,3 +69,5 @@ a {
   @import 'partials/fontreset';
 }
 */
+
+@import 'z_index';

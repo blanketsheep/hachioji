@@ -8,7 +8,7 @@
   #content {
     >.container {
       @include container;
-      min-height:1500px;
+      //min-height:1500px;
     }
     #left {
       @include span(30 nest);

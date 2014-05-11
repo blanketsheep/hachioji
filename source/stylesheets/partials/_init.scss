@@ -21,6 +21,10 @@ $rhythm-unit: 'rem';
 $relative-font-sizing:false;
 $rem-with-px-fallback: true;
 $default-transition-duration:.25s;
+$default-box-shadow-h-offset:0;
+$default-box-shadow-v-offset:1px;
+$default-box-shadow-blur:3px;
+$default-box-shadow-color:rgba(0,0,0,.125);
 
 @import 'susy';
 

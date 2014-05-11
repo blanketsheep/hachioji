@@ -11,3 +11,6 @@ nav:
       href: "/index.html"
     - name: "Contact"
       href: "/index.html"
+article:
+  dateformat:
+    grid: "%Y/%m/%d"

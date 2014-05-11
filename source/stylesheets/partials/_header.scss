@@ -29,7 +29,7 @@
     }
   }
   & {
-    @include transition-property(color,background-color);
+    @include transition-property(color,background-color,box-shadow);
     @include transition-duration;
     @include transition-timing-function(ease);
   }
@@ -40,5 +40,6 @@
   body[data-scrolled-main] & {
     color:#000;
     background-color:rgba(255,255,255,1);
+    @include box-shadow;
   }
 }
