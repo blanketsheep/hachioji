@@ -1,0 +1,116 @@
+@charset 'UTF-8';
+@import 'compass';
+
+$susy: (
+  column-width: 24px,
+  columns: 40,
+  gutters: 3/8,
+  math: static,
+  container-position: center,
+  gutter-position: split,
+  global-box-sizing: content-box,
+  debug: (
+    image: show,
+    color: rgba(255,0,0,.25),
+    output: overlay,
+    toggle: top right
+  )
+);
+
+$rhythm-unit: 'rem';
+$relative-font-sizing:false;
+$rem-with-px-fallback: true;
+$default-transition-duration:.25s;
+$default-box-shadow-h-offset:0;
+$default-box-shadow-v-offset:1px;
+$default-box-shadow-blur:3px;
+$default-box-shadow-color:rgba(0,0,0,.125);
+
+@import 'susy';
+
+$wetasphalt:#34495e;
+$sunflower:#f1c40f;
+$pomegranate:#c0392b;
+$belizehole:#2980b9;
+$emerald:#2ecc71;
+$amethyst:#9b59b6;
+
+$background-color:lighten($sunflower,45%);
+
+$header-rhythm:5;
+
+//$article-text-font-size:.9em;
+
+//$slide-height:span(16);
+$slide-background-color:$wetasphalt;
+//$writers-vertical-padding:gutter();
+
+//$writer-header-height:span(4);
+//$writer-text-font-size: $article-text-font-size;
+$writer-header-background-color:$wetasphalt;
+$writer-header-color:#fff;
+//$writer-vertical-padding:$writers-vertical-padding;
+//$writer-text-min-height:span(2);
+//$writer-text-padding-top:gutter();
+
+@mixin fontreset($font-size,$guttered,$setleader: true) {
+  h1,h2,h3,h4,h5,h6,
+  p,blockquote,
+  ul,ol {
+    margin:0;
+    padding:0;
+    font-size:1em;
+    @if not $guttered {
+      @include gutter;
+    }
+    //@include rhythm(1);
+    //@include trailer(1);
+  }
+  h1 {
+    $font-size:1.75rem;
+    @include adjust-font-size-to($font-size);
+    @if $setleader {
+      @include padding-leader(1,$font-size);
+    }
+  }
+  h2 {
+    $font-size:1.5rem;
+    @include adjust-font-size-to($font-size);
+    @if $setleader {
+      @include padding-leader(1,$font-size);
+    }
+  }
+  h3 {
+    $font-size:1.25rem;
+    @include adjust-font-size-to($font-size);
+    @if $setleader {
+      @include padding-leader(1,$font-size);
+    }
+  }
+  h4 {
+    $font-size:1.2rem;
+    @include adjust-font-size-to($font-size);
+    @if $setleader {
+      @include padding-leader(1,$font-size);
+    }
+  }
+  h5 {
+    $font-size:1.15rem;
+    @include adjust-font-size-to($font-size);
+    @if $setleader {
+      @include padding-leader(1,$font-size);
+    }
+  }
+  h6 {
+    $font-size:1.1rem;
+    @include adjust-font-size-to($font-size);
+    @if $setleader {
+      @include padding-leader(1,$font-size);
+    }
+  }
+  p,blockquote {
+    @if $setleader {
+      @include padding-leader(1,$font-size);
+    }
+  }
+}

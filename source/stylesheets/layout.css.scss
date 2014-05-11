@@ -1,0 +1,75 @@
+@import 'partials/init';
+
+@include establish-baseline;
+
+html,body {
+  height:100%;
+  height:100vh;
+}
+body {
+  font-family:
+    'Lucida Grande',
+    'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3',
+    'Meiryo', 'メイリオ',
+    sans-serif;
+  //background-image:url('../images/photography/photography.png');
+  background-repeat:repeat;
+  background-color:#ffffe0;
+  background-color:$background-color;
+}
+#wrapper {
+  min-height:100%;
+  min-height: 100vh;
+  position:relative;
+}
+
+a {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+#mainborder {
+  display:block;
+  height:0;
+}
+
+#header {
+  @import 'partials/header';
+}
+
+#footer {
+  @import 'partials/footer';
+}
+
+#main {
+  padding-top:rhythm($header-rhythm);
+}
+
+#home {
+  @import 'partials/layouts/home';
+}
+
+#single {
+  @import 'partials/layouts/blog';
+}
+#home #content #right #writers .writer,
+#single #right #writers .writer {
+  @import 'partials/writer';
+}
+
+/*
+#home #content #articles .article > .container {
+  $font-size:.95rem;
+  $guttered: false;
+  @import 'partials/fontreset';
+}
+*/
+/*
+#single #article > .container > .main #content > .container {
+  $font-size:.95rem;
+  $guttered: true;
+  @import 'partials/fontreset';
+}
+*/
+
+@import 'z_index';

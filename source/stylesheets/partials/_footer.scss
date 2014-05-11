@@ -1,0 +1,56 @@
+$footer-background-color:$wetasphalt;
+$footer-color:#ddd;
+$footer-h1-color:#fff;
+
+& {
+  background-color:$footer-background-color;
+  color:$footer-color;
+  $h1-font-size:1.25rem;
+  $content-font-size:.9rem;
+  >.container {
+    @include container;
+  }
+  .columns {
+    @include clearfix;
+    .column {
+      @include span(10 of 40);
+      height:rhythm(13);
+      @include rhythm(1);
+    }
+    @include fontreset(1rem,true,false);
+    h1 {
+      $font-size:$h1-font-size;
+      margin:0;
+      @include adjust-font-size-to($font-size);
+      color:$footer-h1-color;
+    }
+    ul {
+      list-style-type:none;
+      li {
+        display:block;
+        text-align:initial;
+      }
+    }
+  }
+  #footer_about {
+    .footer_logo {
+      @import 'partials/footer_logo';
+    }
+    .content {
+      $font-size:$content-font-size;
+      @include adjust-font-size-to($font-size);
+      //@include squish(1 of 10);
+    }
+    h1 {
+      $font-size:$h1-font-size;
+      @include leader(1,$font-size);
+      //@include trailer(1,$font-size);
+    }
+  }
+  #footer_recent_articles {
+    .item {
+      @include adjust-font-size-to($content-font-size);
+      @include ellipsis(true);
+    }
+  }
+}

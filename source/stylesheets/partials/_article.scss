@@ -1,0 +1,52 @@
+$article-image-background-color:$wetasphalt;
+$article-background-color:#fff;
+
+& {
+  $font-size:.95rem;
+  //$guttered:true;
+  @include gallery(10 of 30);
+  >.container {
+    //@include gutter;
+    //@import 'partials/fontreset';
+    font-size:$font-size;
+    @include fontreset($font-size,true,false);
+    @include clearfix;
+    @include leader(1,$font-size);
+    @include trailer(1,$font-size);
+    @include rhythm-borders(0,1,$font-size);
+    background-color:$article-background-color;
+    @include box-shadow;
+    >.image {
+      //@include span(4 of 30);
+      //@include gutter;
+      //@include trailer(1);
+      margin:-( rhythm(1,$font-size) );
+      margin-bottom:0;
+      >.background {
+        display:block;
+        //width:span(4 of 30);
+        background-color:$article-image-background-color;
+        height:rhythm(7,$font-size);
+        background-position:center center;
+        @include background-size(cover);
+      }
+    }
+    >.header {
+      //@include span(26 of 30);
+      >.container {
+        time {
+          display:none;
+          //font-weight:bold;
+        }
+        h1 {
+          //@include gutter;
+          $font-size:1.25rem;
+          @include adjust-font-size-to($font-size);
+          @include leader(1,$font-size);
+          @include trailer(1,$font-size);
+          //font-weight:normal;
+        }
+      }
+    }
+  }
+}

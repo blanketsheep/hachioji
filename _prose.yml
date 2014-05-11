@@ -1,0 +1,45 @@
+prose:
+  rooturl: "source/articles"
+  siteurl: "http://blanketsheep.github.io/hachioji/"
+  media: "source/resources"
+  ignore:
+  - .gitkeep
+  - .gitignore
+  - .gitattributes
+  metadata:
+    source/articles:
+    - name: "date"
+      field:
+        label: "date"
+        element: "text"
+        placeholder: "YYYY-MM-DD HH:MM JST"
+        value: "CURRENT_DATETIME"
+    - name: "title"
+      field:
+        element: "text"
+        label: "title"
+        value: ""
+    - name: "writers"
+      field:
+        label: "writers"
+        element: "multiselect"
+        options:
+        - name: "Miyuki Sumiyoshi"
+          value: "sumiyoshi"
+        - name: "Shuma Yoshioka"
+          value: "s64"
+        - name: "Sayaka Tsuchiya"
+          value: "tsuchiya"
+    - name: "thumbnail"
+      - name: "wide"
+        field:
+          label: "wide"
+          element: "text"
+          placeholder: "/resources/*/*.JPG"
+          value: ""
+      - name: "grid"
+        field:
+          label: "grid"
+          element: "text"
+          placeholder: "/resources/*/*.JPG"
+          value: ""

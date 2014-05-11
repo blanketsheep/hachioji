@@ -1,0 +1,26 @@
+title: "八王子ウェブマガジン"
+nav:
+  items:
+    - name: "About"
+      href: "/index.html"
+      classes:
+      - about
+    - name: "Column"
+      href: "/index.html"
+      classes:
+      - column
+    - name: "Gallery"
+      href: "/index.html"
+      classes:
+      - gallery
+    - name: "Essay"
+      href: "/index.html"
+      classes: 
+      - essay
+    - name: "Letter"
+      href: "/index.html"
+      classes:
+      - letter
+article:
+  dateformat:
+    grid: "%Y/%m/%d"
