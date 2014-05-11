@@ -1,0 +1,36 @@
+= wrap_layout :layout do
+  #mainborder
+  - background = ''
+  - if current_page.data.thumbnail
+    - if current_page.data.thumbnail.wide
+      - background = url_for current_page.data.thumbnail.wide
+    - elsif current_page.data.thumbnail.grid
+      - background = url_for current_page.data.thumbnail.grid
+  div#single
+    div.container
+      div#left
+        div.container
+          article#article
+            div.container
+              header.header
+                div.container
+                  div#image
+                    div.container
+                      - style = "background-image:url(" + background + ")";
+                      div.background style=style
+                        img src=background
+                      h1
+                        a
+                          = current_page.data.title
+              div.main
+                div.container
+                  div#content
+                    div.container
+                      = yield
+              footer.footer
+      div#right
+        div.container
+          - if current_page.data.writers
+            div#writers
+              - current_page.data.writers.each do |key|
+                = partial "partials/writer", :locals => { :writer => data.writers[key] }

@@ -1,0 +1,20 @@
+footer#footer
+  div.container
+    div.columns
+      section#footer_about.column
+        = partial "partials/footer_logo"
+        h1
+          = "blanket sheep"
+        div.content
+          = t(:about_blanketsheep)
+      section#footer_recent_articles.column
+        h1
+          = t(:title_recent_articles)
+        ul.items
+          - blog.articles[0...10].each do |article|
+            li.item
+              = link_to article.title,article
+      section.column
+        
+      section.column
+        

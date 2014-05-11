@@ -27,6 +27,7 @@ branches:
   only:
   - master
   - develop
+  - design/0509
 env:
   global:
   # GitHub Deploy Key

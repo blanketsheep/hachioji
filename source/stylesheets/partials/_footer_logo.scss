@@ -1,0 +1,25 @@
+& {
+  $root-rhythm:4;
+  & {
+    //@include squish(3 of 15);
+    margin:0 auto;
+  }
+  &,&>.container {
+    display:block;
+    @include border-radius(50%);
+    overflow:hidden;
+  }
+  & {
+    @include rhythm-borders(1px,1);
+    $size:rhythm($root-rhythm);
+    width:$size;
+    height:$size;
+  }
+  >.container {
+    margin:-(rhythm(1));
+    $size:rhythm($root-rhythm + 2);
+    width:$size;
+    height:$size;
+  }
+  
+}

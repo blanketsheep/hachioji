@@ -1,0 +1,45 @@
+//$header-height:span(3);
+
+& {
+  position:fixed;
+  top:0;left:0;right:0;
+  bottom:auto;
+  >.container {
+    @include container;
+    >.left,
+    >.center,
+    >.right {
+      //height:$header-height;
+      height: rhythm($header-rhythm);
+    }
+    >.left {
+      @include span(5);
+      .logo {
+        @import 'partials/logo';
+      }
+    }
+    >.center {
+      @include span(30 nest);
+      #nav {
+        @import 'partials/nav';
+      }
+    }
+    >.right {
+      @include span(5);
+    }
+  }
+  & {
+    @include transition-property(color,background-color,box-shadow);
+    @include transition-duration;
+    @include transition-timing-function(ease);
+  }
+  body:not([data-scrolled-main]) & {
+    color:#fff;
+    background-color:rgba(255,255,255,0);
+  }
+  body[data-scrolled-main] & {
+    color:#000;
+    background-color:rgba(255,255,255,1);
+    @include box-shadow;
+  }
+}

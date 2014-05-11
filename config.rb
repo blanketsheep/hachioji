@@ -7,6 +7,17 @@ activate :i18n, :path => "/:locale/", :mount_at_root => :ja
 set :relative_links, true
 set :slim, :pretty => true, :sort_attrs => false, :format => :html5
 
+# Use relative URLs
+activate :relative_assets
+
+activate :blog do |blog|
+  blog.layout = "blog"
+  blog.sources   = "{year}-{month}-{day}-{title}.html"
+  blog.prefix    = "articles"
+  blog.permalink = "/:year/:month/:day/:title.html"
+  blog.summary_separator = /!READMORE/
+end
+
 ###
 # Compass
 ###
@@ -45,9 +56,9 @@ set :slim, :pretty => true, :sort_attrs => false, :format => :html5
 # activate :automatic_image_sizes
 
 # Reload the browser automatically whenever files change
-# configure :development do
-#   activate :livereload
-# end
+configure :development do
+  activate :livereload
+end
 
 # Methods defined in the helpers block are available in templates
 # helpers do
@@ -72,9 +83,6 @@ configure :build do
 
   # Enable cache buster
   # activate :asset_hash
-
-  # Use relative URLs
-  # activate :relative_assets
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"

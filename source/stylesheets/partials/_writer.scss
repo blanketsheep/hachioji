@@ -1,0 +1,54 @@
+& {
+  & {
+    //padding:$writer-vertical-padding 0;
+    //@include rhythm(1);
+    &:not(:first-child) {
+      @include padding-leader(1);
+    }
+    &:not(:last-child) {
+      @include padding-trailer(1);
+    }
+  }
+  >.container {
+    position:relative;
+  }
+  .header {
+    >.container {
+      position:relative;
+      //height:$writer-header-height;
+      height:rhythm(5);
+      color:$writer-header-color;
+    }
+    .background {
+      position:absolute;
+      top:0;left:0;right:0;bottom:0;
+      & {
+        background-color:$writer-header-background-color;
+        background-position:center center;
+        @include background-size(cover);
+      }
+      img {
+        display:none;
+      }
+    }
+    .name {
+      margin:0;
+      position:absolute;
+      top:auto;left:auto;
+      right:0;bottom:0;
+      @include gutter;
+      @include adjust-font-size-to(1.25rem);
+    }
+  }
+  .main {
+    .text {
+      //font-size:$writer-text-font-size;
+      $font-size:.9rem;
+      @include adjust-font-size-to($font-size);
+      @include padding-leader(1,$font-size);
+      //@include padding-trailer(1,$font-size);
+      //min-height:$writer-text-min-height;
+      //padding-top:$writer-text-padding-top;
+    }
+  }
+}
