@@ -1,6 +1,7 @@
 //$nav-height: $header-height;
 
 & {
+  $font-size:$header-font-size;
   >.container>ul {
     //height:$nav-height;
   }
@@ -29,7 +30,9 @@
     }
     .text {
       text-align:center;
-      @include rhythm( ($header-rhythm - 1) / 2 );
+      $rhythm:( ($header-rhythm - 1) / 2 );
+      @include leader($rhythm,$font-size);
+      @include trailer($rhythm,$font-size);
     }
     &.about .text:first-letter {
       color:$pomegranate;

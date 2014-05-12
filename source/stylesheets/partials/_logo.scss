@@ -1,6 +1,7 @@
 //$logo-height:$header-height;
 
 & {
+  $font-size:$header-font-size;
   & {
     margin:0;
     font-size:inherit;
@@ -27,7 +28,7 @@
     }
     & {
       //height:$logo-height;
-      height:rhythm($header-rhythm);
+      height:rhythm($header-rhythm,$font-size);
     }
   }
   body:not([data-scrolled-main]) & {

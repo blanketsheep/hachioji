@@ -4,13 +4,15 @@
   position:fixed;
   top:0;left:0;right:0;
   bottom:auto;
+  $font-size:$header-font-size;
+  font-size:$font-size;
   >.container {
     @include container;
     >.left,
     >.center,
     >.right {
       //height:$header-height;
-      height: rhythm($header-rhythm);
+      height: rhythm($header-rhythm,$font-size);
     }
     >.left {
       @include span(5);
