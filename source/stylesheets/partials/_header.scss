@@ -6,6 +6,7 @@
   bottom:auto;
   $font-size:$header-font-size;
   font-size:$font-size;
+  font-weight:bold;
   >.container {
     @include container;
     >.left,
