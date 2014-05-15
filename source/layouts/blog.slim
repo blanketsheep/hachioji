@@ -19,9 +19,13 @@
                       - style = "background-image:url(" + background + ")";
                       div.background style=style
                         img src=background
+                  div#hmain
+                    div.container
                       h1
-                        a
-                          = current_page.data.title
+                        = link_to current_page.data.title, current_article
+                      time
+                        - timestr = current_article.date.strftime( data.conf.article.dateformat.single )
+                        = link_to timestr,current_article
               div.main
                 div.container
                   div#content

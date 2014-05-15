@@ -30,7 +30,7 @@
           >.container {
             position:relative;
             //height:$article-header-image-height;
-            height:rhythm(10);
+            height:rhythm(13);
             color:$article-header-image-color;
             background-color:$article-header-image-background-color;
           }
@@ -51,6 +51,18 @@
             position:absolute;
             top:auto;left:auto;
             right:0;bottom:0;
+          }
+        }
+        #hmain {
+          & {
+            background-color:#fff;
+            @include gutter;
+          }
+          >.container {
+          }
+          @include fontreset(1rem,true,false);
+          time {
+            display:block;
           }
         }
       }
