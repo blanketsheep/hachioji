@@ -34,14 +34,15 @@ $default-text-shadow-color: $default-box-shadow-color;
 
 @import 'susy';
 
+/*
 $wetasphalt:#34495e;
 $sunflower:#f1c40f;
 $pomegranate:#c0392b;
 $belizehole:#2980b9;
 $emerald:#2ecc71;
 $amethyst:#9b59b6;
-
-$background-color:lighten($sunflower,45%);
+*/
+@import 'colors';
 
 $header-rhythm:5;
 $header-font-size:1.25rem;
@@ -49,13 +50,10 @@ $header-font-size:1.25rem;
 //$article-text-font-size:.9em;
 
 //$slide-height:span(16);
-$slide-background-color:$wetasphalt;
 //$writers-vertical-padding:gutter();
 
 //$writer-header-height:span(4);
 //$writer-text-font-size: $article-text-font-size;
-$writer-header-background-color:$wetasphalt;
-$writer-header-color:#fff;
 //$writer-vertical-padding:$writers-vertical-padding;
 //$writer-text-min-height:span(2);
 //$writer-text-padding-top:gutter();
