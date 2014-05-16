@@ -5,6 +5,7 @@
   color:$footer-color;
   $h1-font-size:1.25rem;
   $content-font-size:.9rem;
+  //$font-size:1rem;
   >.container {
     @include container;
   }
@@ -12,10 +13,10 @@
     @include clearfix;
     .column {
       @include span(10 of 40);
-      height:rhythm(13);
+      height:rhythm(10);
       @include rhythm(1);
     }
-    @include fontreset(1rem,true,false);
+    @include fontreset($content-font-size,true,false);
     h1 {
       $font-size:$h1-font-size;
       margin:0;
@@ -47,8 +48,42 @@
   }
   #footer_recent_articles {
     .item {
-      @include adjust-font-size-to($content-font-size);
+      $font-size:$content-font-size;
+      @include adjust-font-size-to($font-size);
       @include ellipsis(true);
+    }
+  }
+  #footer_links {
+    .item {
+      $font-size:$content-font-size;
+      $rhythm:1;
+      @include adjust-font-size-to($font-size);
+      >a {
+        display:block;
+        padding-left:rhythm($rhythm);
+        position:relative;
+        height:rhythm($rhythm);
+      }
+      i {
+        line-height:inherit;
+        display:block;
+        text-align:center;
+        height:rhythm($rhythm);
+        width:rhythm($rhythm);
+        position:absolute;
+        top:0;left:0;bottom:0;
+        right:auto;
+      }
+    }
+  }
+  .bottom {
+    .copyright {
+      display:block;
+      text-align:center;
+      $font-size:$content-font-size;
+      @include adjust-font-size-to($font-size);
+      @include padding-leader(1,$font-size);
+      @include padding-trailer(1,$font-size);
     }
   }
 }
