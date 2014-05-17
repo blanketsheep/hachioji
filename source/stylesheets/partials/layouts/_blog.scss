@@ -57,6 +57,7 @@
           & {
             background-color:#fff;
             @include gutter;
+            @include rhythm-borders(0,1);
           }
           >.container {
           }
