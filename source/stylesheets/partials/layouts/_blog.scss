@@ -80,9 +80,13 @@
               font-size:$font-size;
               @include adjust-font-size-to($font-size);
               @include fontreset($font-size,$guttered);
+              @include padding-trailer(1,$font-size);
             }
           }
         }
+      }
+      >.footer {
+        
       }
     }
   }
