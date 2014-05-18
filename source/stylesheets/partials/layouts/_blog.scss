@@ -57,7 +57,9 @@
           & {
             background-color:#fff;
             @include gutter;
-            @include rhythm-borders(0,1);
+            //@include rhythm-borders(0,1);
+            @include horizontal-borders(0,1);
+            @include pad(1);
           }
           >.container {
           }
@@ -69,6 +71,7 @@
       }
       >.main {
         #content {
+          @include pad(1);
           >.container {
             $font-size:.95rem;
             $guttered: false;
