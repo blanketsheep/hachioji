@@ -1,6 +1,7 @@
 require "susy"
+require "tzinfo"
 
-Time.zone = "Tokyo"
+Time.zone = "Asia/Tokyo"
 set :markdown_engine, :redcarpet
 set :markdown, fenced_code_blocks: true, tables: true, smartypants: true
 activate :i18n, :path => "/:locale/", :mount_at_root => :ja
