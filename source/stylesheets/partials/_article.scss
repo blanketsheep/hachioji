@@ -10,15 +10,15 @@
     @include clearfix;
     @include leader(1,$font-size);
     @include trailer(1,$font-size);
-    @include rhythm-borders(0,1,$font-size);
+    //@include rhythm-borders(0,1,$font-size);
+    @include padding-trailer(1,$font-size);
+    //@include horizontal-borders(0,1,$font-size);
     background-color:$article-background-color;
     @include box-shadow;
     >.image {
       //@include span(4 of 30);
       //@include gutter;
       //@include trailer(1);
-      margin:-( rhythm(1,$font-size) );
-      margin-bottom:0;
       >.background {
         display:block;
         //width:span(4 of 30);
@@ -27,6 +27,10 @@
         background-position:center center;
         @include background-size(cover);
       }
+    }
+    >.header,
+    >.content {
+      @include pad(1);
     }
     >.header {
       //@include span(26 of 30);
