@@ -55,7 +55,8 @@
         }
         #hmain {
           & {
-            background-color:#fff;
+            //background-color:#fff;
+            background-color:$article-header-hmain-background-color;
             @include gutter;
             //@include rhythm-borders(0,1);
             @include horizontal-borders(0,1);
