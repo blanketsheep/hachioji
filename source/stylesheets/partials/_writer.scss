@@ -5,7 +5,7 @@
     &:not(:first-child) {
       @include padding-leader(1);
     }
-    &:not(:last-child) {
+    &:last-child {
       @include padding-trailer(1);
     }
   }

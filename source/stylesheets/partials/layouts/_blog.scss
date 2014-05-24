@@ -19,6 +19,17 @@
       //@import 'partials/writer';
     }
   }
+  #category_articles {
+    ul {
+      list-style-type:none;
+      margin:0;padding:0;
+    }
+    li {
+      display:block;
+    }
+    .items {
+    }
+  }
   #article {
     >.container {
       >.header {

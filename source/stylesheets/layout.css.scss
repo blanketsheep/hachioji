@@ -58,6 +58,10 @@ a {
   @import 'partials/writer';
 }
 
+.nav_header {
+  @import 'partials/nav_header';
+}
+
 /*
 #home #content #articles .article > .container {
   $font-size:.95rem;

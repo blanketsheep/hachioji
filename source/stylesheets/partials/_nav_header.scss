@@ -1,0 +1,41 @@
+$nav-header-rhythm:2;
+$nav-header-font-size:1.25rem;
+
+& {
+  $font-size:$nav-header-font-size;
+  @include adjust-font-size-to($font-size);
+  margin:0;
+  $height:rhythm($nav-header-rhythm,$font-size);
+  & {
+    color:$nav-header-color;
+    background-color:$nav-header-background-color;
+    font-weight:normal;
+    @include single-box-shadow($nav-header-border-color,0,1px,0);
+    @include box-shadow(0 1px 0 $nav-header-border-color,0 -1px 0 $nav-header-border-color);
+  }
+  &,
+  &>.container {
+    display:block;
+  }
+  >.container {
+    position:relative;
+    padding-left:$height;
+  }
+  .fa,
+  .text {
+    display:block;
+  }
+  .fa {
+    position:absolute;
+    top:0;left:0;bottom:0;
+    right:auto;
+    width:$height;
+    line-height:$height;
+    text-align:center;
+    background-color:$nav-header-icon-background-color;
+  }
+  .text {
+    line-height:$height;
+    //padding-left:.5em;
+  }
+}

@@ -87,8 +87,11 @@ configure :build do
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
+  
+  # ignore /^bower_components\/(?!(fontawesome|jquery))/
+  ignore /^bower_components\/(?!fontawesome)/
 end
 
-after_configuration do
-  sprockets.append_path '../vendor/bower_components/'
+ready do
+  sprockets.append_path 'bower_components'
 end

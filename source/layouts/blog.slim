@@ -35,6 +35,13 @@
       div#right
         div.container
           - if current_page.data.writers
-            div#writers
+            section#writers
+              = partial "partials/nav_header", :locals => { :icon => "fa-user", :text => "ライター" }
               - current_page.data.writers.each do |key|
                 = partial "partials/writer", :locals => { :writer => data.writers[key] }
+          section#category_articles
+            = partial "partials/nav_header", :locals => { :icon => "fa-file-o", :text => "最近の記事" }
+            ul.items
+              - blog.articles[0...10].each do |article|
+                li.item
+                  = link_to article.title,article

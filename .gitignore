@@ -22,3 +22,5 @@ Thumbs.db
 
 !/source
 /build
+
+/source/bower_components

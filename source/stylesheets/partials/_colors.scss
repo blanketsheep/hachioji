@@ -4,6 +4,9 @@ $end-of-the-day:       #f3f797;
 $mezz:                 #ff914d;
 $nail-polished-leaves: #ffbb4d;
 
+$default-box-shadow-color:rgba(0,0,0,.125);
+$default-text-shadow-color: $default-box-shadow-color;
+
 //$background-color: $end-of-the-day;
 $background-color: lighten($end-of-the-day,15%);
 $dummy-color: $old-sunlight;
@@ -29,3 +32,13 @@ $nav-letter-first-color: purple;
 $article-header-hmain-background-color:transparent;
 $article-header-image-color:#fff;
 $article-header-image-background-color: $dummy-color;
+
+/*
+$nav-header-background-color:$nail-polished-leaves;
+$nav-header-color:#fff;
+$nav-header-icon-background-color:$mezz;
+*/
+$nav-header-background-color:inherit;
+$nav-header-color:inherit;
+$nav-header-icon-background-color:inherit;
+$nav-header-border-color:$default-box-shadow-color;
