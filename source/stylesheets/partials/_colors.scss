@@ -42,3 +42,8 @@ $nav-header-background-color:inherit;
 $nav-header-color:inherit;
 $nav-header-icon-background-color:inherit;
 $nav-header-border-color:$default-box-shadow-color;
+
+$article-nextprev-border-color:$nav-header-border-color;
+$article-location-background-color:$article-background-color;
+$article-location-image-background-color:$dummy-color;
+$article-location-map-background-color:$article-location-image-background-color;

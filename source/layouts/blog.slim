@@ -68,6 +68,42 @@
                               img src=image
                             span.text
                               = article.title
+                  section#locations
+                    - current_page.data.locations.each do |location|
+                      - escapedAddress = URI.escape(location.address)
+                      - mapUrl = 'http://maps.google.com/maps/api/staticmap?size=300x175&maptype=roadmap&sensor=false&language=ja&markers=color:red|label:none|' + escapedAddress
+                      - imgStyle = "background-image:url(" + location.image + ");"
+                      - mapStyle = "background-image:url(" + mapUrl + ");"
+                      section.location
+                        div.container
+                          div.left
+                            div.container
+                              div.pad
+                                div.image style=imgStyle
+                                  img src=location.image
+                                div.map style=mapStyle
+                                  img src=mapUrl
+                          div.right
+                            div.container
+                              header.header
+                                h1
+                                  = location.title
+                                div.address
+                                  = location.address
+                              div.main
+                                div.text
+                                  = location.text
+                                ul.items
+                                  - location.items.each do |item|
+                                    - classes = []
+                                    - classes.push 'fa'
+                                    - classes.push item.icon
+                                    li.item
+                                      a.container href=item.href target="_blank"
+                                        span.icon
+                                          i class=classes
+                                        span.text
+                                          = item.title
       div#right
         div.container
           - if current_page.data.writers
