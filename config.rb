@@ -19,6 +19,12 @@ activate :blog do |blog|
   blog.summary_separator = /!READMORE/
 end
 
+activate :deploy do |deploy|
+  deploy.build_before = false
+  deploy.method = :git
+  deploy.branch = 'gh-pages'
+end
+
 ###
 # Compass
 ###
