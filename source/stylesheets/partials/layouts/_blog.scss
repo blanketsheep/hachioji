@@ -195,7 +195,7 @@
             .text {
               @include ellipsis(true);
             }
-            &:nth-child(1) {
+            &[data-position="1"] {
               .navicon {
                 left:0;
               }
@@ -203,7 +203,7 @@
                 text-align:left;
               }
             }
-            &:nth-child(2) {
+            &[data-position="2"] {
               .image {
                 margin:0 auto;
               }
@@ -214,7 +214,7 @@
                 text-align:center;
               }
             }
-            &:nth-child(3) {
+            &[data-position="3"] {
               .navicon {
                 right:0;
               }

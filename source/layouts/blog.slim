@@ -60,7 +60,7 @@
                         - classes = []
                         - classes.push 'fa'
                         - classes.push navicon
-                        a.item href=url_for(article)
+                        a.item href=url_for(article) data-position=i
                           span.container
                             span.navicon
                               i class=classes
@@ -69,7 +69,7 @@
                             span.text
                               = article.title
                   section#locations
-                    - current_page.data.locations.each do |location|
+                    - (current_page.data.locations || []).each do |location|
                       - escapedAddress = URI.escape(location.address)
                       - mapUrl = 'http://maps.google.com/maps/api/staticmap?size=300x175&maptype=roadmap&sensor=false&language=ja&markers=color:red|label:none|' + escapedAddress
                       - imgStyle = "background-image:url(" + location.image + ");"
@@ -94,7 +94,7 @@
                                 div.text
                                   = location.text
                                 ul.items
-                                  - location.items.each do |item|
+                                  - (location.items || []).each do |item|
                                     - classes = []
                                     - classes.push 'fa'
                                     - classes.push item.icon
