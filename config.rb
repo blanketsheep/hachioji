@@ -22,6 +22,7 @@ end
 activate :deploy do |deploy|
   deploy.build_before = false
   deploy.method = :git
+  deploy.remote = 'git@github.com:blanketsheep/hachioji.git'
   deploy.branch = 'gh-pages'
 end
 
