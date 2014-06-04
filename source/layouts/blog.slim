@@ -2,10 +2,12 @@
   #mainborder
   - background = ''
   - if current_page.data.thumbnail
+    - imgPath = '';
     - if current_page.data.thumbnail.wide
-      - background = url_for current_page.data.thumbnail.wide
+      - imgPath = current_page.data.thumbnail.wide
     - elsif current_page.data.thumbnail.grid
-      - background = url_for current_page.data.thumbnail.grid
+      - imgPath = current_page.data.thumbnail.grid
+    - background = url_for imgPath
   div#single
     div.container
       div#left
@@ -72,7 +74,8 @@
                     - (current_page.data.locations || []).each do |location|
                       - escapedAddress = URI.escape(location.address)
                       - mapUrl = 'http://maps.google.com/maps/api/staticmap?size=300x175&maptype=roadmap&sensor=false&language=ja&markers=color:red|label:none|' + escapedAddress
-                      - imgStyle = "background-image:url(" + location.image + ");"
+                      - imgUrl = url_for location.image
+                      - imgStyle = "background-image:url(" + imgUrl + ");"
                       - mapStyle = "background-image:url(" + mapUrl + ");"
                       section.location
                         div.container
@@ -80,7 +83,7 @@
                             div.container
                               div.pad
                                 div.image style=imgStyle
-                                  img src=location.image
+                                  img src=imgUrl
                                 div.map style=mapStyle
                                   img src=mapUrl
                           div.right
@@ -118,11 +121,12 @@
                 - background = ''
                 - if article.data.thumbnail
                   - if article.data.thumbnail.icon
-                    - background = url_for article.data.thumbnail.icon
+                    - path = article.data.thumbnail.icon
                   - elsif article.data.thumbnail.grid
-                    - background = url_for article.data.thumbnail.grid
+                    - path = article.data.thumbnail.grid
                   - elsif article.data.thumbnail.wide
-                    - background = url_for article.data.thumbnail.wide
+                    - path = article.data.thumbnail.wide
+                  - background = url_for(path)
                 - style = "background-image:url(" + background + ");"
                 li.item
                   a.container href=url_for(article)
