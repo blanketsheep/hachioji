@@ -2,10 +2,12 @@
   #mainborder
   - background = ''
   - if current_page.data.thumbnail
+    - imgPath = '';
     - if current_page.data.thumbnail.wide
-      - background = url_for current_page.data.thumbnail.wide
+      - imgPath = current_page.data.thumbnail.wide
     - elsif current_page.data.thumbnail.grid
-      - background = url_for current_page.data.thumbnail.grid
+      - imgPath = current_page.data.thumbnail.grid
+    - background = url_for imgPath
   div#single
     div.container
       div#left
@@ -19,18 +21,116 @@
                       - style = "background-image:url(" + background + ")";
                       div.background style=style
                         img src=background
+                  div#hmain
+                    div.container
                       h1
-                        a
-                          = current_page.data.title
+                        = link_to current_page.data.title, current_article
+                      time
+                        - timestr = current_article.date.strftime( data.conf.article.dateformat.single )
+                        = link_to timestr,current_article
               div.main
                 div.container
                   div#content
                     div.container
                       = yield
               footer.footer
+                div.container
+                  div#nextprev
+                    nav.container
+                      - for i in 1...4 do
+                        - article = nil
+                        - navicon = nil
+                        - case i
+                        - when 1
+                          - article = current_article.previous_article
+                          - navicon = 'fa-angle-left'
+                        - when 2
+                          - article = current_article
+                          - navicon = 'fa-file-o'
+                        - when 3
+                          - article = current_article.next_article
+                          - navicon = 'fa-angle-right'
+                        - if !article
+                          - next
+                        - image = ''
+                        - if article.data.thumbnail
+                          - if article.data.thumbnail.wide
+                            - image = article.data.thumbnail.wide
+                          - elsif article.data.thumbnail.grid
+                            - image = article.data.thumbnail.grid
+                        - style = "background-image:url(" + image + ");"
+                        - classes = []
+                        - classes.push 'fa'
+                        - classes.push navicon
+                        a.item href=url_for(article) data-position=i
+                          span.container
+                            span.navicon
+                              i class=classes
+                            span.image style=style
+                              img src=image
+                            span.text
+                              = article.title
+                  section#locations
+                    - (current_page.data.locations || []).each do |location|
+                      - escapedAddress = URI.escape(location.address)
+                      - mapUrl = 'http://maps.google.com/maps/api/staticmap?size=300x175&maptype=roadmap&sensor=false&language=ja&markers=color:red|label:none|' + escapedAddress
+                      - imgUrl = url_for location.image
+                      - imgStyle = "background-image:url(" + imgUrl + ");"
+                      - mapStyle = "background-image:url(" + mapUrl + ");"
+                      section.location
+                        div.container
+                          div.left
+                            div.container
+                              div.pad
+                                div.image style=imgStyle
+                                  img src=imgUrl
+                                div.map style=mapStyle
+                                  img src=mapUrl
+                          div.right
+                            div.container
+                              header.header
+                                h1
+                                  = location.title
+                                div.address
+                                  = location.address
+                              div.main
+                                div.text
+                                  = location.text
+                                ul.items
+                                  - (location.items || []).each do |item|
+                                    - classes = []
+                                    - classes.push 'fa'
+                                    - classes.push item.icon
+                                    li.item
+                                      a.container href=item.href target="_blank"
+                                        span.icon
+                                          i class=classes
+                                        span.text
+                                          = item.title
       div#right
         div.container
           - if current_page.data.writers
-            div#writers
+            section#writers
+              = partial "partials/nav_header", :locals => { :icon => "fa-user", :text => "ライター" }
               - current_page.data.writers.each do |key|
                 = partial "partials/writer", :locals => { :writer => data.writers[key] }
+          section#category_articles
+            = partial "partials/nav_header", :locals => { :icon => "fa-file-o", :text => "最近の記事" }
+            ul.items
+              - blog.articles[0...10].each do |article|
+                - background = ''
+                - if article.data.thumbnail
+                  - if article.data.thumbnail.icon
+                    - path = article.data.thumbnail.icon
+                  - elsif article.data.thumbnail.grid
+                    - path = article.data.thumbnail.grid
+                  - elsif article.data.thumbnail.wide
+                    - path = article.data.thumbnail.wide
+                  - background = url_for(path)
+                - style = "background-image:url(" + background + ");"
+                li.item
+                  a.container href=url_for(article)
+                    span.icon style=style
+                      img src=background
+                    span.text
+                      = article.title

@@ -19,6 +19,13 @@ activate :blog do |blog|
   blog.summary_separator = /!READMORE/
 end
 
+#activate :deploy do |deploy|
+#  deploy.build_before = false
+#  deploy.method = :git
+#  deploy.remote = 'git@github.com:blanketsheep/hachioji.git'
+#  deploy.branch = 'gh-pages'
+#end
+
 ###
 # Compass
 ###
@@ -87,8 +94,11 @@ configure :build do
 
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
+  
+  # ignore /^bower_components\/(?!(fontawesome|jquery))/
+  ignore /^bower_components\/(?!fontawesome)/
 end
 
-after_configuration do
-  sprockets.append_path '../vendor/bower_components/'
+ready do
+  sprockets.append_path 'bower_components'
 end

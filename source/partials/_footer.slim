@@ -4,7 +4,7 @@ footer#footer
       section#footer_about.column
         = partial "partials/footer_logo"
         h1
-          = "blanket sheep"
+          = "Blanket Sheep"
         div.content
           = t(:about_blanketsheep)
       section#footer_recent_articles.column
@@ -15,6 +15,15 @@ footer#footer
             li.item
               = link_to article.title,article
       section.column
-        
-      section.column
-        
+        | からだ!
+      section.column#footer_links.column
+        ul.items
+          - data.footer_links.items.each do |item|
+            li.item
+              a href=item.href target="_blank"
+                i class=(item.icon.classes)
+                span.text
+                  = item.name
+    div.bottom
+      span.copyright
+        | &copy; Blanket Sheep.

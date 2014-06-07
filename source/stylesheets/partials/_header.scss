@@ -4,13 +4,16 @@
   position:fixed;
   top:0;left:0;right:0;
   bottom:auto;
+  $font-size:$header-font-size;
+  font-size:$font-size;
+  //font-weight:bold;
   >.container {
     @include container;
     >.left,
     >.center,
     >.right {
       //height:$header-height;
-      height: rhythm($header-rhythm);
+      height: rhythm($header-rhythm,$font-size);
     }
     >.left {
       @include span(5);
@@ -29,17 +32,24 @@
     }
   }
   & {
-    @include transition-property(color,background-color,box-shadow);
+    @include transition-property(color,background-color,box-shadow,text-shadow);
     @include transition-duration;
     @include transition-timing-function(ease);
   }
+  & {
+    //background-color:rgba(255,255,255,0);
+    color:#000;
+  }
   body:not([data-scrolled-main]) & {
-    color:#fff;
+    //color:#fff;
     background-color:rgba(255,255,255,0);
+    //@include single-text-shadow(0,0,0,$default-text-shadow-spread,rgba(0,0,0,0));
+    @include single-box-shadow(rgba(0,0,0,0),0,0,0,$default-box-shadow-spread,$default-box-shadow-inset);
   }
   body[data-scrolled-main] & {
-    color:#000;
-    background-color:rgba(255,255,255,1);
+    //color:#000;
+    background-color:rgba(255,255,255,.75);
+    //@include text-shadow;
     @include box-shadow;
   }
 }

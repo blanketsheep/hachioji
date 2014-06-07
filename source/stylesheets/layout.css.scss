@@ -8,11 +8,12 @@ html,body {
 }
 body {
   font-family:
-    'Lucida Grande',
+    'Verdana',
+    'YuGothic', 'Yu Gothic', '游ゴシック',
     'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3',
     'Meiryo', 'メイリオ',
     sans-serif;
-  //background-image:url('../images/photography/photography.png');
+  background-image:url('../images/photography.transparentize/photography.png');
   background-repeat:repeat;
   background-color:#ffffe0;
   background-color:$background-color;
@@ -55,6 +56,10 @@ a {
 #home #content #right #writers .writer,
 #single #right #writers .writer {
   @import 'partials/writer';
+}
+
+.nav_header {
+  @import 'partials/nav_header';
 }
 
 /*

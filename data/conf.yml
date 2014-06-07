@@ -24,3 +24,4 @@ nav:
 article:
   dateformat:
     grid: "%Y/%m/%d"
+    single: "%Y/%m/%d"

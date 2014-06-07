@@ -5,7 +5,7 @@
     &:not(:first-child) {
       @include padding-leader(1);
     }
-    &:not(:last-child) {
+    &:last-child {
       @include padding-trailer(1);
     }
   }
@@ -27,16 +27,27 @@
         background-position:center center;
         @include background-size(cover);
       }
+      & {
+        background-image:url('../images/kouki.jpg');
+      }
       img {
         display:none;
       }
     }
+    .position,
     .name {
       margin:0;
       position:absolute;
+      @include gutter;
+    }
+    .position {
+      top:0;left:0;
+      right:auto;bottom:auto;
+      @include adjust-font-size-to(1rem);
+    }
+    .name {
       top:auto;left:auto;
       right:0;bottom:0;
-      @include gutter;
       @include adjust-font-size-to(1.25rem);
     }
   }
