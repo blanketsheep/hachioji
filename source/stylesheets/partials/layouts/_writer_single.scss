@@ -47,7 +47,8 @@ $header-icon-wrap-rhythm:5;
             background-position:center center;
             @include background-size(cover);
             @include border-radius(50%);
-            border:solid 3px #000;
+            border:solid 3px $writer-single-icon-border-color;
+            background-color:$writer-single-icon-background-color;
           }
           img {
             display:none;
