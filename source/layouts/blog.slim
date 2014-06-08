@@ -138,14 +138,18 @@
             ul.items
               - blog.articles[0...10].each do |article|
                 - background = ''
-                - if article.data.thumbnail
-                  - if article.data.thumbnail.icon
-                    - path = article.data.thumbnail.icon
-                  - elsif article.data.thumbnail.grid
-                    - path = article.data.thumbnail.grid
-                  - elsif article.data.thumbnail.wide
-                    - path = article.data.thumbnail.wide
-                  - background = url_for(path)
+                - imgPath = ''
+                - keys = []
+                - keys.push 'thumbnail_icon'
+                - keys.push 'thumbnail_grid'
+                - keys.push 'thumbnail_wide'
+                - keys.each do |key|
+                  - if article.data.has_key?(key)
+                    - imgPath = article.data[key]
+                    - break
+                  - else
+                    - next
+                - background = url_for imgPath
                 - style = "background-image:url(" + background + ");"
                 li.item
                   a.container href=url_for(article)
