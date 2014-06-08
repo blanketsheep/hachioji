@@ -9,7 +9,6 @@ s64:
     ウェブサイトのコーディングなどの技術担当。<br/>
     エナジードリンクをキメつつガジェットを買い漁るのが趣味。<br/>
     GitHubやTumblrで活動中。
-  longtext: ""
   tag: writer_s64
   profile_path: "/writers/s64.html"
 sumiyoshi:
@@ -23,9 +22,8 @@ sumiyoshi:
     山梨出身だが、父親の転勤で八王子市に移り住む。<br/>
     八王子のすべての方にもっと八王子を知ってもらうため、*サイト名*を立ち上げる。<br/>
     生まれてこの方食べられなかったキャラメルを、この間克服。
-  longtext: ""
   tag: writer_sumiyoshi
-  profile_path: "/writers/s64.html"
+  profile_path: "/writers/sumiyoshi.html"
 tsuchiko:
   name: "ツチコ。"
   avatar:
@@ -37,9 +35,8 @@ tsuchiko:
     こんにちは、ツチコ。って言います。<br/>
     マグロが好きなまだまだ悩める現役JKです。(※ラストのピチピチ)<br/>
     ライター擬きなのでちょっとポップでキュートなアイコンって事にしといてください<br/>
-  longtext: ""
   tag: writer_tsuchiko
-  profile_path: "/writers/s64.html"
+  profile_path: "/writers/tsuchiko.html"
 yuyupom:
   name: "ゆゆぽむ"
   avatar:
@@ -51,10 +48,5 @@ yuyupom:
     元バンギャ、現HipHop大好きな女の子。食べることが何よりも幸せ。<br/>
     今年は上手くカラーメイクを取り入れようと計画中。いつまでも女の子でいたい身長150(自称)の元気な乙女ですん。<br/>
     地元はやっぱり八王子！地元大好き！てなことで八王子の魅力を伝えたいです。
-  longtext: |-
-    八王子市在住のLast JKなう。出身は羽村市なのですが、小4の時に八王子に移住。今ではすっかり八王子人です。<br/>
-    受験勉強に勤しみつつ、メイクやファッションの研究を重ね日々女磨きを楽しんでいる17歳。とにかく楽しいことが大好きです。人生ノリです。ノリで生きてるお気楽少女です。フットワークは軽めです。<br/>
-    趣味は音楽鑑賞とカラオケ。あとは最近デジカメを貰ったので写真もちょこっと。<br/>
-    八王子が1番落ち着く街だと思っています。都会と田舎の融合した街のいいところを存分に発信していきたいと思います。
   tag: writer_yuyupom
-  profile_path: "/writers/s64.html"
+  profile_path: "/writers/yuyupom.html"

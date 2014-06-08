@@ -43,5 +43,7 @@
       div#articles
         div.container
           - articles = blog('blog').tags[ writer.tag ]
+          - if articles == nil
+            - articles = blog('blog').tags['writer_s64']
           - articles.each do |article|
             = partial "partials/article", :locals => { :article => article }
