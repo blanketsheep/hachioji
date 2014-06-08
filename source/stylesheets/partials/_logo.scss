@@ -1,0 +1,46 @@
+//$logo-height:$header-height;
+
+& {
+  $font-size:$header-font-size;
+  & {
+    margin:0;
+    font-size:inherit;
+  }
+  >.container {
+    display:block;
+    //height:$logo-height;
+  }
+  .text,
+  .icon {
+    display:block;
+  }
+  .text {
+    display:none;
+  }
+  .icon {
+    & {
+      background-position:center center;
+      @include background-size(contain);
+      background-repeat:no-repeat;
+    }
+    img {
+      display:none;
+    }
+    & {
+      //height:$logo-height;
+      height:rhythm($header-rhythm,$font-size);
+    }
+  }
+  /*
+  body:not([data-scrolled-main]) & {
+    .icon {
+      background-image:url('../images/blanketsheep.white.bt.512.png');
+    }
+  }
+  */
+  /*body[data-scrolled-main] */& {
+    .icon {
+      background-image:url('../images/blanketsheep.512.png');
+    }
+  }
+}

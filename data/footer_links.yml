@@ -1,0 +1,13 @@
+items:
+  - name: "GitHub"
+    icon:
+      classes:
+      - fa
+      - fa-github
+    href: "https://github.com/blanketsheep/hachioji"
+  - name: "Twitter"
+    icon:
+      classes:
+      - fa
+      - fa-twitter
+    href: "https://twitter.com/hachioji_bs"

@@ -3,6 +3,9 @@ prose:
   siteurl: "http://blanketsheep.github.io/hachioji/"
   media: "source/resources"
   ignore:
+  - .gitkeep
+  - .gitignore
+  - .gitattributes
   metadata:
     source/articles:
     - name: "date"
@@ -16,17 +19,20 @@ prose:
         element: "text"
         label: "title"
         value: ""
-    - name: "writers"
+    - name: "tags"
       field:
-        label: "writers"
         element: "multiselect"
+        label: "tags"
         options:
-        - name: "Miyuki Sumiyoshi"
-          value: "sumiyoshi"
-        - name: "Shuma Yoshioka"
-          value: "s64"
-        - name: "Sayaka Tsuchiya"
-          value: "tsuchiya"
+        - name: "writer_s64"
+          value: "writer_s64"
+        - name: "writer_sumiyoshi"
+          value: "writer_sumiyoshi"
+        - name: "writer_tsuchiko"
+          value: "writer_tsuchiko"
+        - name: "writer_yuyupom"
+          value: "writer_yuyupom"
+        alterable: true
     - name: "thumbnail"
       - name: "wide"
         field:

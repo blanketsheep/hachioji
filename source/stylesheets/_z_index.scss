@@ -1,0 +1,20 @@
+$header-z-index:1000;
+
+$head-z-index:($header-z-index + 1);
+
+$main-z-index:($header-z-index - 1);
+$footer-z-index:($main-z-index - 1);
+
+head {
+  z-index:$head-z-index;
+}
+
+#header {
+  z-index:$header-z-index;
+}
+#main {
+  z-index:$main-z-index;
+}
+#footer {
+  z-index:$footer-z-index;
+}

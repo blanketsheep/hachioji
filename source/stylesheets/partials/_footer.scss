@@ -1,0 +1,89 @@
+//$footer-background-color:$wetasphalt;
+
+& {
+  background-color:$footer-background-color;
+  color:$footer-color;
+  $h1-font-size:1.25rem;
+  $content-font-size:.9rem;
+  //$font-size:1rem;
+  >.container {
+    @include container;
+  }
+  .columns {
+    @include clearfix;
+    .column {
+      @include span(10 of 40);
+      height:rhythm(10);
+      @include rhythm(1);
+    }
+    @include fontreset($content-font-size,true,false);
+    h1 {
+      $font-size:$h1-font-size;
+      margin:0;
+      @include adjust-font-size-to($font-size);
+      color:$footer-h1-color;
+    }
+    ul {
+      list-style-type:none;
+      li {
+        display:block;
+        text-align:initial;
+      }
+    }
+  }
+  #footer_about {
+    .footer_logo {
+      @import 'partials/footer_logo';
+    }
+    .content {
+      $font-size:$content-font-size;
+      @include adjust-font-size-to($font-size);
+      //@include squish(1 of 10);
+    }
+    h1 {
+      $font-size:$h1-font-size;
+      @include leader(1,$font-size);
+      //@include trailer(1,$font-size);
+    }
+  }
+  #footer_recent_articles {
+    .item {
+      $font-size:$content-font-size;
+      @include adjust-font-size-to($font-size);
+      @include ellipsis(true);
+    }
+  }
+  #footer_links {
+    .item {
+      $font-size:$content-font-size;
+      $rhythm:1;
+      @include adjust-font-size-to($font-size);
+      >a {
+        display:block;
+        padding-left:rhythm($rhythm);
+        position:relative;
+        height:rhythm($rhythm);
+      }
+      i {
+        line-height:inherit;
+        display:block;
+        text-align:center;
+        height:rhythm($rhythm);
+        width:rhythm($rhythm);
+        position:absolute;
+        top:0;left:0;bottom:0;
+        right:auto;
+      }
+    }
+  }
+  .bottom {
+    .copyright {
+      display:block;
+      text-align:center;
+      $font-size:$content-font-size;
+      @include adjust-font-size-to($font-size);
+      @include padding-leader(1,$font-size);
+      @include padding-trailer(1,$font-size);
+    }
+  }
+}

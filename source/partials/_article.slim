@@ -1,0 +1,20 @@
+article.article
+  div.container
+    div.image
+      - background = ''
+      - if article.data.thumbnail
+        - if article.data.thumbnail.grid
+          - background = url_for article.data.thumbnail.grid
+        - elsif article.data.thumbnail.wide
+          - background = url_for article.data.thumbnail.wide
+      - style = "background-image:url(" + background + ")";
+      a.background href=url_for(article) style=style
+    header.header
+      div.container
+        h1
+          = link_to article.title, article
+        time datetime=article.date
+          = link_to article.date.strftime( data.conf.article.dateformat.grid ), article
+    div.content
+      div.container
+        = article.summary

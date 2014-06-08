@@ -1,0 +1,17 @@
+- style = "";
+- if writer.avatar.wide && !writer.avatar.wide.empty?
+  - style = "background-image:url(#{writer.avatar.wide});"
+section.writer
+  div.container
+    header.header
+      div.container
+        div.background style=style
+          img src=writer.avatar.wide
+        h2.position
+          = writer.position
+        h1.name
+          = link_to writer.name, writer.profile_path
+    div.main
+      div.container
+        div.text
+          = writer.text
