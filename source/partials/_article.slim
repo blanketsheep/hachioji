@@ -2,11 +2,22 @@ article.article
   div.container
     div.image
       - background = ''
-      - if article.data.thumbnail
-        - if article.data.thumbnail.grid
-          - background = url_for article.data.thumbnail.grid
-        - elsif article.data.thumbnail.wide
-          - background = url_for article.data.thumbnail.wide
+      - imgPath = ''
+      /- if article.data.thumbnail
+      /  - if article.data.thumbnail.grid
+      /    - background = url_for article.data.thumbnail.grid
+      /  - elsif article.data.thumbnail.wide
+      /    - background = url_for article.data.thumbnail.wide
+      - keys = []
+      - keys.push 'thumbnail_grid'
+      - keys.push 'thumbnail_wide'
+      - keys.each do |key|
+        - if article.data.has_key?(key)
+          - imgPath = article.data[key]
+          - break
+        - else
+          - next
+      - background = url_for imgPath
       - style = "background-image:url(" + background + ")";
       a.background href=url_for(article) style=style
     header.header
