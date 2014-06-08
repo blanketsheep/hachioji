@@ -33,6 +33,15 @@ prose:
         - name: "writer_yuyupom"
           value: "writer_yuyupom"
         alterable: true
-    thumbnail:
-      wide: "/resources/*/*.JPG"
-      grid: "/resources/*/*.JPG"
+    - name: "thumbnail_wide"
+      field:
+        label: "thumbnail_wide"
+        element: "text"
+        placeholder: "/resources/*/*.JPG"
+        value: ""
+    - name: "thumbnail_grid"
+      field:
+        label: "thumbnail_grid"
+        element: "text"
+        placeholder: "/resources/*/*.JPG"
+        value: ""
