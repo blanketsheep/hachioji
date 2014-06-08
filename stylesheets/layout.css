@@ -312,44 +312,44 @@ a {
       padding-bottom: 0rem;
       margin-bottom: 24px;
       margin-bottom: 1.5rem; }
-    /* line 63, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
+    /* line 64, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
     #footer .columns h1, #footer .columns h2, #footer .columns h3, #footer .columns h4, #footer .columns h5, #footer .columns h6,
     #footer .columns p, #footer .columns blockquote,
     #footer .columns ul, #footer .columns ol {
       margin: 0;
       padding: 0;
       font-size: 1em; }
-    /* line 75, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
+    /* line 76, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
     #footer .columns h1 {
       font-size: 28px;
       font-size: 1.75rem;
       line-height: 48px;
       line-height: 3rem; }
-    /* line 82, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
+    /* line 83, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
     #footer .columns h2 {
       font-size: 24px;
       font-size: 1.5rem;
       line-height: 48px;
       line-height: 3rem; }
-    /* line 89, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
+    /* line 90, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
     #footer .columns h3 {
       font-size: 20px;
       font-size: 1.25rem;
       line-height: 24px;
       line-height: 1.5rem; }
-    /* line 96, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
+    /* line 97, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
     #footer .columns h4 {
       font-size: 19px;
       font-size: 1.2rem;
       line-height: 24px;
       line-height: 1.5rem; }
-    /* line 103, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
+    /* line 104, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
     #footer .columns h5 {
       font-size: 18px;
       font-size: 1.15rem;
       line-height: 24px;
       line-height: 1.5rem; }
-    /* line 110, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
+    /* line 111, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
     #footer .columns h6 {
       font-size: 18px;
       font-size: 1.1rem;
@@ -507,7 +507,7 @@ a {
     margin-left: 0.28125rem;
     margin-right: 5px;
     margin-right: 0.28125rem; }
-  /* line 1, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_article.scss */
+  /* line 20, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_home.scss */
   #home #content #articles .article {
     width: 321px;
     width: 20.0625rem;
@@ -530,95 +530,7 @@ a {
       margin-left: 41.53125rem;
       margin-right: -100%;
       clear: none; }
-    /* line 5, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_article.scss */
-    #home #content #articles .article > .container {
-      font-size: 0.95rem;
-      overflow: hidden;
-      *zoom: 1;
-      margin-top: 24px;
-      margin-top: 1.5rem;
-      margin-bottom: 24px;
-      margin-bottom: 1.5rem;
-      padding-bottom: 24px;
-      padding-bottom: 1.5rem;
-      background-color: white;
-      -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.125);
-      -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.125);
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.125); }
-      /* line 63, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
-      #home #content #articles .article > .container h1, #home #content #articles .article > .container h2, #home #content #articles .article > .container h3, #home #content #articles .article > .container h4, #home #content #articles .article > .container h5, #home #content #articles .article > .container h6,
-      #home #content #articles .article > .container p, #home #content #articles .article > .container blockquote,
-      #home #content #articles .article > .container ul, #home #content #articles .article > .container ol {
-        margin: 0;
-        padding: 0;
-        font-size: 1em; }
-      /* line 75, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
-      #home #content #articles .article > .container h1 {
-        font-size: 28px;
-        font-size: 1.75rem;
-        line-height: 48px;
-        line-height: 3rem; }
-      /* line 82, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
-      #home #content #articles .article > .container h2 {
-        font-size: 24px;
-        font-size: 1.5rem;
-        line-height: 48px;
-        line-height: 3rem; }
-      /* line 89, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
-      #home #content #articles .article > .container h3 {
-        font-size: 20px;
-        font-size: 1.25rem;
-        line-height: 24px;
-        line-height: 1.5rem; }
-      /* line 96, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
-      #home #content #articles .article > .container h4 {
-        font-size: 19px;
-        font-size: 1.2rem;
-        line-height: 24px;
-        line-height: 1.5rem; }
-      /* line 103, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
-      #home #content #articles .article > .container h5 {
-        font-size: 18px;
-        font-size: 1.15rem;
-        line-height: 24px;
-        line-height: 1.5rem; }
-      /* line 110, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
-      #home #content #articles .article > .container h6 {
-        font-size: 18px;
-        font-size: 1.1rem;
-        line-height: 24px;
-        line-height: 1.5rem; }
-      /* line 22, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_article.scss */
-      #home #content #articles .article > .container > .image > .background {
-        display: block;
-        background-color: #f8ff73;
-        height: 10.5rem;
-        background-position: center center;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        -webkit-background-size: cover;
-        background-size: cover; }
-      /* line 31, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_article.scss */
-      #home #content #articles .article > .container > .header,
-      #home #content #articles .article > .container > .content {
-        padding-left: 33px;
-        padding-left: 2.0625rem;
-        padding-right: 33px;
-        padding-right: 2.0625rem; }
-      /* line 38, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_article.scss */
-      #home #content #articles .article > .container > .header > .container time {
-        display: none; }
-      /* line 42, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_article.scss */
-      #home #content #articles .article > .container > .header > .container h1 {
-        font-size: 20px;
-        font-size: 1.25rem;
-        line-height: 24px;
-        line-height: 1.5rem;
-        margin-top: 24px;
-        margin-top: 1.5rem;
-        margin-bottom: 24px;
-        margin-bottom: 1.5rem; }
-  /* line 25, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_home.scss */
+  /* line 26, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_home.scss */
   #home #writers {
     margin-top: 24px;
     margin-top: 1.5rem;
@@ -797,44 +709,44 @@ a {
     padding-left: 2.0625rem;
     padding-right: 33px;
     padding-right: 2.0625rem; }
-  /* line 63, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
+  /* line 64, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
   #single #article > .container > .header #hmain h1, #single #article > .container > .header #hmain h2, #single #article > .container > .header #hmain h3, #single #article > .container > .header #hmain h4, #single #article > .container > .header #hmain h5, #single #article > .container > .header #hmain h6,
   #single #article > .container > .header #hmain p, #single #article > .container > .header #hmain blockquote,
   #single #article > .container > .header #hmain ul, #single #article > .container > .header #hmain ol {
     margin: 0;
     padding: 0;
     font-size: 1em; }
-  /* line 75, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
+  /* line 76, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
   #single #article > .container > .header #hmain h1 {
     font-size: 28px;
     font-size: 1.75rem;
     line-height: 48px;
     line-height: 3rem; }
-  /* line 82, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
+  /* line 83, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
   #single #article > .container > .header #hmain h2 {
     font-size: 24px;
     font-size: 1.5rem;
     line-height: 48px;
     line-height: 3rem; }
-  /* line 89, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
+  /* line 90, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
   #single #article > .container > .header #hmain h3 {
     font-size: 20px;
     font-size: 1.25rem;
     line-height: 24px;
     line-height: 1.5rem; }
-  /* line 96, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
+  /* line 97, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
   #single #article > .container > .header #hmain h4 {
     font-size: 19px;
     font-size: 1.2rem;
     line-height: 24px;
     line-height: 1.5rem; }
-  /* line 103, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
+  /* line 104, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
   #single #article > .container > .header #hmain h5 {
     font-size: 18px;
     font-size: 1.15rem;
     line-height: 24px;
     line-height: 1.5rem; }
-  /* line 110, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
+  /* line 111, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
   #single #article > .container > .header #hmain h6 {
     font-size: 18px;
     font-size: 1.1rem;
@@ -858,7 +770,7 @@ a {
       line-height: 1.5rem;
       padding-bottom: 24px;
       padding-bottom: 1.5rem; }
-      /* line 63, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
+      /* line 64, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
       #single #article > .container > .main #content > .container h1, #single #article > .container > .main #content > .container h2, #single #article > .container > .main #content > .container h3, #single #article > .container > .main #content > .container h4, #single #article > .container > .main #content > .container h5, #single #article > .container > .main #content > .container h6,
       #single #article > .container > .main #content > .container p, #single #article > .container > .main #content > .container blockquote,
       #single #article > .container > .main #content > .container ul, #single #article > .container > .main #content > .container ol {
@@ -869,7 +781,7 @@ a {
         margin-left: 0.28125rem;
         margin-right: 5px;
         margin-right: 0.28125rem; }
-      /* line 75, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
+      /* line 76, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
       #single #article > .container > .main #content > .container h1 {
         font-size: 28px;
         font-size: 1.75rem;
@@ -877,7 +789,7 @@ a {
         line-height: 3rem;
         padding-top: 24px;
         padding-top: 1.5rem; }
-      /* line 82, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
+      /* line 83, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
       #single #article > .container > .main #content > .container h2 {
         font-size: 24px;
         font-size: 1.5rem;
@@ -885,7 +797,7 @@ a {
         line-height: 3rem;
         padding-top: 24px;
         padding-top: 1.5rem; }
-      /* line 89, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
+      /* line 90, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
       #single #article > .container > .main #content > .container h3 {
         font-size: 20px;
         font-size: 1.25rem;
@@ -893,7 +805,7 @@ a {
         line-height: 1.5rem;
         padding-top: 24px;
         padding-top: 1.5rem; }
-      /* line 96, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
+      /* line 97, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
       #single #article > .container > .main #content > .container h4 {
         font-size: 19px;
         font-size: 1.2rem;
@@ -901,7 +813,7 @@ a {
         line-height: 1.5rem;
         padding-top: 24px;
         padding-top: 1.5rem; }
-      /* line 103, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
+      /* line 104, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
       #single #article > .container > .main #content > .container h5 {
         font-size: 18px;
         font-size: 1.15rem;
@@ -909,7 +821,7 @@ a {
         line-height: 1.5rem;
         padding-top: 24px;
         padding-top: 1.5rem; }
-      /* line 110, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
+      /* line 111, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
       #single #article > .container > .main #content > .container h6 {
         font-size: 18px;
         font-size: 1.1rem;
@@ -917,7 +829,7 @@ a {
         line-height: 1.5rem;
         padding-top: 24px;
         padding-top: 1.5rem; }
-      /* line 117, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
+      /* line 118, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
       #single #article > .container > .main #content > .container p, #single #article > .container > .main #content > .container blockquote {
         padding-top: 24px;
         padding-top: 1.5rem; }
@@ -1026,44 +938,44 @@ a {
     /* line 224, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_blog.scss */
     #single #article > .container > .footer #nextprev .item[data-position="3"] .text {
       text-align: right; }
-  /* line 63, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
+  /* line 64, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
   #single #article > .container > .footer #locations .location h1, #single #article > .container > .footer #locations .location h2, #single #article > .container > .footer #locations .location h3, #single #article > .container > .footer #locations .location h4, #single #article > .container > .footer #locations .location h5, #single #article > .container > .footer #locations .location h6,
   #single #article > .container > .footer #locations .location p, #single #article > .container > .footer #locations .location blockquote,
   #single #article > .container > .footer #locations .location ul, #single #article > .container > .footer #locations .location ol {
     margin: 0;
     padding: 0;
     font-size: 1em; }
-  /* line 75, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
+  /* line 76, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
   #single #article > .container > .footer #locations .location h1 {
     font-size: 28px;
     font-size: 1.75rem;
     line-height: 48px;
     line-height: 3rem; }
-  /* line 82, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
+  /* line 83, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
   #single #article > .container > .footer #locations .location h2 {
     font-size: 24px;
     font-size: 1.5rem;
     line-height: 48px;
     line-height: 3rem; }
-  /* line 89, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
+  /* line 90, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
   #single #article > .container > .footer #locations .location h3 {
     font-size: 20px;
     font-size: 1.25rem;
     line-height: 24px;
     line-height: 1.5rem; }
-  /* line 96, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
+  /* line 97, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
   #single #article > .container > .footer #locations .location h4 {
     font-size: 19px;
     font-size: 1.2rem;
     line-height: 24px;
     line-height: 1.5rem; }
-  /* line 103, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
+  /* line 104, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
   #single #article > .container > .footer #locations .location h5 {
     font-size: 18px;
     font-size: 1.15rem;
     line-height: 24px;
     line-height: 1.5rem; }
-  /* line 110, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
+  /* line 111, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
   #single #article > .container > .footer #locations .location h6 {
     font-size: 18px;
     font-size: 1.1rem;
@@ -1341,6 +1253,434 @@ a {
   /* line 37, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_nav_header.scss */
   .nav_header .text {
     line-height: 3rem; }
+
+/* line 4, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_writer_single.scss */
+#writers #writer_single {
+  margin-top: -4.5rem; }
+  /* line 12, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_writer_single.scss */
+  #writers #writer_single > .container > .header > .container > .top > .container {
+    position: relative;
+    height: 30rem; }
+  /* line 16, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_writer_single.scss */
+  #writers #writer_single > .container > .header > .container > .top .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-position: center center;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover; }
+    /* line 21, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_writer_single.scss */
+    #writers #writer_single > .container > .header > .container > .top .image img {
+      display: none; }
+    /* line 24, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_writer_single.scss */
+    #writers #writer_single > .container > .header > .container > .top .image {
+      background-image: url("../images/kouki.jpg") !important; }
+  /* line 29, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_writer_single.scss */
+  #writers #writer_single > .container > .header > .container > .bottom {
+    padding-bottom: 24px;
+    padding-bottom: 1.5rem; }
+    /* line 31, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_writer_single.scss */
+    #writers #writer_single > .container > .header > .container > .bottom {
+      margin-top: -3.75rem; }
+    /* line 64, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
+    #writers #writer_single > .container > .header > .container > .bottom h1, #writers #writer_single > .container > .header > .container > .bottom h2, #writers #writer_single > .container > .header > .container > .bottom h3, #writers #writer_single > .container > .header > .container > .bottom h4, #writers #writer_single > .container > .header > .container > .bottom h5, #writers #writer_single > .container > .header > .container > .bottom h6,
+    #writers #writer_single > .container > .header > .container > .bottom p, #writers #writer_single > .container > .header > .container > .bottom blockquote,
+    #writers #writer_single > .container > .header > .container > .bottom ul, #writers #writer_single > .container > .header > .container > .bottom ol {
+      margin: 0;
+      padding: 0;
+      font-size: 1em; }
+    /* line 76, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
+    #writers #writer_single > .container > .header > .container > .bottom h1 {
+      font-size: 28px;
+      font-size: 1.75rem;
+      line-height: 48px;
+      line-height: 3rem; }
+    /* line 83, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
+    #writers #writer_single > .container > .header > .container > .bottom h2 {
+      font-size: 24px;
+      font-size: 1.5rem;
+      line-height: 48px;
+      line-height: 3rem; }
+    /* line 90, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
+    #writers #writer_single > .container > .header > .container > .bottom h3 {
+      font-size: 20px;
+      font-size: 1.25rem;
+      line-height: 24px;
+      line-height: 1.5rem; }
+    /* line 97, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
+    #writers #writer_single > .container > .header > .container > .bottom h4 {
+      font-size: 19px;
+      font-size: 1.2rem;
+      line-height: 24px;
+      line-height: 1.5rem; }
+    /* line 104, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
+    #writers #writer_single > .container > .header > .container > .bottom h5 {
+      font-size: 18px;
+      font-size: 1.15rem;
+      line-height: 24px;
+      line-height: 1.5rem; }
+    /* line 111, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
+    #writers #writer_single > .container > .header > .container > .bottom h6 {
+      font-size: 18px;
+      font-size: 1.1rem;
+      line-height: 24px;
+      line-height: 1.5rem; }
+    /* line 36, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_writer_single.scss */
+    #writers #writer_single > .container > .header > .container > .bottom .icon {
+      display: block;
+      margin: 0 auto;
+      width: 7.5rem;
+      height: 7.5rem;
+      position: relative; }
+      /* line 43, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_writer_single.scss */
+      #writers #writer_single > .container > .header > .container > .bottom .icon .container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: block;
+        background-position: center center;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+        -moz-border-radius: 50%;
+        -webkit-border-radius: 50%;
+        border-radius: 50%;
+        border: solid 3px #000; }
+      /* line 52, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_writer_single.scss */
+      #writers #writer_single > .container > .header > .container > .bottom .icon img {
+        display: none; }
+    /* line 56, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_writer_single.scss */
+    #writers #writer_single > .container > .header > .container > .bottom h1, #writers #writer_single > .container > .header > .container > .bottom h2 {
+      text-align: center; }
+    /* line 59, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_writer_single.scss */
+    #writers #writer_single > .container > .header > .container > .bottom h1 {
+      margin-top: 24px;
+      margin-top: 1.5rem;
+      padding-top: 0px;
+      padding-top: 0rem;
+      padding-bottom: 0px;
+      padding-bottom: 0rem;
+      margin-bottom: 24px;
+      margin-bottom: 1.5rem; }
+    /* line 62, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_writer_single.scss */
+    #writers #writer_single > .container > .header > .container > .bottom h2 {
+      font-size: 14px;
+      font-size: 0.9rem;
+      line-height: 24px;
+      line-height: 1.5rem;
+      font-weight: normal; }
+      /* line 65, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_writer_single.scss */
+      #writers #writer_single > .container > .header > .container > .bottom h2 .item {
+        margin-left: 5px;
+        margin-left: 0.28125rem;
+        margin-right: 5px;
+        margin-right: 0.28125rem; }
+  /* line 75, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_writer_single.scss */
+  #writers #writer_single > .container > .columns {
+    width: 1320px;
+    width: 82.5rem;
+    margin-left: auto;
+    margin-right: auto; }
+    /* line 12, /home/travis/build/blanketsheep/hachioji/vendor/bundle/ruby/2.1.0/gems/susy-2.1.2/sass/susy/output/support/_clearfix.scss */
+    #writers #writer_single > .container > .columns:after {
+      content: " ";
+      display: block;
+      clear: both; }
+    /* line 67, /home/travis/build/blanketsheep/hachioji/vendor/bundle/ruby/2.1.0/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
+    head:hover ~ #writers #writer_single > .container > .columns, head:hover ~ body #writers #writer_single > .container > .columns {
+      position: relative; }
+      /* line 70, /home/travis/build/blanketsheep/hachioji/vendor/bundle/ruby/2.1.0/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
+      head:hover ~ #writers #writer_single > .container > .columns:before, head:hover ~ body #writers #writer_single > .container > .columns:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        content: " ";
+        z-index: 998;
+        background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 13.63636%, rgba(255, 0, 0, 0.25) 13.63636%, rgba(255, 77, 77, 0.25) 86.36364%, rgba(0, 0, 0, 0) 86.36364%), -moz-linear-gradient(top, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%);
+        background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 13.63636%, rgba(255, 0, 0, 0.25) 13.63636%, rgba(255, 77, 77, 0.25) 86.36364%, rgba(0, 0, 0, 0) 86.36364%), -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%);
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 13.63636%, rgba(255, 0, 0, 0.25) 13.63636%, rgba(255, 77, 77, 0.25) 86.36364%, rgba(0, 0, 0, 0) 86.36364%), linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%);
+        background-size: 33px, 100% 24px;
+        background-origin: content-box, border-box;
+        background-clip: content-box, border-box;
+        background-position: left top; }
+    /* line 82, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_writer_single.scss */
+    #writers #writer_single > .container > .columns > .left,
+    #writers #writer_single > .container > .columns > .right {
+      display: none; }
+    /* line 86, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_writer_single.scss */
+    #writers #writer_single > .container > .columns > .left {
+      width: 255px;
+      width: 15.9375rem;
+      float: left;
+      margin-left: 5px;
+      margin-left: 0.28125rem;
+      margin-right: 5px;
+      margin-right: 0.28125rem; }
+    /* line 90, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_writer_single.scss */
+    #writers #writer_single > .container > .columns > .main {
+      padding-bottom: 72px;
+      padding-bottom: 4.5rem; }
+      /* line 92, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_writer_single.scss */
+      #writers #writer_single > .container > .columns > .main > .container {
+        padding-left: 264px;
+        padding-left: 16.5rem;
+        padding-right: 264px;
+        padding-right: 16.5rem; }
+        /* line 64, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
+        #writers #writer_single > .container > .columns > .main > .container h1, #writers #writer_single > .container > .columns > .main > .container h2, #writers #writer_single > .container > .columns > .main > .container h3, #writers #writer_single > .container > .columns > .main > .container h4, #writers #writer_single > .container > .columns > .main > .container h5, #writers #writer_single > .container > .columns > .main > .container h6,
+        #writers #writer_single > .container > .columns > .main > .container p, #writers #writer_single > .container > .columns > .main > .container blockquote,
+        #writers #writer_single > .container > .columns > .main > .container ul, #writers #writer_single > .container > .columns > .main > .container ol {
+          margin: 0;
+          padding: 0;
+          font-size: 1em;
+          margin-left: 5px;
+          margin-left: 0.28125rem;
+          margin-right: 5px;
+          margin-right: 0.28125rem; }
+        /* line 76, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
+        #writers #writer_single > .container > .columns > .main > .container h1 {
+          font-size: 28px;
+          font-size: 1.75rem;
+          line-height: 48px;
+          line-height: 3rem;
+          padding-top: 24px;
+          padding-top: 1.5rem; }
+        /* line 83, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
+        #writers #writer_single > .container > .columns > .main > .container h2 {
+          font-size: 24px;
+          font-size: 1.5rem;
+          line-height: 48px;
+          line-height: 3rem;
+          padding-top: 24px;
+          padding-top: 1.5rem; }
+        /* line 90, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
+        #writers #writer_single > .container > .columns > .main > .container h3 {
+          font-size: 20px;
+          font-size: 1.25rem;
+          line-height: 24px;
+          line-height: 1.5rem;
+          padding-top: 24px;
+          padding-top: 1.5rem; }
+        /* line 97, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
+        #writers #writer_single > .container > .columns > .main > .container h4 {
+          font-size: 19px;
+          font-size: 1.2rem;
+          line-height: 24px;
+          line-height: 1.5rem;
+          padding-top: 24px;
+          padding-top: 1.5rem; }
+        /* line 104, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
+        #writers #writer_single > .container > .columns > .main > .container h5 {
+          font-size: 18px;
+          font-size: 1.15rem;
+          line-height: 24px;
+          line-height: 1.5rem;
+          padding-top: 24px;
+          padding-top: 1.5rem; }
+        /* line 111, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
+        #writers #writer_single > .container > .columns > .main > .container h6 {
+          font-size: 18px;
+          font-size: 1.1rem;
+          line-height: 24px;
+          line-height: 1.5rem;
+          padding-top: 24px;
+          padding-top: 1.5rem; }
+        /* line 118, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
+        #writers #writer_single > .container > .columns > .main > .container p, #writers #writer_single > .container > .columns > .main > .container blockquote {
+          padding-top: 24px;
+          padding-top: 1.5rem; }
+    /* line 100, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_writer_single.scss */
+    #writers #writer_single > .container > .columns > .right {
+      width: 255px;
+      width: 15.9375rem;
+      float: left;
+      margin-left: 5px;
+      margin-left: 0.28125rem;
+      margin-right: 5px;
+      margin-right: 0.28125rem; }
+  /* line 108, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_writer_single.scss */
+  #writers #writer_single #articles {
+    padding-bottom: 120px;
+    padding-bottom: 7.5rem; }
+    /* line 110, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_writer_single.scss */
+    #writers #writer_single #articles > .container {
+      width: 1320px;
+      width: 82.5rem;
+      margin-left: auto;
+      margin-right: auto; }
+      /* line 12, /home/travis/build/blanketsheep/hachioji/vendor/bundle/ruby/2.1.0/gems/susy-2.1.2/sass/susy/output/support/_clearfix.scss */
+      #writers #writer_single #articles > .container:after {
+        content: " ";
+        display: block;
+        clear: both; }
+      /* line 67, /home/travis/build/blanketsheep/hachioji/vendor/bundle/ruby/2.1.0/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
+      head:hover ~ #writers #writer_single #articles > .container, head:hover ~ body #writers #writer_single #articles > .container {
+        position: relative; }
+        /* line 70, /home/travis/build/blanketsheep/hachioji/vendor/bundle/ruby/2.1.0/gems/susy-2.1.2/sass/susy/language/susy/_background.scss */
+        head:hover ~ #writers #writer_single #articles > .container:before, head:hover ~ body #writers #writer_single #articles > .container:before {
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          content: " ";
+          z-index: 998;
+          background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 13.63636%, rgba(255, 0, 0, 0.25) 13.63636%, rgba(255, 77, 77, 0.25) 86.36364%, rgba(0, 0, 0, 0) 86.36364%), -moz-linear-gradient(top, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%);
+          background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 13.63636%, rgba(255, 0, 0, 0.25) 13.63636%, rgba(255, 77, 77, 0.25) 86.36364%, rgba(0, 0, 0, 0) 86.36364%), -webkit-linear-gradient(top, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%);
+          background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 13.63636%, rgba(255, 0, 0, 0.25) 13.63636%, rgba(255, 77, 77, 0.25) 86.36364%, rgba(0, 0, 0, 0) 86.36364%), linear-gradient(to bottom, rgba(0, 0, 0, 0.5) 5%, rgba(0, 0, 0, 0) 5%);
+          background-size: 33px, 100% 24px;
+          background-origin: content-box, border-box;
+          background-clip: content-box, border-box;
+          background-position: left top; }
+    /* line 113, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_writer_single.scss */
+    #writers #writer_single #articles .article {
+      width: 321px;
+      width: 20.0625rem;
+      float: left; }
+      /* line 63, /home/travis/build/blanketsheep/hachioji/vendor/bundle/ruby/2.1.0/gems/susy-2.1.2/sass/susy/language/susy/_gallery.scss */
+      #writers #writer_single #articles .article:nth-child(4n + 1) {
+        margin-left: 5px;
+        margin-left: 0.28125rem;
+        margin-right: -100%;
+        clear: both; }
+      /* line 63, /home/travis/build/blanketsheep/hachioji/vendor/bundle/ruby/2.1.0/gems/susy-2.1.2/sass/susy/language/susy/_gallery.scss */
+      #writers #writer_single #articles .article:nth-child(4n + 2) {
+        margin-left: 335px;
+        margin-left: 20.90625rem;
+        margin-right: -100%;
+        clear: none; }
+      /* line 63, /home/travis/build/blanketsheep/hachioji/vendor/bundle/ruby/2.1.0/gems/susy-2.1.2/sass/susy/language/susy/_gallery.scss */
+      #writers #writer_single #articles .article:nth-child(4n + 3) {
+        margin-left: 665px;
+        margin-left: 41.53125rem;
+        margin-right: -100%;
+        clear: none; }
+      /* line 63, /home/travis/build/blanketsheep/hachioji/vendor/bundle/ruby/2.1.0/gems/susy-2.1.2/sass/susy/language/susy/_gallery.scss */
+      #writers #writer_single #articles .article:nth-child(4n + 4) {
+        margin-left: 995px;
+        margin-left: 62.15625rem;
+        margin-right: -100%;
+        clear: none; }
+
+/* line 5, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_article.scss */
+#home #content #articles .article > .container,
+#writers #writer_single > .container > #articles .article > .container {
+  font-size: 0.95rem;
+  overflow: hidden;
+  *zoom: 1;
+  margin-top: 24px;
+  margin-top: 1.5rem;
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
+  padding-bottom: 24px;
+  padding-bottom: 1.5rem;
+  background-color: white;
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.125);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.125);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.125); }
+  /* line 64, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
+  #home #content #articles .article > .container h1, #home #content #articles .article > .container h2, #home #content #articles .article > .container h3, #home #content #articles .article > .container h4, #home #content #articles .article > .container h5, #home #content #articles .article > .container h6,
+  #home #content #articles .article > .container p, #home #content #articles .article > .container blockquote,
+  #home #content #articles .article > .container ul, #home #content #articles .article > .container ol,
+  #writers #writer_single > .container > #articles .article > .container h1,
+  #writers #writer_single > .container > #articles .article > .container h2,
+  #writers #writer_single > .container > #articles .article > .container h3,
+  #writers #writer_single > .container > #articles .article > .container h4,
+  #writers #writer_single > .container > #articles .article > .container h5,
+  #writers #writer_single > .container > #articles .article > .container h6,
+  #writers #writer_single > .container > #articles .article > .container p,
+  #writers #writer_single > .container > #articles .article > .container blockquote,
+  #writers #writer_single > .container > #articles .article > .container ul,
+  #writers #writer_single > .container > #articles .article > .container ol {
+    margin: 0;
+    padding: 0;
+    font-size: 1em; }
+  /* line 76, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
+  #home #content #articles .article > .container h1,
+  #writers #writer_single > .container > #articles .article > .container h1 {
+    font-size: 28px;
+    font-size: 1.75rem;
+    line-height: 48px;
+    line-height: 3rem; }
+  /* line 83, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
+  #home #content #articles .article > .container h2,
+  #writers #writer_single > .container > #articles .article > .container h2 {
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 48px;
+    line-height: 3rem; }
+  /* line 90, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
+  #home #content #articles .article > .container h3,
+  #writers #writer_single > .container > #articles .article > .container h3 {
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 24px;
+    line-height: 1.5rem; }
+  /* line 97, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
+  #home #content #articles .article > .container h4,
+  #writers #writer_single > .container > #articles .article > .container h4 {
+    font-size: 19px;
+    font-size: 1.2rem;
+    line-height: 24px;
+    line-height: 1.5rem; }
+  /* line 104, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
+  #home #content #articles .article > .container h5,
+  #writers #writer_single > .container > #articles .article > .container h5 {
+    font-size: 18px;
+    font-size: 1.15rem;
+    line-height: 24px;
+    line-height: 1.5rem; }
+  /* line 111, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
+  #home #content #articles .article > .container h6,
+  #writers #writer_single > .container > #articles .article > .container h6 {
+    font-size: 18px;
+    font-size: 1.1rem;
+    line-height: 24px;
+    line-height: 1.5rem; }
+  /* line 22, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_article.scss */
+  #home #content #articles .article > .container > .image > .background,
+  #writers #writer_single > .container > #articles .article > .container > .image > .background {
+    display: block;
+    background-color: #f8ff73;
+    height: 10.5rem;
+    background-position: center center;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    background-size: cover; }
+  /* line 31, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_article.scss */
+  #home #content #articles .article > .container > .header,
+  #home #content #articles .article > .container > .content,
+  #writers #writer_single > .container > #articles .article > .container > .header,
+  #writers #writer_single > .container > #articles .article > .container > .content {
+    padding-left: 33px;
+    padding-left: 2.0625rem;
+    padding-right: 33px;
+    padding-right: 2.0625rem; }
+  /* line 38, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_article.scss */
+  #home #content #articles .article > .container > .header > .container time,
+  #writers #writer_single > .container > #articles .article > .container > .header > .container time {
+    display: none; }
+  /* line 42, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_article.scss */
+  #home #content #articles .article > .container > .header > .container h1,
+  #writers #writer_single > .container > #articles .article > .container > .header > .container h1 {
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 24px;
+    line-height: 1.5rem;
+    margin-top: 24px;
+    margin-top: 1.5rem;
+    margin-bottom: 24px;
+    margin-bottom: 1.5rem; }
 
 /*
 #home #content #articles .article > .container {
