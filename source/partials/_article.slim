@@ -8,7 +8,7 @@ article.article
         - elsif article.data.thumbnail.wide
           - background = url_for article.data.thumbnail.wide
       - style = "background-image:url(" + background + ")";
-      a.background href=url_for(article.path, :relative => true) style=style
+      a.background href=url_for(article.path) style=style
     header.header
       div.container
         h1

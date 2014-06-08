@@ -62,6 +62,15 @@ a {
   @import 'partials/nav_header';
 }
 
+#writers {
+  @import 'partials/layouts/writers';
+}
+
+#home #content #articles .article,
+#writers #writer_single > .container > #articles .article {
+  @import 'partials/article';
+}
+
 /*
 #home #content #articles .article > .container {
   $font-size:.95rem;
