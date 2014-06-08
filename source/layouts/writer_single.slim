@@ -6,16 +6,18 @@
         div.container
           div.top
             div.container
-              - style = 'background-image:url(' + writer.avatar.wide + ');'
+              - img = url_for writer.avatar.wide
+              - style = 'background-image:url(' + img + ');'
               div.image style=style
-                img src=writer.avatar.wide
+                img src=img
           div.bottom
             #mainborder
             div.container
-              - style = 'background-image:url(' + writer.avatar.icon + ');';
+              - img = url_for writer.avatar.icon
+              - style = 'background-image:url(' + img + ');';
               a.icon
                 span.container style=style
-                  img src=writer.avatar.icon
+                  img src=img
               h1
                 = writer.name
               h2
