@@ -1,0 +1,117 @@
+$header-top-rhythm:20;
+$header-icon-wrap-rhythm:5;
+
+& {
+  margin-top:-( rhythm($header-rhythm) );
+  >.container {
+    
+  }
+  >.container>.header {
+    >.container {
+      >.top {
+        >.container {
+          position:relative;
+          height:rhythm($header-top-rhythm);
+        }
+        .image {
+          position:absolute;
+          top:0;left:0;right:0;bottom:0;
+          background-position:center center;
+          @include background-size(cover);
+          img {
+            display:none;
+          }
+          & {
+            background-image:url('../images/kouki.jpg') !important;
+          }
+        }
+      }
+      >.bottom {
+        $icon-size:rhythm($header-icon-wrap-rhythm);
+        & {
+          margin-top:-($icon-size / 2);
+        }
+        @include padding-trailer(1);
+        @include fontreset(1em,true,false);
+        .icon {
+          display:block;
+          margin:0 auto;
+          $size:$icon-size;
+          width:$size;
+          height:$size;
+          position:relative;
+          .container {
+            position:absolute;
+            top:0;left:0;right:0;bottom:0;
+            display:block;
+            background-position:center center;
+            @include background-size(cover);
+            @include border-radius(50%);
+            border:solid 3px #000;
+          }
+          img {
+            display:none;
+          }
+        }
+        h1,h2 {
+          text-align:center;
+        }
+        h1 {
+          @include rhythm(1);
+        }
+        h2 {
+          @include adjust-font-size-to(.9rem);
+          font-weight:normal;
+          .item {
+            @include gutters;
+            &:not(:first-child):before {
+              //content:':';
+            }
+          }
+        }
+      }
+    }
+  }
+  >.container>.columns {
+    @include container;
+    //@include clearfix;
+    $max-span:40;
+    $right-span:8;
+    $left-span:$right-span;
+    $main-span:$max-span - ($left-span + $right-span);
+    >.left,
+    >.right {
+      display:none;
+    }
+    >.left {
+      @include span($left-span of 40);
+      //display:none;
+    }
+    >.main {
+      //@include span($main-span of 40);
+      >.container {
+        //@include pad(1);
+        @include prefix($left-span);
+        @include suffix($right-span);
+        @include fontreset(1em,false,true);
+      }
+      @include padding-trailer(3);
+    }
+    >.right {
+      @include span($right-span of 40);
+      .article {
+        //@import 'partials/article';
+        //@include gallery(10 of 30);
+      }
+    }
+  }
+  #articles {
+    @include padding-trailer(5);
+    >.container {
+      @include container;
+    }
+    .article {
+      @include gallery(10 of 40);
+    }
+  }
+}

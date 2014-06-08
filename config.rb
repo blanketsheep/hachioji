@@ -22,7 +22,7 @@ end
 
 activate :blog do |blog|
   blog.name = "writers"
-  blog.layout = "blog"
+  blog.layout = "writer_single"
   blog.sources   = "{title}.html"
   blog.prefix    = "writers"
   blog.permalink = "/:title.html"

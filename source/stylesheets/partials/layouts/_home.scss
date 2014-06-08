@@ -18,7 +18,8 @@
     }
     #articles {
       .article {
-        @import 'partials/article';
+        //@import 'partials/article';
+        @include gallery(10 of 30);
       }
     }
   }
