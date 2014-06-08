@@ -25,9 +25,9 @@ after_success:
 #- bundle exec middleman deploy
 branches:
   only:
-  - master
-  #- develop
-  - design/0509
+  #- master
+  - develop
+  #- design/0509
 env:
   global:
   # GitHub Deploy Key
