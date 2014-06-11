@@ -119,47 +119,40 @@ a {
       margin-left: 0.28125rem;
       margin-right: 5px;
       margin-right: 0.28125rem; }
-      /* line 3, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_logo.scss */
+      /* line 5, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_logo.scss */
       #header > .container > .left .logo {
-        /*
-        body:not([data-scrolled-main]) & {
-          .icon {
-            background-image:url('../images/blanketsheep.white.bt.512.png');
-          }
-        }
-        */
-        /*body[data-scrolled-main] */ }
-        /* line 5, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_logo.scss */
-        #header > .container > .left .logo {
-          margin: 0;
-          font-size: inherit; }
-        /* line 9, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_logo.scss */
-        #header > .container > .left .logo > .container {
-          display: block; }
-        /* line 13, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_logo.scss */
-        #header > .container > .left .logo .text,
-        #header > .container > .left .logo .icon {
-          display: block; }
-        /* line 17, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_logo.scss */
-        #header > .container > .left .logo .text {
-          display: none; }
-        /* line 21, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_logo.scss */
-        #header > .container > .left .logo .icon {
-          background-position: center center;
-          -moz-background-size: contain;
-          -o-background-size: contain;
-          -webkit-background-size: contain;
-          background-size: contain;
-          background-repeat: no-repeat; }
-        /* line 26, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_logo.scss */
-        #header > .container > .left .logo .icon img {
-          display: none; }
-        /* line 29, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_logo.scss */
-        #header > .container > .left .logo .icon {
-          height: 4.5rem; }
-        /* line 42, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_logo.scss */
-        #header > .container > .left .logo .icon {
-          background-image: url("../images/blanketsheep.512.png"); }
+        margin: 0;
+        font-size: inherit; }
+      /* line 9, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_logo.scss */
+      #header > .container > .left .logo > .container {
+        display: block; }
+      /* line 13, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_logo.scss */
+      #header > .container > .left .logo .text,
+      #header > .container > .left .logo .icon {
+        display: block; }
+      /* line 17, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_logo.scss */
+      #header > .container > .left .logo .text {
+        display: none; }
+      /* line 21, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_logo.scss */
+      #header > .container > .left .logo .icon {
+        background-position: center center;
+        -moz-background-size: contain;
+        -o-background-size: contain;
+        -webkit-background-size: contain;
+        background-size: contain;
+        background-repeat: no-repeat; }
+      /* line 26, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_logo.scss */
+      #header > .container > .left .logo .icon img {
+        display: none; }
+      /* line 29, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_logo.scss */
+      #header > .container > .left .logo .icon {
+        height: 4.5rem; }
+      /* line 35, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_logo.scss */
+      body:not([data-scrolled-main]) #header > .container > .left .logo .icon {
+        background-image: url("../images/blanketsheep.white.bt.512.png"); }
+      /* line 40, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_logo.scss */
+      body[data-scrolled-main] #header > .container > .left .logo .icon {
+        background-image: url("../images/blanketsheep.512.png"); }
     /* line 24, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_header.scss */
     #header > .container > .center {
       width: 990px;
@@ -245,13 +238,17 @@ a {
     color: #000; }
   /* line 43, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_header.scss */
   body:not([data-scrolled-main]) #header {
+    color: #fff;
     background-color: rgba(255, 255, 255, 0);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.125);
     -moz-box-shadow: 0 0 0 transparent;
     -webkit-box-shadow: 0 0 0 transparent;
     box-shadow: 0 0 0 transparent; }
   /* line 49, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_header.scss */
   body[data-scrolled-main] #header {
+    color: #000;
     background-color: rgba(255, 255, 255, 0.75);
+    text-shadow: 0 0 0 transparent;
     -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.125);
     -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.125);
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.125); }
@@ -461,9 +458,138 @@ a {
   margin-top: -4.5rem; }
   /* line 3, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_home.scss */
   #home #slide {
-    height: 27rem;
     background-color: #f8ff73; }
-  /* line 9, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_home.scss */
+    /* line 8, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_home.scss */
+    #home #slide > .container {
+      overflow: hidden; }
+      /* line 10, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_home.scss */
+      #home #slide > .container,
+      #home #slide > .container > .background,
+      #home #slide > .container > .items {
+        position: relative; }
+      /* line 15, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_home.scss */
+      #home #slide > .container > .background,
+      #home #slide > .container > .items {
+        height: 31.5rem; }
+      /* line 19, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_home.scss */
+      #home #slide > .container > .background {
+        display: none;
+        background-position: center center;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover; }
+    /* line 25, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_home.scss */
+    #home #slide .slide_item {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0; }
+      /* line 28, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_home.scss */
+      #home #slide .slide_item > .container {
+        position: relative;
+        height: 31.5rem;
+        overflow: hidden; }
+      /* line 33, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_home.scss */
+      #home #slide .slide_item .background,
+      #home #slide .slide_item .main {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0; }
+      /* line 38, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_home.scss */
+      #home #slide .slide_item .background {
+        background-position: center center;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover; }
+        /* line 44, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_home.scss */
+        #home #slide .slide_item .background img {
+          display: none; }
+      /* line 48, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_home.scss */
+      #home #slide .slide_item .main {
+        /*
+        $hPad: $header-rhythm + 1;
+        $hRhythm:$rhythm - ($hPad * 2);
+        */ }
+        /* line 55, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_home.scss */
+        #home #slide .slide_item .main > .container {
+          /*
+          @include padding-leader($hPad);
+          @include padding-trailer($hPad);
+          */
+          height: 31.5rem; }
+        /* line 62, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_home.scss */
+        #home #slide .slide_item .main .thumbnail {
+          display: none; }
+          /* line 64, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_home.scss */
+          #home #slide .slide_item .main .thumbnail > .container {
+            height: 31.5rem;
+            width: 56rem;
+            margin: 0 auto;
+            background-position: center center;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            -webkit-background-size: cover;
+            background-size: cover; }
+    /* line 74, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_home.scss */
+    #home #slide .slide_item:not([data-item-key]) {
+      display: none; }
+    /* line 78, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_home.scss */
+    #home #slide .slide_item[data-item-key] {
+      -webkit-animation-duration: 2s;
+      -moz-animation-duration: 2s;
+      -ms-animation-duration: 2s;
+      -o-animation-duration: 2s;
+      animation-duration: 2s;
+      -webkit-animation-timing-function: ease;
+      -moz-animation-timing-function: ease;
+      -ms-animation-timing-function: ease;
+      -o-animation-timing-function: ease;
+      animation-timing-function: ease;
+      -webkit-animation-fill-mode: both;
+      -moz-animation-fill-mode: both;
+      -ms-animation-fill-mode: both;
+      -o-animation-fill-mode: both;
+      animation-fill-mode: both; }
+    /* line 85, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_home.scss */
+    #home #slide:not([data-is-first]) .slide_item[data-item-key] {
+      /*
+      &[data-is-visible],
+      &[data-is-visible] + &:not([data-is-visible]) {
+        @include single-transition(left right);
+      }
+      */ }
+      /* line 86, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_home.scss */
+      #home #slide:not([data-is-first]) .slide_item[data-item-key][data-is-visible] {
+        -webkit-animation-name: show_slide_item;
+        -moz-animation-name: show_slide_item;
+        -ms-animation-name: show_slide_item;
+        -o-animation-name: show_slide_item;
+        animation-name: show_slide_item; }
+      /* line 90, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_home.scss */
+      #home #slide:not([data-is-first]) .slide_item[data-item-key]:not([data-is-visible]) {
+        -webkit-animation-name: hide_slide_item;
+        -moz-animation-name: hide_slide_item;
+        -ms-animation-name: hide_slide_item;
+        -o-animation-name: hide_slide_item;
+        animation-name: hide_slide_item; }
+    /* line 101, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_home.scss */
+    #home #slide {
+      -moz-transition: opacity 0.25s;
+      -o-transition: opacity 0.25s;
+      -webkit-transition: opacity 0.25s;
+      transition: opacity 0.25s; }
+    /* line 104, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_home.scss */
+    #home #slide:not([data-item-length]) {
+      opacity: 0; }
+    /* line 107, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_home.scss */
+    #home #slide[data-item-length] {
+      opacity: 1; }
+  /* line 112, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_home.scss */
   #home #content > .container {
     width: 1320px;
     width: 82.5rem;
@@ -493,12 +619,12 @@ a {
         background-origin: content-box, border-box;
         background-clip: content-box, border-box;
         background-position: left top; }
-  /* line 13, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_home.scss */
+  /* line 116, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_home.scss */
   #home #content #left {
     width: 990px;
     width: 61.875rem;
     float: left; }
-  /* line 16, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_home.scss */
+  /* line 119, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_home.scss */
   #home #content #right {
     width: 321px;
     width: 20.0625rem;
@@ -507,7 +633,7 @@ a {
     margin-left: 0.28125rem;
     margin-right: 5px;
     margin-right: 0.28125rem; }
-  /* line 20, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_home.scss */
+  /* line 123, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_home.scss */
   #home #content #articles .article {
     width: 321px;
     width: 20.0625rem;
@@ -530,7 +656,7 @@ a {
       margin-left: 41.53125rem;
       margin-right: -100%;
       clear: none; }
-  /* line 26, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_home.scss */
+  /* line 129, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_home.scss */
   #home #writers {
     margin-top: 24px;
     margin-top: 1.5rem;
@@ -1712,3 +1838,160 @@ head {
 /* line 18, /home/travis/build/blanketsheep/hachioji/source/stylesheets/_z_index.scss */
 #footer {
   z-index: 998; }
+
+@-webkit-keyframes show_slide_item {
+  /* line 92, /home/travis/build/blanketsheep/hachioji/source/stylesheets/layout.css.scss */
+  0% {
+    /*
+    left:100%;
+    right:-100%;
+    left:100vw;
+    right:-100vw;
+    */
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%); }
+
+  /* line 101, /home/travis/build/blanketsheep/hachioji/source/stylesheets/layout.css.scss */
+  100% {
+    /*
+    left:0%;
+    right:0%;
+    left:0vw;
+    right:0vw;
+    */
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%); } }
+@-moz-keyframes show_slide_item {
+  /* line 92, /home/travis/build/blanketsheep/hachioji/source/stylesheets/layout.css.scss */
+  0% {
+    /*
+    left:100%;
+    right:-100%;
+    left:100vw;
+    right:-100vw;
+    */
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%); }
+
+  /* line 101, /home/travis/build/blanketsheep/hachioji/source/stylesheets/layout.css.scss */
+  100% {
+    /*
+    left:0%;
+    right:0%;
+    left:0vw;
+    right:0vw;
+    */
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%); } }
+@keyframes show_slide_item {
+  /* line 92, /home/travis/build/blanketsheep/hachioji/source/stylesheets/layout.css.scss */
+  0% {
+    /*
+    left:100%;
+    right:-100%;
+    left:100vw;
+    right:-100vw;
+    */
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%); }
+
+  /* line 101, /home/travis/build/blanketsheep/hachioji/source/stylesheets/layout.css.scss */
+  100% {
+    /*
+    left:0%;
+    right:0%;
+    left:0vw;
+    right:0vw;
+    */
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%); } }
+@-webkit-keyframes hide_slide_item {
+  /* line 112, /home/travis/build/blanketsheep/hachioji/source/stylesheets/layout.css.scss */
+  0% {
+    /*
+    left:0%;
+    right:0%;
+    left:0vw;
+    right:0vw;
+    */
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%); }
+
+  /* line 121, /home/travis/build/blanketsheep/hachioji/source/stylesheets/layout.css.scss */
+  100% {
+    /*
+    left:-100%;
+    right:100%;
+    left:-100vw;
+    right:100vw;
+    */
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%); } }
+@-moz-keyframes hide_slide_item {
+  /* line 112, /home/travis/build/blanketsheep/hachioji/source/stylesheets/layout.css.scss */
+  0% {
+    /*
+    left:0%;
+    right:0%;
+    left:0vw;
+    right:0vw;
+    */
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%); }
+
+  /* line 121, /home/travis/build/blanketsheep/hachioji/source/stylesheets/layout.css.scss */
+  100% {
+    /*
+    left:-100%;
+    right:100%;
+    left:-100vw;
+    right:100vw;
+    */
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%); } }
+@keyframes hide_slide_item {
+  /* line 112, /home/travis/build/blanketsheep/hachioji/source/stylesheets/layout.css.scss */
+  0% {
+    /*
+    left:0%;
+    right:0%;
+    left:0vw;
+    right:0vw;
+    */
+    -moz-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%); }
+
+  /* line 121, /home/travis/build/blanketsheep/hachioji/source/stylesheets/layout.css.scss */
+  100% {
+    /*
+    left:-100%;
+    right:100%;
+    left:-100vw;
+    right:100vw;
+    */
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%); } }

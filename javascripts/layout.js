@@ -20,9 +20,10 @@
   $(window).on('scroll', onscroll);
 
   $(function() {
-    mainPosition = $('#mainborder').offset().top;
-    console.log(mainPosition);
-    return onscroll();
+    return (function() {
+      mainPosition = $('#mainborder').offset().top;
+      return onscroll();
+    })();
   });
 
 }).call(this);
