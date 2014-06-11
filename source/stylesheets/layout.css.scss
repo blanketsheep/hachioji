@@ -87,3 +87,44 @@ a {
 */
 
 @import 'z_index';
+
+@include keyframes(show_slide_item) {
+  0% {
+    /*
+    left:100%;
+    right:-100%;
+    left:100vw;
+    right:-100vw;
+    */
+    @include translateX(100%);
+  }
+  100% {
+    /*
+    left:0%;
+    right:0%;
+    left:0vw;
+    right:0vw;
+    */
+    @include translateX(0%);
+  }
+}
+@include keyframes(hide_slide_item) {
+  0% {
+    /*
+    left:0%;
+    right:0%;
+    left:0vw;
+    right:0vw;
+    */
+    @include translateX(0%);
+  }
+  100% {
+    /*
+    left:-100%;
+    right:100%;
+    left:-100vw;
+    right:100vw;
+    */
+    @include translateX(-100%);
+  }
+}

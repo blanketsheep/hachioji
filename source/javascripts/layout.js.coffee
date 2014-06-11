@@ -16,6 +16,8 @@ onscroll = ->
 $(window).on 'scroll', onscroll
 
 $ ->
-  mainPosition = $('#mainborder').offset().top;
-  console.log mainPosition
-  onscroll()
+  (() ->
+    mainPosition = $('#mainborder').offset().top;
+    #console.log mainPosition
+    onscroll()
+  )()
