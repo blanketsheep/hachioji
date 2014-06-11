@@ -2,8 +2,111 @@
   margin-top:-( rhythm($header-rhythm) );
   #slide {
     //height:$slide-height;
-    height:rhythm(15 + $header-rhythm);
+    $rhythm:18 + $header-rhythm;
+    $height:rhythm($rhythm);
     background-color:$slide-background-color;
+    >.container {
+      overflow:hidden;
+      &,
+      >.background,
+      >.items {
+        position:relative;
+      }
+      >.background,
+      >.items {
+        height:$height;
+      }
+      >.background {
+        display:none;
+        background-position:center center;
+        @include background-size(cover);
+      }
+    }
+    .slide_item {
+      position:absolute;
+      top:0;left:0;right:0;bottom:0;
+      >.container {
+        position:relative;
+        height:$height;
+        overflow:hidden;
+      }
+      .background,
+      .main {
+        position:absolute;
+        top:0;left:0;right:0;bottom:0;
+      }
+      .background {
+        //$blur:5px;
+        background-position:center center;
+        @include background-size(cover);
+        //@include filter( blur($blur) );
+        //margin:-($blur);
+        img {
+          display:none;
+        }
+      }
+      .main {
+        /*
+        $hPad: $header-rhythm + 1;
+        $hRhythm:$rhythm - ($hPad * 2);
+        */
+        $hRhythm:$rhythm;
+        $height:rhythm($hRhythm);
+        >.container {
+          /*
+          @include padding-leader($hPad);
+          @include padding-trailer($hPad);
+          */
+          height:$height;
+        }
+        .thumbnail {
+          display:none;
+          >.container {
+            height:$height;
+            width:($height * 16) / 9;
+            margin:0 auto;
+            background-position:center center;
+            @include background-size(cover);
+          }
+        }
+      }
+    }
+    & .slide_item:not([data-item-key]) {
+      display:none;
+    }
+    & .slide_item[data-item-key] {
+      & {
+        @include experimental('animation-duration',2s);
+        //@include experimental('animation-delay',10s);
+        @include experimental('animation-timing-function',ease);
+        @include experimental('animation-fill-mode',both);
+      }
+    }
+    &:not([data-is-first]) .slide_item[data-item-key] {
+      &[data-is-visible] {
+        //@include scale(1,1);
+        @include experimental('animation-name',show_slide_item);
+      }
+      &:not([data-is-visible]) {
+        //@include scale(.75,.75);
+        @include experimental('animation-name',hide_slide_item);
+      }
+      /*
+      &[data-is-visible],
+      &[data-is-visible] + &:not([data-is-visible]) {
+        @include single-transition(left right);
+      }
+      */
+    }
+    & {
+      @include single-transition(opacity);
+    }
+    &:not([data-item-length]) {
+      opacity:0;
+    }
+    &[data-item-length] {
+      opacity:1;
+    }
   }
   #content {
     >.container {
