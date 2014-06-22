@@ -137,6 +137,17 @@
               @include fontreset($font-size,$guttered);
               @include padding-trailer(1,$font-size);
             }
+            .flickrembed {
+              display:block;
+              & {
+                width:auto;height:auto;
+                margin:0;padding:0;
+              }
+              & {
+                width:span(28);
+                height:rhythm(20,$font-size);
+              }
+            }
           }
         }
       }
