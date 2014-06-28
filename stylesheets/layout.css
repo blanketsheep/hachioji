@@ -12,7 +12,7 @@ $nav-header-background-color:$nail-polished-leaves;
 $nav-header-color:#fff;
 $nav-header-icon-background-color:$mezz;
 */
-/* line 106, /home/travis/build/blanketsheep/hachioji/vendor/bundle/ruby/2.1.0/gems/compass-core-1.0.0.alpha.19/stylesheets/compass/typography/_vertical_rhythm.scss */
+/* line 106, /home/travis/build/blanketsheep/hachioji/vendor/bundle/ruby/2.1.0/gems/compass-core-1.0.0.alpha.20/stylesheets/compass/typography/_vertical_rhythm.scss */
 html {
   font-size: 16px;
   line-height: 24px; }
@@ -137,7 +137,6 @@ a {
       #header > .container > .left .logo .icon {
         background-position: center center;
         -moz-background-size: contain;
-        -o-background-size: contain;
         -webkit-background-size: contain;
         background-size: contain;
         background-repeat: no-repeat; }
@@ -222,15 +221,12 @@ a {
   /* line 34, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_header.scss */
   #header {
     -moz-transition-property: color, background-color, box-shadow, text-shadow;
-    -o-transition-property: color, background-color, box-shadow, text-shadow;
     -webkit-transition-property: color, background-color, box-shadow, text-shadow;
     transition-property: color, background-color, box-shadow, text-shadow;
     -moz-transition-duration: 0.25s;
-    -o-transition-duration: 0.25s;
     -webkit-transition-duration: 0.25s;
     transition-duration: 0.25s;
     -moz-transition-timing-function: ease;
-    -o-transition-timing-function: ease;
     -webkit-transition-timing-function: ease;
     transition-timing-function: ease; }
   /* line 39, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_header.scss */
@@ -476,7 +472,6 @@ a {
         display: none;
         background-position: center center;
         -moz-background-size: cover;
-        -o-background-size: cover;
         -webkit-background-size: cover;
         background-size: cover; }
     /* line 25, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_home.scss */
@@ -503,7 +498,6 @@ a {
       #home #slide .slide_item .background {
         background-position: center center;
         -moz-background-size: cover;
-        -o-background-size: cover;
         -webkit-background-size: cover;
         background-size: cover; }
         /* line 44, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_home.scss */
@@ -532,7 +526,6 @@ a {
             margin: 0 auto;
             background-position: center center;
             -moz-background-size: cover;
-            -o-background-size: cover;
             -webkit-background-size: cover;
             background-size: cover; }
     /* line 74, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_home.scss */
@@ -580,7 +573,6 @@ a {
     /* line 101, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_home.scss */
     #home #slide {
       -moz-transition: opacity 0.25s;
-      -o-transition: opacity 0.25s;
       -webkit-transition: opacity 0.25s;
       transition: opacity 0.25s; }
     /* line 104, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_home.scss */
@@ -753,7 +745,6 @@ a {
   #single #category_articles .item .icon {
     background-position: center center;
     -moz-background-size: cover;
-    -o-background-size: cover;
     -webkit-background-size: cover;
     background-size: cover; }
   /* line 63, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_blog.scss */
@@ -793,7 +784,6 @@ a {
       bottom: 0;
       background-position: center center;
       -moz-background-size: cover;
-      -o-background-size: cover;
       -webkit-background-size: cover;
       background-size: cover; }
       /* line 97, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_blog.scss */
@@ -1039,7 +1029,6 @@ a {
     #single #article > .container > .footer #nextprev .item .image {
       display: none;
       -moz-background-size: cover;
-      -o-background-size: cover;
       -webkit-background-size: cover;
       background-size: cover;
       background-position: center center; }
@@ -1168,7 +1157,6 @@ a {
       right: 0;
       bottom: 0;
       -moz-transition: opacity 0.25s;
-      -o-transition: opacity 0.25s;
       -webkit-transition: opacity 0.25s;
       transition: opacity 0.25s;
       background-position: center center; }
@@ -1180,14 +1168,12 @@ a {
     #single #article > .container > .footer #locations .location .left .image {
       background-color: #f8ff73;
       -moz-background-size: cover;
-      -o-background-size: cover;
       -webkit-background-size: cover;
       background-size: cover; }
     /* line 290, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_blog.scss */
     #single #article > .container > .footer #locations .location .left .map {
       background-color: #f8ff73;
       -moz-background-size: contain;
-      -o-background-size: contain;
       -webkit-background-size: contain;
       background-size: contain; }
   /* line 295, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_blog.scss */
@@ -1295,7 +1281,6 @@ a {
     background-color: #f8ff73;
     background-position: center center;
     -moz-background-size: cover;
-    -o-background-size: cover;
     -webkit-background-size: cover;
     background-size: cover; }
   /* line 30, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_writer.scss */
@@ -1409,7 +1394,6 @@ a {
     bottom: 0;
     background-position: center center;
     -moz-background-size: cover;
-    -o-background-size: cover;
     -webkit-background-size: cover;
     background-size: cover; }
     /* line 21, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_writer_single.scss */
@@ -1485,7 +1469,6 @@ a {
         display: block;
         background-position: center center;
         -moz-background-size: cover;
-        -o-background-size: cover;
         -webkit-background-size: cover;
         background-size: cover;
         -moz-border-radius: 50%;
@@ -1794,7 +1777,6 @@ a {
     height: 10.5rem;
     background-position: center center;
     -moz-background-size: cover;
-    -o-background-size: cover;
     -webkit-background-size: cover;
     background-size: cover; }
   /* line 31, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_article.scss */
