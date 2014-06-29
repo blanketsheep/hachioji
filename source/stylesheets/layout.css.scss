@@ -17,6 +17,7 @@ body {
   background-repeat:repeat;
   background-color:#ffffe0;
   background-color:$background-color;
+  @include adjust-font-size-to(1rem);
 }
 #wrapper {
   min-height:100%;
@@ -50,6 +51,10 @@ a {
   @import 'partials/layouts/home';
 }
 
+#about {
+  @import 'partials/layouts/about';
+}
+
 #single {
   @import 'partials/layouts/blog';
 }
@@ -69,6 +74,10 @@ a {
 #home #content #articles .article,
 #writers #writer_single > .container > #articles .article {
   @import 'partials/article';
+}
+
+.circle_image {
+  @import 'partials/circle_image'
 }
 
 /*
