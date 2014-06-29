@@ -18,7 +18,7 @@ div#about
           article.item
             div.container
               div.top
-                = partial "partials/circle_image", :locals => { :image_src => item.avatar.icon, :href => url_for(item.profile_path) }
+                = partial "partials/circle_image", :locals => { :image_src => url_for(item.avatar.icon), :href => url_for(item.profile_path) }
               div.main
                 header.header
                   h1
