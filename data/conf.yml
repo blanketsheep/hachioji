@@ -2,7 +2,7 @@ title: "八王子ウェブマガジン"
 nav:
   items:
     - name: "About"
-      href: "/about.html"
+      href: "/index.html"
       classes:
       - about
     - name: "Column"
