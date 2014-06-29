@@ -1,0 +1,29 @@
+---
+---
+#mainborder
+div#about
+  section#whats
+    div.background
+      iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d51868.24730395017!2d139.2958473!3d35.65814985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60191eb9b729f437%3A0x27d80e549d4e1c62!2z5p2x5Lqs6YO95YWr546L5a2Q5biC!5e0!3m2!1sja!2s!4v1403992865051' frameborder="0" style="border:0;"
+    div.container
+      div.icon
+        = partial "partials/circle_image", :locals => { :image_src => url_for('/images/blanketsheep.512.png') }
+      div.content
+        div.text
+          = t(:about_blanketsheep)
+  section#about_writers
+    div.container
+      div.items
+        - data.writers.each_value do |item|
+          article.item
+            div.container
+              div.top
+                = partial "partials/circle_image", :locals => { :image_src => item.avatar.icon, :href => url_for(item.profile_path) }
+              div.main
+                header.header
+                  h1
+                    = link_to item.name, item.profile_path
+                div.content
+      div.header
+        h1
+          = t(:we_are_writers)

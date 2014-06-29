@@ -133,3 +133,22 @@ $header-font-size:1.25rem;
     @content;
   }
 }
+
+@mixin gpu-acceleration {  
+  @include transform3d( translate3d(0,0,0) );
+}
+
+$circle-image-rhythm:5;
+$circle-image-border-width:3px;
+
+@mixin circle-image-sizing($rhythm: $circle-image-rhythm, $border-width: $circle-image-border-width) {
+  $size:rhythm($rhythm);
+  border-width:$border-width;
+  &, &>.container {
+    width:$size;
+    height:$size;
+  }
+  >.container {
+    margin:-($border-width);
+  }
+}
