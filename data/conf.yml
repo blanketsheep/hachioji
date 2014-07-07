@@ -10,7 +10,7 @@ nav:
       classes:
       - column
     - name: "Gallery"
-      href: "/index.html"
+      href: "/gallery.html"
       classes:
       - gallery
     - name: "Essay"
