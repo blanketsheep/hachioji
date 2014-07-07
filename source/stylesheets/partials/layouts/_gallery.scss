@@ -1,0 +1,15 @@
+& {
+  >.container {
+    @include container;
+  }
+  #gallery_map {
+    @include pad(3);
+    @include padding-leader(3);
+    @include padding-trailer(3);
+    iframe {
+      display:block;
+      width:100%;
+      height:rhythm(31);
+    }
+  }
+}

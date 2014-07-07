@@ -54,6 +54,9 @@ a {
 #about {
   @import 'partials/layouts/about';
 }
+#gallery {
+  @import 'partials/layouts/gallery';
+}
 
 #single {
   @import 'partials/layouts/blog';
