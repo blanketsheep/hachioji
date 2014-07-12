@@ -909,19 +909,7 @@ a {
       background-position: left top; }
 /* line 5, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_gallery.scss */
 #gallery #gallery_map {
-  padding-left: 99px;
-  padding-left: 6.1875rem;
-  padding-right: 99px;
-  padding-right: 6.1875rem;
-  padding-top: 72px;
-  padding-top: 4.5rem;
-  padding-bottom: 72px;
-  padding-bottom: 4.5rem; }
-  /* line 9, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_gallery.scss */
-  #gallery #gallery_map iframe {
-    display: block;
-    width: 100%;
-    height: 46.5rem; }
+  min-height: 45rem; }
 
 /* line 3, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_blog.scss */
 #single {
