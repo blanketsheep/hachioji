@@ -10,6 +10,7 @@ html
     /!meta name="viewport" content="width=device-width, initial-scale=1.0"
     meta name="viewport" content="width=1920, initial-scale=1.0"
     = stylesheet_link_tag "assets", "layout", "/bower_components/fontawesome/css/font-awesome.min.css"
+    = javascript_include_tag 'https://maps.googleapis.com/maps/api/js?v=3.exp'
     = javascript_include_tag "assets", "layout"
     - if current_page.data.has_key?('layout_exjs')
       - current_page.data.layout_exjs.each do |js|
