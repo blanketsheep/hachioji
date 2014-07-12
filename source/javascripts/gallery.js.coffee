@@ -68,11 +68,21 @@ $ ->
     
     map = new google.maps.Map document.getElementById('gallery_map'), mapOptions
     
-    swBound = new google.maps.LatLng 35.664835, 139.282848
-    neBound = new google.maps.LatLng 35.664656, 139.283664
-    bounds  = new google.maps.LatLngBounds swBound, neBound
+    #swBound = new google.maps.LatLng 35.664835, 139.282848
+    #neBound = new google.maps.LatLng 35.664656, 139.283664
+    #bounds  = new google.maps.LatLngBounds swBound, neBound
+    #src = 'http://localhost:4567/resources/2014-05-09-test/DSC_5717.JPG'
+    #overlay = new PhotoOverlay bounds, src, map
     
-    src = 'http://localhost:4567/resources/2014-05-09-test/DSC_5717.JPG'
-    
-    overlay = new PhotoOverlay bounds, src, map
+    locations = $('#items .location')
+    $(locations).each (key, location) ->
+      photos = $('.photo',location)
+      $(photos).each (key,photo) ->
+        swBound = new google.maps.LatLng $(photo).attr('data-sw-latitude'), $(photo).attr('data-sw-longitude')
+        neBound = new google.maps.LatLng $(photo).attr('data-ne-latitude'), $(photo).attr('data-ne-longitude')
+        bounds  = new google.maps.LatLngBounds swBound, neBound
+        
+        src = $(photo).attr 'data-src'
+        
+        overlay = new PhotoOverlay bounds, src, map
   )()
