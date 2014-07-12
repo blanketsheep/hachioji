@@ -61,7 +61,8 @@
 $ ->
   (() ->
     mapOptions = 
-      zoom: 13
+      #zoom: 13
+      zoom: 17
       #center: new google.maps.LatLng 35.659475, 139.287093
       center: new google.maps.LatLng 35.665726, 139.281587
       mapTypeId: google.maps.MapTypeId.ROADMAP
