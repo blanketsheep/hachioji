@@ -7,3 +7,10 @@ div#gallery
   div.container
     div#gallery_map
       /iframe src='https://mapsengine.google.com/map/embed?mid=zW5_dzsIb19U.kf0T1MM6qkrA' frameborder="0" style="border:0;"
+    div#items
+      div.container
+        - blog('blog').tags['gallery'].each do |article|
+          - article.data.locations.each do |location|
+            div.location data-title=location.title data-address=location.address data-text=location.text
+              - location.photos.each do |photo|
+                div.photo data-src=photo.src data-sw-latitude=photo.southwest.latitude data-sw-longitude=photo.southwest.longitude data-ne-latitude=photo.northeast.latitude data-ne-longitude=photo.northeast.longitude
