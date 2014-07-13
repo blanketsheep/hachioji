@@ -18,6 +18,7 @@
       //height:$writer-header-height;
       height:rhythm(5);
       color:$writer-header-color;
+      @include single-text-shadow($default-text-shadow-h-offset, $default-text-shadow-v-offset, $default-text-shadow-blur, $default-text-shadow-spread, rgba(0,0,0,.5));
     }
     .background {
       position:absolute;
