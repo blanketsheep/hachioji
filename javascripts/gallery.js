@@ -33,16 +33,16 @@
       return $(panes.overlayLayer).append(elm);
     };
     this.PhotoOverlay.prototype.draw = function() {
-      var elm, elmHeight, elmWidth, ne, overlayProjection, sw;
+      var elm, elmHeight, elmWidth, nw, overlayProjection, se;
       overlayProjection = this.getProjection();
-      sw = overlayProjection.fromLatLngToDivPixel(this.bounds_.getSouthWest());
-      ne = overlayProjection.fromLatLngToDivPixel(this.bounds_.getNorthEast());
-      elmWidth = ne.x - sw.x;
-      elmHeight = ne.y - sw.y;
+      nw = overlayProjection.fromLatLngToDivPixel(this.bounds_.getSouthWest());
+      se = overlayProjection.fromLatLngToDivPixel(this.bounds_.getNorthEast());
+      elmWidth = se.x - nw.x;
+      elmHeight = se.y - nw.y;
       elm = this.elm_;
       return $(elm).css({
-        'left': sw.x + 'px',
-        'top': sw.y + 'px',
+        'left': nw.x + 'px',
+        'top': nw.y + 'px',
         'width': elmWidth + 'px',
         'height': elmHeight + 'px'
       });
@@ -58,7 +58,7 @@
       var locations, map, mapOptions;
       mapOptions = {
         zoom: 17,
-        center: new google.maps.LatLng(35.665726, 139.281587),
+        center: new google.maps.LatLng(35.656039, 139.339178),
         mapTypeId: google.maps.MapTypeId.ROADMAP
       };
       map = new google.maps.Map(document.getElementById('gallery_map'), mapOptions);
@@ -68,8 +68,8 @@
         photos = $('.photo', location);
         return $(photos).each(function(key, photo) {
           var bounds, neBound, overlay, src, swBound;
-          swBound = new google.maps.LatLng($(photo).attr('data-sw-latitude'), $(photo).attr('data-sw-longitude'));
-          neBound = new google.maps.LatLng($(photo).attr('data-ne-latitude'), $(photo).attr('data-ne-longitude'));
+          swBound = new google.maps.LatLng($(photo).attr('data-nw-latitude'), $(photo).attr('data-nw-longitude'));
+          neBound = new google.maps.LatLng($(photo).attr('data-se-latitude'), $(photo).attr('data-se-longitude'));
           bounds = new google.maps.LatLngBounds(swBound, neBound);
           src = $(photo).attr('data-src');
           return overlay = new PhotoOverlay(bounds, src, map);
