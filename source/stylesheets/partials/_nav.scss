@@ -16,7 +16,9 @@
     text-align:initial;
   }
   .item {
-    @include span(6 of 30);
+    $columns: susy-get(columns) - (5 * 2);
+    $span:$columns / 5;
+    @include span($span of $columns);
     >.container {
       display:block;
     }

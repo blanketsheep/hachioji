@@ -22,7 +22,9 @@
       }
     }
     >.center {
-      @include span(30 nest);
+      $columns: susy-get(columns);
+      $span:$columns - (5 * 2);
+      @include span($span of $columns nest);
       #nav {
         @import 'partials/nav';
       }
