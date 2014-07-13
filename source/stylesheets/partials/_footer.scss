@@ -12,7 +12,9 @@
   .columns {
     @include clearfix;
     .column {
-      @include span(10 of 40);
+      $max-column:susy-get(columns);
+      $span:$max-column / 4;
+      @include span($span of $max-column);
       height:rhythm(10);
       @include rhythm(1);
     }
