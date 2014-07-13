@@ -19,12 +19,14 @@
       height:rhythm(5);
       color:$writer-header-color;
       @include single-text-shadow($default-text-shadow-h-offset, $default-text-shadow-v-offset, $default-text-shadow-blur, $default-text-shadow-spread, rgba(0,0,0,.5));
+      overflow:hidden;
+      //@include gpu-acceleration;
+      background-color:$writer-header-background-color;
     }
     .background {
       position:absolute;
       top:0;left:0;right:0;bottom:0;
       & {
-        background-color:$writer-header-background-color;
         background-position:center center;
         @include background-size(cover);
       }
@@ -34,9 +36,16 @@
       img {
         display:none;
       }
+      & {
+        $blur:5px;
+        @include filter( blur($blur) );
+        @include scale(1.125);
+        opacity:.8;
+      }
     }
     .position,
-    .name {
+    .name,
+    .icon_wrapper {
       margin:0;
       position:absolute;
       @include gutter;
@@ -50,6 +59,18 @@
       top:auto;left:auto;
       right:0;bottom:0;
       @include adjust-font-size-to(1.25rem);
+    }
+    .icon_wrapper {
+      top:0;left:0;bottom:0;
+      right:0;
+      @include padding-leader(1);
+      @include padding-trailer(1);
+      @include pad(1);
+      .circle_image {
+        @include circle-image-sizing(3);
+        margin:0 auto;
+        @include box-shadow;
+      }
     }
   }
   .main {
