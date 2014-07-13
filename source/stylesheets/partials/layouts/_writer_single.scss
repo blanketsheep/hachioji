@@ -78,7 +78,7 @@ $header-icon-wrap-rhythm:5;
   >.container>.columns {
     @include container;
     //@include clearfix;
-    $max-span:40;
+    $max-span:susy-get(columns);
     $right-span:8;
     $left-span:$right-span;
     $main-span:$max-span - ($left-span + $right-span);
@@ -87,7 +87,7 @@ $header-icon-wrap-rhythm:5;
       display:none;
     }
     >.left {
-      @include span($left-span of 40);
+      @include span($left-span of $max-span);
       //display:none;
     }
     >.main {
@@ -101,7 +101,7 @@ $header-icon-wrap-rhythm:5;
       @include padding-trailer(3);
     }
     >.right {
-      @include span($right-span of 40);
+      @include span($right-span of $max-span);
       .article {
         //@import 'partials/article';
         //@include gallery(10 of 30);
@@ -114,7 +114,9 @@ $header-icon-wrap-rhythm:5;
       @include container;
     }
     .article {
-      @include gallery(10 of 40);
+      $max-span:susy-get(columns);
+      $span:$max-span / 4;
+      @include gallery($span of $max-span);
     }
   }
 }

@@ -109,20 +109,26 @@
     }
   }
   #content {
+    $right-span:12;
+    $left-span:susy-get(columns) - $right-span;
     >.container {
       @include container;
       //min-height:1500px;
     }
     #left {
-      @include span(30 nest);
+      @include span($left-span nest);
     }
     #right {
-      @include span(10);
+      @include span($right-span);
+      >.container {
+        @include prefix(1);
+      }
     }
     #articles {
       .article {
         //@import 'partials/article';
-        @include gallery(10 of 30);
+        $span:$left-span / 3;
+        @include gallery($span of $left-span);
       }
     }
   }
