@@ -2,7 +2,7 @@ s64:
   name: "Shuma Yoshioka"
   avatar:
     icon: "http://ja.gravatar.com/avatar/0a741f935003a289716373693b95db34.png?s=128"
-    wide: ""
+    wide: "/images/writers/s64.png"
   position: "技術担当"
   oneliner: "最近お昼がウィダーになりました"
   text: |-
@@ -14,8 +14,8 @@ s64:
 sumiyoshi:
   name: "住吉みゆき"
   avatar:
-    icon: ""
-    wide: ""
+    icon: "/images/writers/sumiyoshi.icon.png"
+    wide: "/images/writers/sumiyoshi.cover.JPG"
   position: "編集長"
   oneliner: "ジーンズガール"
   text: |-
@@ -28,7 +28,7 @@ tsuchiko:
   name: "ツチコ。"
   avatar:
     icon: "/images/writers/tsuchiko.jpg"
-    wide: ""
+    wide: "/images/writers/tsuchiko.cover.JPG"
   position: "副編集長"
   oneliner: "普通のおっちゃん"
   text: |-
@@ -40,8 +40,8 @@ tsuchiko:
 yuyupom:
   name: "ゆゆぽむ"
   avatar:
-    icon: ""
-    wide: ""
+    icon: "/images/writers/yuyupom.icon.png"
+    wide: "/images/writers/yuyupom.cover.png"
   position: ""
   oneliner: "わがままお嬢様bot"
   text: |-
