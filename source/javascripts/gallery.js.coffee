@@ -36,11 +36,13 @@
   
   @PhotoOverlay.prototype.draw = () ->
     overlayProjection = @.getProjection()
-    sw = overlayProjection.fromLatLngToDivPixel @.bounds_.getSouthWest()
-    ne = overlayProjection.fromLatLngToDivPixel @.bounds_.getNorthEast()
+    #sw = overlayProjection.fromLatLngToDivPixel @.bounds_.getSouthWest()
+    nw = overlayProjection.fromLatLngToDivPixel @.bounds_.getSouthWest()
+    #ne = overlayProjection.fromLatLngToDivPixel @.bounds_.getNorthEast()
+    se = overlayProjection.fromLatLngToDivPixel @.bounds_.getNorthEast()
     
-    elmWidth  = (ne.x - sw.x)
-    elmHeight = (ne.y - sw.y)
+    elmWidth  = (se.x - nw.x)
+    elmHeight = (se.y - nw.y)
     
     #if elmWidth > elmHeight
     #  elmWidth = elmHeight
@@ -49,8 +51,8 @@
     
     elm = @elm_
     $(elm).css
-      'left':   sw.x + 'px'
-      'top':    sw.y + 'px'
+      'left':   nw.x + 'px'
+      'top':    nw.y + 'px'
       'width':  elmWidth  + 'px'
       'height': elmHeight + 'px'
   
@@ -64,7 +66,7 @@ $ ->
       #zoom: 13
       zoom: 17
       #center: new google.maps.LatLng 35.659475, 139.287093
-      center: new google.maps.LatLng 35.665726, 139.281587
+      center: new google.maps.LatLng 35.656039, 139.339178
       mapTypeId: google.maps.MapTypeId.ROADMAP
     
     map = new google.maps.Map document.getElementById('gallery_map'), mapOptions
@@ -79,8 +81,8 @@ $ ->
     $(locations).each (key, location) ->
       photos = $('.photo',location)
       $(photos).each (key,photo) ->
-        swBound = new google.maps.LatLng $(photo).attr('data-sw-latitude'), $(photo).attr('data-sw-longitude')
-        neBound = new google.maps.LatLng $(photo).attr('data-ne-latitude'), $(photo).attr('data-ne-longitude')
+        swBound = new google.maps.LatLng $(photo).attr('data-nw-latitude'), $(photo).attr('data-nw-longitude')
+        neBound = new google.maps.LatLng $(photo).attr('data-se-latitude'), $(photo).attr('data-se-longitude')
         bounds  = new google.maps.LatLngBounds swBound, neBound
         
         src = $(photo).attr 'data-src'
