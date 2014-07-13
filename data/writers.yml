@@ -1,16 +1,3 @@
-s64:
-  name: "Shuma Yoshioka"
-  avatar:
-    icon: "http://ja.gravatar.com/avatar/0a741f935003a289716373693b95db34.png?s=128"
-    wide: "/images/writers/s64.png"
-  position: "技術担当"
-  oneliner: "最近お昼がウィダーになりました"
-  text: |-
-    ウェブサイトのコーディングなどの技術担当。<br/>
-    エナジードリンクをキメたりガジェットを買い漁るのが趣味。<br/>
-    GitHubやTumblrで活動中。
-  tag: writer_s64
-  profile_path: "/writers/s64.html"
 sumiyoshi:
   name: "住吉みゆき"
   avatar:
@@ -50,3 +37,16 @@ yuyupom:
     地元はやっぱり八王子！地元大好き！てなことで八王子の魅力を伝えたいです。
   tag: writer_yuyupom
   profile_path: "/writers/yuyupom.html"
+s64:
+  name: "Shuma Yoshioka"
+  avatar:
+    icon: "http://ja.gravatar.com/avatar/0a741f935003a289716373693b95db34.png?s=128"
+    wide: "/images/writers/s64.png"
+  position: "技術担当"
+  oneliner: "最近お昼がウィダーになりました"
+  text: |-
+    ウェブサイトのコーディングなどの技術担当。<br/>
+    エナジードリンクをキメたりガジェットを買い漁るのが趣味。<br/>
+    GitHubやTumblrで活動中。
+  tag: writer_s64
+  profile_path: "/writers/s64.html"
