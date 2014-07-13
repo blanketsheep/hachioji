@@ -13,4 +13,4 @@ div#gallery
           - article.data.locations.each do |location|
             div.location data-title=location.title data-address=location.address data-text=location.text
               - location.photos.each do |photo|
-                div.photo data-src=url_for(photo.src) data-sw-latitude=photo.southwest.latitude data-sw-longitude=photo.southwest.longitude data-ne-latitude=photo.northeast.latitude data-ne-longitude=photo.northeast.longitude
+                div.photo data-src=url_for(photo.src) data-se-latitude=photo.southeast.latitude data-se-longitude=photo.southeast.longitude data-nw-latitude=photo.northwest.latitude data-nw-longitude=photo.northwest.longitude
