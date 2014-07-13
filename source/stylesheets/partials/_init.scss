@@ -4,7 +4,7 @@
 
 $susy: (
   column-width: 24px,
-  columns: 40,
+  columns: 44,
   gutters: 3/8,
   math: static,
   container-position: center,
@@ -119,5 +119,36 @@ $header-font-size:1.25rem;
     @if $setleader {
       @include padding-leader(1,$font-size);
     }
+  }
+}
+
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes $animation-name {
+    @content;
+  }
+  @-moz-keyframes $animation-name {
+    @content;
+  }
+  @keyframes $animation-name {
+    @content;
+  }
+}
+
+@mixin gpu-acceleration {  
+  @include transform3d( translate3d(0,0,0) );
+}
+
+$circle-image-rhythm:5;
+$circle-image-border-width:3px;
+
+@mixin circle-image-sizing($rhythm: $circle-image-rhythm, $border-width: $circle-image-border-width) {
+  $size:rhythm($rhythm);
+  border-width:$border-width;
+  &, &>.container {
+    width:$size;
+    height:$size;
+  }
+  >.container {
+    margin:-($border-width);
   }
 }

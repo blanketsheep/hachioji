@@ -1,17 +1,20 @@
 //$article-header-image-height:span(7);
 
 & {
+  $max-span:susy-get(columns);
+  $right-span:12;
+  $left-span:$max-span - $right-span;
   @include padding-leader(1);
   >.container {
     @include container;
   }
   #left {
-    @include span(30 nest);
+    @include span($left-span of $max-span nest);
   }
   #right {
-    @include span(10);
+    @include span($right-span of $max-span);
     >.container {
-      
+      @include prefix(1);
     }
   }
   #writers {
@@ -137,6 +140,18 @@
               @include fontreset($font-size,$guttered);
               @include padding-trailer(1,$font-size);
             }
+            .flickrembed {
+              display:block;
+              & {
+                width:auto;height:auto;
+                margin:0;padding:0;
+              }
+              & {
+                $span:$left-span - 2;
+                width:span($span);
+                height:rhythm(20,$font-size);
+              }
+            }
           }
         }
       }
@@ -155,7 +170,8 @@
           .item {
             $height:rhythm(1);
             & {
-              @include span(10 of 30);
+              $span:$left-span / 3;
+              @include span($span of $left-span);
             }
             &,&>.container {
               display:block;

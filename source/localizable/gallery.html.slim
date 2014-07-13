@@ -1,0 +1,16 @@
+---
+layout_exjs:
+- gallery
+---
+#mainborder
+div#gallery
+  div.container
+    div#gallery_map
+      /iframe src='https://mapsengine.google.com/map/embed?mid=zW5_dzsIb19U.kf0T1MM6qkrA' frameborder="0" style="border:0;"
+    div#items
+      div.container
+        - blog('blog').tags['gallery'].each do |article|
+          - article.data.locations.each do |location|
+            div.location data-title=location.title data-address=location.address data-text=location.text
+              - location.photos.each do |photo|
+                div.photo data-src=url_for(photo.src) data-se-latitude=photo.southeast.latitude data-se-longitude=photo.southeast.longitude data-nw-latitude=photo.northwest.latitude data-nw-longitude=photo.northwest.longitude

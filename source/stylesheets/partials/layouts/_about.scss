@@ -1,0 +1,84 @@
+& {
+  #whats {
+    position:relative;
+    >.background {
+      position:absolute;
+      top:0;left:0;right:0;bottom:0;
+      & {
+        background-position:center center;
+        @include background-size(cover);
+        //opacity:.125;
+        opacity:.35;
+      }
+      img {
+        display:none;
+      }
+      iframe {
+        width:100%;
+        height:100%;
+      }
+    }
+    >.container {
+      position:relative;
+      @include padding-leader(10);
+      @include padding-trailer(10);
+    }
+    .circle_image {
+      margin:0 auto;
+      @include circle-image-sizing(10);
+    }
+    .content {
+      $left-span:10;
+      $right-span:$left-span;
+      @include container;
+      .text {
+        /*
+        @include prefix($left-span);
+        @include suffix($right-span);
+        */
+        @include squish($left-span);
+        @include padding-leader(3);
+        //@include padding-trailer(3);
+      }
+    }
+  }
+  #about_writers {
+    @include fontreset(1rem,true,false);
+    >.container {
+      @include padding-leader(2);
+      @include padding-trailer(2);
+    }
+    .items {
+      @include container;
+      $columns:susy-get(columns);
+      $item-span:$columns / 4;
+      .item {
+        @include span($item-span of $columns);
+        >.container {
+          @include padding-leader(1);
+          @include padding-trailer(2);
+        }
+        .top {
+          @include padding-leader(1);
+          @include padding-trailer(1);
+        }
+        .circle_image {
+          margin:0 auto;
+        }
+        h1 {
+          @include adjust-font-size-to(1rem);
+          text-align:center;
+          font-weight:inherit;
+        }
+      }
+    }
+    >.container>.header {
+      @include rhythm(0,1,1);
+      h1 {
+        @include adjust-font-size-to(1rem);
+        text-align:center;
+        font-weight:inherit;
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+- imgPath = ''
+- background = ''
+- style = ''
+- keys = []
+- keys.push 'thumbnail_slide'
+- keys.push 'thumbnail_wide'
+- keys.push 'thumbnail_grid'
+- keys.each do |key|
+  - if article.data.has_key?(key)
+    - imgPath = article.data[key]
+    - break
+  - else
+    - next
+- background = url_for imgPath
+- style = 'background-image:url(' + background + ');'
+article.slide_item
+  div.container
+    div.background style=style
+      img src=background
+    div.main
+      div.container
+        div.thumbnail
+          div.container style=style

@@ -1,0 +1,29 @@
+& {
+  border-style:solid;
+  border-color:#ddd;
+  @include box-sizing(border-box);
+  @include gpu-acceleration;
+  &,
+  &>.container,
+  & .image {
+    display:block;
+    border-radius:50%;
+    overflow:hidden;
+  }
+  >.container {
+    position:relative;
+    background-color:$circle-image-background-color;
+  }
+  .image {
+    position:absolute;
+    top:0;left:0;right:0;bottom:0;
+    background-position:center center;
+    @include background-size(cover);
+    img {
+      display:none;
+    }
+  }
+  & {
+    @include circle-image-sizing;
+  }
+}

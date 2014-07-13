@@ -1,7 +1,17 @@
 ---
+exjs:
+- home
 ---
 div#home
-  div#slide
+  section#slide
+    div.container
+      div.background
+      div.items
+        - articles = blog('blog').tags['home_slide']
+        - if articles == nil
+          - articles = []
+        - articles.each do |article|
+          = partial "partials/slide_item", :locals => { :article => article }
   #mainborder
   div#content
     div.container

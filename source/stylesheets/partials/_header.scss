@@ -22,7 +22,9 @@
       }
     }
     >.center {
-      @include span(30 nest);
+      $columns: susy-get(columns);
+      $span:$columns - (5 * 2);
+      @include span($span of $columns nest);
       #nav {
         @import 'partials/nav';
       }
@@ -41,15 +43,15 @@
     color:#000;
   }
   body:not([data-scrolled-main]) & {
-    //color:#fff;
+    color:#fff;
     background-color:rgba(255,255,255,0);
-    //@include single-text-shadow(0,0,0,$default-text-shadow-spread,rgba(0,0,0,0));
+    @include text-shadow;
     @include single-box-shadow(rgba(0,0,0,0),0,0,0,$default-box-shadow-spread,$default-box-shadow-inset);
   }
   body[data-scrolled-main] & {
-    //color:#000;
+    color:#000;
     background-color:rgba(255,255,255,.75);
-    //@include text-shadow;
+    @include single-text-shadow(0,0,0,$default-text-shadow-spread,rgba(0,0,0,0));
     @include box-shadow;
   }
 }
