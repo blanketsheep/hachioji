@@ -11,6 +11,6 @@ div#gallery
       div.container
         - blog('blog').tags['gallery'].each do |article|
           - article.data.locations.each do |location|
-            div.location data-title=location.title data-address=location.address data-text=location.text
+            div.location data-title=location.title data-address=location.address data-text=location.text data-latitude=location.latitude data-longitude=location.longitude
               - location.photos.each do |photo|
                 div.photo data-src=url_for(photo.src) data-se-latitude=photo.southeast.latitude data-se-longitude=photo.southeast.longitude data-nw-latitude=photo.northwest.latitude data-nw-longitude=photo.northwest.longitude
