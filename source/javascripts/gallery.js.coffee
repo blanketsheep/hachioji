@@ -61,6 +61,9 @@
     @elm_ = null
 )()
 $ ->
+  map = null
+  mapOptions = null
+  locations = null
   (() ->
     mapOptions = 
       #zoom: 13
@@ -68,17 +71,21 @@ $ ->
       #center: new google.maps.LatLng 35.659475, 139.287093
       center: new google.maps.LatLng 35.656039, 139.339178
       mapTypeId: google.maps.MapTypeId.ROADMAP
-    
     map = new google.maps.Map document.getElementById('gallery_map'), mapOptions
-    
-    #swBound = new google.maps.LatLng 35.664835, 139.282848
-    #neBound = new google.maps.LatLng 35.664656, 139.283664
-    #bounds  = new google.maps.LatLngBounds swBound, neBound
-    #src = 'http://localhost:4567/resources/2014-05-09-test/DSC_5717.JPG'
-    #overlay = new PhotoOverlay bounds, src, map
-    
     locations = $('#items .location')
+  )()
+  (() ->
     $(locations).each (key, location) ->
+      (() ->
+        latLng = new google.maps.LatLng $(location).attr('data-latitude'), $(location).attr('data-longitude')
+        marker = new google.maps.Marker({
+          position: latLng,
+          map: map,
+          title: $(location).attr('data-title')
+        })
+        google.maps.event.addListener marker, 'click', () ->
+          window.open 'http://example.com/'
+      )()
       photos = $('.photo',location)
       $(photos).each (key,photo) ->
         swBound = new google.maps.LatLng $(photo).attr('data-nw-latitude'), $(photo).attr('data-nw-longitude')

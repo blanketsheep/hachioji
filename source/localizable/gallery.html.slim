@@ -11,6 +11,21 @@ div#gallery
       div.container
         - blog('blog').tags['gallery'].each do |article|
           - article.data.locations.each do |location|
-            div.location data-title=location.title data-address=location.address data-text=location.text
+            div.location data-title=location.title data-address=location.address data-text=location.text data-latitude=location.latitude data-longitude=location.longitude
+              div.location-card.gallery-card
+                div.container
+                  header.header
+                    h1
+                      = location.title
+                  div.main
+                    = location.text
+                  footer.footer
+                    a href=url_for(article)
+                      span.fa.fa-arrow-circle-right
+                      = article.title
               - location.photos.each do |photo|
-                div.photo data-src=url_for(photo.src) data-se-latitude=photo.southeast.latitude data-se-longitude=photo.southeast.longitude data-nw-latitude=photo.northwest.latitude data-nw-longitude=photo.northwest.longitude
+                div.photo.photo-card.gallery-card data-src=url_for(photo.src) data-se-latitude=photo.southeast.latitude data-se-longitude=photo.southeast.longitude data-nw-latitude=photo.northwest.latitude data-nw-longitude=photo.northwest.longitude
+                  div.container
+                    - style = 'background-image:url(' + url_for(photo.src) + ');'
+                    div.image style=style
+                      img src=url_for(photo.src)
