@@ -1,4 +1,6 @@
 (function() {
+  var __indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
+
   (function() {
     this.PhotoOverlay = function(bounds, image, map) {
       this.bounds_ = bounds;
@@ -54,10 +56,12 @@
   })();
 
   $(function() {
-    var locations, map, mapOptions;
+    var locations, map, mapOptions, markerId, markers;
+    markers = {};
     map = null;
     mapOptions = null;
     locations = null;
+    markerId = null;
     (function() {
       mapOptions = {
         zoom: 17,
@@ -71,6 +75,21 @@
       return $(locations).each(function(key, location) {
         var photos;
         (function() {
+          var ids, tempId;
+          while (true) {
+            ids = Object.keys(markers);
+            tempId = Math.random().toString();
+            if (__indexOf.call(ids, tempId) < 0) {
+              markerId = tempId;
+              break;
+            } else {
+              continue;
+            }
+          }
+          return markers[markerId] = {};
+        })();
+        $(location).attr('data-marker-id', markerId);
+        (function() {
           var latLng, marker;
           latLng = new google.maps.LatLng($(location).attr('data-latitude'), $(location).attr('data-longitude'));
           marker = new google.maps.Marker({
@@ -78,9 +97,21 @@
             map: map,
             title: $(location).attr('data-title')
           });
-          return google.maps.event.addListener(marker, 'click', function() {
-            return window.open('http://example.com/');
+          google.maps.event.addListener(marker, 'click', function() {
+            var elms, hide, show;
+            elms = $('#items .location[data-marker-id]');
+            show = null;
+            $(elms).each(function(key, elm) {
+              if ($(elm).attr('data-marker-id') === markerId) {
+                show = elm;
+                return false;
+              }
+            });
+            hide = $(elms).not(show);
+            $(hide).removeAttr('data-selected');
+            return $(show).attr('data-selected', 'data-selected');
           });
+          return markers[markerId].marker = marker;
         })();
         photos = $('.photo', location);
         return $(photos).each(function(key, photo) {
@@ -89,7 +120,8 @@
           neBound = new google.maps.LatLng($(photo).attr('data-se-latitude'), $(photo).attr('data-se-longitude'));
           bounds = new google.maps.LatLngBounds(swBound, neBound);
           src = $(photo).attr('data-src');
-          return overlay = new PhotoOverlay(bounds, src, map);
+          overlay = new PhotoOverlay(bounds, src, map);
+          return markers[markerId].overlay = overlay;
         });
       });
     })();

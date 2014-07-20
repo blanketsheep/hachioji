@@ -969,7 +969,19 @@ a {
     width: 396px;
     width: 24.75rem;
     float: left; }
-/* line 19, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_gallery.scss */
+  /* line 18, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_gallery.scss */
+  #gallery #items .location:not([data-selected]) {
+    display: none; }
+    /* line 20, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_gallery.scss */
+    #gallery #items .location:not([data-selected]) .gallery-card {
+      opacity: 0; }
+  /* line 24, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_gallery.scss */
+  #gallery #items .location[data-selected] {
+    display: block; }
+    /* line 26, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_gallery.scss */
+    #gallery #items .location[data-selected] .gallery-card {
+      opacity: 1; }
+/* line 31, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_gallery.scss */
 #gallery #items .gallery-card {
   /*
   @include padding-leader(1);
@@ -1023,7 +1035,7 @@ a {
     font-size: 1.1rem;
     line-height: 24px;
     line-height: 1.5rem; }
-  /* line 28, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_gallery.scss */
+  /* line 40, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_gallery.scss */
   #gallery #items .gallery-card > .container {
     -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.125);
     -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.125);
@@ -1039,7 +1051,7 @@ a {
     margin-bottom: 1.5rem;
     margin-right: 38px;
     margin-right: 2.34375rem; }
-/* line 37, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_gallery.scss */
+/* line 49, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_gallery.scss */
 #gallery #items .location-card .header,
 #gallery #items .location-card .main,
 #gallery #items .location-card .footer {
@@ -1047,14 +1059,14 @@ a {
   padding-left: 2.0625rem;
   padding-right: 33px;
   padding-right: 2.0625rem; }
-/* line 42, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_gallery.scss */
+/* line 54, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_gallery.scss */
 #gallery #items .location-card .header,
 #gallery #items .location-card .footer {
   padding-top: 24px;
   padding-top: 1.5rem;
   padding-bottom: 24px;
   padding-bottom: 1.5rem; }
-/* line 48, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_gallery.scss */
+/* line 60, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_gallery.scss */
 #gallery #items .location-card .header h1 {
   white-space: nowrap;
   overflow: hidden;
@@ -1062,7 +1074,7 @@ a {
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   overflow: hidden; }
-/* line 53, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_gallery.scss */
+/* line 65, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_gallery.scss */
 #gallery #items .location-card .main {
   height: 7.5rem;
   overflow: hidden;
@@ -1070,7 +1082,7 @@ a {
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   overflow: hidden; }
-/* line 59, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_gallery.scss */
+/* line 71, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_gallery.scss */
 #gallery #items .location-card .footer a {
   display: block;
   white-space: nowrap;
@@ -1078,11 +1090,11 @@ a {
   -ms-text-overflow: ellipsis;
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis; }
-/* line 63, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_gallery.scss */
+/* line 75, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_gallery.scss */
 #gallery #items .location-card .footer .fa {
   margin-right: .25em;
   line-height: inherit; }
-/* line 70, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_gallery.scss */
+/* line 82, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_gallery.scss */
 #gallery #items .photo-card > .container {
   padding-left: 33px;
   padding-left: 2.0625rem;
@@ -1092,7 +1104,7 @@ a {
   padding-top: 1.5rem;
   padding-bottom: 24px;
   padding-bottom: 1.5rem; }
-/* line 75, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_gallery.scss */
+/* line 87, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_gallery.scss */
 #gallery #items .photo-card .image {
   -moz-background-size: contain;
   -webkit-background-size: contain;
@@ -1100,7 +1112,7 @@ a {
   background-position: center center;
   background-repeat: no-repeat;
   height: 15rem; }
-  /* line 80, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_gallery.scss */
+  /* line 92, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_gallery.scss */
   #gallery #items .photo-card .image img {
     display: none; }
 
