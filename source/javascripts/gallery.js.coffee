@@ -65,6 +65,7 @@ $ ->
   map = null
   mapOptions = null
   locations = null
+  markerId = null
   (() ->
     mapOptions = 
       #zoom: 13
@@ -77,11 +78,18 @@ $ ->
   )()
   (() ->
     $(locations).each (key, location) ->
-      var markerId = null
       (() ->
-        ids = Object.keys markers
-        tempId = Math.random().toString()
+        while true
+          ids = Object.keys markers
+          tempId = Math.random().toString()
+          if tempId not in ids
+            markerId = tempId
+            break
+          else
+            continue
+        markers[ markerId ] = {}
       )()
+      $(location).attr 'data-marker-id', markerId
       (() ->
         latLng = new google.maps.LatLng $(location).attr('data-latitude'), $(location).attr('data-longitude')
         marker = new google.maps.Marker({
@@ -90,15 +98,25 @@ $ ->
           title: $(location).attr('data-title')
         })
         google.maps.event.addListener marker, 'click', () ->
-          window.open 'http://example.com/'
+          elms = $('#items .location[data-marker-id]')
+          show = null
+          $(elms).each (key,elm) ->
+            if $(elm).attr('data-marker-id') == markerId
+              show = elm
+              return false
+#          show = $('[data-marker-id="' + markerId + '"]',elms)
+          hide = $(elms).not(show)
+          $(hide).removeAttr('data-selected')
+          $(show).attr('data-selected','data-selected')
+          
+        markers[ markerId ].marker = marker
       )()
       photos = $('.photo',location)
       $(photos).each (key,photo) ->
         swBound = new google.maps.LatLng $(photo).attr('data-nw-latitude'), $(photo).attr('data-nw-longitude')
         neBound = new google.maps.LatLng $(photo).attr('data-se-latitude'), $(photo).attr('data-se-longitude')
         bounds  = new google.maps.LatLngBounds swBound, neBound
-        
         src = $(photo).attr 'data-src'
-        
         overlay = new PhotoOverlay bounds, src, map
+        markers[ markerId ].overlay = overlay
   )()
