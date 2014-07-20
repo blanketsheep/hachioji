@@ -54,17 +54,34 @@
   })();
 
   $(function() {
-    return (function() {
-      var locations, map, mapOptions;
+    var locations, map, mapOptions;
+    map = null;
+    mapOptions = null;
+    locations = null;
+    (function() {
       mapOptions = {
         zoom: 17,
         center: new google.maps.LatLng(35.656039, 139.339178),
         mapTypeId: google.maps.MapTypeId.ROADMAP
       };
       map = new google.maps.Map(document.getElementById('gallery_map'), mapOptions);
-      locations = $('#items .location');
+      return locations = $('#items .location');
+    })();
+    return (function() {
       return $(locations).each(function(key, location) {
         var photos;
+        (function() {
+          var latLng, marker;
+          latLng = new google.maps.LatLng($(location).attr('data-latitude'), $(location).attr('data-longitude'));
+          marker = new google.maps.Marker({
+            position: latLng,
+            map: map,
+            title: $(location).attr('data-title')
+          });
+          return google.maps.event.addListener(marker, 'click', function() {
+            return window.open('http://example.com/');
+          });
+        })();
         photos = $('.photo', location);
         return $(photos).each(function(key, photo) {
           var bounds, neBound, overlay, src, swBound;
