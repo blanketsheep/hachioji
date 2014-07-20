@@ -118,7 +118,12 @@
               $(show).attr(attrName, '1');
               return $(show).dequeue(attrName);
             });
-            return $(show).dequeue(attrName);
+            $(show).dequeue(attrName);
+            return (function() {
+              return $('html,body').animate({
+                scrollTop: $('#items').offset().top
+              }, 250);
+            })();
           });
           return markers[markerId].marker = marker;
         })();
