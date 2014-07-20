@@ -15,6 +15,18 @@
       >.gallery-card {
         @include span(12 nest);
       }
+      &:not([data-selected]) {
+        display:none;
+        .gallery-card {
+          opacity:0;
+        }
+      }
+      &[data-selected] {
+        display:block;
+        .gallery-card {
+          opacity:1;
+        }
+      }
     }
     .gallery-card {
       /*
