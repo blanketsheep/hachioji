@@ -1,6 +1,7 @@
 require "susy"
 require "tzinfo"
 require "rbs/customrenderer.rb"
+require "animate"
 
 Time.zone = "Asia/Tokyo"
 set :markdown_engine, :redcarpet
