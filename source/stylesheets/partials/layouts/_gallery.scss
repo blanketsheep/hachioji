@@ -15,15 +15,20 @@
       >.gallery-card {
         @include span(12 nest);
       }
+      & {
+        .gallery-card {
+          opacity:0;
+          @include single-transition(opacity);
+        }
+      }
       &:not([data-selected]) {
         display:none;
         .gallery-card {
-          opacity:0;
         }
       }
       &[data-selected] {
         display:block;
-        .gallery-card {
+        &[data-selected="1"] .gallery-card {
           opacity:1;
         }
       }

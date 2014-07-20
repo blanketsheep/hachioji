@@ -65,7 +65,6 @@ $ ->
   map = null
   mapOptions = null
   locations = null
-  markerId = null
   (() ->
     mapOptions = 
       #zoom: 13
@@ -78,6 +77,7 @@ $ ->
   )()
   (() ->
     $(locations).each (key, location) ->
+      markerId = null
       (() ->
         while true
           ids = Object.keys markers
@@ -106,8 +106,27 @@ $ ->
               return false
 #          show = $('[data-marker-id="' + markerId + '"]',elms)
           hide = $(elms).not(show)
-          $(hide).removeAttr('data-selected')
-          $(show).attr('data-selected','data-selected')
+          
+          attrName = 'data-selected'
+          
+#          $(hide).queue attrName, () ->
+#            $(hide).attr attrName, '0'
+#            $(hide).dequeue attrName
+#          .delay 1, attrName
+#          $(hide).queue attrName, () ->
+#            $(hide).removeAttr(attrName)
+#            $(hide).dequeue attrName
+#          $(hide).dequeue attrName
+          $(hide).removeAttr(attrName)
+          
+          $(show).queue attrName, () ->
+            $(show).attr attrName, '0'
+            $(show).dequeue attrName
+          .delay 1, attrName
+          $(show).queue attrName, () ->
+            $(show).attr attrName, '1'
+            $(show).dequeue attrName
+          $(show).dequeue attrName
           
         markers[ markerId ].marker = marker
       )()
