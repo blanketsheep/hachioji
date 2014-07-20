@@ -61,6 +61,7 @@
     @elm_ = null
 )()
 $ ->
+  markers = {}
   map = null
   mapOptions = null
   locations = null
@@ -76,6 +77,11 @@ $ ->
   )()
   (() ->
     $(locations).each (key, location) ->
+      var markerId = null
+      (() ->
+        ids = Object.keys markers
+        tempId = Math.random().toString()
+      )()
       (() ->
         latLng = new google.maps.LatLng $(location).attr('data-latitude'), $(location).attr('data-longitude')
         marker = new google.maps.Marker({
