@@ -56,12 +56,11 @@
   })();
 
   $(function() {
-    var locations, map, mapOptions, markerId, markers;
+    var locations, map, mapOptions, markers;
     markers = {};
     map = null;
     mapOptions = null;
     locations = null;
-    markerId = null;
     (function() {
       mapOptions = {
         zoom: 17,
@@ -73,7 +72,8 @@
     })();
     return (function() {
       return $(locations).each(function(key, location) {
-        var photos;
+        var markerId, photos;
+        markerId = null;
         (function() {
           var ids, tempId;
           while (true) {
@@ -98,7 +98,7 @@
             title: $(location).attr('data-title')
           });
           google.maps.event.addListener(marker, 'click', function() {
-            var elms, hide, show;
+            var attrName, elms, hide, show;
             elms = $('#items .location[data-marker-id]');
             show = null;
             $(elms).each(function(key, elm) {
@@ -108,8 +108,17 @@
               }
             });
             hide = $(elms).not(show);
-            $(hide).removeAttr('data-selected');
-            return $(show).attr('data-selected', 'data-selected');
+            attrName = 'data-selected';
+            $(hide).removeAttr(attrName);
+            $(show).queue(attrName, function() {
+              $(show).attr(attrName, '0');
+              return $(show).dequeue(attrName);
+            }).delay(1, attrName);
+            $(show).queue(attrName, function() {
+              $(show).attr(attrName, '1');
+              return $(show).dequeue(attrName);
+            });
+            return $(show).dequeue(attrName);
           });
           return markers[markerId].marker = marker;
         })();
