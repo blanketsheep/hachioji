@@ -14,7 +14,7 @@ sumiyoshi:
 tsuchiko:
   name: "ツチコ。"
   avatar:
-    icon: "/images/writers/tsuchiko.jpg"
+    icon: "/images/writers/tsuchiko.icon.png"
     wide: "/images/writers/tsuchiko.cover.JPG"
   position: "副編集長"
   oneliner: "普通のおっちゃん"
