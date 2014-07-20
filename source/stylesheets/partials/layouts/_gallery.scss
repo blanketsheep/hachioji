@@ -1,16 +1,14 @@
 & {
   >.container {
-    @include container;
+    //@include container;
   }
   #gallery_map {
-    min-height:rhythm(30);
+    min-height:rhythm(32);
   }
   #items {
-    >.container {
+    .location {
       @include padding-leader(1);
       @include padding-trailer(1);
-    }
-    .location {
       @include container;
       >.gallery-card {
         @include span(12 nest);
@@ -46,8 +44,8 @@
         @include box-shadow;
         background-color:$gallery-card-background-color;
         @include rhythm(1);
-        //@include squish(1);
-        @include post(1);
+        @include squish(1);
+        //@include post(1);
       }
     }
     .location-card {

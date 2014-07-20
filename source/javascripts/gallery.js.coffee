@@ -128,6 +128,12 @@ $ ->
             $(show).dequeue attrName
           $(show).dequeue attrName
           
+          (() ->
+            $('html,body').animate
+              scrollTop: $('#items').offset().top
+            , 250
+          )()
+          
         markers[ markerId ].marker = marker
       )()
       photos = $('.photo',location)
