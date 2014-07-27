@@ -7,7 +7,7 @@
 - keys.push 'thumbnail_grid'
 - keys.each do |key|
   - if article.data.has_key?(key)
-    - imgPath = article.data[key]
+    - imgPath = thumbnail_url(article.data[key], :hd)
     - break
   - else
     - next
