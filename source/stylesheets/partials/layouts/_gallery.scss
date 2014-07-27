@@ -1,8 +1,101 @@
 & {
   >.container {
-    @include container;
+    //@include container;
   }
   #gallery_map {
-    min-height:rhythm(30);
+    min-height:rhythm(32);
+  }
+  #items {
+    .location {
+      @include padding-leader(1);
+      @include padding-trailer(1);
+      @include container;
+      >.gallery-card {
+        @include span(12 nest);
+      }
+      & {
+        .gallery-card {
+          opacity:0;
+          @include single-transition(opacity);
+        }
+      }
+      &:not([data-selected]) {
+        display:none;
+        .gallery-card {
+        }
+      }
+      &[data-selected] {
+        display:block;
+        &[data-selected="1"] .gallery-card {
+          opacity:1;
+        }
+      }
+    }
+    .gallery-card {
+      /*
+      @include padding-leader(1);
+      @include padding-trailer(1);
+      @include pad(1);
+      */
+      $font-size:.9rem;
+      @include adjust-font-size-to($font-size);
+      @include fontreset($font-size,true,false);
+      >.container {
+        @include box-shadow;
+        background-color:$gallery-card-background-color;
+        @include rhythm(1);
+        @include squish(1);
+        //@include post(1);
+      }
+    }
+    .location-card {
+      .header,
+      .main,
+      .footer {
+        @include pad(1);
+      }
+      .header,
+      .footer {
+        @include padding-leader(1);
+        @include padding-trailer(1);
+      }
+      .header {
+        h1 {
+          @include ellipsis(true);
+          overflow:hidden;
+        }
+      }
+      .main {
+        height:rhythm(5);
+        @include ellipsis(false);
+        overflow:hidden;
+      }
+      .footer {
+        a {
+          display:block;
+          @include ellipsis(true);
+        }
+        .fa {
+          margin-right:.25em;
+          line-height:inherit;
+        }
+      }
+    }
+    .photo-card {
+      >.container {
+        @include pad(1);
+        @include padding-leader(1);
+        @include padding-trailer(1);
+      }
+      .image {
+        @include background-size(contain);
+        background-position:center center;
+        background-repeat:no-repeat;
+        height:rhythm(10);
+        img {
+          display:none;
+        }
+      }
+    }
   }
 }

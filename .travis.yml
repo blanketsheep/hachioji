@@ -2,7 +2,8 @@ language: ruby
 rvm:
 - 2.1.0
 before_script:
-- git clone --quiet --branch gh-pages https://github.com/blanketsheep/hachioji.git build/
+- git clone --quiet --branch gh-pages https://github.com/blanketsheep/hachioji.git
+  build/
 - pushd build/
 - git pull --quiet -u origin gh-pages
 - git rm -rf ./*
@@ -22,19 +23,17 @@ after_success:
 - git add -A
 - git commit -m Update
 - git push --quiet git@github.com:blanketsheep/hachioji.git gh-pages
-#- bundle exec middleman deploy
 branches:
   only:
-  #- master
   - develop
-  #- design/0509
 env:
   global:
-  # GitHub Deploy Key
   - secure: UGlbsiwsXArXwBgjrBNVBLV3du9rzfLlT1kinGHMIrJ80WjujEAU2qKNNYUC+GKzlle8fLoxl5ZQ0YegSCWBErVswNUUzf37Je9ijfUbuLgtkaMukFiMPgAnOO2tOA4byi0k9XosjZm3+YTUdVWpIKGZn3CZyJhvUo3BeHPvY6w=
   - GIT_COMMITTER_NAME="Travis CI (Shuma Yoshioka)"
   - GIT_AUTHOR_NAME="Travis CI (Shuma Yoshioka)"
   - GIT_COMMITTER_EMAIL="s64.stdio+travis@gmail.com"
   - GIT_AUTHOR_EMAIL="s64.stdio+travis@gmail.com"
   - JEKYLL_BUILD="gh-pages"
-
+notifications:
+  slack:
+    secure: NgTjtYud+jTv3sAQY+atIsupAJMUVyNwu6I+hf1ezh2X3qsF0mW4g/3pAZzFpABk28UmC4FBLJ4yLfYee9qW5wMF1QIE7h8FmCSJsuMlh0oX8y3VYGT0tumZBZVlne8U7UU75oEnasa7KTWRYV5tORCVL4+InazNpxpKiyoWyZo=
