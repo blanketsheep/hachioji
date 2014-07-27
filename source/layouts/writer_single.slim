@@ -6,14 +6,14 @@
         div.container
           div.top
             div.container
-              - img = url_for writer.avatar.wide
+              - img = url_for thumbnail_url(writer.avatar.wide, :hd)
               - style = 'background-image:url(' + img + ');'
               div.image style=style
                 img src=img
           div.bottom
             #mainborder
             div.container
-              - img = url_for writer.avatar.icon
+              - img = url_for thumbnail_url(writer.avatar.icon, :big_icon)
               - style = 'background-image:url(' + img + ');';
               a.icon
                 span.container style=style
