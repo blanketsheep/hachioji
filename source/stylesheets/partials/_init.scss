@@ -25,6 +25,7 @@ $base-font-size:16px;
 $base-line-height:24px;
 
 $default-transition-duration:.25s;
+$default-transition-function:ease;
 
 $default-box-shadow-h-offset:0;
 $default-box-shadow-v-offset:1px;
@@ -35,6 +36,7 @@ $default-text-shadow-v-offset: $default-box-shadow-v-offset;
 $default-text-shadow-blur: $default-box-shadow-blur;
 
 @import 'susy';
+@import 'animate';
 
 /*
 $wetasphalt:#34495e;
