@@ -24,8 +24,9 @@ div#gallery
                       span.fa.fa-arrow-circle-right
                       = article.title
               - location.photos.each do |photo|
-                div.photo.photo-card.gallery-card data-src=url_for(photo.src) data-se-latitude=photo.southeast.latitude data-se-longitude=photo.southeast.longitude data-nw-latitude=photo.northwest.latitude data-nw-longitude=photo.northwest.longitude
+                - photosrc = url_for( thumbnail_url(photo.src, :medium) )
+                div.photo.photo-card.gallery-card data-src=photosrc data-se-latitude=photo.southeast.latitude data-se-longitude=photo.southeast.longitude data-nw-latitude=photo.northwest.latitude data-nw-longitude=photo.northwest.longitude
                   div.container
-                    - style = 'background-image:url(' + url_for(photo.src) + ');'
+                    - style = 'background-image:url(' + url_for( thumbnail_url(photo.src, :big) ) + ');'
                     div.image style=style
-                      img src=url_for(photo.src)
+                      img src=url_for(photosrc)

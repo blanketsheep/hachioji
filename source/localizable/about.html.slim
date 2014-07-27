@@ -8,7 +8,7 @@ div#about
       iframe src='https://mapsengine.google.com/map/embed?mid=zW5_dzsIb19U.kf0T1MM6qkrA' frameborder="0" style="border:0;"
     div.container
       div.icon
-        = partial "partials/circle_image", :locals => { :image_src => url_for('/images/blanketsheep.512.png') }
+        = partial "partials/circle_image", :locals => { :image_src => url_for( thumbnail_url('/images/blanketsheep.512.png', :large_icon) ) }
       div.content
         div.text
           = t(:about_blanketsheep)
@@ -19,7 +19,7 @@ div#about
           article.item
             div.container
               div.top
-                = partial "partials/circle_image", :locals => { :image_src => url_for(item.avatar.icon), :href => url_for(item.profile_path) }
+                = partial "partials/circle_image", :locals => { :image_src => url_for( thumbnail_url(item.avatar.icon, :big_icon) ), :href => url_for(item.profile_path) }
               div.main
                 header.header
                   h1

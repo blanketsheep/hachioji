@@ -1,14 +1,16 @@
-- style = "";
+- style = ""
+- widepath = ""
 - if writer.avatar.wide && !writer.avatar.wide.empty?
-  - style = "background-image:url(#{writer.avatar.wide});"
+  - widepath = url_for( thumbnail_url(writer.avatar.wide, :big) )
+  - style = "background-image:url(" + widepath + ");"
 section.writer
   div.container
     header.header
       div.container
         div.background style=style
-          img src=writer.avatar.wide
+          img src=widepath
         div.icon_wrapper
-          = partial "partials/circle_image", :locals => { :image_src => url_for(writer.avatar.icon), :href => url_for(writer.profile_path) }
+          = partial "partials/circle_image", :locals => { :image_src => url_for( thumbnail_url(writer.avatar.icon, :medium_icon) ), :href => url_for(writer.profile_path) }
         h2.position
           = writer.position
         h1.name

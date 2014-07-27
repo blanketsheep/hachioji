@@ -13,7 +13,7 @@ article.article
       - keys.push 'thumbnail_wide'
       - keys.each do |key|
         - if article.data.has_key?(key)
-          - imgPath = article.data[key]
+          - imgPath = thumbnail_url(article.data[key], :big)
           - break
         - else
           - next
