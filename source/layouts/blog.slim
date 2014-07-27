@@ -14,7 +14,7 @@
   - keys.push 'thumbnail_grid'
   - keys.each do |key|
     - if current_page.data.has_key?(key)
-      - imgPath = current_page.data[key]
+      - imgPath = thumbnail_url(current_page.data[key], :large)
       - break
     - else
       - next
@@ -69,6 +69,7 @@
                             - image = article.data.thumbnail.wide
                           - elsif article.data.thumbnail.grid
                             - image = article.data.thumbnail.grid
+                        - image = thumbnail_url(image, :small_icon)
                         - style = "background-image:url(" + image + ");"
                         - classes = []
                         - classes.push 'fa'
@@ -85,7 +86,7 @@
                     - (current_page.data.locations || []).each do |location|
                       - escapedAddress = URI.escape(location.address)
                       - mapUrl = 'http://maps.google.com/maps/api/staticmap?size=300x175&maptype=roadmap&sensor=false&language=ja&markers=color:red|label:none|' + escapedAddress
-                      - imgUrl = url_for location.image
+                      - imgUrl = url_for thumbnail_url(location.image, :big)
                       - imgStyle = "background-image:url(" + imgUrl + ");"
                       - mapStyle = "background-image:url(" + mapUrl + ");"
                       section.location
@@ -145,7 +146,7 @@
                 - keys.push 'thumbnail_wide'
                 - keys.each do |key|
                   - if article.data.has_key?(key)
-                    - imgPath = article.data[key]
+                    - imgPath = thumbnail_url(article.data[key], :small_icon)
                     - break
                   - else
                     - next
