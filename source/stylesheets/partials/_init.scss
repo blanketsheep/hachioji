@@ -1,5 +1,6 @@
 @charset 'UTF-8';
 @import 'compass';
+@import 'breakpoint';
 //@import '../../bower_components/fontawesome/scss/font-awesome.scss';
 
 $susy: (
@@ -37,6 +38,24 @@ $default-text-shadow-blur: $default-box-shadow-blur;
 
 @import 'susy';
 @import 'animate';
+
+/* * * * * * * * * * * * */
+
+$layout-default-breakpoint: container($susy);
+
+$layout-tablet: 36;
+$layout-tablet-min-width:  container($layout-tablet);
+$layout-tablet-max-width:  $layout-default-breakpoint - 1px;
+$layout-tablet-breakpoint: $layout-tablet-min-width $layout-tablet-max-width;
+
+/* * * * * * * * * * * * */
+
+$sidebar-right-span: (
+  default: 12,
+  tablet:  10
+);
+
+/* * * * * * * * * * * * */
 
 /*
 $wetasphalt:#34495e;
@@ -153,4 +172,30 @@ $circle-image-border-width:3px;
   >.container {
     margin:-($border-width);
   }
+}
+
+/* * * * * * * * * * * * */
+
+@mixin blog-sidebar-sizing($layout: default) {
+  >.container {
+    @include container;
+  }
+  $left-span:  sidebar-left-span($layout);
+  $right-span: sidebar-right-span($layout);
+  #left {
+    @include span($left-span);
+  }
+  #right {
+    @include span($right-span);
+    >.container {
+      @include prefix(1);
+    }
+  }
+}
+
+@function sidebar-right-span($layout: default) {
+  @return map-get($sidebar-right-span, $layout);
+}
+@function sidebar-left-span($layout: default) {
+  @return susy-get(columns) - sidebar-right-span($layout);
 }
