@@ -83,6 +83,10 @@ a {
   @import 'partials/circle_image'
 }
 
+#letter {
+  @import 'partials/layouts/letter';
+}
+
 /*
 #home #content #articles .article > .container {
   $font-size:.95rem;
