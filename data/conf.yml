@@ -18,7 +18,7 @@ nav:
       classes: 
       - essay
     - name: "Letter"
-      href: "/index.html"
+      href: "/letter.html"
       classes:
       - letter
 article:
