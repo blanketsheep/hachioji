@@ -1,11 +1,62 @@
+@mixin letter-layout-breakpoint($layout: default) {
+  #letter_form,
+  #letter_thankyou {
+    >.container {
+      @include container;
+    }
+  }
+  #letter_thankyou {
+    .card {
+      h1 {
+        @if $layout == default or $layout == tablet {
+          @include pad(4);
+        } @else if $layout == phone {
+          @include adjust-font-size-to(1.25rem);
+        }
+      }
+      .main {
+        $pad: 10;
+        @if $layout == tablet {
+          $pad: 5;
+        } @else if $layout == phablet or $layout == phone {
+          $pad: 1;
+        }
+        @include pad($pad);
+      }
+    }
+  }
+  #letter_form {
+    .form {
+      iframe {
+        @if $layout == default or $layout == tablet {
+          min-height:rhythm(30);
+        } @else {
+          min-height:rhythm(15);
+        }
+      }
+    }
+  }
+}
+
 & {
-  
+  @include breakpoint($layout-default-breakpoint) {
+    @include letter-layout-breakpoint(default);
+  }
+  @include susy-breakpoint($layout-tablet-breakpoint, $layout-tablet) {
+    @include letter-layout-breakpoint(tablet);
+  }
+  @include susy-breakpoint($layout-phablet-breakpoint, $layout-phablet) {
+    @include letter-layout-breakpoint(phablet);
+  }
+  @include susy-breakpoint($layout-phone-breakpoint, $layout-phone) {
+    @include letter-layout-breakpoint(phone);
+  }
 }
 #letter_form,
 #letter_thankyou {
   @include fontreset(1rem,true,false);
   >.container {
-    @include container;
+    //@include container;
     @include padding-leader(1);
     @include padding-trailer(1);
   }
@@ -27,7 +78,7 @@
       display:block;
       width:100%;
       height:100%;
-      min-height:rhythm(30);
+      //min-height:rhythm(30);
     }
   }
 }
@@ -41,7 +92,7 @@
       
     }
     h1 {
-      @include pad(4);
+      //@include pad(4);
       text-align:center;
       span {
         display:block;
@@ -60,7 +111,7 @@
     }
     .main {
       position:relative;
-      @include pad(10);
+      //@include pad(10);
     }
   }
 }
