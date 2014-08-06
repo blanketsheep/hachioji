@@ -1,6 +1,93 @@
 $header-top-rhythm:20;
 $header-icon-wrap-rhythm:5;
 
+@mixin writer-single-layout-breakpoint($layout: default) {
+  >.container>.header {
+    @if $layout == phone {
+      $header-top-rhythm: 12;
+    }
+    >.container {
+      >.top {
+        >.container {
+          height:rhythm($header-top-rhythm);
+        }
+      }
+      >.bottom {
+        $icon-size:rhythm($header-icon-wrap-rhythm);
+        & {
+          margin-top:-($icon-size / 2);
+        }
+        .icon {
+          $size:$icon-size;
+          width:$size;
+          height:$size;
+        }
+      }
+    }
+  }
+  >.container>.columns {
+    @include container;
+    $max-span:susy-get(columns);
+    
+    $right-span:8;
+    
+    @if $layout == phablet {
+      $right-span: 3;
+    }
+    @if $layout == phone {
+      $right-span: 1;
+    }
+    
+    $left-span:$right-span;
+    
+    $main-span:$max-span - ($left-span + $right-span);
+    >.left {
+      @include span($left-span of $max-span);
+    }
+    >.main {
+      >.container {
+        @include prefix($left-span);
+        @include suffix($right-span);
+      }
+    }
+    >.right {
+      @include span($right-span of $max-span);
+    }
+  }
+  #articles {
+    >.container {
+      @include container;
+    }
+    .article {
+      $max-span:susy-get(columns);
+      $span:$max-span / 4;
+      @if $layout == phablet {
+        $span: $max-span / 2;
+      } @else if $layout == phone {
+        $span: $max-span;
+      }
+      
+      @if $layout != phone {
+        @include gallery($span of $max-span);
+      }
+    }
+  }
+}
+
+& {
+  @include breakpoint($layout-default-breakpoint) {
+    @include writer-single-layout-breakpoint(default);
+  }
+  @include susy-breakpoint($layout-tablet-breakpoint, $layout-tablet) {
+    @include writer-single-layout-breakpoint(tablet);
+  }
+  @include susy-breakpoint($layout-phablet-breakpoint, $layout-phablet) {
+    @include writer-single-layout-breakpoint(phablet);
+  }
+  @include susy-breakpoint($layout-phone-breakpoint, $layout-phone) {
+    @include writer-single-layout-breakpoint(phone);
+  }
+}
 & {
   margin-top:-( rhythm($header-rhythm) );
   >.container {
@@ -11,7 +98,6 @@ $header-icon-wrap-rhythm:5;
       >.top {
         >.container {
           position:relative;
-          height:rhythm($header-top-rhythm);
         }
         .image {
           position:absolute;
@@ -27,18 +113,11 @@ $header-icon-wrap-rhythm:5;
         }
       }
       >.bottom {
-        $icon-size:rhythm($header-icon-wrap-rhythm);
-        & {
-          margin-top:-($icon-size / 2);
-        }
         @include padding-trailer(1);
         @include fontreset(1em,true,false);
         .icon {
           display:block;
           margin:0 auto;
-          $size:$icon-size;
-          width:$size;
-          height:$size;
           position:relative;
           .container {
             position:absolute;
@@ -74,32 +153,26 @@ $header-icon-wrap-rhythm:5;
     }
   }
   >.container>.columns {
-    @include container;
-    //@include clearfix;
-    $max-span:susy-get(columns);
-    $right-span:8;
-    $left-span:$right-span;
-    $main-span:$max-span - ($left-span + $right-span);
     >.left,
     >.right {
       display:none;
     }
     >.left {
-      @include span($left-span of $max-span);
+      //@include span($left-span of $max-span);
       //display:none;
     }
     >.main {
       //@include span($main-span of 40);
       >.container {
         //@include pad(1);
-        @include prefix($left-span);
-        @include suffix($right-span);
+        //@include prefix($left-span);
+        //@include suffix($right-span);
         @include fontreset(1em,false,true);
       }
       @include padding-trailer(3);
     }
     >.right {
-      @include span($right-span of $max-span);
+      //@include span($right-span of $max-span);
       .article {
         //@import 'partials/article';
         //@include gallery(10 of 30);
@@ -109,12 +182,14 @@ $header-icon-wrap-rhythm:5;
   #articles {
     @include padding-trailer(5);
     >.container {
-      @include container;
+      //@include container;
     }
     .article {
+      /*
       $max-span:susy-get(columns);
       $span:$max-span / 4;
       @include gallery($span of $max-span);
+      */
     }
   }
 }
