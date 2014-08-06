@@ -1,3 +1,49 @@
+@mixin about-layout-breakpoint($layout: default) {
+  #whats {
+    .content {
+      $left-span:10;
+      @if $layout == phablet {
+        $left-span: 3;
+      } @else if $layout == phone {
+        $left-span: 1;
+      }
+      $right-span:$left-span;
+      @include container;
+      .text {
+        @include squish($left-span);
+      }
+    }
+  }
+  #about_writers {
+    .items {
+      @include container;
+      $columns:susy-get(columns);
+      $item-span:$columns / 4;
+      @if $layout == phablet {
+        $item-span:$columns / 2;
+      } @else if $layout == phone {
+        $item-span:$columns;
+      }
+      .item {
+        @include span($item-span of $columns);
+      }
+    }
+  }
+}
+& {
+  @include breakpoint($layout-default-breakpoint) {
+    @include about-layout-breakpoint(default);
+  }
+  @include susy-breakpoint($layout-tablet-breakpoint, $layout-tablet) {
+    @include about-layout-breakpoint(tablet);
+  }
+  @include susy-breakpoint($layout-phablet-breakpoint, $layout-phablet) {
+    @include about-layout-breakpoint(phablet);
+  }
+  @include susy-breakpoint($layout-phone-breakpoint, $layout-phone) {
+    @include about-layout-breakpoint(phone);
+  }
+}
 & {
   #whats {
     position:relative;
@@ -28,15 +74,17 @@
       @include circle-image-sizing(10);
     }
     .content {
+      /*
       $left-span:10;
       $right-span:$left-span;
       @include container;
+      */
       .text {
         /*
         @include prefix($left-span);
         @include suffix($right-span);
         */
-        @include squish($left-span);
+        //@include squish($left-span);
         @include padding-leader(3);
         //@include padding-trailer(3);
       }
@@ -49,11 +97,13 @@
       @include padding-trailer(2);
     }
     .items {
+      /*
       @include container;
       $columns:susy-get(columns);
       $item-span:$columns / 4;
+      */
       .item {
-        @include span($item-span of $columns);
+        //@include span($item-span of $columns);
         >.container {
           @include padding-leader(1);
           @include padding-trailer(2);
