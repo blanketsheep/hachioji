@@ -2,7 +2,8 @@ nav#nav
   div.container
     ul
       - data.conf.nav.items.each do |item|
-        - classes = item.classes
+        - classes = Array.new
+        - classes.concat(item.classes)
         - classes.push "item"
         li class=classes
           a.container href=url_for(item.href, :relative => true)
