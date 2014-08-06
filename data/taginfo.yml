@@ -3,3 +3,13 @@ gallery:
   text: |-
     フォトギャラリーの対象記事のリストだよ
   background: "/images/articles/2014-05-09-test/DSC_5717.JPG"
+essay:
+  title: "エッセイ"
+  text: |-
+    ライターの書いたエッセイだよ
+  background: "/images/articles/2014-05-09-test/DSC_5717.JPG"
+column:
+  title: "コラム"
+  text: |-
+    ライターの書いたコラムだよ
+  background: "/images/articles/2014-05-09-test/DSC_5717.JPG"
