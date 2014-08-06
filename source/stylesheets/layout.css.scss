@@ -87,6 +87,14 @@ a {
   @import 'partials/layouts/letter';
 }
 
+#gallery {
+  @import 'partials/layouts/gallery';
+}
+
+#tag {
+  @import 'partials/layouts/tag';
+}
+
 /*
 #home #content #articles .article > .container {
   $font-size:.95rem;
