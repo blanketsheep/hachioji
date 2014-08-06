@@ -1,17 +1,54 @@
+@mixin gallery-layout-breakpoint($layout: default) {
+  #gallery_map {
+    @if $layout == default {
+      min-height:rhythm(32);
+    } @else if $layout == tablet {
+      min-height:rhythm(18);
+    } @else {
+      min-height:rhythm(16);
+    }
+  }
+  #items {
+    .location {
+      @include container;
+      >.gallery-card {
+        $card-span: 12;
+        @if $layout == default or $layout == tablet {
+          @include span($card-span nest);
+        }
+      }
+    }
+  }
+}
+
+& {
+  @include breakpoint($layout-default-breakpoint) {
+    @include gallery-layout-breakpoint(default);
+  }
+  @include susy-breakpoint($layout-tablet-breakpoint, $layout-tablet) {
+    @include gallery-layout-breakpoint(tablet);
+  }
+  @include susy-breakpoint($layout-phablet-breakpoint, $layout-phablet) {
+    @include gallery-layout-breakpoint(phablet);
+  }
+  @include susy-breakpoint($layout-phone-breakpoint, $layout-phone) {
+    @include gallery-layout-breakpoint(phone);
+  }
+}
 & {
   >.container {
     //@include container;
   }
   #gallery_map {
-    min-height:rhythm(32);
+    //min-height:rhythm(32);
   }
   #items {
     .location {
       @include padding-leader(1);
       @include padding-trailer(1);
-      @include container;
+      //@include container;
       >.gallery-card {
-        @include span(12 nest);
+        //@include span(12 nest);
       }
       & {
         .gallery-card {
