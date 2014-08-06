@@ -1,0 +1,20 @@
+---
+---
+div#tag
+  - if data.taginfo.has_key?(tagname)
+    - taginfo = data.taginfo[ tagname ]
+    header#tag_header
+      div.container
+        - imgPath = thumbnail_url(taginfo.background, :hd)
+        - style = "background-image:url(" + imgPath + ");"
+        div.background style=style
+        div.main
+          div.container
+            div.top
+              h1
+                = link_to taginfo.title, current_page
+            div.bottom
+              div.text
+                = taginfo.text
+  #mainborder
+  div#content
