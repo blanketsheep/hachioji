@@ -20,9 +20,35 @@
   $(window).on('scroll', onscroll);
 
   $(function() {
-    return (function() {
+    (function() {
       mainPosition = $('#mainborder').offset().top;
       return onscroll();
+    })();
+    return (function() {
+      var attrKey, isExpandableHeader;
+      attrKey = 'data-expanded';
+      isExpandableHeader = function() {
+        var bottom;
+        bottom = $('#header').css('bottom').toString();
+        if (bottom !== '0' && bottom !== '0px') {
+          return false;
+        }
+        return true;
+      };
+      return $('#header a').on('click', function(e) {
+        var header, isExpanded;
+        header = $('#header');
+        isExpanded = $(header).attr(attrKey);
+        if (!isExpandableHeader() || (isExpanded != null)) {
+          return true;
+        }
+        if (isExpanded == null) {
+          $(header).attr(attrKey, attrKey);
+        } else {
+          $(header).removeAttr(attrKey);
+        }
+        return false;
+      });
     })();
   });
 
