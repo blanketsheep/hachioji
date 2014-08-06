@@ -7,7 +7,7 @@
   @include fontreset(1rem,false,false);
   >.container {
     position:relative;
-    height: rhythm($rhythm);
+    //height: rhythm($rhythm);
   }
   .background {
     position:absolute;
@@ -48,4 +48,33 @@
 #content {
   @include padding-leader(1);
   @include padding-trailer(1);
+  >.container {
+    $right-span: map-get($tag-lr, right-span);
+    $left-span:  susy-get(columns) - $right-span;
+    @include container;
+    #left {
+      @include span($left-span);
+    }
+    #right {
+      @include span($right-span);
+    }
+  }
+}
+
+#left {
+  $left-span: susy-get(columns) - map-get($tag-lr,right-span);
+  #articles {
+    >.container {
+      @include container($left-span);
+    }
+    .article {
+      $span: $left-span / 3;
+      @include gallery($span of $left-span);
+    }
+  }
+}
+#right {
+  >.container {
+    @include prefix(1);
+  }
 }

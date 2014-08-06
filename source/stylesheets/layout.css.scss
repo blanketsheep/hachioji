@@ -75,7 +75,8 @@ a {
 }
 
 #home #content #articles .article,
-#writers #writer_single > .container > #articles .article {
+#writers #writer_single > .container > #articles .article,
+#tag #articles .article {
   @import 'partials/article';
 }
 
@@ -109,6 +110,8 @@ a {
   @import 'partials/fontreset';
 }
 */
+
+@import 'partials/category_articles';
 
 @import 'z_index';
 
