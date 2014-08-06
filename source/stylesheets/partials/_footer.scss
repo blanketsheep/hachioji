@@ -1,5 +1,39 @@
 //$footer-background-color:$wetasphalt;
+@mixin footer-breakpoint($layout: default) {
+  >.container {
+    //@include container;
+  }
+  .columns {
+    @include container;
+    .column {
+      $span: susy-get(columns) / 4;
+      @if $layout == default or $layout == tablet {
+        @include span($span);
+      }
+    }
+  }
+  @if $layout != default and $layout != tablet {
+    #footer_recent_articles,
+    .column:not([id]) {
+      display:none;
+    }
+  }
+}
 
+& {
+  @include breakpoint($layout-default-breakpoint) {
+    @include footer-breakpoint(default);
+  }
+  @include susy-breakpoint($layout-tablet-breakpoint, $layout-tablet) {
+    @include footer-breakpoint(tablet);
+  }
+  @include susy-breakpoint($layout-phablet-breakpoint, $layout-phablet) {
+    @include footer-breakpoint(phablet);
+  }
+  @include susy-breakpoint($layout-phone-breakpoint, $layout-phone) {
+    @include footer-breakpoint(phone);
+  }
+}
 & {
   background-color:$footer-background-color;
   color:$footer-color;
@@ -7,16 +41,18 @@
   $content-font-size:.9rem;
   //$font-size:1rem;
   >.container {
-    @include container;
+    //@include container;
   }
   .columns {
-    @include clearfix;
     .column {
+      /*
       $max-column:susy-get(columns);
       $span:$max-column / 4;
       @include span($span of $max-column);
-      height:rhythm(10);
-      @include rhythm(1);
+      */
+      //height:rhythm(10);
+      @include padding-leader(1);
+      @include padding-trailer(1);
     }
     @include fontreset($content-font-size,true,false);
     h1 {

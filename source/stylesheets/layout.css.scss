@@ -75,12 +75,25 @@ a {
 }
 
 #home #content #articles .article,
-#writers #writer_single > .container > #articles .article {
+#writers #writer_single > .container > #articles .article,
+#tag #articles .article {
   @import 'partials/article';
 }
 
 .circle_image {
   @import 'partials/circle_image'
+}
+
+#letter {
+  @import 'partials/layouts/letter';
+}
+
+#gallery {
+  @import 'partials/layouts/gallery';
+}
+
+#tag {
+  @import 'partials/layouts/tag';
 }
 
 /*
@@ -97,6 +110,8 @@ a {
   @import 'partials/fontreset';
 }
 */
+
+@import 'partials/category_articles';
 
 @import 'z_index';
 
