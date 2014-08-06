@@ -1,5 +1,29 @@
 //$nav-height: $header-height;
+@mixin nav-breakpoint($layout: default) {
+  $item-span: susy-get(columns) / 7;
+  .item {
+    @if $layout != phone {
+      @include span($item-span);
+    } @else {
+      @include gutters;
+    }
+  }
+}
 
+& {
+  @include breakpoint($layout-default-breakpoint) {
+    @include nav-breakpoint(default);
+  }
+  @include susy-breakpoint($layout-tablet-breakpoint, $layout-tablet) {
+    @include nav-breakpoint(tablet);
+  }
+  @include susy-breakpoint($layout-phablet-breakpoint, $layout-phablet) {
+    @include nav-breakpoint(phablet);
+  }
+  @include susy-breakpoint($layout-phone-breakpoint, $layout-phone) {
+    @include nav-breakpoint(phone);
+  }
+}
 & {
   $font-size:$header-font-size;
   >.container>ul {
@@ -16,9 +40,11 @@
     text-align:initial;
   }
   .item {
+    /*
     $columns: susy-get(columns) - (5 * 2);
     $span:$columns / 5;
     @include span($span of $columns);
+    */
     >.container {
       display:block;
     }

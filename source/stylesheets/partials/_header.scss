@@ -1,5 +1,58 @@
 //$header-height:span(3);
+@mixin header-breakpoint($layout: default) {
+  >.container {
+    @include container;
+    $item-span: susy-get(columns) / 7;
+    @if $layout != phone {
+      >.left,
+      >.right,
+      >.center {
+        height: rhythm($header-rhythm);
+      }
+      >.left,
+      >.right {
+        @include span($item-span);
+      }
+      >.center {
+        $span: $item-span * 5;
+        @include span($span nest);
+      }
+    } @else {
+      >.left,
+      >.right {
+        @include gutters;
+      }
+    }
+  }
+  @if $layout == phone {
+    //@include single-transition(max-height);
+    bottom:0 !important;
+    overflow:hidden;
+    &:not(:hover),
+    &:not([data-expanded]) {
+      max-height: rhythm($header-rhythm);
+    }
+    &:hover,
+    &[data-expanded] {
+      max-height: 100%;
+    }
+  }
+}
 
+& {
+  @include breakpoint($layout-default-breakpoint) {
+    @include header-breakpoint(default);
+  }
+  @include susy-breakpoint($layout-tablet-breakpoint, $layout-tablet) {
+    @include header-breakpoint(tablet);
+  }
+  @include susy-breakpoint($layout-phablet-breakpoint, $layout-phablet) {
+    @include header-breakpoint(phablet);
+  }
+  @include susy-breakpoint($layout-phone-breakpoint, $layout-phone) {
+    @include header-breakpoint(phone);
+  }
+}
 & {
   position:fixed;
   top:0;left:0;right:0;
@@ -8,33 +61,35 @@
   font-size:$font-size;
   //font-weight:bold;
   >.container {
-    @include container;
+    //@include container;
     >.left,
     >.center,
     >.right {
       //height:$header-height;
-      height: rhythm($header-rhythm,$font-size);
+      //height: rhythm($header-rhythm,$font-size);
     }
     >.left {
-      @include span(5);
+      //@include span(5);
       .logo {
         @import 'partials/logo';
       }
     }
     >.center {
+      /*
       $columns: susy-get(columns);
       $span:$columns - (5 * 2);
       @include span($span of $columns nest);
+      */
       #nav {
         @import 'partials/nav';
       }
     }
     >.right {
-      @include span(5);
+      //@include span(5);
     }
   }
   & {
-    @include transition-property(color,background-color,box-shadow,text-shadow);
+    @include transition-property(color,background-color,box-shadow,text-shadow,max-height);
     @include transition-duration;
     @include transition-timing-function(ease);
   }
