@@ -1,0 +1,41 @@
+---
+pageable: true
+per_page: 3
+---
+div#tag
+  - taginfo = Hash.new
+  - if data.taginfo.has_key?(tagname)
+    - taginfo = data.taginfo[ tagname ]
+  header#tag_header data-tagname=tagname
+    div.container
+      - imgPath = ''
+      - style   = ''
+      - if taginfo.has_key?('background')
+        - imgPath = url_for thumbnail_url(taginfo.background, :hd)
+        - style = "background-image:url(" + imgPath + ");"
+      div.background style=style
+      div.main
+        div.container
+          div.top
+            h1
+              - if taginfo.has_key?('title')
+                = link_to taginfo.title, current_page
+              - else
+                - title = 'タグ: '+tagname
+                = link_to title, current_page
+          div.bottom
+            - if taginfo.has_key?('text')
+              div.text
+                = taginfo.text
+  #mainborder
+  div#content
+    div.container
+      div#left
+        div.container
+          div#articles
+            div.container
+              - page_articles.each_with_index do |article, i|
+                = partial 'partials/article', :locals => { :article => article }
+      div#right
+        div.container
+          = partial 'partials/category_articles'

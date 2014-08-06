@@ -6,7 +6,7 @@ nav:
       classes:
       - about
     - name: "Column"
-      href: "/index.html"
+      href: "/articles/tags/column.html"
       classes:
       - column
     - name: "Gallery"
@@ -14,7 +14,7 @@ nav:
       classes:
       - gallery
     - name: "Essay"
-      href: "/index.html"
+      href: "/articles/tags/essay.html"
       classes: 
       - essay
     - name: "Letter"

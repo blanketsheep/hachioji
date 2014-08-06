@@ -32,6 +32,7 @@ activate :thumbnailer,
 activate :blog do |blog|
   blog.name = "blog"
   blog.layout = "blog"
+  blog.tag_template = "/articles/tag.html"
   blog.sources   = "{year}-{month}-{day}-{title}.html"
   blog.prefix    = "articles"
   blog.permalink = "/:year/:month/:day/:title.html"
