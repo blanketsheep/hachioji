@@ -1,9 +1,9 @@
 //$header-height:span(3);
 @mixin header-breakpoint($layout: default) {
   >.container {
-    @include container;
     $item-span: susy-get(columns) / 7;
     @if $layout != phone {
+      @include container;
       >.left,
       >.right,
       >.center {
@@ -28,11 +28,9 @@
     //@include single-transition(max-height);
     bottom:0 !important;
     overflow:hidden;
-    &:not(:hover),
     &:not([data-expanded]) {
       max-height: rhythm($header-rhythm);
     }
-    &:hover,
     &[data-expanded] {
       max-height: 100%;
     }

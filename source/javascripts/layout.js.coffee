@@ -21,3 +21,21 @@ $ ->
     #console.log mainPosition
     onscroll()
   )()
+  (() ->
+    attrKey = 'data-expanded'
+    isExpandableHeader = ->
+      bottom = $('#header').css('bottom').toString()
+      if bottom != '0' && bottom != '0px'
+        return false
+      return true
+    $('#header a').on 'click', (e) ->
+      header = $('#header')
+      isExpanded = $(header).attr attrKey
+      if !isExpandableHeader() || isExpanded?
+        return true
+      if !isExpanded?
+        $(header).attr attrKey,attrKey
+      else
+        $(header).removeAttr attrKey
+      return false
+  )()
