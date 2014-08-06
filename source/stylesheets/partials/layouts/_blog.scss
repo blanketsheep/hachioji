@@ -22,61 +22,6 @@
       //@import 'partials/writer';
     }
   }
-  #category_articles {
-    ul {
-      list-style-type:none;
-      margin:0;padding:0;
-    }
-    li {
-      display:block;
-    }
-    .items {
-      /*
-      @include padding-leader(1);
-      @include padding-trailer(1);
-      */
-    }
-    .item {
-      $height:rhythm(2);
-      >.container {
-        display:block;
-        padding-left:$height;
-        position:relative;
-        height:$height;
-        overflow:hidden;
-      }
-      .icon,
-      .text {
-        display:block;
-      }
-      .icon {
-        $margin:.35rem;
-        $size:$height - ($margin * 2);
-        & {
-          width:$size;
-          height:$size;
-          position:absolute;
-          top:$margin;left:$margin;bottom:$margin;
-          right:auto;
-        }
-        & {
-          background-position:center center;
-          @include background-size(cover);
-        }
-        & {
-          @include border-radius(50%);
-        }
-        img {
-          display:none;
-        }
-      }
-      .text {
-        @include ellipsis(true);
-        //padding-left:.5em;
-        line-height:$height;
-      }
-    }
-  }
   #article {
     >.container {
       >.header {

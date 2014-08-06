@@ -1,0 +1,24 @@
+section#category_articles
+  = partial "partials/nav_header", :locals => { :icon => "fa-file-o", :text => "最近の記事" }
+  ul.items
+    - blog('blog').articles[0...10].each do |article|
+      - background = ''
+      - imgPath = ''
+      - keys = []
+      - keys.push 'thumbnail_icon'
+      - keys.push 'thumbnail_grid'
+      - keys.push 'thumbnail_wide'
+      - keys.each do |key|
+        - if article.data.has_key?(key)
+          - imgPath = thumbnail_url(article.data[key], :small_icon)
+          - break
+        - else
+          - next
+      - background = url_for imgPath
+      - style = "background-image:url(" + background + ");"
+      li.item
+        a.container href=url_for(article)
+          span.icon style=style
+            img src=background
+          span.text
+            = article.title
