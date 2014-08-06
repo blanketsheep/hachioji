@@ -1,5 +1,68 @@
+@mixin tag-layout-breakpoint($layout: default) {
+  #tag_header {
+    .main {
+      >.container {
+        @include container;
+      }
+    }
+  }
+  //$right-span: map-get($tag-lr, right-span);
+  $right-span: map-get($sidebar-right-span, $layout);
+  $left-span:  susy-get(columns) - $right-span;
+  #content {
+    >.container {
+      @include container;
+      @if $layout == phablet or $layout == phone {
+        #right {
+          display:none;
+        }
+      } @else {
+        #left {
+          @include span($left-span);
+        }
+      }
+      #right {
+        @include span($right-span);
+      }
+    }
+  }
+  #left {
+    //$left-span: susy-get(columns) - map-get($tag-lr,right-span);
+    #articles {
+      >.container {
+        @include container($left-span);
+      }
+      .article {
+        $span: $left-span / 3;
+        @if $layout == tablet {
+          $span: $left-span / 2;
+        } @else if $layout == phablet or $layout == phone {
+          $span: $left-span;
+        }
+        @if $layout != phablet and $layout != phone {
+          @include gallery($span of $left-span);
+        }
+      }
+    }
+  }
+}
+
 & {
   margin-top:-( rhythm($header-rhythm) );
+}
+& {
+  @include breakpoint($layout-default-breakpoint) {
+    @include tag-layout-breakpoint(default);
+  }
+  @include susy-breakpoint($layout-tablet-breakpoint, $layout-tablet) {
+    @include tag-layout-breakpoint(tablet);
+  }
+  @include susy-breakpoint($layout-phablet-breakpoint, $layout-phablet) {
+    @include tag-layout-breakpoint(phablet);
+  }
+  @include susy-breakpoint($layout-phone-breakpoint, $layout-phone) {
+    @include tag-layout-breakpoint(phone);
+  }
 }
 #tag_header {
   $rhythm: map-get($tag-header,height);
@@ -22,7 +85,7 @@
     color: map-get($tag-header, color);
     @include text-shadow;
     >.container {
-      @include container;
+      
     }
     .top,
     .bottom {
@@ -48,31 +111,8 @@
 #content {
   @include padding-leader(1);
   @include padding-trailer(1);
-  >.container {
-    $right-span: map-get($tag-lr, right-span);
-    $left-span:  susy-get(columns) - $right-span;
-    @include container;
-    #left {
-      @include span($left-span);
-    }
-    #right {
-      @include span($right-span);
-    }
-  }
 }
 
-#left {
-  $left-span: susy-get(columns) - map-get($tag-lr,right-span);
-  #articles {
-    >.container {
-      @include container($left-span);
-    }
-    .article {
-      $span: $left-span / 3;
-      @include gallery($span of $left-span);
-    }
-  }
-}
 #right {
   >.container {
     @include prefix(1);
