@@ -1,9 +1,88 @@
+@mixin home-layout-breakpoint($layout: default) {
+  $right-span: map-get($sidebar-right-span, $layout);
+  $left-span:  susy-get(columns) - $right-span;
+  #slide {
+    $rhythm:18;
+    @if $layout == phone or $layout == phablet {
+      $rhythm: 8;
+    }
+    $rhythm:$rhythm + $header-rhythm;
+    $height:rhythm($rhythm);
+    >.container {
+      >.background,
+      >.items {
+        height:$height;
+      }
+    }
+    .slide_item {
+      >.container {
+        height:$height;
+      }
+      .main {
+        $hRhythm:$rhythm;
+        $height:rhythm($hRhythm);
+        >.container {
+          height:$height;
+        }
+        .thumbnail {
+          >.container {
+            height:$height;
+            width:($height * 16) / 9;
+          }
+        }
+      }
+    }
+    @if $layout == phablet or $layout == phone {
+      
+    }
+  }
+  #content {
+    >.container {
+      @include container;
+    }
+    #left {
+      @include span($left-span nest);
+    }
+    #right {
+      @include span($right-span);
+      @if $layout == phablet or $layout == phone {
+        display:none;
+      }
+    }
+    #articles {
+      .article {
+        $span:$left-span / 3;
+        @if $layout == tablet {
+          $span: $left-span / 2;
+        } @else if $layout == phablet or $layout == phone {
+          $span: $left-span;
+        }
+        @if $layout == default or $layout == tablet {
+          @include gallery($span of $left-span);
+        }
+      }
+    }
+  }
+}
+
+& {
+  @include breakpoint($layout-default-breakpoint) {
+    @include home-layout-breakpoint(default);
+  }
+  @include susy-breakpoint($layout-tablet-breakpoint, $layout-tablet) {
+    @include home-layout-breakpoint(tablet);
+  }
+  @include susy-breakpoint($layout-phablet-breakpoint, $layout-phablet) {
+    @include home-layout-breakpoint(phablet);
+  }
+  @include susy-breakpoint($layout-phone-breakpoint, $layout-phone) {
+    @include home-layout-breakpoint(phone);
+  }
+}
 & {
   margin-top:-( rhythm($header-rhythm) );
   #slide {
     //height:$slide-height;
-    $rhythm:18 + $header-rhythm;
-    $height:rhythm($rhythm);
     background-color:$slide-background-color;
     >.container {
       overflow:hidden;
@@ -11,10 +90,6 @@
       >.background,
       >.items {
         position:relative;
-      }
-      >.background,
-      >.items {
-        height:$height;
       }
       >.background {
         display:none;
@@ -27,7 +102,6 @@
       top:0;left:0;right:0;bottom:0;
       >.container {
         position:relative;
-        height:$height;
         overflow:hidden;
       }
       .background,
@@ -50,20 +124,16 @@
         $hPad: $header-rhythm + 1;
         $hRhythm:$rhythm - ($hPad * 2);
         */
-        $hRhythm:$rhythm;
-        $height:rhythm($hRhythm);
+        
         >.container {
           /*
           @include padding-leader($hPad);
           @include padding-trailer($hPad);
           */
-          height:$height;
         }
         .thumbnail {
           display:none;
           >.container {
-            height:$height;
-            width:($height * 16) / 9;
             margin:0 auto;
             background-position:center center;
             @include background-size(cover);
@@ -109,17 +179,19 @@
     }
   }
   #content {
+    /*
     $right-span:12;
     $left-span:susy-get(columns) - $right-span;
+    */
     >.container {
-      @include container;
+      //@include container;
       //min-height:1500px;
     }
     #left {
-      @include span($left-span nest);
+      //@include span($left-span nest);
     }
     #right {
-      @include span($right-span);
+      //@include span($right-span);
       >.container {
         @include prefix(1);
       }
@@ -127,8 +199,10 @@
     #articles {
       .article {
         //@import 'partials/article';
+        /*
         $span:$left-span / 3;
         @include gallery($span of $left-span);
+        */
       }
     }
   }

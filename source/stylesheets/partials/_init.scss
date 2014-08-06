@@ -1,5 +1,6 @@
 @charset 'UTF-8';
 @import 'compass';
+@import 'breakpoint';
 //@import '../../bower_components/fontawesome/scss/font-awesome.scss';
 
 $susy: (
@@ -38,6 +39,36 @@ $default-text-shadow-blur: $default-box-shadow-blur;
 @import 'susy';
 @import 'animate';
 
+/* * * * * * * * * * * * */
+
+$layout-default-breakpoint: container($susy);
+
+$layout-tablet: 36;
+$layout-tablet-min-width:  container($layout-tablet);
+$layout-tablet-max-width:  $layout-default-breakpoint - 1px;
+$layout-tablet-breakpoint: $layout-tablet-min-width $layout-tablet-max-width;
+
+$layout-phablet: 18;
+$layout-phablet-min-width:  container($layout-phablet);
+$layout-phablet-max-width:  $layout-tablet-min-width - 1px;
+$layout-phablet-breakpoint: $layout-phablet-min-width $layout-phablet-max-width;
+
+$layout-phone: 9;
+$layout-phone-min-width:  container($layout-phone);
+$layout-phone-max-width:  $layout-phablet-min-width - 1px;
+$layout-phone-breakpoint: $layout-phone-min-width $layout-phone-max-width;
+
+/* * * * * * * * * * * * */
+
+$sidebar-right-span: (
+  default: 12,
+  tablet:  12,
+  phablet: 0,
+  phone:   0
+);
+
+/* * * * * * * * * * * * */
+
 /*
 $wetasphalt:#34495e;
 $sunflower:#f1c40f;
@@ -67,9 +98,11 @@ $tag-header: (
   color: #fff,
   background-color: $dummy-color
 );
+/*
 $tag-lr: (
   right-span: 12
 );
+*/
 
 @mixin fontreset($font-size,$guttered,$setleader: true) {
   h1,h2,h3,h4,h5,h6,
@@ -162,4 +195,61 @@ $circle-image-border-width:3px;
   >.container {
     margin:-($border-width);
   }
+}
+
+/* * * * * * * * * * * * */
+
+@mixin blog-sidebar-sizing($layout: default) {
+  >.container {
+    @include container;
+  }
+  $left-span:  sidebar-left-span($layout);
+  $right-span: sidebar-right-span($layout);
+  @if $layout == phablet or $layout == phone {
+    $left-span: susy-get(columns);
+    $right-span:0;
+    #right {
+      display:none;
+    }
+  }
+  #left {
+    @include span($left-span nest);
+  }
+  #right {
+    @include span($right-span nest);
+    >.container {
+      @include prefix(1);
+    }
+  }
+  #nextprev {
+    .item {
+      $span:$left-span / 3;
+      @include span($span of $left-span);
+    }
+  }
+  #locations {
+    .location {
+      $left-column:  11;
+      @if $layout == phone {
+        $left-column: $left-span
+      }
+      $right-column: $left-span - $left-column;
+      >.container {
+        @include container($left-span);
+      }
+      .left {
+        @include span($left-column of $left-span);
+      }
+      .right {
+        @include span($right-column of $left-span);
+      }
+    }
+  }
+}
+
+@function sidebar-right-span($layout: default) {
+  @return map-get($sidebar-right-span, $layout);
+}
+@function sidebar-left-span($layout: default) {
+  @return susy-get(columns) - sidebar-right-span($layout);
 }
