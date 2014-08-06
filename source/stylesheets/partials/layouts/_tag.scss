@@ -1,0 +1,80 @@
+& {
+  margin-top:-( rhythm($header-rhythm) );
+}
+#tag_header {
+  $rhythm: map-get($tag-header,height);
+  background-color: map-get($tag-header, background-color);
+  @include fontreset(1rem,false,false);
+  >.container {
+    position:relative;
+    //height: rhythm($rhythm);
+  }
+  .background {
+    position:absolute;
+    top:0;left:0;right:0;bottom:0;
+    @include background-size(cover);
+    background-position: center center;
+  }
+  .main {
+    position:relative;
+    @include padding-leader(4);
+    //@include padding-trailer(1);
+    color: map-get($tag-header, color);
+    @include text-shadow;
+    >.container {
+      @include container;
+    }
+    .top,
+    .bottom {
+      @include prefix(2);
+    }
+    .top {
+      //@include prefix(2);
+      h1 {
+        @include adjust-font-size-to(2.25rem);
+      }
+    }
+    .bottom {
+      //@include prefix(3);
+      @include padding-leader(1);
+      @include padding-trailer(1);
+      .text {
+        @include gutters;
+        @include adjust-font-size-to(1.25rem);
+      }
+    }
+  }
+}
+#content {
+  @include padding-leader(1);
+  @include padding-trailer(1);
+  >.container {
+    $right-span: map-get($tag-lr, right-span);
+    $left-span:  susy-get(columns) - $right-span;
+    @include container;
+    #left {
+      @include span($left-span);
+    }
+    #right {
+      @include span($right-span);
+    }
+  }
+}
+
+#left {
+  $left-span: susy-get(columns) - map-get($tag-lr,right-span);
+  #articles {
+    >.container {
+      @include container($left-span);
+    }
+    .article {
+      $span: $left-span / 3;
+      @include gallery($span of $left-span);
+    }
+  }
+}
+#right {
+  >.container {
+    @include prefix(1);
+  }
+}

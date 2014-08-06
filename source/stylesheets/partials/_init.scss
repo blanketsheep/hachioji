@@ -93,6 +93,15 @@ $header-font-size:1.25rem;
 //$writer-text-min-height:span(2);
 //$writer-text-padding-top:gutter();
 
+$tag-header: (
+  height: 14,
+  color: #fff,
+  background-color: $dummy-color
+);
+$tag-lr: (
+  right-span: 12
+);
+
 @mixin fontreset($font-size,$guttered,$setleader: true) {
   h1,h2,h3,h4,h5,h6,
   p,blockquote,
