@@ -11,7 +11,7 @@ div#tag
       - imgPath = ''
       - style   = ''
       - if taginfo.has_key?('background')
-        - imgPath = thumbnail_url(taginfo.background, :hd)
+        - imgPath = url_for thumbnail_url(taginfo.background, :hd)
         - style = "background-image:url(" + imgPath + ");"
       div.background style=style
       div.main
