@@ -99,6 +99,7 @@
               @include fontreset($font-size,$guttered);
               @include padding-trailer(1,$font-size);
             }
+            /*
             .flickrembed {
               display:block;
               & {
@@ -106,13 +107,14 @@
                 margin:0;padding:0;
               }
               & {
-                /*
+                / *
                 $span:$left-span - 2;
                 width:span($span);
                 height:rhythm(20,$font-size);
-                */
+                * /
               }
             }
+            */
           }
         }
       }
