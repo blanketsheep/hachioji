@@ -129,6 +129,12 @@ configure :build do
   ignore /^bower_components\/(?!fontawesome)/
 end
 
+after_configuration do
+  if ENV['MM_ENV'] == 'development'
+    set :environment, :development
+  end
+end
+
 ready do
   sprockets.append_path 'bower_components'
 end

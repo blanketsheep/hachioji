@@ -1,6 +1,7 @@
 ---
 ja:
   hello: "こんにちは!"
+  preview_prefix: "[Preview] "
   about_blanketsheep: |-
     Blanket Sheep は八王子を拠点に活動している個人ライターグループです。<br/>
     様々なほげほげが行き交う街「八王子」から、たくさんのほげほげをピックアップ。<br/>
