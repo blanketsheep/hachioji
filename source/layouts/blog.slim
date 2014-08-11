@@ -127,11 +127,13 @@
           /    - current_page.data.writers.each do |key|
           /      = partial "partials/writer", :locals => { :writer => data.writers[key] }
           section#writers
-            = partial "partials/nav_header", :locals => { :icon => "fa-user", :text => "ライター" }
-            - writers = []
+            - writers = Array.new
             - current_article.tags.each do |tag|
               - if data.writer_tags.keys.include? tag
                 - writers.push data.writer_tags[tag]
-            - writers.uniq.each do |key|
-              = partial "partials/writer", :locals => { :writer => data.writers[key] }
+              - writers.uniq!
+            - if writers.length > 0
+              = partial "partials/nav_header", :locals => { :icon => "fa-user", :text => "ライター" }
+              - writers.each do |key|
+                = partial "partials/writer", :locals => { :writer => data.writers[key] }
           = partial 'partials/category_articles'
