@@ -1,0 +1,4 @@
+[submodule "preview"]
+	path = preview
+	url = https://github.com/blanketsheep/hachioji.git
+	branch = gh-pages-preview
