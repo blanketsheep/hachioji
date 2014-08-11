@@ -20,10 +20,7 @@ after_success:
 - echo -e "\nHost github.com" >> ~/.ssh/config
 - echo -e "\tStrictHostKeyChecking no" >> ~/.ssh/config
 - echo -e "\tIdentityFile ~/.ssh/github_hachioji_deploy_key" >> ~/.ssh/config
-- pushd build/
-- git add -A
-- git commit -m Update
-- git push --quiet git@github.com:blanketsheep/hachioji.git gh-pages
+- source ./after_deploy.sh
 branches:
   only:
   - master
