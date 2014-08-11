@@ -27,7 +27,8 @@ after_success:
 - git push --quiet git@github.com:blanketsheep/hachioji.git gh-pages
 branches:
   only:
-  - develop
+  - master
+#  - develop
 env:
   global:
   - secure: UGlbsiwsXArXwBgjrBNVBLV3du9rzfLlT1kinGHMIrJ80WjujEAU2qKNNYUC+GKzlle8fLoxl5ZQ0YegSCWBErVswNUUzf37Je9ijfUbuLgtkaMukFiMPgAnOO2tOA4byi0k9XosjZm3+YTUdVWpIKGZn3CZyJhvUo3BeHPvY6w=
