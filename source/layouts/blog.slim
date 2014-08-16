@@ -27,11 +27,12 @@
             div.container
               header.header
                 div.container
-                  div#image
-                    div.container
-                      - style = "background-image:url(" + background + ")";
-                      div.background style=style
-                        img src=background
+                  div#image.image_box_wrapper
+                    div.image_box
+                      div.container
+                        - style = "background-image:url(" + background + ")";
+                        div.background style=style
+                          /img src=background
                   div#hmain
                     div.container
                       h1
