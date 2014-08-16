@@ -31,7 +31,7 @@
         @if $layout == default or $layout == tablet {
           min-height:rhythm(30);
         } @else {
-          min-height:rhythm(15);
+          min-height:rhythm(55);
         }
       }
     }
