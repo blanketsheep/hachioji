@@ -4,6 +4,14 @@
       >.container {
         @include container;
       }
+      .top,
+      .bottom {
+        @if $layout == default or $layout == tablet {
+          @include prefix(2);
+        } @else if $layout == phablet {
+          @include prefix(1);
+        }
+      }
     }
   }
   //$right-span: map-get($tag-lr, right-span);
@@ -89,16 +97,14 @@
     }
     .top,
     .bottom {
-      @include prefix(2);
+      //@include prefix(2);
     }
     .top {
-      //@include prefix(2);
       h1 {
         @include adjust-font-size-to(2.25rem);
       }
     }
     .bottom {
-      //@include prefix(3);
       @include padding-leader(1);
       @include padding-trailer(1);
       .text {
