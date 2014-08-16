@@ -6,7 +6,10 @@
   }
 }
 
-@mixin image-box {
+@mixin image-box($ratio: "16:9") {
+  @if $ratio == "16:9" {
+    $ratio: 56.25%;
+  }
   & {
     @include padding-leader(2);
     @include padding-trailer(2);
@@ -17,7 +20,7 @@
     &:before {
       content: '';
       display:block;
-      padding-top:56.25%;
+      padding-top:$ratio;
     }
     >.container {
       position:absolute;
