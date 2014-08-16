@@ -4075,7 +4075,7 @@ a {
     padding-right: 2.0625rem; }
   /* line 30, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_letter.scss */
   #letter #letter_form .form iframe {
-    min-height: 22.5rem; } }
+    min-height: 82.5rem; } }
 @media (min-width: 297px) and (max-width: 593px) {
   /* line 4, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_letter.scss */
   #letter #letter_form > .container,
@@ -4130,7 +4130,7 @@ a {
     padding-right: 2.0625rem; }
   /* line 30, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_letter.scss */
   #letter #letter_form .form iframe {
-    min-height: 22.5rem; } }
+    min-height: 82.5rem; } }
 /* line 108, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
 #letter #letter_form h1, #letter #letter_form h2, #letter #letter_form h3, #letter #letter_form h4, #letter #letter_form h5, #letter #letter_form h6,
 #letter #letter_form p, #letter #letter_form blockquote,
