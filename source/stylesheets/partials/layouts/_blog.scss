@@ -44,10 +44,10 @@
         }
         #image {
           @include gutter;
-          >.container {
-            position:relative;
+          .container {
+            //position:relative;
             //height:$article-header-image-height;
-            height:rhythm(13);
+            //height:rhythm(13);
             color:$article-header-image-color;
             background-color:$article-header-image-background-color;
           }
@@ -99,6 +99,7 @@
               @include fontreset($font-size,$guttered);
               @include padding-trailer(1,$font-size);
             }
+            /*
             .flickrembed {
               display:block;
               & {
@@ -106,13 +107,14 @@
                 margin:0;padding:0;
               }
               & {
-                /*
+                / *
                 $span:$left-span - 2;
                 width:span($span);
                 height:rhythm(20,$font-size);
-                */
+                * /
               }
             }
+            */
           }
         }
       }
