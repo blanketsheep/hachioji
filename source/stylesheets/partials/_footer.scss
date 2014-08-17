@@ -40,10 +40,18 @@
   $h1-font-size:1.25rem;
   $content-font-size:.9rem;
   //$font-size:1rem;
+  $copyright-rhythm: map-get($footer,copyright-height);
+  $columns-rhythm: map-get($footer,height) - $copyright-rhythm;
   >.container {
     //@include container;
   }
   .columns {
+    $pad:1;
+    $height:$columns-rhythm - ($pad * 2);
+    & {
+      @include padding-leader($pad);
+      @include padding-trailer($pad);
+    }
     .column {
       /*
       $max-column:susy-get(columns);
@@ -51,8 +59,11 @@
       @include span($span of $max-column);
       */
       //height:rhythm(10);
+      height:rhythm($height);
+      /*
       @include padding-leader(1);
       @include padding-trailer(1);
+      */
     }
     @include fontreset($content-font-size,true,false);
     h1 {
@@ -98,6 +109,11 @@
       @include ellipsis(true);
     }
   }
+  #footer_twitter {
+    >iframe {
+      min-height:100% !important;
+    }
+  }
   #footer_links {
     .item {
       $font-size:$content-font-size;
@@ -122,13 +138,16 @@
     }
   }
   .bottom {
+    $pad:1;
+    $height:$copyright-rhythm - ($pad * 2);
+    height:$height;
     .copyright {
       display:block;
       text-align:center;
       $font-size:$content-font-size;
       @include adjust-font-size-to($font-size);
-      @include padding-leader(1,$font-size);
-      @include padding-trailer(1,$font-size);
+      @include padding-leader($pad,$font-size);
+      @include padding-trailer($pad,$font-size);
     }
   }
 }
