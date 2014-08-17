@@ -1,7 +1,7 @@
 - imgPath = ''
 - background = ''
 - style = ''
-- keys = []
+- keys = Array.new
 - keys.push 'thumbnail_slide'
 - keys.push 'thumbnail_wide'
 - keys.push 'thumbnail_grid'
@@ -19,5 +19,9 @@ article.slide_item
       img src=background
     div.main
       div.container
-        div.thumbnail
-          div.container style=style
+        /div.thumbnail
+        /  div.container style=style
+        h1
+          = link_to article.title, article
+        div.text
+          = article.summary
