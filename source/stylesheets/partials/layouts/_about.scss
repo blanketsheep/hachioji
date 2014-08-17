@@ -72,6 +72,7 @@
     .circle_image {
       margin:0 auto;
       @include circle-image-sizing(10);
+      @include circle-image-coloring($mezz);
     }
     .content {
       /*

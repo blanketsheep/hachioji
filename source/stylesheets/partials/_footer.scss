@@ -70,8 +70,15 @@
     }
   }
   #footer_about {
+    /*
     .footer_logo {
       @import 'partials/footer_logo';
+    }
+    */
+    .circle_image {
+      @include circle-image-sizing(6);
+      @include circle-image-coloring(transparent);
+      margin:0 auto;
     }
     .content {
       $font-size:$content-font-size;

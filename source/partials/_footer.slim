@@ -2,7 +2,8 @@ footer#footer
   div.container
     div.columns
       section#footer_about.column
-        = partial "partials/footer_logo"
+        /= partial "partials/footer_logo"
+        = partial "partials/circle_image", :locals => { :image_src => url_for( thumbnail_url('/images/blanketsheep.white.half.png',:big_icon) ) }
         h1
           = "Blanket Sheep"
         div.content

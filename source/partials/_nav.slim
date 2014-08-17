@@ -6,7 +6,7 @@ nav#nav
         - classes.concat(item.classes)
         - classes.push "item"
         li class=classes
-          a.container href=url_for(item.href, :relative => true)
+          a.container href=url_for(item.href)
             span.text
               = item.name
             span.icon

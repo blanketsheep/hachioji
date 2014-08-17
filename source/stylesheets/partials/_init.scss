@@ -197,6 +197,14 @@ $circle-image-border-width:3px;
     margin:-($border-width);
   }
 }
+@mixin circle-image-coloring($background-color:$circle-image-background-color,$border-color:#ddd) {
+  & {
+    border-color:$border-color;
+  }
+  >.container {
+    background-color:$background-color;
+  }
+}
 
 /* * * * * * * * * * * * */
 

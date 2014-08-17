@@ -1,4 +1,6 @@
+- imgPath = url_for thumbnail_url('/images/blanketsheep.white.half.png',:large_icon)
 a.footer_logo
   span.container
-    span.image
-      img
+    - style = 'background-url(' + imgPath + ');'
+    span.image style=style
+      img src=imgPath
