@@ -100,6 +100,10 @@
     .slide_item {
       position:absolute;
       top:0;left:0;right:0;bottom:0;
+      & {
+        @include single-text-shadow;
+        color:$slide-color;
+      }
       >.container {
         position:relative;
         overflow:hidden;
@@ -120,6 +124,7 @@
         }
       }
       .main {
+        @include fontreset(1rem,false,false);
         /*
         $hPad: $header-rhythm + 1;
         $hRhythm:$rhythm - ($hPad * 2);
@@ -130,6 +135,7 @@
           @include padding-leader($hPad);
           @include padding-trailer($hPad);
           */
+          @include container;
         }
         .thumbnail {
           display:none;
@@ -138,6 +144,16 @@
             background-position:center center;
             @include background-size(cover);
           }
+        }
+        h1 {
+          @include leader(9);
+          @include adjust-font-size-to(2rem);
+          max-width:span(20);
+        }
+        .text {
+          @include leader(2);
+          @include adjust-font-size-to(1.25rem);
+          max-width:span(16);
         }
       }
     }
@@ -168,6 +184,31 @@
       }
       */
     }
+    /*
+    &:not([data-is-first]) .slide_item[data-item-key] {
+      .main {
+        @include transition(
+          text-shadow $default-transition-duration $default-transition-function 2s,
+          //background-color $default-transition-duration $default-transition-function 2s
+          color $default-transition-duration $default-transition-function 2s
+        );
+      }
+    }
+    .slide_item[data-item-key][data-is-visible] {
+      .main {
+        @include single-text-shadow($default-text-shadow-h-offset,$default-text-shadow-v-offset,$default-text-shadow-blur);
+        //background-color:rgba(0,0,0,.5);
+        color:transparentize($slide-color,0);
+      }
+    }
+    .slide_item[data-item-key]:not([data-is-visible]) {
+      .main {
+        //@include single-text-shadow(0,0,0,0);
+        //background-color:rgba(0,0,0,0);
+        color:transparentize($slide-color,1);
+      }
+    }
+    */
     & {
       @include single-transition(opacity);
     }
