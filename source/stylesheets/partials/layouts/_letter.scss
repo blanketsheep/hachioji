@@ -54,7 +54,7 @@
 }
 #letter_form,
 #letter_thankyou {
-  @include fontreset(1rem,true,false);
+  @include fontreset($base-font-size,true,false);
   >.container {
     //@include container;
     @include padding-leader(1);

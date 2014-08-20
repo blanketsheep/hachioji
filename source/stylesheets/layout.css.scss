@@ -17,7 +17,7 @@ body {
   background-repeat:repeat;
   background-color:#ffffe0;
   background-color:$background-color;
-  @include adjust-font-size-to(1rem);
+  @include adjust-font-size-to($base-font-size);
 }
 #wrapper {
   min-height:100%;
@@ -97,21 +97,6 @@ a {
 }
 
 @import 'partials/image_box';
-
-/*
-#home #content #articles .article > .container {
-  $font-size:.95rem;
-  $guttered: false;
-  @import 'partials/fontreset';
-}
-*/
-/*
-#single #article > .container > .main #content > .container {
-  $font-size:.95rem;
-  $guttered: true;
-  @import 'partials/fontreset';
-}
-*/
 
 @import 'partials/category_articles';
 

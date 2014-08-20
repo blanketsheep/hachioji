@@ -75,7 +75,7 @@
 #tag_header {
   $rhythm: map-get($tag-header,height);
   background-color: map-get($tag-header, background-color);
-  @include fontreset(1rem,false,false);
+  @include fontreset($base-font-size,false,false);
   >.container {
     position:relative;
     //height: rhythm($rhythm);

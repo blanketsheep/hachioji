@@ -53,12 +53,12 @@
     .position {
       top:0;left:0;
       right:auto;bottom:auto;
-      @include adjust-font-size-to(1rem);
+      @include adjust-font-size-to($base-font-size);
     }
     .name {
       top:auto;left:auto;
       right:0;bottom:0;
-      @include adjust-font-size-to(1.25rem);
+      @include adjust-font-size-to($base-font-size * 1.25);
     }
     .icon_wrapper {
       top:0;left:0;bottom:0;

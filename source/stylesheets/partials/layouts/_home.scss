@@ -124,7 +124,7 @@
         }
       }
       .main {
-        @include fontreset(1rem,false,false);
+        @include fontreset($base-font-size,false,false);
         /*
         $hPad: $header-rhythm + 1;
         $hRhythm:$rhythm - ($hPad * 2);

@@ -80,7 +80,7 @@
           }
           >.container {
           }
-          @include fontreset(1rem,true,false);
+          @include fontreset($base-font-size,true,false);
           time {
             display:block;
           }
@@ -209,7 +209,7 @@
         }
         #locations {
           .location {
-            @include fontreset(1rem,true,false);
+            @include fontreset($base-font-size,true,false);
             //$left-column:11;
             @include trailer(1);
             >.container {

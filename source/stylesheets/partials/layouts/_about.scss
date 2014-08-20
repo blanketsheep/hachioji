@@ -92,7 +92,7 @@
     }
   }
   #about_writers {
-    @include fontreset(1rem,true,false);
+    @include fontreset($base-font-size,true,false);
     >.container {
       @include padding-leader(2);
       @include padding-trailer(2);
