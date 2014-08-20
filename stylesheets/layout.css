@@ -21,7 +21,7 @@ $tag-lr: (
 );
 */
 /* * * * * * * * * * * * */
-/* line 106, /home/travis/.rvm/gems/ruby-2.1.0/gems/compass-core-1.0.0/stylesheets/compass/typography/_vertical_rhythm.scss */
+/* line 106, /home/travis/.rvm/gems/ruby-2.1.0/gems/compass-core-1.0.1/stylesheets/compass/typography/_vertical_rhythm.scss */
 html {
   font-size: 16px;
   line-height: 24px; }
@@ -2905,168 +2905,172 @@ a {
     /* line 205, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_blog.scss */
     #single #article > .container > .footer #nextprev .item[data-position="3"] .text {
       text-align: right; }
-  /* line 113, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
-  #single #article > .container > .footer #locations .location h1, #single #article > .container > .footer #locations .location h2, #single #article > .container > .footer #locations .location h3, #single #article > .container > .footer #locations .location h4, #single #article > .container > .footer #locations .location h5, #single #article > .container > .footer #locations .location h6,
-  #single #article > .container > .footer #locations .location p, #single #article > .container > .footer #locations .location blockquote,
-  #single #article > .container > .footer #locations .location ul, #single #article > .container > .footer #locations .location ol {
-    margin: 0;
-    padding: 0; }
-  /* line 126, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
-  #single #article > .container > .footer #locations .location h1 {
-    font-size: 28px;
-    font-size: 1.75rem;
-    line-height: 48px;
-    line-height: 3rem; }
-  /* line 133, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
-  #single #article > .container > .footer #locations .location h2 {
-    font-size: 24px;
-    font-size: 1.5rem;
-    line-height: 48px;
-    line-height: 3rem; }
-  /* line 140, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
-  #single #article > .container > .footer #locations .location h3 {
-    font-size: 20px;
-    font-size: 1.25rem;
-    line-height: 24px;
-    line-height: 1.5rem; }
-  /* line 147, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
-  #single #article > .container > .footer #locations .location h4 {
-    font-size: 19px;
-    font-size: 1.2rem;
-    line-height: 24px;
-    line-height: 1.5rem; }
-  /* line 154, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
-  #single #article > .container > .footer #locations .location h5 {
-    font-size: 18px;
-    font-size: 1.15rem;
-    line-height: 24px;
-    line-height: 1.5rem; }
-  /* line 161, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
-  #single #article > .container > .footer #locations .location h6 {
-    font-size: 18px;
-    font-size: 1.1rem;
-    line-height: 24px;
-    line-height: 1.5rem; }
-  /* line 215, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_blog.scss */
-  #single #article > .container > .footer #locations .location > .container {
-    background-color: white;
-    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.125);
-    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.125);
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.125); }
-  /* line 223, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_blog.scss */
-  #single #article > .container > .footer #locations .location .left > .container {
-    padding-left: 33px;
-    padding-left: 2.0625rem;
-    padding-right: 33px;
-    padding-right: 2.0625rem; }
-    /* line 225, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_blog.scss */
-    #single #article > .container > .footer #locations .location .left > .container > .pad {
-      position: relative;
-      height: 10.5rem; }
-      /* line 229, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_blog.scss */
-      #single #article > .container > .footer #locations .location .left > .container > .pad:not(:hover) .image {
-        opacity: 1; }
-      /* line 232, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_blog.scss */
-      #single #article > .container > .footer #locations .location .left > .container > .pad:not(:hover) .map {
-        opacity: 0; }
-      /* line 237, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_blog.scss */
-      #single #article > .container > .footer #locations .location .left > .container > .pad:hover .image {
-        opacity: 0; }
-      /* line 240, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_blog.scss */
-      #single #article > .container > .footer #locations .location .left > .container > .pad:hover .map {
-        opacity: 1; }
-  /* line 246, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_blog.scss */
-  #single #article > .container > .footer #locations .location .left .image,
-  #single #article > .container > .footer #locations .location .left .map {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    -moz-transition: opacity 0.25s ease;
-    -o-transition: opacity 0.25s ease;
-    -webkit-transition: opacity 0.25s ease;
-    transition: opacity 0.25s ease;
-    background-position: center center; }
-    /* line 252, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_blog.scss */
-    #single #article > .container > .footer #locations .location .left .image img,
-    #single #article > .container > .footer #locations .location .left .map img {
-      display: none; }
-  /* line 256, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_blog.scss */
-  #single #article > .container > .footer #locations .location .left .image {
-    background-color: #f8ff73;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    -webkit-background-size: cover;
-    background-size: cover; }
-  /* line 260, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_blog.scss */
-  #single #article > .container > .footer #locations .location .left .map {
-    background-color: #f8ff73;
-    -moz-background-size: contain;
-    -o-background-size: contain;
-    -webkit-background-size: contain;
-    background-size: contain; }
-  /* line 267, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_blog.scss */
-  #single #article > .container > .footer #locations .location .right > .container {
-    margin-right: 38px;
-    margin-right: 2.34375rem; }
-  /* line 271, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_blog.scss */
-  #single #article > .container > .footer #locations .location .left,
-  #single #article > .container > .footer #locations .location .right {
-    padding-top: 24px;
-    padding-top: 1.5rem;
-    padding-bottom: 24px;
-    padding-bottom: 1.5rem; }
-  /* line 277, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_blog.scss */
-  #single #article > .container > .footer #locations .location .header h1,
-  #single #article > .container > .footer #locations .location .header .address {
-    white-space: nowrap;
-    overflow: hidden;
-    -ms-text-overflow: ellipsis;
-    -o-text-overflow: ellipsis;
-    text-overflow: ellipsis; }
-  /* line 284, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_blog.scss */
-  #single #article > .container > .footer #locations .location .header .address {
-    font-size: 13px;
-    font-size: 0.8rem;
-    line-height: 24px;
-    line-height: 1.5rem; }
-  /* line 289, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_blog.scss */
-  #single #article > .container > .footer #locations .location .main > .text {
-    padding-top: 24px;
-    padding-top: 1.5rem;
-    padding-bottom: 24px;
-    padding-bottom: 1.5rem; }
-  /* line 296, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_blog.scss */
-  #single #article > .container > .footer #locations .location .main .items .item, #single #article > .container > .footer #locations .location .main .items .item > .container {
-    display: block; }
-  /* line 299, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_blog.scss */
-  #single #article > .container > .footer #locations .location .main .items .item > .container {
-    height: 1.5rem;
-    padding-left: 1.5rem;
-    position: relative; }
-  /* line 304, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_blog.scss */
-  #single #article > .container > .footer #locations .location .main .items .item .icon,
-  #single #article > .container > .footer #locations .location .main .items .item .text {
-    display: block;
-    line-height: 1.5rem; }
-  /* line 309, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_blog.scss */
-  #single #article > .container > .footer #locations .location .main .items .item .icon {
-    width: 1.5rem;
-    height: 1.5rem;
-    text-align: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: auto; }
-  /* line 317, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_blog.scss */
-  #single #article > .container > .footer #locations .location .main .items .item .text {
-    white-space: nowrap;
-    overflow: hidden;
-    -ms-text-overflow: ellipsis;
-    -o-text-overflow: ellipsis;
-    text-overflow: ellipsis; }
+  /* line 212, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_blog.scss */
+  #single #article > .container > .footer #locations .location {
+    margin-bottom: 24px;
+    margin-bottom: 1.5rem; }
+    /* line 113, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
+    #single #article > .container > .footer #locations .location h1, #single #article > .container > .footer #locations .location h2, #single #article > .container > .footer #locations .location h3, #single #article > .container > .footer #locations .location h4, #single #article > .container > .footer #locations .location h5, #single #article > .container > .footer #locations .location h6,
+    #single #article > .container > .footer #locations .location p, #single #article > .container > .footer #locations .location blockquote,
+    #single #article > .container > .footer #locations .location ul, #single #article > .container > .footer #locations .location ol {
+      margin: 0;
+      padding: 0; }
+    /* line 126, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
+    #single #article > .container > .footer #locations .location h1 {
+      font-size: 28px;
+      font-size: 1.75rem;
+      line-height: 48px;
+      line-height: 3rem; }
+    /* line 133, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
+    #single #article > .container > .footer #locations .location h2 {
+      font-size: 24px;
+      font-size: 1.5rem;
+      line-height: 48px;
+      line-height: 3rem; }
+    /* line 140, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
+    #single #article > .container > .footer #locations .location h3 {
+      font-size: 20px;
+      font-size: 1.25rem;
+      line-height: 24px;
+      line-height: 1.5rem; }
+    /* line 147, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
+    #single #article > .container > .footer #locations .location h4 {
+      font-size: 19px;
+      font-size: 1.2rem;
+      line-height: 24px;
+      line-height: 1.5rem; }
+    /* line 154, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
+    #single #article > .container > .footer #locations .location h5 {
+      font-size: 18px;
+      font-size: 1.15rem;
+      line-height: 24px;
+      line-height: 1.5rem; }
+    /* line 161, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_init.scss */
+    #single #article > .container > .footer #locations .location h6 {
+      font-size: 18px;
+      font-size: 1.1rem;
+      line-height: 24px;
+      line-height: 1.5rem; }
+    /* line 216, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_blog.scss */
+    #single #article > .container > .footer #locations .location > .container {
+      background-color: white;
+      -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.125);
+      -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.125);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.125); }
+    /* line 224, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_blog.scss */
+    #single #article > .container > .footer #locations .location .left > .container {
+      padding-left: 33px;
+      padding-left: 2.0625rem;
+      padding-right: 33px;
+      padding-right: 2.0625rem; }
+      /* line 226, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_blog.scss */
+      #single #article > .container > .footer #locations .location .left > .container > .pad {
+        position: relative;
+        height: 10.5rem; }
+        /* line 230, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_blog.scss */
+        #single #article > .container > .footer #locations .location .left > .container > .pad:not(:hover) .image {
+          opacity: 1; }
+        /* line 233, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_blog.scss */
+        #single #article > .container > .footer #locations .location .left > .container > .pad:not(:hover) .map {
+          opacity: 0; }
+        /* line 238, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_blog.scss */
+        #single #article > .container > .footer #locations .location .left > .container > .pad:hover .image {
+          opacity: 0; }
+        /* line 241, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_blog.scss */
+        #single #article > .container > .footer #locations .location .left > .container > .pad:hover .map {
+          opacity: 1; }
+    /* line 247, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_blog.scss */
+    #single #article > .container > .footer #locations .location .left .image,
+    #single #article > .container > .footer #locations .location .left .map {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      -moz-transition: opacity 0.25s ease;
+      -o-transition: opacity 0.25s ease;
+      -webkit-transition: opacity 0.25s ease;
+      transition: opacity 0.25s ease;
+      background-position: center center; }
+      /* line 253, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_blog.scss */
+      #single #article > .container > .footer #locations .location .left .image img,
+      #single #article > .container > .footer #locations .location .left .map img {
+        display: none; }
+    /* line 257, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_blog.scss */
+    #single #article > .container > .footer #locations .location .left .image {
+      background-color: #f8ff73;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      -webkit-background-size: cover;
+      background-size: cover; }
+    /* line 261, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_blog.scss */
+    #single #article > .container > .footer #locations .location .left .map {
+      background-color: #f8ff73;
+      -moz-background-size: contain;
+      -o-background-size: contain;
+      -webkit-background-size: contain;
+      background-size: contain; }
+    /* line 268, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_blog.scss */
+    #single #article > .container > .footer #locations .location .right > .container {
+      margin-right: 38px;
+      margin-right: 2.34375rem; }
+    /* line 272, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_blog.scss */
+    #single #article > .container > .footer #locations .location .left,
+    #single #article > .container > .footer #locations .location .right {
+      padding-top: 24px;
+      padding-top: 1.5rem;
+      padding-bottom: 24px;
+      padding-bottom: 1.5rem; }
+    /* line 278, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_blog.scss */
+    #single #article > .container > .footer #locations .location .header h1,
+    #single #article > .container > .footer #locations .location .header .address {
+      white-space: nowrap;
+      overflow: hidden;
+      -ms-text-overflow: ellipsis;
+      -o-text-overflow: ellipsis;
+      text-overflow: ellipsis; }
+    /* line 285, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_blog.scss */
+    #single #article > .container > .footer #locations .location .header .address {
+      font-size: 13px;
+      font-size: 0.8rem;
+      line-height: 24px;
+      line-height: 1.5rem; }
+    /* line 290, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_blog.scss */
+    #single #article > .container > .footer #locations .location .main > .text {
+      padding-top: 24px;
+      padding-top: 1.5rem;
+      padding-bottom: 24px;
+      padding-bottom: 1.5rem; }
+    /* line 297, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_blog.scss */
+    #single #article > .container > .footer #locations .location .main .items .item, #single #article > .container > .footer #locations .location .main .items .item > .container {
+      display: block; }
+    /* line 300, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_blog.scss */
+    #single #article > .container > .footer #locations .location .main .items .item > .container {
+      height: 1.5rem;
+      padding-left: 1.5rem;
+      position: relative; }
+    /* line 305, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_blog.scss */
+    #single #article > .container > .footer #locations .location .main .items .item .icon,
+    #single #article > .container > .footer #locations .location .main .items .item .text {
+      display: block;
+      line-height: 1.5rem; }
+    /* line 310, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_blog.scss */
+    #single #article > .container > .footer #locations .location .main .items .item .icon {
+      width: 1.5rem;
+      height: 1.5rem;
+      text-align: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: auto; }
+    /* line 318, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/layouts/_blog.scss */
+    #single #article > .container > .footer #locations .location .main .items .item .text {
+      white-space: nowrap;
+      overflow: hidden;
+      -ms-text-overflow: ellipsis;
+      -o-text-overflow: ellipsis;
+      text-overflow: ellipsis; }
 
 /* line 5, /home/travis/build/blanketsheep/hachioji/source/stylesheets/partials/_writer.scss */
 #home #content #right #writers .writer:not(:first-child),
