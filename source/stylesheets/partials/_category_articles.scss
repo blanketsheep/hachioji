@@ -26,7 +26,8 @@
         display:block;
       }
       .icon {
-        $margin:$base-font-size * .35;
+        //$margin:$base-font-size * .35;
+        $margin:.35rem;
         $size:$height - ($margin * 2);
         & {
           width:$size;

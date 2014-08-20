@@ -10,13 +10,13 @@ $susy: (
   math: static,
   container-position: center,
   gutter-position: split,
-  global-box-sizing: content-box,
+  global-box-sizing: content-box/*,
   debug: (
     image: show,
     color: rgba(255,0,0,.25),
     output: overlay,
     toggle: top right
-  )
+  )*/
 );
 
 $rhythm-unit: 'rem';
