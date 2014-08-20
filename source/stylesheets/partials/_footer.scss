@@ -37,13 +37,20 @@
 & {
   background-color:$footer-background-color;
   color:$footer-color;
-  $h1-font-size:1.25rem;
-  $content-font-size:.9rem;
-  //$font-size:1rem;
+  $h1-font-size:$base-font-size * 1.25;
+  $content-font-size:$base-font-size * .9;
+  $copyright-rhythm: map-get($footer,copyright-height);
+  $columns-rhythm: map-get($footer,height) - $copyright-rhythm;
   >.container {
     //@include container;
   }
   .columns {
+    $pad:1;
+    $height:$columns-rhythm - ($pad * 2);
+    & {
+      @include padding-leader($pad);
+      @include padding-trailer($pad);
+    }
     .column {
       /*
       $max-column:susy-get(columns);
@@ -51,8 +58,11 @@
       @include span($span of $max-column);
       */
       //height:rhythm(10);
+      height:rhythm($height);
+      /*
       @include padding-leader(1);
       @include padding-trailer(1);
+      */
     }
     @include fontreset($content-font-size,true,false);
     h1 {
@@ -87,8 +97,8 @@
     }
     h1 {
       $font-size:$h1-font-size;
-      @include leader(1,$font-size);
-      //@include trailer(1,$font-size);
+      @include leader(1);
+      //@include trailer(1);
     }
   }
   #footer_recent_articles {
@@ -96,6 +106,11 @@
       $font-size:$content-font-size;
       @include adjust-font-size-to($font-size);
       @include ellipsis(true);
+    }
+  }
+  #footer_twitter {
+    >iframe {
+      min-height:100% !important;
     }
   }
   #footer_links {
@@ -122,13 +137,16 @@
     }
   }
   .bottom {
+    $pad:1;
+    $height:$copyright-rhythm - ($pad * 2);
+    height:$height;
     .copyright {
       display:block;
       text-align:center;
       $font-size:$content-font-size;
       @include adjust-font-size-to($font-size);
-      @include padding-leader(1,$font-size);
-      @include padding-trailer(1,$font-size);
+      @include padding-leader($pad);
+      @include padding-trailer($pad);
     }
   }
 }

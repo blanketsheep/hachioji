@@ -4,8 +4,8 @@ $end-of-the-day:       #f3f797;
 $mezz:                 #ff914d;
 $nail-polished-leaves: #ffbb4d;
 
-$default-box-shadow-color:rgba(0,0,0,.125);
-$default-text-shadow-color: $default-box-shadow-color;
+$default-box-shadow-color:  rgba(0,0,0,.125);
+$default-text-shadow-color: rgba(0,0,0,.4);
 
 //$background-color: $end-of-the-day;
 $background-color: lighten($end-of-the-day,15%);

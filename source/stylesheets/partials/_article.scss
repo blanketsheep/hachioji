@@ -1,18 +1,19 @@
 & {
-  $font-size:.95rem;
+  $font-size:$base-font-size * .95;
   //$guttered:true;
   //@include gallery(10 of 30);
   >.container {
     //@include gutter;
     //@import 'partials/fontreset';
-    font-size:$font-size;
+    @include adjust-font-size-to($font-size);
     @include fontreset($font-size,true,false);
+    // TODO
     @include clearfix;
-    @include leader(1,$font-size);
-    @include trailer(1,$font-size);
-    //@include rhythm-borders(0,1,$font-size);
-    @include padding-trailer(1,$font-size);
-    //@include horizontal-borders(0,1,$font-size);
+    @include leader(1);
+    @include trailer(1);
+    //@include rhythm-borders(0,1);
+    @include padding-trailer(1);
+    //@include horizontal-borders(0,1);
     background-color:$article-background-color;
     @include box-shadow;
     >.image {
@@ -23,7 +24,7 @@
         display:block;
         //width:span(4 of 30);
         background-color:$article-image-background-color;
-        height:rhythm(7,$font-size);
+        height:rhythm(7);
         background-position:center center;
         @include background-size(cover);
       }
@@ -41,10 +42,10 @@
         }
         h1 {
           //@include gutter;
-          $font-size:1.25rem;
+          $font-size:$base-font-size * 1.25;
           @include adjust-font-size-to($font-size);
-          @include leader(1,$font-size);
-          @include trailer(1,$font-size);
+          @include leader(1);
+          @include trailer(1);
           //font-weight:normal;
         }
       }

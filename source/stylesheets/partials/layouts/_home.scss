@@ -147,12 +147,12 @@
         }
         h1 {
           @include leader(9);
-          @include adjust-font-size-to(2rem);
+          @include adjust-font-size-to($base-font-size * 2);
           max-width:span(20);
         }
         .text {
           @include leader(2);
-          @include adjust-font-size-to(1.25rem);
+          @include adjust-font-size-to($base-font-size * 1.25);
           max-width:span(16);
         }
       }

@@ -117,7 +117,7 @@
           margin:0 auto;
         }
         h1 {
-          @include adjust-font-size-to(1rem);
+          @include adjust-font-size-to($base-font-size);
           text-align:center;
           font-weight:inherit;
         }
@@ -126,7 +126,7 @@
     >.container>.header {
       @include rhythm(0,1,1);
       h1 {
-        @include adjust-font-size-to(1rem);
+        @include adjust-font-size-to($base-font-size);
         text-align:center;
         font-weight:inherit;
       }

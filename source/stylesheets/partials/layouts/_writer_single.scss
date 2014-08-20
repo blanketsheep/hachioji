@@ -142,7 +142,7 @@ $header-icon-wrap-rhythm:5;
           @include rhythm(1);
         }
         h2 {
-          @include adjust-font-size-to(.9rem);
+          @include adjust-font-size-to($base-font-size * .9);
           font-weight:normal;
           .item {
             @include gutters;
