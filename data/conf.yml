@@ -5,14 +5,14 @@ nav:
       href: "/about.html"
       classes:
       - about
-    - name: "Column"
-      href: "/articles/tags/column.html"
-      classes:
-      - column
     - name: "Gallery"
       href: "/gallery.html"
       classes:
       - gallery
+    - name: "Column"
+      href: "/articles/tags/column.html"
+      classes:
+      - column
     - name: "Essay"
       href: "/articles/tags/essay.html"
       classes: 
