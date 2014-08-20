@@ -54,9 +54,9 @@
   .main {
     .text {
       //font-size:$writer-text-font-size;
-      $font-size:.9rem;
+      $font-size:$base-font-size * .9;
       @include adjust-font-size-to($font-size);
-      @include padding-leader(1,$font-size);
+      @include padding-leader(1);
       //@include padding-trailer(1,$font-size);
       //min-height:$writer-text-min-height;
       //padding-top:$writer-text-padding-top;

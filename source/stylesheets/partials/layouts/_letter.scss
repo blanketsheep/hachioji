@@ -11,7 +11,7 @@
         @if $layout == default or $layout == tablet {
           @include pad(4);
         } @else if $layout == phone {
-          @include adjust-font-size-to(1.25rem);
+          @include adjust-font-size-to($base-font-size * 1.25);
         }
       }
       .main {

@@ -74,7 +74,7 @@
       @include padding-trailer(1);
       @include pad(1);
       */
-      $font-size:.9rem;
+      $font-size:$base-font-size * .9;
       @include adjust-font-size-to($font-size);
       @include fontreset($font-size,true,false);
       >.container {

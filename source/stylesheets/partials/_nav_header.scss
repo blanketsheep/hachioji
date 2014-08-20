@@ -1,5 +1,5 @@
 $nav-header-rhythm:2;
-$nav-header-font-size:1.25rem;
+$nav-header-font-size:$base-font-size * 1.25;
 
 & {
   $font-size:$nav-header-font-size;
@@ -10,7 +10,6 @@ $nav-header-font-size:1.25rem;
     color:$nav-header-color;
     background-color:$nav-header-background-color;
     font-weight:normal;
-    @include single-box-shadow($nav-header-border-color,0,1px,0);
     @include box-shadow(0 1px 0 $nav-header-border-color,0 -1px 0 $nav-header-border-color);
   }
   &,

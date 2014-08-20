@@ -20,8 +20,9 @@ $susy: (
 );
 
 $rhythm-unit: 'rem';
-$relative-font-sizing:false;
-$rem-with-px-fallback: true;
+//$relative-font-sizing:false;
+//$rem-with-px-fallback: true;
+$rem-with-px-fallback: false;
 $base-font-size:16px;
 $base-line-height:24px;
 
@@ -85,7 +86,7 @@ $amethyst:#9b59b6;
 @import 'colors';
 
 $header-rhythm:3;
-$header-font-size:1.25rem;
+$header-font-size:$base-font-size * 1.25;
 
 //$article-text-font-size:.9em;
 
@@ -123,52 +124,29 @@ $tag-lr: (
       @include gutter;
     }
   }
-  h1 {
-    $font-size:1.75rem;
-    @include adjust-font-size-to($font-size);
-    @if $setleader {
-      @include padding-leader(1,$font-size);
-    }
-  }
-  h2 {
-    $font-size:1.5rem;
-    @include adjust-font-size-to($font-size);
-    @if $setleader {
-      @include padding-leader(1,$font-size);
-    }
-  }
-  h3 {
-    $font-size:1.25rem;
-    @include adjust-font-size-to($font-size);
-    @if $setleader {
-      @include padding-leader(1,$font-size);
-    }
-  }
-  h4 {
-    $font-size:1.2rem;
-    @include adjust-font-size-to($font-size);
-    @if $setleader {
-      @include padding-leader(1,$font-size);
-    }
-  }
-  h5 {
-    $font-size:1.15rem;
-    @include adjust-font-size-to($font-size);
-    @if $setleader {
-      @include padding-leader(1,$font-size);
-    }
-  }
-  h6 {
-    $font-size:1.1rem;
-    @include adjust-font-size-to($font-size);
-    @if $setleader {
-      @include padding-leader(1,$font-size);
-    }
-  }
+  h1,h2,h3,h4,h5,h6,
   p,blockquote {
     @if $setleader {
-      @include padding-leader(1,$font-size);
+      @include padding-leader(1);
     }
+  }
+  h1 {
+    @include adjust-font-size-to($base-font-size * 1.75);
+  }
+  h2 {
+    @include adjust-font-size-to($base-font-size * 1.5);
+  }
+  h3 {
+    @include adjust-font-size-to($base-font-size * 1.25);
+  }
+  h4 {
+    @include adjust-font-size-to($base-font-size * 1.2);
+  }
+  h5 {
+    @include adjust-font-size-to($base-font-size * 1.15);
+  }
+  h6 {
+    @include adjust-font-size-to($base-font-size * 1.1);
   }
 }
 

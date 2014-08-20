@@ -37,9 +37,8 @@
 & {
   background-color:$footer-background-color;
   color:$footer-color;
-  $h1-font-size:1.25rem;
-  $content-font-size:.9rem;
-  //$font-size:1rem;
+  $h1-font-size:$base-font-size * 1.25;
+  $content-font-size:$base-font-size * .9;
   $copyright-rhythm: map-get($footer,copyright-height);
   $columns-rhythm: map-get($footer,height) - $copyright-rhythm;
   >.container {
@@ -98,8 +97,8 @@
     }
     h1 {
       $font-size:$h1-font-size;
-      @include leader(1,$font-size);
-      //@include trailer(1,$font-size);
+      @include leader(1);
+      //@include trailer(1);
     }
   }
   #footer_recent_articles {
@@ -146,8 +145,8 @@
       text-align:center;
       $font-size:$content-font-size;
       @include adjust-font-size-to($font-size);
-      @include padding-leader($pad,$font-size);
-      @include padding-trailer($pad,$font-size);
+      @include padding-leader($pad);
+      @include padding-trailer($pad);
     }
   }
 }

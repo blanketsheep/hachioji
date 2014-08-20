@@ -62,8 +62,7 @@
           }
           h1 {
             margin:0;
-            font-size:inherit;
-            @include adjust-font-size-to(1.5rem);
+            @include adjust-font-size-to($base-font-size * 1.5);
             @include gutter;
             position:absolute;
             top:auto;left:auto;
@@ -76,7 +75,7 @@
             background-color:$article-header-hmain-background-color;
             @include gutter;
             //@include rhythm-borders(0,1);
-            @include horizontal-borders(0,1);
+            @include horizontal-borders(0px,1);
             @include pad(1);
           }
           >.container {
@@ -91,13 +90,13 @@
         #content {
           @include pad(1);
           >.container {
-            $font-size:.95rem;
+            $font-size:$base-font-size * .95;
             $guttered: false;
             & {
               font-size:$font-size;
               @include adjust-font-size-to($font-size);
               @include fontreset($font-size,$guttered);
-              @include padding-trailer(1,$font-size);
+              @include padding-trailer(1);
             }
             /*
             .flickrembed {
@@ -110,7 +109,7 @@
                 / *
                 $span:$left-span - 2;
                 width:span($span);
-                height:rhythm(20,$font-size);
+                height:rhythm(20);
                 * /
               }
             }
@@ -283,7 +282,7 @@
                 
               }
               .address {
-                @include adjust-font-size-to(.8rem);
+                @include adjust-font-size-to($base-font-size * .8);
               }
             }
             .main {
