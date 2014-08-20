@@ -212,6 +212,7 @@
           .location {
             @include fontreset(1rem,true,false);
             //$left-column:11;
+            @include trailer(1);
             >.container {
               background-color:$article-location-background-color;
               @include box-shadow;
